@@ -1,0 +1,72 @@
+{
+  "lang": "de",
+  "nav": {
+    "modules": "Module",
+    "cases": "Referenzen",
+    "demo": "Demo",
+    "reviews": "Bewertungen",
+    "cta": "Testen"
+  },
+  "hero": {
+    "slogan": "Eine Idee. Alle Formate.",
+    "subtitle": "Wir verwandeln einen Gedanken in Content für alle Plattformen.",
+    "cta_primary": "Loslegen",
+    "cta_secondary": "Demo ansehen"
+  },
+  "visual_demo": {
+    "heading": "Sie haben eine Idee. Wir machen sechs Formate daraus."
+  },
+  "modules": {
+    "heading": "Sechs Formate. Eine Quelle.",
+    "items": [
+      { "name": "Avatar", "desc": "Der Experte spricht ohne Dreharbeiten" },
+      { "name": "Reel", "desc": "30 Sekunden, die fesseln" },
+      { "name": "Beitrag", "desc": "Visuelle Verankerung der Idee" },
+      { "name": "Karussell", "desc": "Komplexe Gedanken — einfach erklärt" },
+      { "name": "Artikel", "desc": "SEO-Text, der gefunden wird" },
+      { "name": "Repost", "desc": "Eine Idee — alle Plattformen" }
+    ]
+  },
+  "how": {
+    "heading": "So funktioniert es",
+    "steps": [
+      { "title": "Thema", "desc": "Laden Sie ein Thema hoch" },
+      { "title": "Prisma", "desc": "KI erstellt 6 Formate" },
+      { "title": "Prüfung", "desc": "Der Manager prüft" },
+      { "title": "Veröffentlichung", "desc": "Content geht auf alle Plattformen" }
+    ]
+  },
+  "showcase": {
+    "heading": "Ein Thema. Drei Formate.",
+    "subtitle": "Alles wurde aus einem Punkt des Content-Plans erstellt."
+  },
+  "testimonials": {
+    "heading": "Was Kunden sagen"
+  },
+  "demo": {
+    "heading": "Sehen Sie PRIZMA in Aktion",
+    "caption": "Zwei-Minuten-Überblick"
+  },
+  "cta": {
+    "heading": "Testen Sie PRIZMA",
+    "subtitle": "Senden Sie eine Anfrage — wir zeigen, wie eine Idee zu Content wird.",
+    "name": "Ihr Name",
+    "email": "E-Mail",
+    "company": "Firmenname",
+    "message": "Beschreiben Sie Ihre Aufgaben",
+    "submit": "Anfrage senden",
+    "privacy": "Mit dem Klick stimmen Sie der Datenschutzerklärung zu"
+  },
+  "footer": {
+    "tagline": "Eine Idee. Alle Formate.",
+    "modules": "Module",
+    "cases": "Referenzen",
+    "demo": "Demo",
+    "contact": "Kontakt",
+    "copyright": "© 2026 PRIZMA. Alle Rechte vorbehalten."
+  },
+  "seo": {
+    "title": "PRIZMA — Eine Idee. Alle Formate.",
+    "description": "Wir verwandeln einen Gedanken in Content für alle Plattformen. Artikel, Reels, Karussells, Posts, AI-Avatare und Cross-Posting — automatisch."
+  }
+}

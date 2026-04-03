@@ -1,0 +1,99 @@
+---
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+---
+
+<section class="demo-section" id="demo">
+  <div class="section-wrap">
+    <h2 class="reveal">{t.demo.heading}</h2>
+
+    <div class="demo-player glass-card reveal">
+      <div class="demo-backdrop"></div>
+      <div class="demo-grid-lines"></div>
+      <div class="play-btn">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </div>
+    </div>
+
+    <p class="demo-caption">{t.demo.caption}</p>
+  </div>
+</section>
+
+<style>
+  .demo-section {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .demo-section h2 {
+    margin-bottom: 48px;
+  }
+
+  .demo-player {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .demo-player:hover {
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow:
+      0 0 80px rgba(139, 92, 246, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .demo-backdrop {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(6, 182, 212, 0.05), rgba(16, 185, 129, 0.03));
+  }
+
+  .demo-grid-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .play-btn {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--purple-deep));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.4);
+    transition: transform 0.3s;
+  }
+
+  .play-btn svg {
+    margin-left: 4px;
+  }
+
+  .demo-player:hover .play-btn {
+    transform: scale(1.1);
+  }
+
+  .demo-caption {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+</style>

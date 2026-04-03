@@ -1,0 +1,109 @@
+---
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+
+const stepColors = ['#8B5CF6', '#06B6D4', '#10B981', '#F59E0B'];
+---
+
+<section id="how">
+  <div class="section-wrap">
+    <h2 class="reveal">{t.how.heading}</h2>
+
+    <div class="steps-row" data-stagger>
+      {t.how.steps.map((step: any, i: number) => (
+        <div class="step-card">
+          <div class="step-number glass-card" style={`--accent: ${stepColors[i]};`}>
+            {i + 1}
+          </div>
+          <div class="step-title">{step.title}</div>
+          <div class="step-desc">{step.desc}</div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Gradient line connecting steps -->
+    <div class="steps-line" aria-hidden="true"></div>
+  </div>
+</section>
+
+<style>
+  #how .section-wrap {
+    position: relative;
+  }
+
+  #how h2 {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .steps-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .steps-line {
+    position: absolute;
+    top: calc(80px + 40px + 40px); /* heading mb + number height/2 */
+    left: 12%;
+    right: 12%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--purple), var(--cyan), var(--green), var(--amber));
+    opacity: 0.15;
+    z-index: 1;
+  }
+
+  .step-card {
+    text-align: center;
+    position: relative;
+  }
+
+  .step-number {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+    border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+    transition: all 0.4s;
+  }
+
+  .step-card:hover .step-number {
+    transform: scale(1.08);
+    box-shadow:
+      0 0 40px color-mix(in srgb, var(--accent) 20%, transparent),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .step-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .step-desc {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .steps-row { grid-template-columns: repeat(2, 1fr); }
+    .steps-line { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .steps-row { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,18 @@
+{
+  "name": "prizma-landing",
+  "version": "1.0.0",
+  "description": "PRIZMA — AI content automation platform landing page",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "astro": "^6.1.3",
+    "gsap": "^3.14.2"
+  }
+}

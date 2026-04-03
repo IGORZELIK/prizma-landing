@@ -1,0 +1,147 @@
+---
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+
+const cards = [
+  {
+    tag: t.modules.items[4].name,
+    tagClass: 'tag-article',
+    title: t.lang === 'ru' ? 'Как выбрать CRM для малого бизнеса' : t.lang === 'de' ? 'Wie wählt man ein CRM für KMU' : 'How to choose a CRM for small business',
+    meta: t.lang === 'ru' ? 'SEO-статья · 2 800 слов' : t.lang === 'de' ? 'SEO-Artikel · 2.800 Wörter' : 'SEO article · 2,800 words',
+    gradient: 'linear-gradient(135deg, #1e1b4b, #312e81)',
+    previewText: t.lang === 'ru' ? 'ГЛУБОКИЙ РАЗБОР' : t.lang === 'de' ? 'TIEFENANALYSE' : 'DEEP DIVE',
+  },
+  {
+    tag: t.modules.items[1].name,
+    tagClass: 'tag-reel',
+    title: t.lang === 'ru' ? '3 ошибки при выборе CRM' : t.lang === 'de' ? '3 Fehler bei der CRM-Wahl' : '3 mistakes when choosing a CRM',
+    meta: t.lang === 'ru' ? 'Рилс · 30 сек' : t.lang === 'de' ? 'Reel · 30 Sek.' : 'Reel · 30 sec',
+    gradient: 'linear-gradient(135deg, #1e3a5f, #0e4155)',
+    previewText: t.lang === 'ru' ? 'ЦЕПЛЯЮЩИЙ РИЛС' : t.lang === 'de' ? 'FESSELNDES REEL' : 'HOOKING REEL',
+  },
+  {
+    tag: t.modules.items[0].name,
+    tagClass: 'tag-avatar',
+    title: t.lang === 'ru' ? 'Эксперт объясняет: зачем CRM' : t.lang === 'de' ? 'Experte erklärt: Warum CRM' : 'Expert explains: Why CRM',
+    meta: t.lang === 'ru' ? 'AI-аватар · 1:15' : t.lang === 'de' ? 'AI-Avatar · 1:15' : 'AI avatar · 1:15',
+    gradient: 'linear-gradient(135deg, #14332a, #1a4037)',
+    previewText: t.lang === 'ru' ? 'ЛИЧНЫЙ КОНТАКТ' : t.lang === 'de' ? 'PERSÖNLICHER KONTAKT' : 'PERSONAL TOUCH',
+  },
+];
+---
+
+<section class="showcase-section" id="cases">
+  <div class="section-wrap">
+    <h2 class="reveal">{t.showcase.heading}</h2>
+    <p class="section-subtitle reveal">{t.showcase.subtitle}</p>
+
+    <div class="showcase-grid" data-stagger>
+      {cards.map(card => (
+        <div class="showcase-card glass-card">
+          <div class="showcase-preview" style={`background: ${card.gradient};`}>
+            <div class="showcase-preview-content">
+              <span class="showcase-preview-text">{card.previewText}</span>
+            </div>
+            <span class={`showcase-tag ${card.tagClass}`}>{card.tag}</span>
+          </div>
+          <div class="showcase-info">
+            <div class="showcase-title">{card.title}</div>
+            <div class="showcase-meta">{card.meta}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .showcase-section {
+    position: relative;
+    z-index: 1;
+  }
+
+  .showcase-section h2 {
+    text-align: center;
+  }
+
+  .showcase-section .section-subtitle {
+    text-align: center;
+    margin: 16px auto 60px;
+  }
+
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .showcase-card {
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .showcase-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .showcase-preview {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .showcase-preview-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .showcase-preview-text {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+  }
+
+  .showcase-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .tag-article { background: rgba(139, 92, 246, 0.3); color: #C4B5FD; }
+  .tag-reel    { background: rgba(236, 72, 153, 0.3); color: #F9A8D4; }
+  .tag-avatar  { background: rgba(6, 182, 212, 0.3);  color: #67E8F9; }
+
+  .showcase-info {
+    padding: 20px 24px;
+  }
+
+  .showcase-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .showcase-meta {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 900px) {
+    .showcase-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  }
+</style>

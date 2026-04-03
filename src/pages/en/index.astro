@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Hero from '../../components/Hero.astro';
+import VisualDemo from '../../components/VisualDemo.astro';
+import Modules from '../../components/Modules.astro';
+import HowItWorks from '../../components/HowItWorks.astro';
+import Showcase from '../../components/Showcase.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import DemoVideo from '../../components/DemoVideo.astro';
+import CtaForm from '../../components/CtaForm.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+
+import t from '../../i18n/en.json';
+---
+
+<Layout t={t}>
+  <Nav t={t} />
+  <Hero t={t} />
+  <VisualDemo t={t} />
+  <hr class="divider" />
+  <Modules t={t} />
+  <hr class="divider" />
+  <HowItWorks t={t} />
+  <hr class="divider" />
+  <Showcase t={t} />
+  <hr class="divider" />
+  <DemoVideo t={t} />
+  <hr class="divider" />
+  <Testimonials t={t} />
+  <hr class="divider" />
+  <CtaForm t={t} />
+  <Footer t={t} />
+</Layout>

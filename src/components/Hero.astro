@@ -1,0 +1,112 @@
+---
+import PrismLogo from './PrismLogo.astro';
+
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+---
+
+<section class="hero" id="hero">
+  <PrismLogo />
+
+  <h1 class="hero-slogan">{t.hero.slogan}</h1>
+  <p class="hero-subtitle">{t.hero.subtitle}</p>
+
+  <div class="hero-cta">
+    <a href="#contact" class="btn-primary"><span>{t.hero.cta_primary}</span></a>
+    <a href="#demo" class="btn-secondary">{t.hero.cta_secondary}</a>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px 40px;
+  }
+
+  .hero-slogan {
+    opacity: 0;
+    animation: revealUp 1s ease-out 2.0s forwards;
+    background: linear-gradient(135deg, #fff 0%, #E5E7EB 50%, rgba(139, 92, 246, 0.9) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 300;
+    color: var(--text-secondary);
+    max-width: 580px;
+    line-height: 1.75;
+    margin-top: 20px;
+    opacity: 0;
+    animation: revealUp 1s ease-out 2.3s forwards;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    opacity: 0;
+    animation: revealUp 1s ease-out 2.6s forwards;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: revealUp 1s ease-out 3.2s forwards;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--purple), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes revealUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; height: 30px; }
+    50%      { opacity: 1; height: 50px; }
+  }
+
+  @media (max-width: 600px) {
+    .hero-cta {
+      flex-direction: column;
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>
+
+<script>
+  // Nav reveal via GSAP (after hero timeline)
+  setTimeout(() => {
+    const nav = document.getElementById('nav');
+    if (nav) {
+      nav.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+      nav.style.opacity = '1';
+      nav.style.transform = 'translateY(0)';
+    }
+  }, 3000);
+</script>

@@ -1,0 +1,148 @@
+---
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+---
+
+<section class="cta-section" id="contact">
+  <div class="section-wrap">
+    <div class="cta-glow" aria-hidden="true"></div>
+
+    <h2 class="reveal">{t.cta.heading}</h2>
+    <p class="section-subtitle cta-sub reveal">{t.cta.subtitle}</p>
+
+    <div class="cta-form-wrap glass-card reveal">
+      <form class="cta-form" data-astro-reload>
+        <div class="form-row">
+          <input
+            type="text"
+            class="form-input"
+            placeholder={t.cta.name}
+            name="name"
+            required
+            autocomplete="name"
+          />
+          <input
+            type="email"
+            class="form-input"
+            placeholder={t.cta.email}
+            name="email"
+            required
+            autocomplete="email"
+          />
+        </div>
+        <input
+          type="text"
+          class="form-input"
+          placeholder={t.cta.company}
+          name="company"
+          autocomplete="organization"
+        />
+        <textarea
+          class="form-input form-textarea"
+          placeholder={t.cta.message}
+          name="message"
+          rows="4"
+        ></textarea>
+        <button type="submit" class="btn-primary submit-btn">
+          <span>{t.cta.submit}</span>
+        </button>
+      </form>
+      <p class="cta-privacy">{t.cta.privacy}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .cta-section h2 {
+    margin-bottom: 0;
+  }
+
+  .cta-sub {
+    margin: 16px auto 48px;
+    text-align: center;
+  }
+
+  .cta-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-form-wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 16px;
+  }
+
+  .form-input {
+    flex: 1;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+  }
+
+  .form-input::placeholder {
+    color: var(--text-dim);
+  }
+
+  .form-input:focus {
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 18px;
+    font-size: 1.05rem;
+  }
+
+  .cta-privacy {
+    margin-top: 16px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 600px) {
+    .form-row { flex-direction: column; }
+    .cta-form-wrap { padding: 28px 20px; }
+  }
+</style>

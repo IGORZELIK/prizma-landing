@@ -1,0 +1,179 @@
+---
+interface Props {
+  t: Record<string, any>;
+}
+
+const { t } = Astro.props;
+const lang = t.lang || 'en';
+const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{t.seo.title}</title>
+  <meta name="description" content={t.seo.description} />
+
+  <!-- OG -->
+  <meta property="og:title" content={t.seo.title} />
+  <meta property="og:description" content={t.seo.description} />
+  <meta property="og:image" content="https://prizma.to/og-image.png" />
+  <meta property="og:url" content={`https://prizma.to/${lang === 'en' ? '' : lang}`} />
+  <meta property="og:type" content="website" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="ru" href="https://prizma.to/ru" />
+  <link rel="alternate" hreflang="de" href="https://prizma.to/de" />
+  <link rel="alternate" hreflang="en" href="https://prizma.to/en" />
+  <link rel="alternate" hreflang="x-default" href="https://prizma.to/en" />
+  <link rel="canonical" href={`https://prizma.to/${lang === 'en' ? '' : lang}`} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <!-- Background orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="particles" style="position:fixed;inset:0;z-index:0;pointer-events:none;"></canvas>
+
+  <slot />
+
+  <!-- GSAP -->
+  <script>
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Make gsap available globally for component scripts
+    (window as any).__gsap = gsap;
+    (window as any).__ScrollTrigger = ScrollTrigger;
+
+    // Universal reveal animation
+    gsap.utils.toArray('.reveal').forEach((el: any) => {
+      gsap.from(el, {
+        y: 24,
+        opacity: 0,
+        duration: 0.7,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 85%',
+        },
+      });
+    });
+
+    // Stagger groups
+    document.querySelectorAll('[data-stagger]').forEach((group) => {
+      const children = group.children;
+      gsap.from(children, {
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: group,
+          start: 'top 80%',
+        },
+      });
+    });
+
+    // Counter animation
+    document.querySelectorAll('[data-count]').forEach((el: any) => {
+      const target = parseInt(el.getAttribute('data-count') || '0');
+      gsap.from(el, {
+        textContent: 0,
+        duration: 1.5,
+        ease: 'power2.out',
+        snap: { textContent: 1 },
+        scrollTrigger: { trigger: el, start: 'top 80%' },
+      });
+    });
+  </script>
+
+  <!-- Particles -->
+  <script>
+    const canvas = document.getElementById('particles') as HTMLCanvasElement;
+    if (canvas) {
+      const ctx = canvas.getContext('2d')!;
+      let w = canvas.width = window.innerWidth;
+      let h = canvas.height = window.innerHeight;
+      const isMobile = window.innerWidth < 768;
+
+      const colors = ['#8B5CF6', '#06B6D4', '#10B981', '#ffffff', '#ffffff', '#ffffff'];
+      const count = isMobile ? 20 : 50;
+
+      interface Particle { x: number; y: number; vx: number; vy: number; r: number; color: string; }
+      const particles: Particle[] = [];
+
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          r: 0.5 + Math.random() * 1,
+          color: colors[Math.floor(Math.random() * colors.length)],
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+
+        // Connections (desktop only)
+        if (!isMobile) {
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 100) {
+                ctx.strokeStyle = `rgba(255,255,255,${0.04 * (1 - dist / 100)})`;
+                ctx.lineWidth = 0.5;
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.stroke();
+              }
+            }
+          }
+        }
+
+        // Particles
+        for (const p of particles) {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0 || p.x > w) p.vx *= -1;
+          if (p.y < 0 || p.y > h) p.vy *= -1;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = 0.6;
+          ctx.fill();
+          ctx.globalAlpha = 1;
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      draw();
+
+      window.addEventListener('resize', () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      });
+    }
+  </script>
+</body>
+</html>

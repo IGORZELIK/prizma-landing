@@ -1,0 +1,72 @@
+{
+  "lang": "en",
+  "nav": {
+    "modules": "Modules",
+    "cases": "Cases",
+    "demo": "Demo",
+    "reviews": "Reviews",
+    "cta": "Try it"
+  },
+  "hero": {
+    "slogan": "One idea. Every format.",
+    "subtitle": "We turn one thought into content for every platform.",
+    "cta_primary": "Get started",
+    "cta_secondary": "Watch demo"
+  },
+  "visual_demo": {
+    "heading": "You have an idea. We turn it into six formats."
+  },
+  "modules": {
+    "heading": "Six formats. One source.",
+    "items": [
+      { "name": "Avatar", "desc": "The expert speaks without filming" },
+      { "name": "Reel", "desc": "30 seconds that hook" },
+      { "name": "Post", "desc": "Visual reinforcement of the idea" },
+      { "name": "Carousel", "desc": "Complex thoughts — simply explained" },
+      { "name": "Article", "desc": "SEO content that gets found" },
+      { "name": "Repost", "desc": "One idea — every platform" }
+    ]
+  },
+  "how": {
+    "heading": "How it works",
+    "steps": [
+      { "title": "Topic", "desc": "Upload a topic" },
+      { "title": "Prism", "desc": "AI creates 6 formats" },
+      { "title": "Review", "desc": "Manager reviews" },
+      { "title": "Publish", "desc": "Content goes to every platform" }
+    ]
+  },
+  "showcase": {
+    "heading": "One topic. Three formats.",
+    "subtitle": "Everything below was created from one content plan item."
+  },
+  "testimonials": {
+    "heading": "What clients say"
+  },
+  "demo": {
+    "heading": "See PRIZMA in action",
+    "caption": "Two-minute overview"
+  },
+  "cta": {
+    "heading": "Try PRIZMA",
+    "subtitle": "Send a request — we'll show how one idea becomes content.",
+    "name": "Your name",
+    "email": "Email",
+    "company": "Company name",
+    "message": "Describe your goals",
+    "submit": "Send request",
+    "privacy": "By clicking, you agree to the privacy policy"
+  },
+  "footer": {
+    "tagline": "One idea. Every format.",
+    "modules": "Modules",
+    "cases": "Cases",
+    "demo": "Demo",
+    "contact": "Contact",
+    "copyright": "© 2026 PRIZMA. All rights reserved."
+  },
+  "seo": {
+    "title": "PRIZMA — One idea. Every format.",
+    "description": "We turn one thought into content for every platform. Articles, reels, carousels, posts, AI avatars and cross-posting — automatically."
+  }
+}

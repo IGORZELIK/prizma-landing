@@ -1,0 +1,197 @@
+---
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+const lang = t.lang;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+const langs = ['RU', 'DE', 'EN'];
+---
+
+<nav class="nav" id="nav">
+  <a href={`${prefix}/#`} class="nav-logo text-unbounded gradient-text">PRIZMA</a>
+
+  <div class="nav-links">
+    <a href={`${prefix}/#modules`}>{t.nav.modules}</a>
+    <a href={`${prefix}/#cases`}>{t.nav.cases}</a>
+    <a href={`${prefix}/#demo`}>{t.nav.demo}</a>
+    <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>
+    <a href={`${prefix}/#contact`} class="nav-cta-btn">{t.nav.cta}</a>
+  </div>
+
+  <div class="lang-switch">
+    {langs.map(l => (
+      <a
+        href={`/${l.toLowerCase()}`}
+        class:list={[{ active: lang === l.toLowerCase() }]}
+      >{l}</a>
+    ))}
+  </div>
+
+  <button class="nav-burger" aria-label="Menu">
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Mobile menu -->
+  <div class="nav-mobile">
+    <a href={`${prefix}/#modules`}>{t.nav.modules}</a>
+    <a href={`${prefix}/#cases`}>{t.nav.cases}</a>
+    <a href={`${prefix}/#demo`}>{t.nav.demo}</a>
+    <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>
+    <a href={`${prefix}/#contact`} class="nav-cta-btn">{t.nav.cta}</a>
+    <div class="lang-switch mobile">
+      {langs.map(l => (
+        <a
+          href={`/${l.toLowerCase()}`}
+          class:list={[{ active: lang === l.toLowerCase() }]}
+        >{l}</a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 15, 0.4);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  .nav-logo {
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: #fff; }
+
+  .nav-cta-btn {
+    padding: 8px 22px !important;
+    border: 1px solid rgba(139, 92, 246, 0.4) !important;
+    border-radius: 10px;
+    color: var(--purple) !important;
+    font-weight: 600 !important;
+    transition: all 0.3s !important;
+    backdrop-filter: blur(8px);
+  }
+
+  .nav-cta-btn:hover {
+    background: var(--purple) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+  }
+
+  .lang-switch {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .lang-switch a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--text-dim);
+    transition: color 0.3s;
+    padding: 4px 6px;
+  }
+
+  .lang-switch a.active { color: #fff; }
+  .lang-switch a:hover { color: var(--text-secondary); }
+
+  .lang-switch.mobile { display: none; }
+
+  /* Burger */
+  .nav-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .nav-burger span {
+    width: 22px;
+    height: 1.5px;
+    background: var(--text-secondary);
+    transition: all 0.3s;
+  }
+
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(30px);
+    padding: 24px 40px;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-glass);
+  }
+
+  .nav-mobile a {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    font-weight: 400;
+    transition: color 0.3s;
+  }
+
+  .nav-mobile a:hover { color: #fff; }
+
+  @media (max-width: 768px) {
+    .nav { padding: 0 20px; }
+    .nav-links, .lang-switch:not(.mobile) { display: none; }
+    .nav-burger { display: flex; }
+    .nav-mobile.open {
+      display: flex;
+    }
+    .lang-switch.mobile {
+      display: flex;
+      margin-top: 8px;
+    }
+  }
+</style>
+
+<script>
+  const burger = document.querySelector('.nav-burger');
+  const mobile = document.querySelector('.nav-mobile');
+  burger?.addEventListener('click', () => {
+    mobile?.classList.toggle('open');
+  });
+  // Close on link click
+  mobile?.querySelectorAll('a[href*="#"]').forEach(a => {
+    a.addEventListener('click', () => mobile?.classList.remove('open'));
+  });
+</script>

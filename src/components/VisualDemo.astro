@@ -1,0 +1,177 @@
+---
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+
+const formats = [
+  { icon: 'file-text', label: t.modules.items[4].name, color: '#8B5CF6' },
+  { icon: 'film', label: t.modules.items[1].name, color: '#06B6D4' },
+  { icon: 'image', label: t.modules.items[2].name, color: '#10B981' },
+  { icon: 'layers', label: t.modules.items[3].name, color: '#F59E0B' },
+  { icon: 'user', label: t.modules.items[0].name, color: '#EC4899' },
+  { icon: 'share-2', label: t.modules.items[5].name, color: '#6366F1' },
+];
+---
+
+<section class="visual-demo" id="visual-demo">
+  <div class="section-wrap">
+    <h2 class="reveal">{t.visual_demo.heading}</h2>
+
+    <div class="demo-visual">
+      <!-- Source card -->
+      <div class="source-card glass-card reveal">
+        <div class="source-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        <div class="source-label">{t.lang === 'ru' ? 'Как выбрать CRM для бизнеса' : t.lang === 'de' ? 'Wie wählt man ein CRM' : 'How to choose a CRM'}</div>
+      </div>
+
+      <!-- Rays -->
+      <div class="rays">
+        {formats.map((f, i) => (
+          <div class="ray" style={`--color: ${f.color}; --delay: ${0.3 + i * 0.1}s; --angle: ${-25 + i * 10}deg;`}></div>
+        ))}
+      </div>
+
+      <!-- Format cards -->
+      <div class="format-cards" data-stagger>
+        {formats.map(f => (
+          <div class="format-card glass-card">
+            <span class="format-dot" style={`background: ${f.color};`}></span>
+            <span class="format-name">{f.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .visual-demo {
+    position: relative;
+    z-index: 1;
+  }
+
+  .visual-demo h2 {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 80px;
+  }
+
+  .demo-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+  }
+
+  .source-card {
+    padding: 32px 28px;
+    min-width: 220px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .source-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(139, 92, 246, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+
+  .source-label {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+
+  .rays {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 120px;
+    flex-shrink: 0;
+  }
+
+  .ray {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, var(--color));
+    opacity: 0;
+    animation: rayReveal 0.8s ease-out var(--delay) forwards;
+    transform-origin: left;
+  }
+
+  @keyframes rayReveal {
+    from { opacity: 0; transform: scaleX(0); }
+    to   { opacity: 0.6; transform: scaleX(1); }
+  }
+
+  .format-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .format-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    min-width: 160px;
+  }
+
+  .format-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .format-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 768px) {
+    .demo-visual {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .rays {
+      width: 100%;
+      flex-direction: row;
+      height: 40px;
+    }
+
+    .ray {
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(180deg, transparent, var(--color));
+    }
+
+    .format-cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .format-card {
+      min-width: auto;
+      padding: 10px 16px;
+    }
+  }
+</style>

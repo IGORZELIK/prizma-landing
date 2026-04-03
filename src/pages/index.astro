@@ -1,0 +1,69 @@
+---
+// Root page — GeoIP-based redirect
+// For SSG, we render the English version by default
+// and add client-side geo-detection to redirect
+
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import VisualDemo from '../components/VisualDemo.astro';
+import Modules from '../components/Modules.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Showcase from '../components/Showcase.astro';
+import Testimonials from '../components/Testimonials.astro';
+import DemoVideo from '../components/DemoVideo.astro';
+import CtaForm from '../components/CtaForm.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+import t from '../i18n/en.json';
+---
+
+<Layout t={t}>
+  <Nav t={t} />
+  <Hero t={t} />
+  <VisualDemo t={t} />
+  <hr class="divider" />
+  <Modules t={t} />
+  <hr class="divider" />
+  <HowItWorks t={t} />
+  <hr class="divider" />
+  <Showcase t={t} />
+  <hr class="divider" />
+  <DemoVideo t={t} />
+  <hr class="divider" />
+  <Testimonials t={t} />
+  <hr class="divider" />
+  <CtaForm t={t} />
+  <Footer t={t} />
+</Layout>
+
+<script>
+  // GeoIP-based language redirect (runs once on first visit)
+  const LANG_KEY = 'prizma_lang';
+  const saved = localStorage.getItem(LANG_KEY);
+
+  if (!saved && window.location.pathname === '/') {
+    // Only redirect from root page, not from /en, /ru, /de
+    fetch('https://ipapi.co/json/')
+      .then(r => r.json())
+      .then(data => {
+        const country = (data.country_code || '').toUpperCase();
+        const ruCountries = ['RU', 'UA', 'BY', 'KZ', 'UZ', 'KG', 'TJ', 'TM', 'AZ', 'AM', 'GE', 'MD'];
+        const deCountries = ['DE', 'AT', 'CH', 'LI', 'LU'];
+
+        let lang = 'en';
+        if (ruCountries.includes(country)) lang = 'ru';
+        else if (deCountries.includes(country)) lang = 'de';
+
+        localStorage.setItem(LANG_KEY, lang);
+        if (lang !== 'en') {
+          window.location.href = `/${lang}`;
+        }
+      })
+      .catch(() => {
+        // On error, stay on English
+        localStorage.setItem(LANG_KEY, 'en');
+      });
+  }
+</script>
