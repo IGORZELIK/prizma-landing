@@ -23,7 +23,7 @@
       { "name": "Post", "desc": "Expertise, die man sieht. Kein einfaches Bild, sondern ein Post, der den Experten im Feed verankert und Schritt für Schritt Vertrauen aufbaut." },
       { "name": "Reel", "desc": "Kurzvideo mit klarer Botschaft. Algorithmen spielen es organisch aus. Der direkteste Weg zu neuen Followern. Ohne Anzeigenbudget." },
       { "name": "Karussell", "desc": "Komplexe Inhalte, übersichtlich aufbereitet. Karussells werden gespeichert und geteilt. Content, zu dem man immer wieder zurückkommt." },
-      { "name": "Artikel", "desc": "SEO- und GEO-optimierter Blogartikel, der jahrelang Traffic bringt. PRIZMA analysiert echte Suchanfragen und strukturiert Texte, die ranken." },
+      { "name": "Blog-Artikel", "desc": "SEO- und GEO-optimierter Blogartikel, der jahrelang Traffic bringt. PRIZMA analysiert echte Suchanfragen und strukturiert Texte, die ranken." },
       { "name": "KI-Avatar", "desc": "Der Experte täglich präsent. Ganz ohne Kamera. Ein KI-Avatar überträgt Stimme und Auftreten im Videoformat, automatisch und kontinuierlich." },
       { "name": "Repost", "desc": "Ein Inhalt, auf allen Kanälen. Ton, Länge und Format werden je Plattform angepasst. Die Botschaft bleibt dieselbe." }
     ]
