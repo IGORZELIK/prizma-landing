@@ -18,7 +18,7 @@
   },
   "modules": {
     "heading": "Der Ansatz hat sich verändert. Das Werkzeug auch.",
-    "subheading": "Regelmäßig posten reicht heute nicht mehr. Algorithmen bewerten Konsistenz, thematische Relevanz und Nutzerverhalten. PRIZMA erstellt alle sechs Formate aus einer einzigen Idee, jedes passgenau für seinen Kanal.",
+    "subheading": "Regelmäßig posten reicht heute nicht mehr. Algorithmen bewerten Konsistenz, thematische Relevanz und Nutzerverhalten. PRIZMA erstellt die gewünschten Formate aus einer einzigen Idee, jedes passgenau für seinen Kanal.",
     "items": [
       { "name": "Post", "desc": "Expertise, die man sieht. Kein einfaches Bild, sondern ein Post, der den Experten im Feed verankert und Schritt für Schritt Vertrauen aufbaut." },
       { "name": "Reel", "desc": "Kurzvideo mit klarer Botschaft. Algorithmen spielen es organisch aus. Der direkteste Weg zu neuen Followern. Ohne Anzeigenbudget." },
@@ -50,7 +50,7 @@
     "heading": "So funktioniert es",
     "steps": [
       { "title": "Thema", "desc": "Sie geben ein Thema, eine Idee oder einen Expertenstandpunkt ein" },
-      { "title": "PRIZMA", "desc": "Die KI recherchiert, berücksichtigt SEO- und GEO-Signale und erstellt sechs Formate" },
+      { "title": "PRIZMA", "desc": "Die KI recherchiert, berücksichtigt SEO- und GEO-Signale und erstellt die gewählten Formate" },
       { "title": "Freigabe", "desc": "Sie prüfen das Ergebnis. Ohne Ihre Freigabe wird nichts veröffentlicht." },
       { "title": "Live", "desc": "Der Content wird automatisch auf allen Plattformen ausgespielt." }
     ]

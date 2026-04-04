@@ -18,7 +18,7 @@
   },
   "modules": {
     "heading": "Content has evolved. Your tools should too.",
-    "subheading": "Publishing alone is not enough anymore. Platform algorithms reward consistency, topical authority, and behavioral signals. PRIZMA builds all six formats from a single idea — each one tuned to its channel.",
+    "subheading": "Publishing alone is not enough anymore. Platform algorithms reward consistency, topical authority, and behavioral signals. PRIZMA builds the formats you need from a single idea, each one tuned to its channel.",
     "items": [
       { "name": "Post", "desc": "Authority, made visible. A well-crafted post positions the expert in the feed and earns trust over time — not just a one-time impression." },
       { "name": "Reel", "desc": "Short-form video that carries real expertise. Algorithms distribute it organically. The most effective way to reach a new audience without paid media." },
@@ -50,7 +50,7 @@
     "heading": "How it works",
     "steps": [
       { "title": "Topic", "desc": "You provide a topic, idea, or expert perspective" },
-      { "title": "PRIZMA", "desc": "AI researches it, applies SEO and GEO signals, and produces six formats" },
+      { "title": "PRIZMA", "desc": "AI researches it, applies SEO and GEO signals, and produces the selected formats" },
       { "title": "You review", "desc": "You check the output — nothing goes out without your approval" },
       { "title": "Published", "desc": "Content is distributed automatically across all platforms" }
     ]
