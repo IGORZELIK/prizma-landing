@@ -6,11 +6,12 @@ const { t } = Astro.props;
 
 const phases = [
   {
-    quarter: 'Q1 2026',
-    title: 'Ядро платформы',
+    id: 'launched',
     status: 'done',
-    statusLabel: 'Готово',
-    color: '#10B981',
+    period: 'Запущено',
+    date: '2025',
+    title: 'Ядро платформы',
+    color: '#22c55e',
     items: [
       { label: '6 модулей контента', desc: 'Аватар, Reels, посты, карусели, SEO-статьи, репостинг — все форматы в одной системе' },
       { label: 'Единый контент-план', desc: 'Один источник идей разворачивается во все форматы автоматически' },
@@ -23,11 +24,12 @@ const phases = [
     ],
   },
   {
-    quarter: 'Q2 2026',
-    title: 'Релиз платформы',
-    status: 'current',
-    statusLabel: 'Сейчас',
-    color: '#06B6D4',
+    id: 'current',
+    status: 'in-progress',
+    period: 'В разработке',
+    date: 'Q2 2026',
+    title: 'Расширение рынков и форматов',
+    color: '#f59e0b',
     items: [
       { label: 'Полный SEO-цикл', desc: 'Семантическое ядро, генерация статей, автопубликация на блог клиента' },
       { label: 'Мультиязычный SEO-модуль', desc: 'Статьи на нескольких языках с раздельной оптимизацией под каждый рынок' },
@@ -36,87 +38,104 @@ const phases = [
     ],
   },
   {
-    quarter: 'Q3 2026',
-    title: 'Контроль качества и аналитика',
+    id: 'q3',
     status: 'planned',
-    statusLabel: 'В планах',
-    color: '#8B5CF6',
+    period: 'Планируется',
+    date: 'Q3 2026',
+    title: 'AI-агенты: контроль качества',
+    color: '#8b5cf6',
     items: [
-      { label: 'AI-агент проверки контента', desc: 'Автоматическая проверка перед публикацией: тон, факты, соответствие бренду' },
-      { label: 'Сбор метрик по каждому посту', desc: 'Охваты, клики, вовлечённость — всё в единой аналитической панели' },
-      { label: 'Расширенная видеогенерация', desc: 'Видео с озвучкой, субтитрами и брендированными вставками' },
-      { label: 'Клиентские блоги на Astro SSR', desc: 'Отдельные SEO-оптимизированные сайты для публикации статей клиентов' },
+      { label: 'Quality Gate Agent', desc: 'AI-проверка контента перед публикацией: факты, стиль, tone of voice' },
+      { label: 'Аналитика постов', desc: 'Автосбор метрик: охваты, лайки, вовлечённость по каждому клиенту' },
+      { label: 'Astro SSR блог', desc: 'Рендеринг клиентских блогов с идеальными Core Web Vitals' },
     ],
   },
   {
-    quarter: 'Q4 2026',
-    title: 'Самообучающаяся система',
+    id: 'q4',
     status: 'planned',
-    statusLabel: 'В планах',
-    color: '#8B5CF6',
+    period: 'Планируется',
+    date: 'Q4 2026',
+    title: 'Самообучающаяся система',
+    color: '#ec4899',
     items: [
       { label: 'SEO Feedback Loop', desc: 'Мониторинг позиций, автодоработка статей и переиндексация по результатам' },
-      { label: 'Content Performance Agent', desc: 'Автокоррекция контент-плана на основе реальных метрик каждого поста' },
-      { label: 'Кросс-модульная связность', desc: 'Видео, статьи, посты и карусели ссылаются друг на друга как единая система' },
+      { label: 'Content Performance Agent', desc: 'Анализ что работает у клиента, автокоррекция контент-плана' },
+      { label: 'Кросс-модульная связность', desc: 'AI-агент синхронизирует нарратив между всеми форматами контента' },
     ],
   },
 ];
+
+const statusConfig: Record<string, { label: string; icon: string }> = {
+  'done':        { label: 'Готово',    icon: '✓' },
+  'in-progress': { label: 'В работе', icon: '◉' },
+  'planned':     { label: 'В планах', icon: '◎' },
+};
 ---
 
 <section class="roadmap" id="roadmap">
   <div class="section-wrap">
-    <h2 class="reveal">От платформы к агентской системе</h2>
-    <p class="roadmap-sub reveal">PRIZMA развивается в сторону автономных AI-агентов. Открытый roadmap — мы строим публично.</p>
+    <!-- Header -->
+    <div class="roadmap-header reveal">
+      <div class="roadmap-pill">
+        <span class="pill-dot">◉</span>
+        Roadmap 2025–2026
+      </div>
+      <h2>Куда движется PRIZMA</h2>
+      <p class="roadmap-sub">От автоматизации контента к самообучающейся системе, которая сама улучшает результаты ваших публикаций</p>
+    </div>
 
+    <!-- Timeline -->
     <div class="timeline">
-      <!-- Vertical line -->
-      <div class="timeline-line"></div>
-
       {phases.map((phase, i) => (
-        <div class="phase-row reveal" data-index={i}>
+        <div class="phase-row reveal" data-index={i} style={`--phase-color: ${phase.color};`}>
           <!-- Node -->
-          <div class={`phase-node node-${phase.status}`} style={`--color: ${phase.color};`}>
-            {phase.status === 'done' && (
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            )}
+          <div class={`phase-node node-${phase.status}`}>
+            <span class="node-icon">{statusConfig[phase.status].icon}</span>
           </div>
+
+          <!-- Connector line -->
+          {i < phases.length - 1 && (
+            <div class={`connector connector-${phase.status}`}
+              style={`--next-color: ${phases[i + 1].color};`}
+            ></div>
+          )}
 
           <!-- Card -->
           <div
-            class={`phase-card glass-card phase-${phase.status}`}
-            style={`--accent: ${phase.color};`}
-            data-open={i === 1 ? 'true' : 'false'}
+            class={`phase-card phase-${phase.status}`}
+            data-open={phase.status === 'in-progress' ? 'true' : 'false'}
           >
+            <!-- Card header -->
             <div class="phase-header">
-              <div class="phase-meta">
-                <span class="phase-quarter">{phase.quarter}</span>
-                <span class={`phase-badge badge-${phase.status}`}>{phase.statusLabel}</span>
-              </div>
-              <div class="phase-title-row">
-                <h3 class="phase-title">{phase.title}</h3>
+              <div class="phase-top-row">
+                <span class="phase-date">{phase.date}</span>
+                <span class="phase-status-label">{statusConfig[phase.status].label}</span>
+                <div class="phase-spacer"></div>
                 <div class="phase-chevron">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <polyline points="4,6 8,10 12,6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                   </svg>
                 </div>
               </div>
+              <h3 class="phase-title">{phase.title}</h3>
             </div>
 
+            <!-- Card body -->
             <div class="phase-body">
-              <div class="phase-count">{phase.items.length} {phase.items.length === 1 ? 'пункт' : phase.items.length < 5 ? 'пункта' : 'пунктов'}</div>
-              <ul class="phase-items">
+              <p class="phase-count">
+                {phase.items.length} {phase.items.length > 4 ? 'фич' : phase.items.length > 1 ? 'фичи' : 'фича'}
+              </p>
+              <div class="phase-items">
                 {phase.items.map((item, idx) => (
-                  <li style={`animation-delay: ${idx * 0.05}s`}>
-                    <span class="item-dot" style={`background: ${phase.color};`}></span>
-                    <span class="item-content">
-                      <span class="item-label">{item.label}</span>
-                      <span class="item-desc">{item.desc}</span>
-                    </span>
-                  </li>
+                  <div class="phase-item" style={`--item-delay: ${idx * 0.06}s`}>
+                    <div class="item-dot"></div>
+                    <div class="item-text">
+                      <div class="item-label">{item.label}</div>
+                      <div class="item-desc">{item.desc}</div>
+                    </div>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -124,9 +143,12 @@ const phases = [
     </div>
 
     <!-- CTA -->
-    <div class="roadmap-cta glass-card reveal">
-      <p class="roadmap-cta-text">Хотите повлиять на приоритеты? Расскажите, какие функции важны для вас.</p>
-      <a href="#contact" class="btn-primary">Связаться</a>
+    <div class="roadmap-cta reveal">
+      <div class="cta-text">
+        <div class="cta-title">Хотите повлиять на приоритеты?</div>
+        <div class="cta-desc">Напишите нам, какие функции важны для вас</div>
+      </div>
+      <a href="#contact" class="cta-btn">Связаться</a>
     </div>
   </div>
 </section>
@@ -137,280 +159,345 @@ const phases = [
     z-index: 1;
   }
 
-  .roadmap h2 {
+  /* Header */
+  .roadmap-header {
+    max-width: 640px;
+    margin: 0 auto 56px;
     text-align: center;
+  }
+
+  .roadmap-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid rgba(139,92,246,0.2);
+    background: rgba(139,92,246,0.06);
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8b5cf6;
+    font-family: monospace;
+  }
+
+  .pill-dot {
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50%      { opacity: 0.8; }
+  }
+
+  .roadmap-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 12px;
+    background: linear-gradient(135deg, #f0f0f5 30%, rgba(139,92,246,0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .roadmap-sub {
-    text-align: center;
-    color: var(--text-dim, #6B7280);
-    margin-top: 12px;
-    margin-bottom: 72px;
     font-size: 1rem;
-  }
-
-  /* Timeline layout */
-  .timeline {
-    position: relative;
-    max-width: 780px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+    max-width: 480px;
     margin: 0 auto;
-    padding-left: 48px;
   }
 
-  .timeline-line {
-    position: absolute;
-    left: 12px;
-    top: 8px;
-    bottom: 8px;
-    width: 2px;
-    background: linear-gradient(
-      to bottom,
-      #10B981 0%,
-      #06B6D4 35%,
-      rgba(139, 92, 246, 0.3) 65%,
-      rgba(139, 92, 246, 0.1) 100%
-    );
+  /* Timeline */
+  .timeline {
+    max-width: 560px;
+    margin: 0 auto;
   }
 
   /* Phase row */
   .phase-row {
     position: relative;
-    margin-bottom: 28px;
+    padding-left: 48px;
   }
 
   /* Node */
   .phase-node {
     position: absolute;
-    left: -42px;
-    top: 20px;
-    width: 24px;
-    height: 24px;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
+    border: 2px solid var(--phase-color);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
+    box-shadow: 0 0 20px color-mix(in srgb, var(--phase-color) 20%, transparent);
+  }
+
+  .node-icon {
+    font-size: 14px;
+    color: var(--phase-color);
+    font-weight: 700;
   }
 
   .node-done {
-    background: var(--color);
-    border: 2px solid var(--color);
+    background: var(--phase-color);
   }
 
-  .node-current {
-    background: var(--color);
-    border: 2px solid var(--color);
-    box-shadow: 0 0 0 6px color-mix(in srgb, var(--color) 20%, transparent);
-    animation: nodePulse 2s ease-in-out infinite;
+  .node-done .node-icon {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .node-in-progress {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--phase-color) 20%, transparent), color-mix(in srgb, var(--phase-color) 7%, transparent));
   }
 
   .node-planned {
-    background: transparent;
-    border: 2px solid var(--color);
-    opacity: 0.5;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--phase-color) 20%, transparent), color-mix(in srgb, var(--phase-color) 7%, transparent));
   }
 
-  @keyframes nodePulse {
-    0%, 100% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--color) 15%, transparent); }
-    50%       { box-shadow: 0 0 0 10px color-mix(in srgb, var(--color) 5%, transparent); }
+  /* Connector line */
+  .connector {
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    width: 2px;
+    bottom: -24px;
+    z-index: 1;
+  }
+
+  .connector-done {
+    background: linear-gradient(to bottom, var(--phase-color), color-mix(in srgb, var(--next-color) 27%, transparent));
+  }
+
+  .connector-in-progress,
+  .connector-planned {
+    background: linear-gradient(to bottom, color-mix(in srgb, var(--phase-color) 27%, transparent), color-mix(in srgb, var(--next-color) 14%, transparent));
   }
 
   /* Card */
   .phase-card {
-    padding: 0;
-    border-left: 2px solid var(--accent);
-    overflow: hidden;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
     cursor: pointer;
-    transition: background 0.3s, box-shadow 0.3s;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .phase-card[data-open="true"] {
+    background: color-mix(in srgb, var(--phase-color) 8%, transparent);
+    border-color: color-mix(in srgb, var(--phase-color) 20%, transparent);
   }
 
   .phase-card:hover {
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.04);
   }
 
+  .phase-card[data-open="true"]:hover {
+    background: color-mix(in srgb, var(--phase-color) 10%, transparent);
+  }
+
+  /* Header */
   .phase-header {
-    padding: 22px 28px;
+    padding: 20px 24px;
   }
 
-  .phase-meta {
+  .phase-top-row {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 8px;
   }
 
-  .phase-quarter {
-    font-size: 0.8rem;
-    color: var(--text-dim, #6B7280);
-    letter-spacing: 1px;
+  .phase-date {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--phase-color);
+    background: color-mix(in srgb, var(--phase-color) 10%, transparent);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: monospace;
+  }
+
+  .phase-status-label {
+    font-size: 10px;
     font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--phase-color);
+    opacity: 0.7;
   }
 
-  .phase-badge {
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
-  }
-
-  .badge-done    { background: rgba(16,185,129,0.15); color: #10B981; }
-  .badge-current { background: rgba(6,182,212,0.15);  color: #06B6D4; animation: badgePulse 2s ease-in-out infinite; }
-  .badge-planned { background: rgba(139,92,246,0.15); color: #8B5CF6; }
-
-  @keyframes badgePulse {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0.6; }
-  }
-
-  .phase-title-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-  }
-
-  .phase-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-primary, #F1F1F3);
-    margin: 0;
-  }
+  .phase-spacer { flex: 1; }
 
   .phase-chevron {
-    color: var(--text-dim, #6B7280);
-    transition: transform 0.3s;
-    flex-shrink: 0;
+    color: rgba(255,255,255,0.4);
+    transition: transform 0.3s ease;
   }
 
   .phase-card[data-open="true"] .phase-chevron {
     transform: rotate(180deg);
   }
 
+  .phase-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f0f0f5;
+    margin: 0;
+    line-height: 1.3;
+  }
+
   /* Body (collapsible) */
   .phase-body {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease, padding 0.3s ease;
-    padding: 0;
+    transition: max-height 0.5s ease;
   }
 
   .phase-card[data-open="true"] .phase-body {
     max-height: 800px;
-    padding: 0 0 24px;
   }
 
   .phase-count {
-    font-size: 0.72rem;
-    color: var(--text-dim, #6B7280);
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    padding: 0 28px 12px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    padding-top: 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    margin: 0 0 16px;
+    padding: 0 24px;
+    font-family: monospace;
   }
 
+  /* Items */
   .phase-items {
-    list-style: none;
-    padding: 0 28px 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 10px;
+    padding: 0 24px 24px;
   }
 
   @keyframes fadeSlideIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateX(-8px); }
+    to   { opacity: 1; transform: translateX(0); }
   }
 
-  .phase-card[data-open="true"] .phase-items li {
-    animation: fadeSlideIn 0.3s ease forwards;
+  .phase-card[data-open="true"] .phase-item {
+    animation: fadeSlideIn 0.4s ease forwards var(--item-delay);
     opacity: 0;
   }
 
-  .phase-items li {
+  .phase-item {
     display: flex;
+    gap: 12px;
     align-items: flex-start;
-    gap: 10px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-  }
-
-  .phase-items li:last-child {
-    border-bottom: none;
   }
 
   .item-dot {
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
+    background: var(--phase-color);
+    margin-top: 7px;
     flex-shrink: 0;
-    margin-top: 6px;
+    opacity: 0.6;
   }
 
-  .item-content {
+  .item-text {
     display: flex;
     flex-direction: column;
-    gap: 2px;
   }
 
   .item-label {
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 600;
-    color: #e2e8f0;
+    color: #e0e0e8;
     line-height: 1.4;
   }
 
   .item-desc {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.38);
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
     line-height: 1.5;
+    margin-top: 2px;
   }
 
-  /* Roadmap CTA */
+  /* CTA */
   .roadmap-cta {
-    max-width: 780px;
-    margin: 48px auto 0;
-    padding: 36px 40px;
+    max-width: 560px;
+    margin: 40px auto 0;
+    padding-left: 48px;
+  }
+
+  .roadmap-cta > * {
+    padding: 20px 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: linear-gradient(135deg, rgba(139,92,246,0.05), rgba(236,72,153,0.03));
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    border-color: rgba(139,92,246,0.2);
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
-  .roadmap-cta-text {
-    font-size: 0.95rem;
-    color: var(--text-secondary, #9CA3AF);
-    line-height: 1.6;
-    max-width: 480px;
-    margin: 0;
+  /* override: make cta itself the flex container */
+  .roadmap-cta {
+    padding: 20px 24px 20px 72px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: linear-gradient(135deg, rgba(139,92,246,0.05), rgba(236,72,153,0.03));
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
-  .btn-primary {
-    display: inline-block;
-    padding: 12px 28px;
-    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
-    border-radius: 12px;
+  .cta-text { flex: 1; min-width: 200px; }
+
+  .cta-title {
+    font-size: 14px;
     font-weight: 600;
-    font-size: 0.9rem;
-    color: white;
+    color: #e0e0e8;
+    margin-bottom: 4px;
+  }
+
+  .cta-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
     text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(139,92,246,0.3);
     white-space: nowrap;
-    transition: opacity 0.2s, transform 0.2s;
-    flex-shrink: 0;
   }
 
-  .btn-primary:hover {
-    opacity: 0.85;
+  .cta-btn:hover {
     transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(139,92,246,0.4);
   }
 
+  /* Mobile */
   @media (max-width: 768px) {
-    .timeline { padding-left: 36px; }
-    .phase-node { left: -30px; width: 20px; height: 20px; }
-    .roadmap-cta { flex-direction: column; text-align: center; }
+    .phase-row { padding-left: 40px; }
+    .phase-node { width: 26px; height: 26px; }
+    .connector { left: 12px; }
+    .roadmap-cta { padding-left: 40px; flex-direction: column; text-align: center; }
+    .roadmap-header h2 { font-size: 1.7rem; }
   }
 </style>
 
