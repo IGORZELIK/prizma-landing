@@ -4,7 +4,6 @@ interface Props {
 }
 const { t } = Astro.props;
 
-/* Order matches the modules: Пост, Рилс, Карусель, Статья, Аватар, Репост */
 const formats = [
   { label: t.modules.items[0].name, color: '#8B5CF6' },
   { label: t.modules.items[1].name, color: '#06B6D4' },
@@ -13,67 +12,128 @@ const formats = [
   { label: t.modules.items[4].name, color: '#EC4899' },
   { label: t.modules.items[5].name, color: '#6366F1' },
 ];
+
+// Single SVG canvas: 800 x 360
+// Prism transform: translate(50, 95) scale(0.9)
+// Original prism right-junction point (150,90) maps to:
+// x = 50 + 150*0.9 = 185,  y = 95 + 90*0.9 = 176
+const originX = 185;
+const originY = 176;
+
+// 6 badge positions (right side), evenly distributed
+const badgeX = 590;
+const badgeH = 44;
+const badgeGap = 12;
+const totalH = 6 * badgeH + 5 * badgeGap;  // 324
+const startY = (360 - totalH) / 2;           // 18
+
+const badges = formats.map((f, i) => ({
+  ...f,
+  bx: badgeX,
+  by: startY + i * (badgeH + badgeGap),
+  cy: startY + i * (badgeH + badgeGap) + badgeH / 2,
+}));
 ---
 
 <section class="visual-demo" id="visual-demo">
   <div class="section-wrap">
     <h2 class="reveal">{t.visual_demo.heading}</h2>
 
-    <div class="prism-visual">
-      <!-- Prism logo (left) -->
-      <div class="prism-logo-wrap">
-        <svg class="prism-logo-svg" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="100,5 50,90 150,90" fill="#8B5CF6"/>
-          <polygon points="5,175 50,90 100,175" fill="#06B6D4"/>
-          <polygon points="195,175 150,90 100,175" fill="#10B981"/>
-        </svg>
-        <!-- Glow behind logo -->
-        <div class="prism-glow"></div>
-      </div>
+    <div class="scene-wrap">
+      <svg
+        class="prism-scene"
+        viewBox="0 0 800 360"
+        preserveAspectRatio="xMidYMid meet"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <radialGradient id="prismGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"  stop-color="#8B5CF6" stop-opacity="0.3"/>
+            <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.1"/>
+            <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="dropGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
 
-      <!-- SVG Rays (connecting prism to badges) -->
-      <svg class="rays-svg" viewBox="0 0 400 360" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {formats.map((f, i) => {
-          const startY = 180;
-          const endY = 30 + i * 60;
-          return (
-            <line
-              class="ray-line"
-              x1="0" y1={startY}
-              x2="400" y2={endY}
-              stroke={f.color}
-              stroke-width="2"
-              style={`--ray-delay: ${i * 0.15}s;`}
-            />
-          );
-        })}
-        {/* Glow duplicates for bloom effect */}
-        {formats.map((f, i) => {
-          const startY = 180;
-          const endY = 30 + i * 60;
-          return (
-            <line
-              class="ray-glow"
-              x1="0" y1={startY}
-              x2="400" y2={endY}
-              stroke={f.color}
-              stroke-width="6"
-              opacity="0.3"
-              style={`--ray-delay: ${i * 0.15}s;`}
-            />
-          );
-        })}
-      </svg>
+        <!-- Prism ambient glow -->
+        <circle cx={originX} cy={originY} r="110" fill="url(#prismGlow)" opacity="0.7"/>
 
-      <!-- Format badges (right) -->
-      <div class="format-badges">
-        {formats.map((f, i) => (
-          <div class="format-badge" style={`--badge-delay: ${1.2 + i * 0.15}s; --accent: ${f.color};`}>
-            <span class="badge-dot" style={`background: ${f.color};`}></span>
-            <span class="badge-label">{f.label}</span>
-          </div>
+        <!-- Glow rays (thick, soft) -->
+        {badges.map((b, i) => (
+          <line
+            class="ray-glow"
+            x1={originX} y1={originY}
+            x2={b.bx} y2={b.cy}
+            stroke={b.color}
+            stroke-width="8"
+            opacity="0.2"
+            style={`--ray-delay: ${i * 0.15}s;`}
+          />
         ))}
-      </div>
+
+        <!-- Sharp rays -->
+        {badges.map((b, i) => (
+          <line
+            class="ray-line"
+            x1={originX} y1={originY}
+            x2={b.bx} y2={b.cy}
+            stroke={b.color}
+            stroke-width="1.5"
+            style={`--ray-delay: ${i * 0.15}s;`}
+          />
+        ))}
+
+        <!-- Prism triangles (on top of rays via z-order) -->
+        <g transform="translate(50, 95) scale(0.9)" filter="url(#dropGlow)">
+          <polygon points="100,5 50,90 150,90"   fill="#8B5CF6"/>
+          <polygon points="5,175 50,90 100,175"   fill="#06B6D4"/>
+          <polygon points="195,175 150,90 100,175" fill="#10B981"/>
+        </g>
+
+        <!-- Badge backgrounds -->
+        {badges.map((b) => (
+          <rect
+            class="badge-rect"
+            x={b.bx} y={b.by}
+            width="190" height={badgeH}
+            rx="12"
+            fill="rgba(255,255,255,0.04)"
+            stroke="rgba(255,255,255,0.09)"
+            stroke-width="1"
+            style={`--badge-delay: ${1.0 + badges.indexOf(b) * 0.12}s; --accent: ${b.color};`}
+          />
+        ))}
+
+        <!-- Badge dots -->
+        {badges.map((b) => (
+          <circle cx={b.bx + 22} cy={b.cy} r="5" fill={b.color}
+            class="badge-dot-svg"
+            style={`--badge-delay: ${1.0 + badges.indexOf(b) * 0.12}s;`}
+          />
+        ))}
+
+        <!-- Badge labels -->
+        {badges.map((b) => (
+          <text
+            class="badge-text"
+            x={b.bx + 38} y={b.cy + 5}
+            font-family="Outfit, sans-serif"
+            font-size="15"
+            font-weight="500"
+            fill="#F1F1F3"
+            style={`--badge-delay: ${1.0 + badges.indexOf(b) * 0.12}s;`}
+          >
+            {b.label}
+          </text>
+        ))}
+      </svg>
     </div>
   </div>
 </section>
@@ -90,160 +150,55 @@ const formats = [
     margin: 0 auto 40px;
   }
 
-  /* Main layout: prism — rays — badges */
-  .prism-visual {
-    display: grid;
-    grid-template-columns: 180px 1fr 200px;
-    align-items: center;
-    gap: 0;
+  .scene-wrap {
     max-width: 900px;
     margin: 0 auto;
-    min-height: 360px;
   }
 
-  /* Prism logo — overlaps rays so rays come directly from it */
-  .prism-logo-wrap {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    margin-right: -118px;
-  }
-
-  .prism-logo-svg {
-    width: 140px;
-    height: 126px;
-    filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.4))
-            drop-shadow(0 0 40px rgba(6, 182, 212, 0.2));
-    position: relative;
-    z-index: 2;
-  }
-
-  .prism-glow {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.1), transparent 70%);
-    pointer-events: none;
-    opacity: 0.6;
-  }
-
-  /* Rays SVG */
-  .rays-svg {
+  .prism-scene {
     width: 100%;
-    height: 360px;
-    z-index: 1;
+    height: auto;
+    display: block;
   }
 
+  /* Ray animation */
   .ray-line,
   .ray-glow {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: drawRay 2s ease-out var(--ray-delay) forwards;
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+    animation: drawRay 2s ease-out var(--ray-delay, 0s) forwards;
   }
 
   @keyframes drawRay {
     to { stroke-dashoffset: 0; }
   }
 
-  /* Format badges */
-  .format-badges {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .format-badge {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 20px;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  /* Badge fade-in */
+  .badge-rect,
+  .badge-dot-svg,
+  .badge-text {
     opacity: 0;
-    transform: translateX(20px);
-    animation: badgeIn 0.5s ease-out var(--badge-delay) forwards;
-    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+    animation: fadeIn 0.5s ease-out var(--badge-delay, 1s) forwards;
   }
 
-  .format-badge:hover {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: var(--accent);
-    box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 20%, transparent);
+  @keyframes fadeIn {
+    to { opacity: 1; }
   }
 
-  @keyframes badgeIn {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .badge-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    box-shadow: 0 0 8px currentColor;
-  }
-
-  .badge-label {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--text-primary);
-  }
-
-  /* ---- Mobile ---- */
-  @media (max-width: 768px) {
-    .prism-visual {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-      gap: 32px;
-      justify-items: center;
-    }
-
-    .prism-logo-svg {
-      width: 100px;
-      height: 90px;
-    }
-
-    .rays-svg {
-      width: 100%;
-      height: 120px;
-      transform: rotate(90deg);
-    }
-
-    .format-badges {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .format-badge {
-      padding: 10px 16px;
-    }
+  .badge-rect:hover {
+    fill: rgba(255,255,255,0.08);
+    stroke: var(--accent);
   }
 </style>
 
 <script>
-  // Re-trigger ray animation on scroll into view
-  const section = document.querySelector('.prism-visual');
-  if (section) {
+  // Replay animation on scroll into view
+  const scene = document.querySelector('.prism-scene');
+  if (scene) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Reset animations by removing and re-adding classes
-          section.querySelectorAll('.ray-line, .ray-glow').forEach(el => {
-            const clone = el.cloneNode(true) as Element;
-            el.parentNode?.replaceChild(clone, el);
-          });
-          section.querySelectorAll('.format-badge').forEach(el => {
+          scene.querySelectorAll('.ray-line, .ray-glow, .badge-rect, .badge-dot-svg, .badge-text').forEach(el => {
             const clone = el.cloneNode(true) as Element;
             el.parentNode?.replaceChild(clone, el);
           });
@@ -251,6 +206,6 @@ const formats = [
         }
       });
     }, { threshold: 0.3 });
-    observer.observe(section);
+    observer.observe(scene);
   }
 </script>
