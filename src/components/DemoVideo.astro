@@ -9,14 +9,26 @@ const { t } = Astro.props;
   <div class="section-wrap">
     <h2 class="reveal">{t.demo.heading}</h2>
 
-    <div class="demo-player glass-card reveal">
+    <div class={`demo-player glass-card reveal${t.lang !== 'ru' ? ' demo-coming-soon' : ''}`}>
       <div class="demo-backdrop"></div>
       <div class="demo-grid-lines"></div>
-      <div class="play-btn">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff">
-          <path d="M8 5v14l11-7z"/>
-        </svg>
-      </div>
+      {t.lang === 'ru' ? (
+        <div class="play-btn">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+      ) : (
+        <div class="coming-soon-overlay">
+          <div class="coming-soon-icon">🎬</div>
+          <div class="coming-soon-label">
+            {t.lang === 'de' ? 'Demnächst verfügbar' : 'Coming soon'}
+          </div>
+          <div class="coming-soon-sub">
+            {t.lang === 'de' ? 'Video in Ihrer Sprache wird vorbereitet' : 'Video in your language is on its way'}
+          </div>
+        </div>
+      )}
     </div>
 
     <p class="demo-caption">{t.demo.caption}</p>
@@ -89,6 +101,43 @@ const { t } = Astro.props;
 
   .demo-player:hover .play-btn {
     transform: scale(1.1);
+  }
+
+  .demo-coming-soon {
+    cursor: default;
+  }
+
+  .demo-coming-soon:hover {
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+  }
+
+  .coming-soon-overlay {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .coming-soon-icon {
+    font-size: 2.5rem;
+    opacity: 0.6;
+  }
+
+  .coming-soon-label {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  .coming-soon-sub {
+    font-size: 0.85rem;
+    color: var(--text-dim);
   }
 
   .demo-caption {
