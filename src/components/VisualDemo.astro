@@ -101,38 +101,33 @@ const formats = [
     min-height: 360px;
   }
 
-  /* Prism logo — overlaps rays so rays appear to come from it */
+  /* Prism logo — overlaps rays so rays come directly from it */
   .prism-logo-wrap {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
-    margin-right: -40px;
+    margin-right: -80px;
   }
 
   .prism-logo-svg {
     width: 140px;
     height: 126px;
-    filter: drop-shadow(0 0 40px rgba(139, 92, 246, 0.5))
-            drop-shadow(0 0 80px rgba(6, 182, 212, 0.3));
+    filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.4))
+            drop-shadow(0 0 40px rgba(6, 182, 212, 0.2));
     position: relative;
     z-index: 2;
   }
 
   .prism-glow {
     position: absolute;
-    width: 280px;
-    height: 280px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.25), rgba(6, 182, 212, 0.15), rgba(16, 185, 129, 0.1), transparent 70%);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.1), transparent 70%);
     pointer-events: none;
-    animation: pulseGlow 4s ease-in-out infinite;
-  }
-
-  @keyframes pulseGlow {
-    0%, 100% { opacity: 0.5; transform: scale(0.9); }
-    50%      { opacity: 1; transform: scale(1.2); }
+    opacity: 0.6;
   }
 
   /* Rays SVG */
