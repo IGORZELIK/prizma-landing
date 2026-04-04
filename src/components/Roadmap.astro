@@ -1,0 +1,376 @@
+---
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+
+const phases = [
+  {
+    quarter: 'Q1 2026',
+    title: 'Ядро платформы',
+    status: 'done',
+    statusLabel: 'Готово',
+    color: '#10B981',
+    items: [
+      '6 модулей контента: цифровой аватар, видео Reels, посты с изображениями, карусели, SEO-статьи, репостинг',
+      'Единый контент-план на все форматы',
+      'Мультитенантная архитектура',
+      'Онбординг клиентов с AI-анализом tone of voice',
+    ],
+  },
+  {
+    quarter: 'Q2 2026',
+    title: 'Релиз платформы',
+    status: 'current',
+    statusLabel: 'Сейчас',
+    color: '#06B6D4',
+    items: [
+      'Полный SEO-цикл: семантическое ядро, генерация статей, автопубликация на блог клиента',
+      'Мультиязычный SEO-модуль',
+      'Автопостинг во все основные соцсети',
+      'Лендинг prizma.to',
+    ],
+  },
+  {
+    quarter: 'Q3 2026',
+    title: 'Контроль качества и аналитика',
+    status: 'planned',
+    statusLabel: 'В планах',
+    color: '#8B5CF6',
+    items: [
+      'AI-агент проверки контента перед публикацией',
+      'Автоматический сбор метрик по каждому посту',
+      'Расширенная видеогенерация с озвучкой',
+      'Клиентские блоги на Astro SSR',
+    ],
+  },
+  {
+    quarter: 'Q4 2026',
+    title: 'Самообучающаяся система',
+    status: 'planned',
+    statusLabel: 'В планах',
+    color: '#8B5CF6',
+    items: [
+      'SEO Feedback Loop: мониторинг позиций, автодоработка, переиндексация',
+      'Content Performance Agent: автокоррекция контент-плана на основе реальных метрик',
+      'Кросс-модульная связность между всеми форматами контента',
+    ],
+  },
+];
+---
+
+<section class="roadmap" id="roadmap">
+  <div class="section-wrap">
+    <h2 class="reveal">Куда движется PRIZMA</h2>
+    <p class="roadmap-sub reveal">Открытый roadmap. Мы строим платформу публично.</p>
+
+    <div class="timeline">
+      <!-- Vertical line -->
+      <div class="timeline-line"></div>
+
+      {phases.map((phase, i) => (
+        <div class="phase-row reveal" data-index={i}>
+          <!-- Node -->
+          <div class={`phase-node node-${phase.status}`} style={`--color: ${phase.color};`}>
+            {phase.status === 'done' && (
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <polyline points="2,6 5,9 10,3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            )}
+          </div>
+
+          <!-- Card -->
+          <div
+            class={`phase-card glass-card phase-${phase.status}`}
+            style={`--accent: ${phase.color};`}
+            data-open={i === 1 ? 'true' : 'false'}
+          >
+            <div class="phase-header">
+              <div class="phase-meta">
+                <span class="phase-quarter">{phase.quarter}</span>
+                <span class={`phase-badge badge-${phase.status}`}>{phase.statusLabel}</span>
+              </div>
+              <div class="phase-title-row">
+                <h3 class="phase-title">{phase.title}</h3>
+                <div class="phase-chevron">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <polyline points="4,6 8,10 12,6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="phase-body">
+              <ul class="phase-items">
+                {phase.items.map(item => (
+                  <li>
+                    <span class="item-dot" style={`background: ${phase.color};`}></span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="roadmap-cta glass-card reveal">
+      <p class="roadmap-cta-text">Хотите повлиять на приоритеты? Расскажите, какие функции важны для вас.</p>
+      <a href="#contact" class="btn-primary">Связаться</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .roadmap {
+    position: relative;
+    z-index: 1;
+  }
+
+  .roadmap h2 {
+    text-align: center;
+  }
+
+  .roadmap-sub {
+    text-align: center;
+    color: var(--text-dim, #6B7280);
+    margin-top: 12px;
+    margin-bottom: 72px;
+    font-size: 1rem;
+  }
+
+  /* Timeline layout */
+  .timeline {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+    padding-left: 48px;
+  }
+
+  .timeline-line {
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      #10B981 0%,
+      #06B6D4 35%,
+      rgba(139, 92, 246, 0.3) 65%,
+      rgba(139, 92, 246, 0.1) 100%
+    );
+  }
+
+  /* Phase row */
+  .phase-row {
+    position: relative;
+    margin-bottom: 28px;
+  }
+
+  /* Node */
+  .phase-node {
+    position: absolute;
+    left: -42px;
+    top: 20px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .node-done {
+    background: var(--color);
+    border: 2px solid var(--color);
+  }
+
+  .node-current {
+    background: var(--color);
+    border: 2px solid var(--color);
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--color) 20%, transparent);
+    animation: nodePulse 2s ease-in-out infinite;
+  }
+
+  .node-planned {
+    background: transparent;
+    border: 2px solid var(--color);
+    opacity: 0.5;
+  }
+
+  @keyframes nodePulse {
+    0%, 100% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--color) 15%, transparent); }
+    50%       { box-shadow: 0 0 0 10px color-mix(in srgb, var(--color) 5%, transparent); }
+  }
+
+  /* Card */
+  .phase-card {
+    padding: 0;
+    border-left: 2px solid var(--accent);
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+
+  .phase-card:hover {
+    background: rgba(255,255,255,0.06);
+  }
+
+  .phase-header {
+    padding: 22px 28px;
+  }
+
+  .phase-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .phase-quarter {
+    font-size: 0.8rem;
+    color: var(--text-dim, #6B7280);
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  .phase-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .badge-done    { background: rgba(16,185,129,0.15); color: #10B981; }
+  .badge-current { background: rgba(6,182,212,0.15);  color: #06B6D4; animation: badgePulse 2s ease-in-out infinite; }
+  .badge-planned { background: rgba(139,92,246,0.15); color: #8B5CF6; }
+
+  @keyframes badgePulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.6; }
+  }
+
+  .phase-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .phase-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary, #F1F1F3);
+    margin: 0;
+  }
+
+  .phase-chevron {
+    color: var(--text-dim, #6B7280);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+
+  .phase-card[data-open="true"] .phase-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Body (collapsible) */
+  .phase-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 28px;
+  }
+
+  .phase-card[data-open="true"] .phase-body {
+    max-height: 400px;
+    padding: 0 28px 24px;
+  }
+
+  .phase-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .phase-items li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-secondary, #9CA3AF);
+    line-height: 1.6;
+  }
+
+  .item-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  /* Roadmap CTA */
+  .roadmap-cta {
+    max-width: 780px;
+    margin: 48px auto 0;
+    padding: 36px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-color: rgba(139,92,246,0.2);
+  }
+
+  .roadmap-cta-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary, #9CA3AF);
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s, transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 768px) {
+    .timeline { padding-left: 36px; }
+    .phase-node { left: -30px; width: 20px; height: 20px; }
+    .roadmap-cta { flex-direction: column; text-align: center; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.phase-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const isOpen = card.getAttribute('data-open') === 'true';
+      card.setAttribute('data-open', isOpen ? 'false' : 'true');
+    });
+  });
+</script>
