@@ -68,7 +68,7 @@ const formats = [
       <!-- Format badges (right) -->
       <div class="format-badges">
         {formats.map((f, i) => (
-          <div class="format-badge" style={`--badge-delay: ${0.6 + i * 0.12}s; --accent: ${f.color};`}>
+          <div class="format-badge" style={`--badge-delay: ${1.2 + i * 0.15}s; --accent: ${f.color};`}>
             <span class="badge-dot" style={`background: ${f.color};`}></span>
             <span class="badge-label">{f.label}</span>
           </div>
@@ -101,46 +101,52 @@ const formats = [
     min-height: 360px;
   }
 
-  /* Prism logo */
+  /* Prism logo — overlaps rays so rays appear to come from it */
   .prism-logo-wrap {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
+    margin-right: -40px;
   }
 
   .prism-logo-svg {
     width: 140px;
     height: 126px;
-    filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.4));
+    filter: drop-shadow(0 0 40px rgba(139, 92, 246, 0.5))
+            drop-shadow(0 0 80px rgba(6, 182, 212, 0.3));
+    position: relative;
+    z-index: 2;
   }
 
   .prism-glow {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.1), transparent 70%);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.25), rgba(6, 182, 212, 0.15), rgba(16, 185, 129, 0.1), transparent 70%);
     pointer-events: none;
     animation: pulseGlow 4s ease-in-out infinite;
   }
 
   @keyframes pulseGlow {
-    0%, 100% { opacity: 0.4; transform: scale(0.9); }
-    50%      { opacity: 0.8; transform: scale(1.15); }
+    0%, 100% { opacity: 0.5; transform: scale(0.9); }
+    50%      { opacity: 1; transform: scale(1.2); }
   }
 
   /* Rays SVG */
   .rays-svg {
     width: 100%;
     height: 360px;
+    z-index: 1;
   }
 
   .ray-line,
   .ray-glow {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
-    animation: drawRay 1s ease-out var(--ray-delay) forwards;
+    animation: drawRay 2s ease-out var(--ray-delay) forwards;
   }
 
   @keyframes drawRay {
