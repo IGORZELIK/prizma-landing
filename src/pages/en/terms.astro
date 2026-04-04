@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+import t from '../../i18n/en.json';
+---
+
+<Layout t={t}>
+  <Nav t={t} />
+  <main class="legal-page">
+    <div class="section-wrap">
+      <h1>Terms of Use</h1>
+      <p class="legal-date">Last updated: April 2026</p>
+
+      <div class="legal-body">
+
+        <h2>1. About the Service</h2>
+        <p>PRIZMA is an automated content creation and publishing platform developed and maintained by Digitalkin OÜ (Estonia). By using the service, you accept these terms.</p>
+
+        <h2>2. Registration and Account</h2>
+        <p>Using PRIZMA requires registration. You agree to provide accurate information and are responsible for the security of your account. One account is provided per organization unless otherwise agreed.</p>
+
+        <h2>3. Acceptable Use</h2>
+        <p>You agree to use PRIZMA for lawful purposes only. The following are prohibited:</p>
+        <ul>
+          <li>Creating content that violates applicable law or the rights of third parties</li>
+          <li>Using the platform to distribute spam or harmful content</li>
+          <li>Attempting to hack or disrupt the service</li>
+          <li>Reselling access to the service without permission from Digitalkin OÜ</li>
+        </ul>
+
+        <h2>4. Your Content</h2>
+        <p>You retain all rights to content you upload to PRIZMA. By providing materials, you grant Digitalkin OÜ a limited license to process them solely for the purpose of delivering the service. We do not use your content to train AI models without your explicit consent.</p>
+
+        <h2>5. Intellectual Property</h2>
+        <p>The PRIZMA platform, its design, algorithms, and source code are the property of Digitalkin OÜ and are protected by intellectual property law.</p>
+
+        <h2>6. Payment and Plans</h2>
+        <p>Payment terms are determined by the selected subscription plan. Payment is made in advance. Refunds are available within 7 days of the first payment, provided the service has not been used to a significant extent.</p>
+
+        <h2>7. Limitation of Liability</h2>
+        <p>PRIZMA is provided "as is." Digitalkin OÜ is not liable for indirect damages, loss of profit, or outcomes arising from the use of generated content. Maximum liability of Digitalkin OÜ is limited to the amount paid for the last 3 months of service use.</p>
+
+        <h2>8. Termination</h2>
+        <p>You may discontinue use of the service at any time. Digitalkin OÜ reserves the right to suspend or terminate access in case of violation of these terms.</p>
+
+        <h2>9. Changes to Terms</h2>
+        <p>We may update these terms. We will notify you of material changes by email at least 14 days before they take effect.</p>
+
+        <h2>10. Governing Law</h2>
+        <p>These terms are governed by the laws of Estonia. All disputes shall be resolved in the courts of Estonia.</p>
+
+        <h2>11. Contact</h2>
+        <p>Digitalkin OÜ<br/>
+        Email: <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+      </div>
+    </div>
+  </main>
+  <Footer t={t} />
+</Layout>
+
+<style>
+  .legal-page { min-height: 80vh; }
+  .legal-page h1 { margin-bottom: 8px; }
+  .legal-date { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 60px; }
+  .legal-body h2 { font-size: 1.2rem; margin-top: 40px; margin-bottom: 12px; color: var(--text-primary); }
+  .legal-body p, .legal-body ul { color: var(--text-secondary, #9CA3AF); line-height: 1.8; font-size: 0.95rem; }
+  .legal-body ul { padding-left: 20px; margin-top: 8px; }
+  .legal-body li { margin-bottom: 6px; }
+  .legal-body a { color: var(--purple); text-decoration: none; }
+  .legal-body a:hover { text-decoration: underline; }
+</style>

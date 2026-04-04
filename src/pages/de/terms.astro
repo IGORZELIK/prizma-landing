@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+import t from '../../i18n/de.json';
+---
+
+<Layout t={t}>
+  <Nav t={t} />
+  <main class="legal-page">
+    <div class="section-wrap">
+      <h1>Nutzungsbedingungen</h1>
+      <p class="legal-date">Stand: April 2026</p>
+
+      <div class="legal-body">
+
+        <h2>1. Über den Dienst</h2>
+        <p>PRIZMA ist eine Plattform zur automatisierten Content-Erstellung und -Veröffentlichung, entwickelt und betrieben von Digitalkin OÜ (Estland). Mit der Nutzung des Dienstes akzeptieren Sie diese Bedingungen.</p>
+
+        <h2>2. Registrierung und Konto</h2>
+        <p>Die Nutzung von PRIZMA erfordert eine Registrierung. Sie verpflichten sich, genaue Angaben zu machen, und sind für die Sicherheit Ihres Kontos verantwortlich. Pro Organisation wird ein Konto bereitgestellt, sofern nicht anders vereinbart.</p>
+
+        <h2>3. Zulässige Nutzung</h2>
+        <p>Sie verpflichten sich, PRIZMA ausschließlich für rechtmäßige Zwecke zu nutzen. Folgendes ist untersagt:</p>
+        <ul>
+          <li>Erstellung von Inhalten, die gegen geltendes Recht oder Rechte Dritter verstoßen</li>
+          <li>Nutzung der Plattform zur Verbreitung von Spam oder schädlichen Inhalten</li>
+          <li>Versuche, den Dienst zu hacken oder zu stören</li>
+          <li>Weiterverkauf des Dienstzugangs ohne Genehmigung von Digitalkin OÜ</li>
+        </ul>
+
+        <h2>4. Ihre Inhalte</h2>
+        <p>Sie behalten alle Rechte an den Inhalten, die Sie in PRIZMA hochladen. Durch die Bereitstellung von Materialien erteilen Sie Digitalkin OÜ eine eingeschränkte Lizenz zur Verarbeitung ausschließlich zum Zweck der Erbringung des Dienstes. Wir verwenden Ihre Inhalte nicht zum Training von KI-Modellen ohne Ihre ausdrückliche Zustimmung.</p>
+
+        <h2>5. Geistiges Eigentum</h2>
+        <p>Die PRIZMA-Plattform, ihr Design, ihre Algorithmen und ihr Quellcode sind Eigentum von Digitalkin OÜ und durch das Recht des geistigen Eigentums geschützt.</p>
+
+        <h2>6. Zahlung und Tarife</h2>
+        <p>Die Zahlungsbedingungen richten sich nach dem gewählten Abonnementplan. Die Zahlung erfolgt im Voraus. Rückerstattungen sind innerhalb von 7 Tagen nach der ersten Zahlung möglich, sofern der Dienst nicht in erheblichem Umfang genutzt wurde.</p>
+
+        <h2>7. Haftungsbeschränkung</h2>
+        <p>PRIZMA wird „wie besehen" bereitgestellt. Digitalkin OÜ haftet nicht für mittelbare Schäden, entgangene Gewinne oder Ergebnisse aus der Nutzung generierter Inhalte. Die maximale Haftung von Digitalkin OÜ ist auf den in den letzten 3 Nutzungsmonaten gezahlten Betrag begrenzt.</p>
+
+        <h2>8. Beendigung</h2>
+        <p>Sie können die Nutzung des Dienstes jederzeit einstellen. Digitalkin OÜ behält sich das Recht vor, den Zugang bei Verstößen gegen diese Bedingungen auszusetzen oder zu beenden.</p>
+
+        <h2>9. Änderungen der Bedingungen</h2>
+        <p>Wir können diese Bedingungen aktualisieren. Über wesentliche Änderungen informieren wir Sie per E-Mail mindestens 14 Tage vor deren Inkrafttreten.</p>
+
+        <h2>10. Anwendbares Recht</h2>
+        <p>Diese Bedingungen unterliegen dem Recht Estlands. Alle Streitigkeiten werden vor den Gerichten Estlands ausgetragen.</p>
+
+        <h2>11. Kontakt</h2>
+        <p>Digitalkin OÜ<br/>
+        E-Mail: <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+      </div>
+    </div>
+  </main>
+  <Footer t={t} />
+</Layout>
+
+<style>
+  .legal-page { min-height: 80vh; }
+  .legal-page h1 { margin-bottom: 8px; }
+  .legal-date { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 60px; }
+  .legal-body h2 { font-size: 1.2rem; margin-top: 40px; margin-bottom: 12px; color: var(--text-primary); }
+  .legal-body p, .legal-body ul { color: var(--text-secondary, #9CA3AF); line-height: 1.8; font-size: 0.95rem; }
+  .legal-body ul { padding-left: 20px; margin-top: 8px; }
+  .legal-body li { margin-bottom: 6px; }
+  .legal-body a { color: var(--purple); text-decoration: none; }
+  .legal-body a:hover { text-decoration: underline; }
+</style>

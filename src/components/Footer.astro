@@ -47,6 +47,12 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <a href={`${prefix}/privacy`}>{t.lang === 'ru' ? 'Политика конфиденциальности' : t.lang === 'de' ? 'Datenschutz' : 'Privacy Policy'}</a>
         <span class="footer-dot">&middot;</span>
         <a href={`${prefix}/terms`}>{t.lang === 'ru' ? 'Условия использования' : t.lang === 'de' ? 'Nutzungsbedingungen' : 'Terms of Use'}</a>
+        {t.lang === 'de' && (
+          <>
+            <span class="footer-dot">&middot;</span>
+            <a href="/de/impressum">Impressum</a>
+          </>
+        )}
         <span class="footer-dot">&middot;</span>
         <span>A <a href="https://digitalkin.co" target="_blank">Digitalkin</a> product</span>
       </div>

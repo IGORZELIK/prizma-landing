@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+import t from '../../i18n/de.json';
+---
+
+<Layout t={t}>
+  <Nav t={t} />
+  <main class="legal-page">
+    <div class="section-wrap">
+      <h1>Datenschutzerklärung</h1>
+      <p class="legal-date">Stand: April 2026</p>
+
+      <div class="legal-body">
+
+        <h2>1. Verantwortlicher</h2>
+        <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO):<br/>
+        <strong>Igor Zelikovsky</strong> / Digitalkin OÜ<br/>
+        Harju maakond, Tallinn, Kesklinna linnaosa, Vesivärava tn 50-201, 10152<br/>
+        Estland<br/>
+        E-Mail: <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+        <h2>2. Arten der verarbeiteten Daten</h2>
+        <p>Im Rahmen der Nutzung von PRIZMA verarbeiten wir folgende Datenkategorien:</p>
+        <ul>
+          <li>Kontodaten: Name, E-Mail, Unternehmensname</li>
+          <li>Nutzungsdaten: Sitzungsinformationen, Aktionen im System</li>
+          <li>Technische Daten: IP-Adresse, Browsertyp, Zeitstempel</li>
+          <li>Inhalte: Themen, Texte und Materialien, die zur Generierung hochgeladen werden</li>
+          <li>Cookies und Tracking-Daten</li>
+        </ul>
+
+        <h2>3. Zwecke und Rechtsgrundlagen der Verarbeitung</h2>
+        <p>Wir verarbeiten personenbezogene Daten zu folgenden Zwecken:</p>
+        <ul>
+          <li>Bereitstellung des PRIZMA-Dienstes und seiner Funktionen (Art. 6 Abs. 1 lit. b DSGVO)</li>
+          <li>Verbesserung der Plattformqualität und der Algorithmen (Art. 6 Abs. 1 lit. f DSGVO)</li>
+          <li>Kommunikation mit Nutzern in Support-Angelegenheiten (Art. 6 Abs. 1 lit. b DSGVO)</li>
+          <li>Erfüllung rechtlicher Verpflichtungen (Art. 6 Abs. 1 lit. c DSGVO)</li>
+          <li>Analyse des Nutzerverhaltens — mit Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)</li>
+        </ul>
+
+        <h2>4. Speicherdauer</h2>
+        <p>Wir speichern Ihre Daten nur so lange, wie es zur Erfüllung der in dieser Richtlinie genannten Zwecke erforderlich ist oder gesetzlich vorgeschrieben wird. Nach Beendigung der Dienstnutzung werden Daten innerhalb von 90 Tagen gelöscht.</p>
+
+        <h2>5. Cookies und Einwilligung</h2>
+        <p>Unsere Website verwendet Cookies. Einige sind technisch notwendig, andere helfen uns, den Dienst zu verbessern. Sie können Ihre Einwilligung jederzeit über die Browsereinstellungen verwalten oder widerrufen.</p>
+        <ul>
+          <li>Technisch notwendige Cookies</li>
+          <li>Analyse-Cookies (z. B. Nutzungsstatistiken)</li>
+        </ul>
+
+        <h2>6. Datensicherheit</h2>
+        <p>Wir setzen SSL-Verschlüsselung und moderne Sicherheitsmaßnahmen ein. Der Zugriff auf Daten ist auf autorisierte Mitarbeiter beschränkt.</p>
+
+        <h2>7. Ihre Rechte nach DSGVO</h2>
+        <p>Sie haben das Recht auf:</p>
+        <ul>
+          <li>Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO)</li>
+          <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+          <li>Löschung Ihrer Daten (Art. 17 DSGVO)</li>
+          <li>Widerruf Ihrer Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
+          <li>Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
+        </ul>
+        <p>Zur Wahrnehmung Ihrer Rechte wenden Sie sich an: <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+        <h2>8. Internationale Datenübermittlung</h2>
+        <p>Digitalkin OÜ hat seinen Sitz in Estland (EU). Ihre Daten werden innerhalb des Europäischen Wirtschaftsraums verarbeitet und unterliegen dem DSGVO-Schutz.</p>
+
+        <h2>9. Kontakt</h2>
+        <p>Bei allen Fragen zur Verarbeitung personenbezogener Daten:<br/>
+        E-Mail: <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+      </div>
+    </div>
+  </main>
+  <Footer t={t} />
+</Layout>
+
+<style>
+  .legal-page { min-height: 80vh; }
+  .legal-page h1 { margin-bottom: 8px; }
+  .legal-date { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 60px; }
+  .legal-body h2 { font-size: 1.2rem; margin-top: 40px; margin-bottom: 12px; color: var(--text-primary); }
+  .legal-body p, .legal-body ul { color: var(--text-secondary, #9CA3AF); line-height: 1.8; font-size: 0.95rem; }
+  .legal-body ul { padding-left: 20px; margin-top: 8px; }
+  .legal-body li { margin-bottom: 6px; }
+  .legal-body a { color: var(--purple); text-decoration: none; }
+  .legal-body a:hover { text-decoration: underline; }
+  .legal-body strong { color: var(--text-primary); }
+</style>
