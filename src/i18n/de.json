@@ -4,7 +4,7 @@
     "modules": "Module",
     "cases": "Referenzen",
     "demo": "Demo",
-    "reviews": "Bewertungen",
+    "reviews": "Stimmen",
     "cta": "Kostenlos testen"
   },
   "hero": {
@@ -14,67 +14,67 @@
     "cta_secondary": "Demo ansehen"
   },
   "visual_demo": {
-    "heading": "Eine Quelle der Expertise. Sechs Prasenzen."
+    "heading": "Eine Quelle. Sechs Kanäle."
   },
   "modules": {
-    "heading": "Der Ansatz hat sich verandert. Das Werkzeug auch.",
-    "subheading": "Content zu erstellen reicht heute nicht mehr. Algorithmen bewerten das Verhalten der Zielgruppe, SEO- und GEO-Signale sowie die Autoritat des Autors. PRIZMA berucksichtigt all das und passt jedes Format an den richtigen Kanal an.",
+    "heading": "Die Anforderungen sind gestiegen. Das Werkzeug auch.",
+    "subheading": "Regelmäßig veröffentlichen reicht heute nicht mehr aus. Plattform-Algorithmen bewerten Konsistenz, thematische Autorität und Nutzerverhalten. PRIZMA erstellt alle sechs Formate aus einer einzigen Idee — jedes davon passgenau für seinen Kanal.",
     "items": [
-      { "name": "Beitrag", "desc": "Visueller Nachweis von Expertise. Kein bloses Bild — ein Beitrag, der die Position des Experten im Feed verankert und nachhaltiges Vertrauen aufbaut." },
-      { "name": "Reel", "desc": "Kurzvideo mit Expertenbotschaft. Algorithmen verbreiten es organisch. Der schnellste Weg zu neuen Zielgruppen — ohne Werbebudget." },
-      { "name": "Karussell", "desc": "Tiefgreifende Expertise in zuganglicher Form. Karussells werden gespeichert und erneut aufgerufen. Content, zu dem die Zielgruppe zuruckkehrt." },
-      { "name": "Artikel", "desc": "SEO- und GEO-optimierter Content, der jahrelang wirkt. PRIZMA beruck­sichtigt Verhaltenssignale und strukturiert Texte nach echten Suchanfragen." },
-      { "name": "Avatar", "desc": "Der Experte ist taglich prasent — ohne Filmaufnahmen. Ein KI-Avatar ubertragt Stimme und Personlichkeit des Experten im Videoformat." },
-      { "name": "Repost", "desc": "Ein Inhalt auf allen Plattformen. PRIZMA passt Ton, Lange und Format fur jeden Kanal an und bewahrt dabei die Expertenbotschaft." }
+      { "name": "Beitrag", "desc": "Sichtbare Kompetenz. Ein durchdachter Beitrag positioniert den Experten im Feed und schafft nachhaltiges Vertrauen — nicht nur einen flüchtigen Eindruck." },
+      { "name": "Reel", "desc": "Kurzvideo mit echtem Mehrwert. Algorithmen verbreiten es organisch. Der effizienteste Weg, neue Zielgruppen zu erreichen — ohne Werbebudget." },
+      { "name": "Karussell", "desc": "Komplexe Themen, klar aufbereitet. Karussells werden gespeichert und weitergeteilt — Inhalte, zu denen Nutzer immer wieder zurückkehren." },
+      { "name": "Artikel", "desc": "Langform-Content für Suchmaschinen. PRIZMA analysiert echte Suchanfragen, wendet SEO- und GEO-Logik an und strukturiert Artikel, die ranken und gelesen werden." },
+      { "name": "Avatar", "desc": "Der Experte präsent, täglich — ohne Kameraaufnahmen. Ein KI-Avatar überträgt Stimme und Erscheinungsbild kontinuierlich im Videoformat." },
+      { "name": "Repost", "desc": "Ein Inhalt, überall verbreitet. Ton, Länge und Format werden kanalspezifisch angepasst — die Kernbotschaft bleibt erhalten." }
     ]
   },
   "why": {
-    "heading": "PRIZMA ist kein Content-Generator. Es ist ein intelligentes System.",
-    "text": "Die meisten Tools erzeugen einfach Text. PRIZMA macht etwas anderes: Es analysiert das Verhalten Ihrer Zielgruppe, berucksichtigt SEO- und GEO-Signale, wertet aus, was funktioniert, und wird mit der Zeit praziser. Inhalte durchlaufen einen Humanizer, damit sie wie ein echter Experte klingen — nicht wie eine Maschine. Human in the loop bedeutet: das letzte Wort liegt immer bei Ihnen.",
+    "heading": "Kein Content-Generator. Ein intelligentes Content-System.",
+    "text": "Die meisten KI-Tools produzieren Text und hören dort auf. PRIZMA geht weiter: Das System analysiert das Verhalten Ihrer Zielgruppe, berücksichtigt SEO- und GEO-Signale, wertet aus, was funktioniert, und wird mit der Zeit präziser. Ein integrierter Humanizer sorgt dafür, dass Inhalte nach echtem Expertenwissen klingen — nicht nach Maschine. Und dank Human in the Loop genehmigen Sie jeden Beitrag, bevor er veröffentlicht wird.",
     "stats": [
-      { "value": "6x", "label": "mehr Formate aus einer Idee" },
-      { "value": "SEO+GEO", "label": "optimiert fur Plattform-Algorithmen" },
-      { "value": "Human", "label": "in the loop — Sie behalten die Kontrolle" }
+      { "value": "6x", "label": "mehr Formate aus einer einzigen Idee" },
+      { "value": "SEO+GEO", "label": "in jeden Inhalt integriert" },
+      { "value": "Sie", "label": "entscheiden — volle Kontrolle, immer" }
     ]
   },
   "for_whom": {
-    "heading": "Fur wen ist PRIZMA",
+    "heading": "Für wen PRIZMA gemacht ist",
     "items": [
-      { "title": "Experten und Grundeг", "desc": "Sie kennen Ihr Fach. PRIZMA ubertragt diese Expertise auf jede Plattform. Ohne Texter, ohne Filmteam, ohne Verlust Ihrer eigenen Stimme." },
-      { "title": "Marketing-Fachleute", "desc": "Produzieren Sie in gleicher Zeit 6x mehr Content. Jedes Format ist fur den Plattform-Algorithmus optimiert. Organische Reichweite wachst ohne Budgeterhohung." },
-      { "title": "Agenturen", "desc": "Skalieren Sie die Produktion fur Kunden ohne zusatzliches Personal. Ein Spezialist betreut mehrere Marken und bewahrt dabei die einzigartige Stimme jeder einzelnen." },
-      { "title": "Personal Brands", "desc": "Sein Sie uberall prasent — auch wenn Sie mit Ihrem Kerngeschaft beschaftigt sind. PRIZMA pflegt Ihr Expertenbild ohne standige Beteiligung." }
+      { "title": "Experten und Gründer", "desc": "Sie haben das Fachwissen. PRIZMA macht daraus eine konsistente Präsenz auf allen Plattformen — ohne Texter, ohne Filmteam, ohne Abstriche bei Ihrem Stil." },
+      { "title": "Marketing-Teams", "desc": "Sechsmal mehr Output mit demselben Team. Jedes Format ist algorithmusgerecht aufbereitet. Organisches Wachstum — ohne Mehrkosten." },
+      { "title": "Agenturen", "desc": "Mehrere Kundenmarken aus einem System heraus betreuen. Jede Marke behält ihre eigene Stimme. Kein zusätzliches Personal erforderlich." },
+      { "title": "Personal Brands", "desc": "Täglich auf allen Kanälen präsent — ohne selbst überall dabei zu sein. PRIZMA hält Ihr Expertenprofil aktiv, während Sie sich auf Ihre eigentliche Arbeit konzentrieren." }
     ]
   },
   "how": {
     "heading": "So funktioniert es",
     "steps": [
-      { "title": "Thema", "desc": "Sie liefern ein Thema, eine Idee oder eine Expertenthese" },
-      { "title": "PRIZMA", "desc": "KI recherchiert das Thema, beruck­sichtigt SEO/GEO-Signale und erstellt sechs Formate" },
-      { "title": "Human in the loop", "desc": "Sie prufen das Ergebnis — die finale Entscheidung liegt immer bei Ihnen" },
-      { "title": "Veroffentlichung", "desc": "Content wird automatisch auf allen Plattformen veroffentlicht" }
+      { "title": "Thema", "desc": "Sie geben ein Thema, eine Idee oder eine Expertenaussage ein" },
+      { "title": "PRIZMA", "desc": "Die KI recherchiert, wendet SEO- und GEO-Signale an und erstellt sechs Formate" },
+      { "title": "Sie prüfen", "desc": "Sie sichten das Ergebnis — nichts wird ohne Ihre Freigabe veröffentlicht" },
+      { "title": "Veröffentlichung", "desc": "Die Inhalte werden automatisch auf allen Plattformen ausgespielt" }
     ]
   },
   "showcase": {
-    "heading": "Ein echtes Beispiel.",
-    "subtitle": "Eine Expertenthese. Drei fertige Veroffentlichungen."
+    "heading": "Ein Praxisbeispiel.",
+    "subtitle": "Eine Expertenidee. Drei fertige Beiträge, bereit zur Veröffentlichung."
   },
   "testimonials": {
     "heading": "Was Kunden sagen"
   },
   "demo": {
-    "heading": "Erleben Sie PRIZMA in Aktion",
-    "caption": "Zweiminutige Ubersicht"
+    "heading": "PRIZMA in der Praxis erleben",
+    "caption": "Zwei Minuten Überblick"
   },
   "cta": {
     "heading": "7 Tage kostenlos. Unverbindlich.",
-    "subtitle": "Hinterlassen Sie eine Anfrage — wir starten einen Test mit Ihrem Thema und zeigen, wie PRIZMA Ihre Expertise verbreitet.",
+    "subtitle": "Teilen Sie uns Ihr Thema mit — wir zeigen Ihnen konkret, was PRIZMA daraus macht. Mit Ihren Inhalten, in Ihrer Sprache.",
     "name": "Ihr Name",
     "email": "E-Mail",
-    "company": "Unternehmensname",
-    "message": "Beschreiben Sie Ihre Expertise und Ihre Ziele",
+    "company": "Unternehmen",
+    "message": "Beschreiben Sie kurz Ihre Expertise und Ihr Ziel",
     "submit": "Anfrage senden",
-    "privacy": "Mit dem Absenden stimmen Sie der Datenschutzerklarung zu"
+    "privacy": "Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu"
   },
   "footer": {
     "tagline": "Eine Idee. Alle Formen.",
@@ -85,7 +85,7 @@
     "copyright": "© 2026 PRIZMA. Alle Rechte vorbehalten."
   },
   "seo": {
-    "title": "PRIZMA — Intelligentes Content-System fur skalierbare Expertise",
-    "description": "PRIZMA verwandelt Expertise in Content fur jede Plattform. SEO- und GEO-Optimierung, Humanizer, sechs Formate aus einer Quelle — mit menschlicher Kontrolle auf jedem Schritt."
+    "title": "PRIZMA — Intelligentes Content-System für Experten und Marken",
+    "description": "Aus einer Idee werden sechs Content-Formate: Beiträge, Reels, Karussells, Artikel, KI-Avatar-Videos und kanalübergreifende Reposts. SEO- und GEO-optimiert, mit menschlicher Freigabe auf jedem Schritt."
   }
 }

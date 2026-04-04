@@ -17,64 +17,64 @@
     "heading": "One source of expertise. Six points of presence."
   },
   "modules": {
-    "heading": "The approach has changed. So has the tool.",
-    "subheading": "Creating content is no longer enough. Algorithms weigh audience behavior, SEO and GEO signals, and author authority. PRIZMA factors all of this in and adapts every format to the right channel.",
+    "heading": "Content has evolved. Your tools should too.",
+    "subheading": "Publishing alone is not enough anymore. Platform algorithms reward consistency, topical authority, and behavioral signals. PRIZMA builds all six formats from a single idea — each one tuned to its channel.",
     "items": [
-      { "name": "Post", "desc": "Visual proof of expertise. Not just a graphic — a post that anchors the expert's position in the feed and builds long-term trust." },
-      { "name": "Reel", "desc": "Short video with an expert message. Algorithms push it organically. The fastest way to reach new audiences without paid ads." },
-      { "name": "Carousel", "desc": "Deep expertise in an accessible format. Carousels get saved and revisited. Content your audience comes back to." },
-      { "name": "Article", "desc": "SEO and GEO-optimized content that works for years. PRIZMA accounts for behavioral signals and structures text around real audience queries." },
-      { "name": "Avatar", "desc": "The expert shows up daily — without filming. An AI avatar delivers the expert's voice and presence in video format, every day." },
-      { "name": "Repost", "desc": "One piece of content across every platform. PRIZMA adapts tone, length, and format per channel while keeping the expert message intact." }
+      { "name": "Post", "desc": "Authority, made visible. A well-crafted post positions the expert in the feed and earns trust over time — not just a one-time impression." },
+      { "name": "Reel", "desc": "Short-form video that carries real expertise. Algorithms distribute it organically. The most effective way to reach a new audience without paid media." },
+      { "name": "Carousel", "desc": "Complex ideas, broken down clearly. Carousels earn saves and shares. The kind of content people bookmark and come back to." },
+      { "name": "Article", "desc": "Long-form content built for search. PRIZMA maps real queries, applies SEO and GEO logic, and structures articles that rank and hold attention." },
+      { "name": "Avatar", "desc": "The expert, present every day — without filming. An AI avatar delivers their voice and likeness in video format on a continuous basis." },
+      { "name": "Repost", "desc": "One piece of content, distributed everywhere. Tone, length, and format adapted per channel — the core message stays intact." }
     ]
   },
   "why": {
-    "heading": "PRIZMA is not a content generator. It is an intelligent system.",
-    "text": "Most tools just generate text. PRIZMA does something different: it studies your audience behavior, accounts for SEO and GEO signals, analyzes what works, and gets sharper over time. Content passes through a humanizer so it sounds like a real expert — not a machine. Human in the loop means the final call is always yours.",
+    "heading": "Not a content generator. An intelligent content system.",
+    "text": "Most AI tools produce text and stop there. PRIZMA goes further: it reads audience behavior, factors in SEO and GEO signals, tracks what performs, and refines over time. A built-in humanizer ensures content sounds like a real expert, not a machine. And human in the loop means you approve every piece before it goes out.",
     "stats": [
-      { "value": "6x", "label": "more formats from one idea" },
-      { "value": "SEO+GEO", "label": "optimized for platform algorithms" },
-      { "value": "Human", "label": "in the loop — you stay in control" }
+      { "value": "6x", "label": "more formats from a single idea" },
+      { "value": "SEO+GEO", "label": "built into every piece of content" },
+      { "value": "Human", "label": "in the loop — full control, always yours" }
     ]
   },
   "for_whom": {
-    "heading": "Who PRIZMA is for",
+    "heading": "Built for",
     "items": [
-      { "title": "Experts and founders", "desc": "You know your field. PRIZMA broadcasts that expertise across every platform. No copywriter, no film crew, no loss of your authentic voice." },
-      { "title": "Marketers", "desc": "Produce 6x more content in the same time. Every format is optimized for the platform algorithm. Organic reach grows without increasing budget." },
-      { "title": "Agencies", "desc": "Scale production for clients without hiring. One specialist manages multiple brands while keeping each one's unique voice intact." },
-      { "title": "Personal brands", "desc": "Stay present everywhere, every day — even when focused on your core work. PRIZMA maintains your expert image without constant involvement." }
+      { "title": "Experts and founders", "desc": "You have the knowledge. PRIZMA turns it into a consistent presence across every platform — no copywriter, no film crew, no compromise on your voice." },
+      { "title": "Marketing teams", "desc": "Six times the output, same team size. Every format is algorithm-ready. Organic growth without growing the budget." },
+      { "title": "Agencies", "desc": "Run multiple client brands from one system. Each brand keeps its distinct voice. No extra headcount needed." },
+      { "title": "Personal brands", "desc": "Show up everywhere, every day — without being everywhere yourself. PRIZMA keeps your expert presence active while you focus on your work." }
     ]
   },
   "how": {
     "heading": "How it works",
     "steps": [
-      { "title": "Topic", "desc": "You provide a topic, idea, or expert thesis" },
-      { "title": "PRIZMA", "desc": "AI researches the topic, accounts for SEO/GEO signals, and creates six formats" },
-      { "title": "Human in the loop", "desc": "You review the result — the final decision is always yours" },
-      { "title": "Publish", "desc": "Content is automatically distributed to all platforms" }
+      { "title": "Topic", "desc": "You provide a topic, idea, or expert perspective" },
+      { "title": "PRIZMA", "desc": "AI researches it, applies SEO and GEO signals, and produces six formats" },
+      { "title": "You review", "desc": "You check the output — nothing goes out without your approval" },
+      { "title": "Published", "desc": "Content is distributed automatically across all platforms" }
     ]
   },
   "showcase": {
-    "heading": "A real example.",
-    "subtitle": "One expert thesis. Three ready-to-publish pieces."
+    "heading": "See it in practice.",
+    "subtitle": "One expert idea. Three finished pieces, ready to publish."
   },
   "testimonials": {
     "heading": "What clients say"
   },
   "demo": {
     "heading": "See PRIZMA in action",
-    "caption": "Two-minute overview"
+    "caption": "Two-minute walkthrough"
   },
   "cta": {
     "heading": "7 days free. No commitment.",
-    "subtitle": "Leave a request and we will run a test drive on your topic — and show exactly how PRIZMA amplifies your expertise.",
+    "subtitle": "Tell us your topic and we will show you exactly what PRIZMA produces — on your content, in your voice.",
     "name": "Your name",
     "email": "Email",
-    "company": "Company name",
-    "message": "Tell us about your expertise and goals",
+    "company": "Company",
+    "message": "Tell us about your expertise and what you are trying to achieve",
     "submit": "Send request",
-    "privacy": "By submitting, you agree to the privacy policy"
+    "privacy": "By submitting you agree to our privacy policy"
   },
   "footer": {
     "tagline": "One idea. Every form.",
@@ -85,7 +85,7 @@
     "copyright": "© 2026 PRIZMA. All rights reserved."
   },
   "seo": {
-    "title": "PRIZMA — Intelligent content system for scaling expertise",
-    "description": "PRIZMA turns expertise into content for every platform. SEO and GEO optimization, humanizer, six formats from one source — with human control at every step."
+    "title": "PRIZMA — Intelligent content system for experts and brands",
+    "description": "Turn one idea into six content formats — posts, reels, carousels, articles, AI avatar videos and cross-platform reposts. SEO and GEO optimized, with human approval at every step."
   }
 }
