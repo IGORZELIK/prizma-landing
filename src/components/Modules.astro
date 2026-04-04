@@ -116,6 +116,27 @@ const accentColors = ['#8B5CF6', '#06B6D4', '#10B981', '#F59E0B', '#EC4899', '#6
   }
 
   @media (max-width: 600px) {
-    .modules-grid { grid-template-columns: 1fr; }
+    .modules-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .module-card {
+      padding: 40px 32px 44px;
+    }
+    .module-icon {
+      margin-bottom: 20px;
+    }
+    .module-icon svg {
+      width: 40px;
+      height: 40px;
+    }
+    .module-name {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+    .module-desc {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
   }
 </style>
