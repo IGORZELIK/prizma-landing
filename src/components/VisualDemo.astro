@@ -39,6 +39,32 @@ const badges = formats.map((f, i) => ({
   <div class="section-wrap">
     <h2 class="reveal">{t.visual_demo.heading}</h2>
 
+    <!-- Mobile layout: prism top + badge grid -->
+    <div class="mobile-visual">
+      <svg class="prism-mobile" viewBox="0 0 200 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="dropGlowMob" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <g transform="translate(55, 10) scale(0.9)" filter="url(#dropGlowMob)">
+          <polygon points="100,5 50,90 150,90"   fill="#8B5CF6"/>
+          <polygon points="5,175 50,90 100,175"   fill="#06B6D4"/>
+          <polygon points="195,175 150,90 100,175" fill="#10B981"/>
+        </g>
+      </svg>
+      <div class="mobile-badges-grid">
+        {formats.map((f, i) => (
+          <div class="mobile-badge-item" style={`--accent: ${f.color}; animation-delay: ${0.1 + i * 0.08}s`}>
+            <span class="mobile-badge-dot" style={`background: ${f.color}`}></span>
+            <span class="mobile-badge-label">{f.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Desktop layout -->
     <div class="scene-wrap">
       <svg
         class="prism-scene"
@@ -190,15 +216,51 @@ const badges = formats.map((f, i) => ({
     stroke: var(--accent);
   }
 
+  /* Mobile layout */
+  .mobile-visual { display: none; }
+
+  @media (max-width: 600px) {
+    .scene-wrap { display: none; }
+    .mobile-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+    .prism-mobile { width: 140px; height: auto; }
+    .mobile-badges-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      width: 100%;
+    }
+    .mobile-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 16px 18px;
+      opacity: 0;
+      animation: fadeIn 0.4s ease-out forwards;
+    }
+    .mobile-badge-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .mobile-badge-label {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #F1F1F3;
+    }
+  }
+
 </style>
 
 <script>
-  // On mobile: zoom into the right side where badges are
-  if (window.innerWidth <= 600) {
-    const svg = document.querySelector('.prism-scene') as SVGElement;
-    if (svg) svg.setAttribute('viewBox', '380 0 420 360');
-  }
-
   // Replay animation on scroll into view
   const scene = document.querySelector('.prism-scene');
   if (scene) {
