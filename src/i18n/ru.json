@@ -34,7 +34,7 @@
     "stats": [
       { "value": "6x", "label": "больше форматов с одной идеи" },
       { "value": "SEO+GEO", "label": "оптимизация под алгоритмы" },
-      { "value": "Human", "label": "in the loop — контроль за вами" }
+      { "value": "Human", "label": "in the loop. Контроль за вами" }
     ]
   },
   "for_whom": {
