@@ -19,12 +19,12 @@
   "modules": {
     "heading": "Six formats. One source.",
     "items": [
-      { "name": "Avatar", "desc": "The expert speaks without filming" },
-      { "name": "Reel", "desc": "30 seconds that hook" },
-      { "name": "Post", "desc": "Visual reinforcement of the idea" },
-      { "name": "Carousel", "desc": "Complex thoughts — simply explained" },
-      { "name": "Article", "desc": "SEO content that gets found" },
-      { "name": "Repost", "desc": "One idea — every platform" }
+      { "name": "Avatar", "desc": "The expert speaks to the audience personally — without filming. AI avatar delivers key ideas." },
+      { "name": "Reel", "desc": "Short videos that grab attention and convey expertise in 30 seconds." },
+      { "name": "Post", "desc": "Visual reinforcement of the expert message. Graphics crafted for topic and brand." },
+      { "name": "Carousel", "desc": "Complex ideas — explained simply. Carousels for LinkedIn and Instagram that educate." },
+      { "name": "Article", "desc": "SEO articles that explore topics in depth. From keywords to publication." },
+      { "name": "Repost", "desc": "One idea — on every platform. Cross-posting adapted for each channel." }
     ]
   },
   "how": {

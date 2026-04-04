@@ -19,12 +19,12 @@
   "modules": {
     "heading": "Sechs Formate. Eine Quelle.",
     "items": [
-      { "name": "Avatar", "desc": "Der Experte spricht ohne Dreharbeiten" },
-      { "name": "Reel", "desc": "30 Sekunden, die fesseln" },
-      { "name": "Beitrag", "desc": "Visuelle Verankerung der Idee" },
-      { "name": "Karussell", "desc": "Komplexe Gedanken — einfach erklärt" },
-      { "name": "Artikel", "desc": "SEO-Text, der gefunden wird" },
-      { "name": "Repost", "desc": "Eine Idee — alle Plattformen" }
+      { "name": "Avatar", "desc": "Der Experte spricht persönlich mit dem Publikum — ohne Dreharbeiten. KI-Avatar vermittelt Kernideen." },
+      { "name": "Reel", "desc": "Kurze Videos, die Aufmerksamkeit erregen und Expertise in 30 Sekunden vermitteln." },
+      { "name": "Beitrag", "desc": "Visuelle Verankerung der Expertenbotschaft. Grafik passend zu Thema und Marke." },
+      { "name": "Karussell", "desc": "Komplexe Ideen — einfach erklärt. Karussells für LinkedIn und Instagram, die bilden." },
+      { "name": "Artikel", "desc": "SEO-Artikel, die Themen vertiefen. Von Keywords bis zur Veröffentlichung." },
+      { "name": "Repost", "desc": "Eine Idee — auf allen Plattformen. Cross-Posting mit Anpassung an jeden Kanal." }
     ]
   },
   "how": {

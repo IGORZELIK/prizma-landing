@@ -106,14 +106,8 @@ const formats = [
     height: 2px;
     width: 100%;
     background: linear-gradient(90deg, transparent, var(--color));
-    opacity: 0;
-    animation: rayReveal 0.8s ease-out var(--delay) forwards;
+    opacity: 0.6;
     transform-origin: left;
-  }
-
-  @keyframes rayReveal {
-    from { opacity: 0; transform: scaleX(0); }
-    to   { opacity: 0.6; transform: scaleX(1); }
   }
 
   .format-cards {

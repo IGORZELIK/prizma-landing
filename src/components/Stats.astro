@@ -1,0 +1,79 @@
+---
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+
+const stats = t.lang === 'ru' ? [
+  { value: 6, label: 'Форматов контента' },
+  { value: 1, label: 'Источник — одна идея' },
+  { value: 85, label: '% Экономии времени', suffix: '%' },
+  { value: 24, label: '/ 7 Автоматизация' },
+] : t.lang === 'de' ? [
+  { value: 6, label: 'Content-Formate' },
+  { value: 1, label: 'Quelle — eine Idee' },
+  { value: 85, label: '% Zeitersparnis', suffix: '%' },
+  { value: 24, label: '/ 7 Automatisierung' },
+] : [
+  { value: 6, label: 'Content formats' },
+  { value: 1, label: 'Source — one idea' },
+  { value: 85, label: '% Time saved', suffix: '%' },
+  { value: 24, label: '/ 7 Automation' },
+];
+---
+
+<section class="stats-bar">
+  {stats.map(stat => (
+    <div class="stat-item reveal">
+      <div class="stat-value gradient-text text-unbounded" data-count={stat.value}>0</div>
+      <div class="stat-label">{stat.label}</div>
+    </div>
+  ))}
+</section>
+
+<style>
+  .stats-bar {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 80px 40px;
+    border-top: 1px solid var(--border-glass);
+    border-bottom: 1px solid var(--border-glass);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-top: 8px;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 768px) {
+    .stats-bar {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .stat-item {
+      flex: 0 0 40%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-bar {
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+</style>
