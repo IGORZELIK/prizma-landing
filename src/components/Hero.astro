@@ -66,7 +66,7 @@ const { t } = Astro.props;
 
   .scroll-hint {
     position: absolute;
-    bottom: 40px;
+    bottom: 16px;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -75,7 +75,7 @@ const { t } = Astro.props;
 
   .scroll-line {
     width: 1px;
-    height: 40px;
+    height: 24px;
     background: linear-gradient(to bottom, var(--purple), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
   }
@@ -96,6 +96,7 @@ const { t } = Astro.props;
       width: 100%;
       max-width: 300px;
     }
+    .scroll-hint { display: none; }
   }
 </style>
 
