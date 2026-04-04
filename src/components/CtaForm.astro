@@ -49,6 +49,17 @@ const { t } = Astro.props;
           <span>{t.cta.submit}</span>
         </button>
       </form>
+
+      <div class="form-success">
+        <div class="success-icon">✓</div>
+        <div class="success-title">
+          {t.lang === 'ru' ? 'Заявка отправлена!' : t.lang === 'de' ? 'Anfrage gesendet!' : 'Request sent!'}
+        </div>
+        <div class="success-sub">
+          {t.lang === 'ru' ? 'Мы свяжемся с вами в ближайшее время.' : t.lang === 'de' ? 'Wir melden uns in Kürze.' : 'We will get back to you shortly.'}
+        </div>
+      </div>
+
       <p class="cta-privacy">{t.cta.privacy}</p>
     </div>
   </div>
@@ -144,5 +155,83 @@ const { t } = Astro.props;
   @media (max-width: 600px) {
     .form-row { flex-direction: column; }
     .cta-form-wrap { padding: 28px 20px; }
+  }
+</style>
+
+<script>
+  const form = document.querySelector('.cta-form') as HTMLFormElement;
+  const successBlock = document.querySelector('.form-success') as HTMLElement;
+  const submitBtn = form?.querySelector('.submit-btn') as HTMLButtonElement;
+
+  const BOT_TOKEN = '8641927444:AAEKyMLgqvPgvDhuUM-hTrD4FAE2GglBdVk';
+  const CHAT_ID = '691305339';
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.classList.add('loading');
+
+    const data = new FormData(form);
+    const name    = data.get('name')    || '—';
+    const email   = data.get('email')   || '—';
+    const company = data.get('company') || '—';
+    const message = data.get('message') || '—';
+
+    const text = `🚀 *Новая заявка с PRIZMA*\n\n👤 *Имя:* ${name}\n📧 *Email:* ${email}\n🏢 *Компания:* ${company}\n💬 *Сообщение:* ${message}`;
+
+    try {
+      await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: CHAT_ID, text, parse_mode: 'Markdown' }),
+      });
+      form.classList.add('hidden');
+      successBlock.classList.add('visible');
+    } catch {
+      submitBtn.classList.remove('loading');
+      alert('Ошибка отправки. Попробуйте ещё раз.');
+    }
+  });
+</script>
+
+<style>
+
+  .form-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 40px 20px;
+  }
+
+  .form-success.visible { display: flex; }
+  .cta-form.hidden { display: none; }
+
+  .success-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #10B981;
+    font-size: 1.5rem;
+  }
+
+  .success-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+  }
+
+  .success-sub {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+  }
+
+  .submit-btn.loading {
+    opacity: 0.6;
+    pointer-events: none;
   }
 </style>
