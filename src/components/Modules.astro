@@ -24,7 +24,7 @@ const accentColors = ['#8B5CF6', '#06B6D4', '#10B981', '#F59E0B', '#EC4899', '#6
 
 <section id="modules">
   <div class="section-wrap">
-    <h2 class="reveal">{t.modules.heading}</h2>
+    {t.modules.heading && <h2 class="reveal">{t.modules.heading}</h2>}
 
     <div class="modules-grid" data-stagger>
       {t.modules.items.map((item: any, i: number) => (
