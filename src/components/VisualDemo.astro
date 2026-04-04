@@ -190,16 +190,15 @@ const badges = formats.map((f, i) => ({
     stroke: var(--accent);
   }
 
-  @media (max-width: 600px) {
-    .scene-wrap { overflow: hidden; }
-    .prism-scene {
-      width: 130%;
-      margin-left: -15%;
-    }
-  }
 </style>
 
 <script>
+  // On mobile: zoom into the right side where badges are
+  if (window.innerWidth <= 600) {
+    const svg = document.querySelector('.prism-scene') as SVGElement;
+    if (svg) svg.setAttribute('viewBox', '380 0 420 360');
+  }
+
   // Replay animation on scroll into view
   const scene = document.querySelector('.prism-scene');
   if (scene) {
