@@ -1,0 +1,91 @@
+---
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+if (!t.why) return;
+---
+
+<section class="why-now">
+  <div class="section-wrap">
+    <div class="why-inner glass-card reveal">
+      <h2>{t.why.heading}</h2>
+      <p class="why-text">{t.why.text}</p>
+
+      {t.why.stats && (
+        <div class="why-stats" data-stagger>
+          {t.why.stats.map((s: any) => (
+            <div class="why-stat">
+              <div class="why-stat-value">{s.value}</div>
+              <div class="why-stat-label">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-now {
+    position: relative;
+    z-index: 1;
+  }
+
+  .why-inner {
+    padding: 60px;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    background: rgba(139, 92, 246, 0.04);
+  }
+
+  .why-inner h2 {
+    margin-bottom: 24px;
+  }
+
+  .why-text {
+    font-size: 1.05rem;
+    color: var(--text-secondary, #9CA3AF);
+    line-height: 1.8;
+    max-width: 680px;
+    margin: 0 auto 48px;
+  }
+
+  .why-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .why-stat-value {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+
+  .why-stat-label {
+    font-size: 0.85rem;
+    color: var(--text-dim, #6B7280);
+    max-width: 120px;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .why-inner {
+      padding: 40px 24px;
+    }
+
+    .why-stats {
+      flex-direction: column;
+      gap: 32px;
+      align-items: center;
+    }
+  }
+</style>

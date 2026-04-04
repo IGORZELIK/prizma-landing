@@ -25,6 +25,7 @@ const accentColors = ['#8B5CF6', '#06B6D4', '#10B981', '#F59E0B', '#EC4899', '#6
 <section id="modules">
   <div class="section-wrap">
     {t.modules.heading && <h2 class="reveal">{t.modules.heading}</h2>}
+    {t.modules.subheading && <p class="modules-sub reveal">{t.modules.subheading}</p>}
 
     <div class="modules-grid" data-stagger>
       {t.modules.items.map((item: any, i: number) => (
@@ -43,6 +44,15 @@ const accentColors = ['#8B5CF6', '#06B6D4', '#10B981', '#F59E0B', '#EC4899', '#6
 </section>
 
 <style>
+  .modules-sub {
+    text-align: center;
+    max-width: 600px;
+    margin: 16px auto 0;
+    color: var(--text-secondary, #9CA3AF);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
   .modules-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
