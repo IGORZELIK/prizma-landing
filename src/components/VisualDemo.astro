@@ -4,13 +4,14 @@ interface Props {
 }
 const { t } = Astro.props;
 
+/* Order matches the modules: Пост, Рилс, Карусель, Статья, Аватар, Репост */
 const formats = [
-  { icon: 'file-text', label: t.modules.items[4].name, color: '#8B5CF6' },
-  { icon: 'film', label: t.modules.items[1].name, color: '#06B6D4' },
-  { icon: 'image', label: t.modules.items[2].name, color: '#10B981' },
-  { icon: 'layers', label: t.modules.items[3].name, color: '#F59E0B' },
-  { icon: 'user', label: t.modules.items[0].name, color: '#EC4899' },
-  { icon: 'share-2', label: t.modules.items[5].name, color: '#6366F1' },
+  { label: t.modules.items[0].name, color: '#8B5CF6' },
+  { label: t.modules.items[1].name, color: '#06B6D4' },
+  { label: t.modules.items[2].name, color: '#10B981' },
+  { label: t.modules.items[3].name, color: '#F59E0B' },
+  { label: t.modules.items[4].name, color: '#EC4899' },
+  { label: t.modules.items[5].name, color: '#6366F1' },
 ];
 ---
 
@@ -18,30 +19,58 @@ const formats = [
   <div class="section-wrap">
     <h2 class="reveal">{t.visual_demo.heading}</h2>
 
-    <div class="demo-visual">
-      <!-- Source card -->
-      <div class="source-card glass-card reveal">
-        <div class="source-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-          </svg>
-        </div>
-        <div class="source-label">{t.lang === 'ru' ? 'Как выбрать CRM для бизнеса' : t.lang === 'de' ? 'Wie wählt man ein CRM' : 'How to choose a CRM'}</div>
+    <div class="prism-visual">
+      <!-- Prism logo (left) -->
+      <div class="prism-logo-wrap">
+        <svg class="prism-logo-svg" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="100,5 50,90 150,90" fill="#8B5CF6"/>
+          <polygon points="5,175 50,90 100,175" fill="#06B6D4"/>
+          <polygon points="195,175 150,90 100,175" fill="#10B981"/>
+        </svg>
+        <!-- Glow behind logo -->
+        <div class="prism-glow"></div>
       </div>
 
-      <!-- Rays -->
-      <div class="rays">
+      <!-- SVG Rays (connecting prism to badges) -->
+      <svg class="rays-svg" viewBox="0 0 400 360" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {formats.map((f, i) => {
+          const startY = 180;
+          const endY = 30 + i * 60;
+          return (
+            <line
+              class="ray-line"
+              x1="0" y1={startY}
+              x2="400" y2={endY}
+              stroke={f.color}
+              stroke-width="2"
+              style={`--ray-delay: ${i * 0.15}s;`}
+            />
+          );
+        })}
+        {/* Glow duplicates for bloom effect */}
+        {formats.map((f, i) => {
+          const startY = 180;
+          const endY = 30 + i * 60;
+          return (
+            <line
+              class="ray-glow"
+              x1="0" y1={startY}
+              x2="400" y2={endY}
+              stroke={f.color}
+              stroke-width="6"
+              opacity="0.3"
+              style={`--ray-delay: ${i * 0.15}s;`}
+            />
+          );
+        })}
+      </svg>
+
+      <!-- Format badges (right) -->
+      <div class="format-badges">
         {formats.map((f, i) => (
-          <div class="ray" style={`--color: ${f.color}; --delay: ${0.3 + i * 0.1}s; --angle: ${-25 + i * 10}deg;`}></div>
-        ))}
-      </div>
-
-      <!-- Format cards -->
-      <div class="format-cards" data-stagger>
-        {formats.map(f => (
-          <div class="format-card glass-card">
-            <span class="format-dot" style={`background: ${f.color};`}></span>
-            <span class="format-name">{f.label}</span>
+          <div class="format-badge" style={`--badge-delay: ${0.6 + i * 0.12}s; --accent: ${f.color};`}>
+            <span class="badge-dot" style={`background: ${f.color};`}></span>
+            <span class="badge-label">{f.label}</span>
           </div>
         ))}
       </div>
@@ -61,111 +90,166 @@ const formats = [
     margin: 0 auto 80px;
   }
 
-  .demo-visual {
-    display: flex;
+  /* Main layout: prism — rays — badges */
+  .prism-visual {
+    display: grid;
+    grid-template-columns: 180px 1fr 200px;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 360px;
+  }
+
+  /* Prism logo */
+  .prism-logo-wrap {
     position: relative;
-  }
-
-  .source-card {
-    padding: 32px 28px;
-    min-width: 220px;
-    text-align: center;
-    flex-shrink: 0;
-  }
-
-  .source-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 16px;
-    background: rgba(139, 92, 246, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 16px;
   }
 
-  .source-label {
-    font-weight: 500;
-    font-size: 0.95rem;
-    color: var(--text-primary);
-    line-height: 1.5;
+  .prism-logo-svg {
+    width: 140px;
+    height: 126px;
+    filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.4));
   }
 
-  .rays {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 120px;
-    flex-shrink: 0;
+  .prism-glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.1), transparent 70%);
+    pointer-events: none;
+    animation: pulseGlow 4s ease-in-out infinite;
   }
 
-  .ray {
-    height: 2px;
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50%      { opacity: 0.8; transform: scale(1.15); }
+  }
+
+  /* Rays SVG */
+  .rays-svg {
     width: 100%;
-    background: linear-gradient(90deg, transparent, var(--color));
-    opacity: 0.6;
-    transform-origin: left;
+    height: 360px;
   }
 
-  .format-cards {
+  .ray-line,
+  .ray-glow {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawRay 1s ease-out var(--ray-delay) forwards;
+  }
+
+  @keyframes drawRay {
+    to { stroke-dashoffset: 0; }
+  }
+
+  /* Format badges */
+  .format-badges {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
-  .format-card {
+  .format-badge {
     display: flex;
     align-items: center;
     gap: 12px;
     padding: 14px 20px;
-    border-radius: 12px;
-    min-width: 160px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0;
+    transform: translateX(20px);
+    animation: badgeIn 0.5s ease-out var(--badge-delay) forwards;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
   }
 
-  .format-dot {
+  .format-badge:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--accent);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 20%, transparent);
+  }
+
+  @keyframes badgeIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .badge-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     flex-shrink: 0;
+    box-shadow: 0 0 8px currentColor;
   }
 
-  .format-name {
-    font-size: 0.9rem;
+  .badge-label {
+    font-size: 0.95rem;
     font-weight: 500;
     color: var(--text-primary);
   }
 
+  /* ---- Mobile ---- */
   @media (max-width: 768px) {
-    .demo-visual {
-      flex-direction: column;
+    .prism-visual {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
       gap: 32px;
+      justify-items: center;
     }
 
-    .rays {
+    .prism-logo-svg {
+      width: 100px;
+      height: 90px;
+    }
+
+    .rays-svg {
       width: 100%;
-      flex-direction: row;
-      height: 40px;
+      height: 120px;
+      transform: rotate(90deg);
     }
 
-    .ray {
-      height: 100%;
-      width: 2px;
-      background: linear-gradient(180deg, transparent, var(--color));
-    }
-
-    .format-cards {
+    .format-badges {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       gap: 8px;
     }
 
-    .format-card {
-      min-width: auto;
+    .format-badge {
       padding: 10px 16px;
     }
   }
 </style>
+
+<script>
+  // Re-trigger ray animation on scroll into view
+  const section = document.querySelector('.prism-visual');
+  if (section) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Reset animations by removing and re-adding classes
+          section.querySelectorAll('.ray-line, .ray-glow').forEach(el => {
+            const clone = el.cloneNode(true) as Element;
+            el.parentNode?.replaceChild(clone, el);
+          });
+          section.querySelectorAll('.format-badge').forEach(el => {
+            const clone = el.cloneNode(true) as Element;
+            el.parentNode?.replaceChild(clone, el);
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(section);
+  }
+</script>
