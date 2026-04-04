@@ -43,6 +43,13 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
 
     <div class="footer-bottom">
       <span class="footer-copy">{t.footer.copyright}</span>
+      <div class="footer-legal">
+        <a href={`${prefix}/privacy`}>{t.lang === 'ru' ? 'Политика конфиденциальности' : t.lang === 'de' ? 'Datenschutz' : 'Privacy Policy'}</a>
+        <span class="footer-dot">&middot;</span>
+        <a href={`${prefix}/terms`}>{t.lang === 'ru' ? 'Условия использования' : t.lang === 'de' ? 'Nutzungsbedingungen' : 'Terms of Use'}</a>
+        <span class="footer-dot">&middot;</span>
+        <span>A <a href="https://digitalkin.co" target="_blank">Digitalkin</a> product</span>
+      </div>
     </div>
   </div>
 </footer>
@@ -131,12 +138,31 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
     padding-top: 24px;
     border-top: 1px solid var(--border-glass);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
   }
 
   .footer-copy {
     font-size: 0.8rem;
     color: var(--text-dim);
   }
+
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+  }
+
+  .footer-legal a {
+    color: var(--text-dim);
+    transition: color 0.2s;
+  }
+
+  .footer-legal a:hover { color: var(--purple); }
 
   @media (max-width: 600px) {
     .footer-top {

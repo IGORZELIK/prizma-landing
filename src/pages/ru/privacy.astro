@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+import t from '../../i18n/ru.json';
+---
+
+<Layout t={t}>
+  <Nav t={t} />
+  <main class="legal-page">
+    <div class="section-wrap">
+      <h1>Политика конфиденциальности</h1>
+      <p class="legal-date">Последнее обновление: апрель 2026</p>
+
+      <div class="legal-body">
+
+        <h2>1. Ответственный за обработку данных</h2>
+        <p>Digitalkin OÜ<br/>
+        Harju maakond, Tallinn, Kesklinna linnaosa, Vesivärava tn 50-201, 10152<br/>
+        Эстония<br/>
+        Email: <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+        <h2>2. Какие данные мы собираем</h2>
+        <p>При использовании PRIZMA мы можем обрабатывать следующие категории данных:</p>
+        <ul>
+          <li>Данные учётной записи: имя, email, название компании</li>
+          <li>Данные использования: информация о сессиях, действиях в системе</li>
+          <li>Технические данные: IP-адрес, тип браузера, временные метки</li>
+          <li>Контент: темы, тексты и материалы, загружаемые в систему для генерации</li>
+        </ul>
+
+        <h2>3. Цели обработки</h2>
+        <p>Ваши данные обрабатываются для:</p>
+        <ul>
+          <li>Предоставления сервиса PRIZMA и его функций</li>
+          <li>Улучшения качества платформы и алгоритмов</li>
+          <li>Коммуникации с пользователями по вопросам поддержки</li>
+          <li>Соблюдения юридических обязательств</li>
+        </ul>
+
+        <h2>4. Хранение данных</h2>
+        <p>Мы храним ваши данные только в течение времени, необходимого для выполнения целей, указанных в этой политике, или в соответствии с требованиями законодательства. После прекращения использования сервиса данные удаляются в течение 90 дней.</p>
+
+        <h2>5. Безопасность</h2>
+        <p>Мы используем SSL-шифрование и современные меры защиты для обеспечения безопасности ваших данных. Доступ к данным ограничен только уполномоченными сотрудниками.</p>
+
+        <h2>6. Ваши права</h2>
+        <p>Вы имеете право:</p>
+        <ul>
+          <li>Запросить доступ к своим данным</li>
+          <li>Потребовать исправления неточных данных</li>
+          <li>Потребовать удаления данных</li>
+          <li>Отозвать согласие на обработку</li>
+        </ul>
+        <p>Для реализации своих прав обратитесь на <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+        <h2>7. Cookies</h2>
+        <p>Мы используем технические cookies, необходимые для работы сайта, и аналитические cookies для улучшения сервиса. Вы можете отказаться от аналитических cookies в настройках браузера.</p>
+
+        <h2>8. Контакт</h2>
+        <p>По всем вопросам, связанным с обработкой персональных данных, обращайтесь:<br/>
+        Email: <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+      </div>
+    </div>
+  </main>
+  <Footer t={t} />
+</Layout>
+
+<style>
+  .legal-page {
+    min-height: 80vh;
+  }
+
+  .legal-page h1 {
+    margin-bottom: 8px;
+  }
+
+  .legal-date {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 60px;
+  }
+
+  .legal-body h2 {
+    font-size: 1.2rem;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+  }
+
+  .legal-body p, .legal-body ul {
+    color: var(--text-secondary, #9CA3AF);
+    line-height: 1.8;
+    font-size: 0.95rem;
+  }
+
+  .legal-body ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+
+  .legal-body li {
+    margin-bottom: 6px;
+  }
+
+  .legal-body a {
+    color: var(--purple);
+    text-decoration: none;
+  }
+
+  .legal-body a:hover {
+    text-decoration: underline;
+  }
+</style>
