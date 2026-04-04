@@ -189,6 +189,16 @@ const badges = formats.map((f, i) => ({
     fill: rgba(255,255,255,0.08);
     stroke: var(--accent);
   }
+
+  @media (max-width: 600px) {
+    .scene-wrap {
+      overflow: hidden;
+    }
+    .prism-scene {
+      width: 200%;
+      margin-left: -100%;
+    }
+  }
 </style>
 
 <script>
