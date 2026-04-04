@@ -30,7 +30,7 @@
   },
   "why": {
     "heading": "Not a content generator. An intelligent content system.",
-    "text": "Most AI tools produce text and stop there. PRIZMA goes further: it reads audience behavior, factors in SEO and GEO signals, tracks what performs, and refines over time. A built-in humanizer ensures content sounds like a real expert, not a machine. And human in the loop means you approve every piece before it goes out.",
+    "text": "Most tools generate text and stop there. PRIZMA goes further: it reads audience behavior, factors in SEO and GEO signals, tracks what performs, and refines over time. Every piece is shaped into the real voice of an expert. No robotic tone, no generic phrasing. The final call is always yours.",
     "stats": [
       { "value": "6x", "label": "more formats from a single idea" },
       { "value": "SEO+GEO", "label": "built into every piece of content" },
