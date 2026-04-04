@@ -216,46 +216,10 @@ const badges = formats.map((f, i) => ({
     stroke: var(--accent);
   }
 
-  /* Mobile layout */
   .mobile-visual { display: none; }
 
   @media (max-width: 600px) {
-    .scene-wrap { display: none; }
-    .mobile-visual {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-    }
-    .prism-mobile { width: 140px; height: auto; }
-    .mobile-badges-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      width: 100%;
-    }
-    .mobile-badge-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px;
-      padding: 16px 18px;
-      opacity: 0;
-      animation: fadeIn 0.4s ease-out forwards;
-    }
-    .mobile-badge-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .mobile-badge-label {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #F1F1F3;
-    }
+    .visual-demo { display: none; }
   }
 
 </style>
