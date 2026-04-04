@@ -12,10 +12,14 @@ const phases = [
     statusLabel: 'Готово',
     color: '#10B981',
     items: [
-      '6 модулей контента: цифровой аватар, видео Reels, посты с изображениями, карусели, SEO-статьи, репостинг',
-      'Единый контент-план на все форматы',
-      'Мультитенантная архитектура',
-      'Онбординг клиентов с AI-анализом tone of voice',
+      { label: '6 модулей контента', desc: 'Аватар, Reels, посты, карусели, SEO-статьи, репостинг — все форматы в одной системе' },
+      { label: 'Единый контент-план', desc: 'Один источник идей разворачивается во все форматы автоматически' },
+      { label: 'Мультитенантная архитектура', desc: 'Изолированные данные и настройки для каждого клиента' },
+      { label: 'AI-онбординг', desc: 'Анализ tone of voice, ниши и аудитории при подключении клиента' },
+      { label: 'BYOK и BYOB', desc: 'Клиент подключает свои ключи API и Telegram-бота для модерации' },
+      { label: 'Human in the loop', desc: 'Контент проходит согласование перед публикацией — ничего не уходит без одобрения' },
+      { label: 'SEO + GEO оптимизация', desc: 'Семантическое ядро, ключевые слова и геотаргетинг встроены в генерацию' },
+      { label: 'Humanizer', desc: 'AI-тексты проходят обработку для естественного звучания и уникальности' },
     ],
   },
   {
@@ -25,10 +29,10 @@ const phases = [
     statusLabel: 'Сейчас',
     color: '#06B6D4',
     items: [
-      'Полный SEO-цикл: семантическое ядро, генерация статей, автопубликация на блог клиента',
-      'Мультиязычный SEO-модуль',
-      'Автопостинг во все основные соцсети',
-      'Лендинг prizma.to',
+      { label: 'Полный SEO-цикл', desc: 'Семантическое ядро, генерация статей, автопубликация на блог клиента' },
+      { label: 'Мультиязычный SEO-модуль', desc: 'Статьи на нескольких языках с раздельной оптимизацией под каждый рынок' },
+      { label: 'Автопостинг во все соцсети', desc: 'Instagram, LinkedIn, Telegram, TikTok — публикация без ручного труда' },
+      { label: 'Публичный запуск prizma.to', desc: 'Открытый доступ, онбординг и первые клиенты' },
     ],
   },
   {
@@ -38,10 +42,10 @@ const phases = [
     statusLabel: 'В планах',
     color: '#8B5CF6',
     items: [
-      'AI-агент проверки контента перед публикацией',
-      'Автоматический сбор метрик по каждому посту',
-      'Расширенная видеогенерация с озвучкой',
-      'Клиентские блоги на Astro SSR',
+      { label: 'AI-агент проверки контента', desc: 'Автоматическая проверка перед публикацией: тон, факты, соответствие бренду' },
+      { label: 'Сбор метрик по каждому посту', desc: 'Охваты, клики, вовлечённость — всё в единой аналитической панели' },
+      { label: 'Расширенная видеогенерация', desc: 'Видео с озвучкой, субтитрами и брендированными вставками' },
+      { label: 'Клиентские блоги на Astro SSR', desc: 'Отдельные SEO-оптимизированные сайты для публикации статей клиентов' },
     ],
   },
   {
@@ -51,9 +55,9 @@ const phases = [
     statusLabel: 'В планах',
     color: '#8B5CF6',
     items: [
-      'SEO Feedback Loop: мониторинг позиций, автодоработка, переиндексация',
-      'Content Performance Agent: автокоррекция контент-плана на основе реальных метрик',
-      'Кросс-модульная связность между всеми форматами контента',
+      { label: 'SEO Feedback Loop', desc: 'Мониторинг позиций, автодоработка статей и переиндексация по результатам' },
+      { label: 'Content Performance Agent', desc: 'Автокоррекция контент-плана на основе реальных метрик каждого поста' },
+      { label: 'Кросс-модульная связность', desc: 'Видео, статьи, посты и карусели ссылаются друг на друга как единая система' },
     ],
   },
 ];
@@ -101,11 +105,15 @@ const phases = [
             </div>
 
             <div class="phase-body">
+              <div class="phase-count">{phase.items.length} {phase.items.length === 1 ? 'пункт' : phase.items.length < 5 ? 'пункта' : 'пунктов'}</div>
               <ul class="phase-items">
-                {phase.items.map(item => (
-                  <li>
+                {phase.items.map((item, idx) => (
+                  <li style={`animation-delay: ${idx * 0.05}s`}>
                     <span class="item-dot" style={`background: ${phase.color};`}></span>
-                    <span>{item}</span>
+                    <span class="item-content">
+                      <span class="item-label">{item.label}</span>
+                      <span class="item-desc">{item.desc}</span>
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -283,41 +291,81 @@ const phases = [
   .phase-body {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-    padding: 0 28px;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    padding: 0;
   }
 
   .phase-card[data-open="true"] .phase-body {
-    max-height: 400px;
-    padding: 0 28px 24px;
+    max-height: 800px;
+    padding: 0 0 24px;
+  }
+
+  .phase-count {
+    font-size: 0.72rem;
+    color: var(--text-dim, #6B7280);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0 28px 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 14px;
   }
 
   .phase-items {
     list-style: none;
-    padding: 0;
+    padding: 0 28px 0;
     margin: 0;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    padding-top: 16px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0;
+  }
+
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .phase-card[data-open="true"] .phase-items li {
+    animation: fadeSlideIn 0.3s ease forwards;
+    opacity: 0;
   }
 
   .phase-items li {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font-size: 0.9rem;
-    color: var(--text-secondary, #9CA3AF);
-    line-height: 1.6;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .phase-items li:last-child {
+    border-bottom: none;
   }
 
   .item-dot {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     flex-shrink: 0;
-    margin-top: 7px;
+    margin-top: 6px;
+  }
+
+  .item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .item-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    line-height: 1.4;
+  }
+
+  .item-desc {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.38);
+    line-height: 1.5;
   }
 
   /* Roadmap CTA */
