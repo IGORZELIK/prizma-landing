@@ -9,32 +9,43 @@ const cards = [
     type: 'post',
     tag: t.modules.items[0].name,
     tagClass: 'tag-post',
-    title: t.lang === 'ru' ? 'Как эксперту быть в ленте каждый день без копирайтера' : t.lang === 'de' ? 'Wie Experten täglich präsent sind — ohne Texter' : 'How experts stay visible every day — without a copywriter',
-    meta: t.lang === 'ru' ? 'Пост · Instagram / LinkedIn' : t.lang === 'de' ? 'Post · Instagram / LinkedIn' : 'Post · Instagram / LinkedIn',
-    gradient: 'linear-gradient(135deg, #1a1040, #2d1f5e)',
+    username: 'prizma.to',
     image: '/showcase-post.png',
-    caption: t.lang === 'ru' ? 'Контент-план готов. Посты написаны. Публикации запланированы.\n\nТы просто занималась своим делом.\n\nИменно так работает PRIZMA — один раз настроил, и система делает всё сама. Без копирайтера, без дедлайнов, без стресса.\n\n#контентмаркетинг #автоматизация #личныйбренд #prizma' : t.lang === 'de' ? 'Content-Plan fertig. Posts geschrieben. Veröffentlichungen geplant.\n\nDu hast einfach deine Arbeit gemacht.\n\nGenau so funktioniert PRIZMA.\n\n#contentmarketing #automatisierung #personalbrand #prizma' : 'Content plan ready. Posts written. Publications scheduled.\n\nYou just focused on your work.\n\nThat\'s exactly how PRIZMA works.\n\n#contentmarketing #automation #personalbrand #prizma',
+    caption: t.lang === 'ru'
+      ? 'Контент-план готов. Посты написаны. Публикации запланированы. Ты просто занималась своим делом. Именно так работает PRIZMA.'
+      : t.lang === 'de'
+      ? 'Content-Plan fertig. Posts geschrieben. Veröffentlichungen geplant. Genau so funktioniert PRIZMA.'
+      : 'Content plan ready. Posts written. Publications scheduled. That\'s exactly how PRIZMA works.',
+    hashtags: t.lang === 'ru' ? '#контентмаркетинг #автоматизация #личныйбренд' : t.lang === 'de' ? '#contentmarketing #automatisierung #personalbrand' : '#contentmarketing #automation #personalbrand',
+    likes: '2,4K',
   },
   {
     type: 'reel',
     tag: t.modules.items[1].name,
     tagClass: 'tag-reel',
-    title: t.lang === 'ru' ? 'Автопостинг для экспертов: как это работает' : t.lang === 'de' ? 'Automatisches Posting für Experten: So geht\'s' : 'Automated posting for experts: how it works',
-    meta: t.lang === 'ru' ? 'Рилс · 30 сек' : t.lang === 'de' ? 'Reel · 30 Sek.' : 'Reel · 30 sec',
-    gradient: 'linear-gradient(135deg, #1e3a5f, #0e4155)',
+    username: 'prizma.to',
     image: null,
-    video: null,
+    caption: t.lang === 'ru'
+      ? 'С PRIZMA не нужно вставать перед камерой каждый день. Твой аватар публикует контент сам.'
+      : t.lang === 'de'
+      ? 'Mit PRIZMA musst du dich nicht täglich vor die Kamera setzen.'
+      : 'With PRIZMA, no camera needed. Your avatar publishes content on its own.',
+    hashtags: t.lang === 'ru' ? '#рилс #автоматизация #prizma' : t.lang === 'de' ? '#reels #automatisierung #prizma' : '#reels #automation #prizma',
+    likes: '5,1K',
   },
   {
     type: 'carousel',
     tag: t.modules.items[2].name,
     tagClass: 'tag-carousel',
-    title: t.lang === 'ru' ? 'Слайды, которые объясняют лучше, чем длинный пост' : t.lang === 'de' ? 'Slides, die mehr sagen als ein langer Post' : 'Slides that explain more than a long post',
-    meta: t.lang === 'ru' ? 'Карусель · Instagram / LinkedIn' : t.lang === 'de' ? 'Karussell · Instagram / LinkedIn' : 'Carousel · Instagram / LinkedIn',
-    gradient: 'linear-gradient(135deg, #14332a, #1a4037)',
-    image: null,
+    username: 'prizma.to',
     carousel: ['/showcase-carousel-1.png', '/showcase-carousel-2.png', '/showcase-carousel-3.png'],
-    caption: t.lang === 'ru' ? 'Длинные тексты пугают, а карусели влюбляют! Это самый простой способ упаковать вашу экспертность в понятные смыслы. Без воды и пафоса показываю, как делать контент на автопилоте и сохранять охваты.\n\n#контентмаркетинг #нейросети #личныйбренд #автоматизация' : t.lang === 'de' ? 'Lange Texte schrecken ab, Karussells begeistern! Der einfachste Weg, Expertise in klare Botschaften zu verpacken.\n\n#contentmarketing #ki #personalbranding #automatisierung' : 'Long texts scare, carousels captivate! The easiest way to pack your expertise into clear, digestible slides.\n\n#contentmarketing #ai #personalbrand #automation',
+    caption: t.lang === 'ru'
+      ? 'Длинные тексты пугают, а карусели влюбляют! Самый простой способ упаковать экспертность в понятные смыслы.'
+      : t.lang === 'de'
+      ? 'Lange Texte schrecken ab, Karussells begeistern! Der einfachste Weg, Expertise in klare Botschaften zu verpacken.'
+      : 'Long texts scare, carousels captivate! The easiest way to pack your expertise into clear slides.',
+    hashtags: t.lang === 'ru' ? '#контентмаркетинг #нейросети #личныйбренд' : t.lang === 'de' ? '#contentmarketing #ki #personalbrand' : '#contentmarketing #ai #personalbrand',
+    likes: '3,7K',
   },
 ];
 ---
@@ -45,35 +56,59 @@ const cards = [
     <p class="section-subtitle reveal">{t.showcase.subtitle}</p>
 
     <div class="showcase-grid" data-stagger>
-      {cards.map((card, cardIndex) => (
-        <div class="showcase-card glass-card" data-card={cardIndex} role="button" tabindex="0" aria-label={card.title}>
-          <div class="showcase-preview" style={`background: ${card.gradient};`}>
-            {card.image
-              ? <img src={card.image} alt={card.tag} class="showcase-preview-img" />
-              : card.carousel
-              ? (
-                <div class="carousel-thumb">
-                  <img src={card.carousel[0]} alt={card.tag} class="showcase-preview-img" />
-                  <div class="carousel-thumb-overlay">
-                    <span class="carousel-thumb-count">{card.carousel.length} slides</span>
-                  </div>
-                </div>
-              )
-              : (
-                <div class="reel-thumb">
-                  <div class="reel-play-icon">▶</div>
-                  <div class="reel-label">{card.tag}</div>
-                </div>
-              )
-            }
-            <span class={`showcase-tag ${card.tagClass}`}>{card.tag}</span>
-            <div class="card-open-hint">
-              <span>{t.lang === 'ru' ? 'Нажмите для просмотра' : t.lang === 'de' ? 'Zum Ansehen klicken' : 'Click to view'}</span>
+      {cards.map((card, i) => (
+        <div class="insta-card glass-card">
+          <!-- Header -->
+          <div class="insta-header">
+            <div class="insta-avatar">P</div>
+            <div class="insta-user">
+              <span class="insta-username">{card.username}</span>
+              <span class="insta-platform">Instagram</span>
             </div>
+            <span class={`insta-tag ${card.tagClass}`}>{card.tag}</span>
           </div>
-          <div class="showcase-info">
-            <div class="showcase-title">{card.title}</div>
-            <div class="showcase-meta">{card.meta}</div>
+
+          <!-- Media -->
+          <div class="insta-media">
+            {card.type === 'post' && card.image && (
+              <img src={card.image} alt={card.tag} class="insta-img" />
+            )}
+            {card.type === 'reel' && (
+              <div class="insta-reel-placeholder">
+                <div class="reel-icon">▶</div>
+                <span class="reel-coming">{t.lang === 'ru' ? 'Рилс скоро' : t.lang === 'de' ? 'Reel bald' : 'Reel coming soon'}</span>
+              </div>
+            )}
+            {card.type === 'carousel' && card.carousel && (
+              <div class="insta-carousel" data-idx={i}>
+                {card.carousel.map((src, j) => (
+                  <img src={src} alt={`slide ${j+1}`} class={`insta-img insta-slide${j === 0 ? ' active' : ''}`} data-slide={j} />
+                ))}
+                <button class="insta-arr insta-arr-l" data-dir="-1">‹</button>
+                <button class="insta-arr insta-arr-r" data-dir="1">›</button>
+                <div class="insta-dots">
+                  {card.carousel.map((_, j) => (
+                    <span class={`insta-dot${j === 0 ? ' active' : ''}`}></span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          <!-- Actions -->
+          <div class="insta-actions">
+            <span class="insta-action">♡</span>
+            <span class="insta-action">💬</span>
+            <span class="insta-action">↗</span>
+          </div>
+
+          <!-- Likes + Caption -->
+          <div class="insta-body">
+            <div class="insta-likes">{card.likes} {t.lang === 'ru' ? 'отметок «Нравится»' : t.lang === 'de' ? 'Gefällt mir' : 'likes'}</div>
+            <div class="insta-caption">
+              <span class="insta-caption-user">{card.username}</span> {card.caption}
+            </div>
+            <div class="insta-hashtags">{card.hashtags}</div>
           </div>
         </div>
       ))}
@@ -81,20 +116,11 @@ const cards = [
   </div>
 </section>
 
-<!-- Modal -->
-<div class="modal-overlay" id="showcaseModal" aria-hidden="true">
-  <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-  <div class="modal-inner" id="modalInner">
-    <!-- content injected by JS -->
-  </div>
-</div>
-
 <style>
   .showcase-section {
     position: relative;
     z-index: 1;
   }
-
   .showcase-section h2 { text-align: center; }
   .showcase-section .section-subtitle {
     text-align: center;
@@ -104,554 +130,224 @@ const cards = [
   .showcase-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 28px;
+    align-items: start;
   }
 
-  .showcase-card {
-    overflow: hidden;
+  .insta-card {
     padding: 0;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .showcase-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
-  }
-
-  .showcase-preview {
-    height: 220px;
-    position: relative;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .showcase-preview-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-
-  .showcase-card:hover .showcase-preview-img {
-    transform: scale(1.04);
-  }
-
-  /* Carousel thumb */
-  .carousel-thumb {
-    position: absolute;
-    inset: 0;
-  }
-  .carousel-thumb-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.2);
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 12px;
-  }
-  .carousel-thumb-count {
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border-radius: 20px;
-  }
-
-  /* Reel thumb */
-  .reel-thumb {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    position: relative;
-    z-index: 1;
-  }
-  .reel-play-icon {
-    width: 56px;
-    height: 56px;
-    background: rgba(255,255,255,0.15);
-    border: 2px solid rgba(255,255,255,0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: #fff;
-    padding-left: 4px;
-  }
-  .reel-label {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.6);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  /* Hover hint */
-  .card-open-hint {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .card-open-hint span {
-    color: #fff;
-    font-size: 0.9rem;
-    font-weight: 500;
-    background: rgba(139,92,246,0.7);
-    padding: 10px 20px;
-    border-radius: 30px;
-    backdrop-filter: blur(8px);
-  }
-  .showcase-card:hover .card-open-hint {
-    opacity: 1;
-  }
-
-  .showcase-tag {
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    z-index: 2;
-  }
-
-  .tag-post    { background: rgba(99, 102, 241, 0.3);  color: #A5B4FC; }
-  .tag-reel    { background: rgba(236, 72, 153, 0.3); color: #F9A8D4; }
-  .tag-carousel { background: rgba(6, 182, 212, 0.3);  color: #67E8F9; }
-
-  .showcase-info { padding: 20px 24px; }
-  .showcase-title {
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--text-primary);
-    margin-bottom: 6px;
-  }
-  .showcase-meta {
-    font-size: 0.8rem;
-    color: var(--text-dim);
-  }
-
-  /* ===== MODAL ===== */
-  .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.88);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    backdrop-filter: blur(12px);
-    padding: 20px;
-  }
-  .modal-overlay.open {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  .modal-close {
-    position: fixed;
-    top: 24px;
-    right: 28px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: #fff;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    font-size: 1rem;
-    cursor: pointer;
-    z-index: 10000;
-    transition: background 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .modal-close:hover { background: rgba(255,255,255,0.2); }
-
-  .modal-inner {
-    max-height: 90vh;
-    width: 100%;
-    max-width: 900px;
-    display: flex;
-    gap: 32px;
-    align-items: flex-start;
-    transform: scale(0.95);
-    transition: transform 0.3s ease;
-  }
-  .modal-overlay.open .modal-inner {
-    transform: scale(1);
-  }
-
-  /* Post modal */
-  .modal-post {
-    display: flex;
-    gap: 0;
-    background: #1a1a2e;
     border-radius: 16px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 860px;
-    margin: 0 auto;
-    box-shadow: 0 40px 100px rgba(0,0,0,0.5);
   }
-  .modal-post-image {
-    flex: 0 0 500px;
-    max-width: 500px;
-  }
-  .modal-post-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .modal-post-sidebar {
-    flex: 1;
-    padding: 28px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    overflow-y: auto;
-    max-height: 80vh;
-  }
-  .modal-post-header {
+
+  /* Header */
+  .insta-header {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+    padding: 12px 14px;
   }
-  .modal-post-avatar {
-    width: 38px;
-    height: 38px;
+  .insta-avatar {
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     background: linear-gradient(135deg, #8B5CF6, #06B6D4);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #fff;
     flex-shrink: 0;
+    border: 2px solid rgba(139,92,246,0.4);
   }
-  .modal-post-username {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #fff;
-  }
-  .modal-post-platform {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.4);
-  }
-  .modal-post-caption {
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.8);
-    line-height: 1.6;
-    white-space: pre-line;
-  }
-  .modal-post-caption .hashtags {
-    color: #A5B4FC;
-  }
-  .modal-post-stats {
+  .insta-user {
     display: flex;
-    gap: 20px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    margin-top: auto;
+    flex-direction: column;
+    flex: 1;
   }
-  .modal-post-stat {
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.5);
+  .insta-username {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-primary);
   }
-  .modal-post-stat strong {
-    color: #fff;
+  .insta-platform {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+  }
+  .insta-tag {
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .tag-post     { background: rgba(99,102,241,0.25); color: #A5B4FC; }
+  .tag-reel     { background: rgba(236,72,153,0.25); color: #F9A8D4; }
+  .tag-carousel { background: rgba(6,182,212,0.25);  color: #67E8F9; }
+
+  /* Media */
+  .insta-media {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    background: #0a0a0f;
+  }
+  .insta-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    font-size: 1rem;
   }
 
-  /* Carousel modal */
-  .modal-carousel {
-    display: flex;
-    gap: 0;
-    background: #1a1a2e;
-    border-radius: 16px;
-    overflow: hidden;
+  /* Reel placeholder */
+  .insta-reel-placeholder {
     width: 100%;
-    max-width: 860px;
-    margin: 0 auto;
-    box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+    height: 100%;
+    background: linear-gradient(135deg, #1e3a5f, #0e4155);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
   }
-  .modal-carousel-viewer {
-    flex: 0 0 500px;
+  .reel-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 2px solid rgba(255,255,255,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #fff;
+    padding-left: 4px;
+  }
+  .reel-coming {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+  }
+
+  /* Carousel */
+  .insta-carousel {
     position: relative;
-    background: #000;
+    width: 100%;
+    height: 100%;
   }
-  .modal-carousel-slide {
+  .insta-slide {
     position: absolute;
     inset: 0;
     opacity: 0;
     transition: opacity 0.35s ease;
   }
-  .modal-carousel-slide.active { opacity: 1; }
-  .modal-carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-  .modal-carousel-nav {
+  .insta-slide.active { opacity: 1; }
+
+  .insta-arr {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 12px;
-    z-index: 5;
-  }
-  .modal-carousel-btn {
-    background: rgba(0,0,0,0.55);
+    background: rgba(255,255,255,0.85);
     border: none;
-    color: #fff;
-    width: 40px;
-    height: 40px;
+    color: #111;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    font-size: 1.4rem;
+    font-size: 1rem;
     cursor: pointer;
+    z-index: 5;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background 0.2s;
+    line-height: 1;
   }
-  .modal-carousel-btn:hover { background: rgba(0,0,0,0.85); }
-  .modal-carousel-counter {
+  .insta-arr:hover { background: #fff; }
+  .insta-arr-l { left: 10px; }
+  .insta-arr-r { right: 10px; }
+
+  .insta-dots {
     position: absolute;
-    bottom: 14px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 6px;
+    gap: 5px;
     z-index: 5;
   }
-  .modal-carousel-dot {
-    width: 7px;
-    height: 7px;
+  .insta-dot {
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.35);
-    cursor: pointer;
+    background: rgba(255,255,255,0.4);
     transition: background 0.2s;
   }
-  .modal-carousel-dot.active { background: #fff; }
-  .modal-carousel-sidebar {
-    flex: 1;
-    padding: 28px 24px;
-    overflow-y: auto;
-    max-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .modal-carousel-caption {
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.8);
-    line-height: 1.6;
-    white-space: pre-line;
-  }
+  .insta-dot.active { background: #fff; }
 
-  /* Reel modal */
-  .modal-reel {
-    background: #111;
-    border-radius: 16px;
-    overflow: hidden;
-    max-width: 420px;
-    width: 100%;
-    margin: 0 auto;
-    box-shadow: 0 40px 100px rgba(0,0,0,0.5);
-    aspect-ratio: 9/16;
+  /* Actions */
+  .insta-actions {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    gap: 14px;
+    padding: 10px 14px 4px;
   }
-  .modal-reel video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .insta-action {
+    font-size: 1.3rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
   }
-  .modal-reel-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    color: rgba(255,255,255,0.4);
-    text-align: center;
-    padding: 40px;
+  .insta-action:hover { opacity: 1; }
+
+  /* Body */
+  .insta-body {
+    padding: 0 14px 16px;
   }
-  .modal-reel-placeholder .icon {
-    font-size: 3rem;
-    opacity: 0.3;
+  .insta-likes {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    margin-bottom: 6px;
   }
-  .modal-reel-placeholder p {
-    font-size: 0.9rem;
+  .insta-caption {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
     line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .insta-caption-user {
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .insta-hashtags {
+    font-size: 0.8rem;
+    color: #A5B4FC;
+    margin-top: 4px;
   }
 
   @media (max-width: 900px) {
-    .showcase-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-    .modal-post, .modal-carousel { flex-direction: column; }
-    .modal-post-image, .modal-carousel-viewer { flex: none; max-width: 100%; height: 300px; }
-    .modal-carousel-viewer { min-height: 300px; }
+    .showcase-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
   }
 </style>
 
 <script>
-  const cards = [
-    {
-      type: 'post',
-      image: '/showcase-post.png',
-      caption: document.documentElement.lang === 'de'
-        ? 'Content-Plan fertig. Posts geschrieben. Veröffentlichungen geplant.\n\nDu hast einfach deine Arbeit gemacht.\n\nGenau so funktioniert PRIZMA.\n\n#contentmarketing #automatisierung #personalbrand #prizma'
-        : document.documentElement.lang === 'en'
-        ? 'Content plan ready. Posts written. Publications scheduled.\n\nYou just focused on your work.\n\nThat\'s exactly how PRIZMA works.\n\n#contentmarketing #automation #personalbrand #prizma'
-        : 'Контент-план готов. Посты написаны. Публикации запланированы.\n\nТы просто занималась своим делом.\n\nИменно так работает PRIZMA — один раз настроил, и система делает всё сама. Без копирайтера, без дедлайнов, без стресса.\n\n#контентмаркетинг #автоматизация #личныйбренд #prizma',
-    },
-    {
-      type: 'reel',
-      video: null,
-    },
-    {
-      type: 'carousel',
-      slides: ['/showcase-carousel-1.png', '/showcase-carousel-2.png', '/showcase-carousel-3.png'],
-      caption: document.documentElement.lang === 'de'
-        ? 'Lange Texte schrecken ab, Karussells begeistern! Der einfachste Weg, Expertise in klare Botschaften zu verpacken.\n\n#contentmarketing #ki #personalbranding #automatisierung'
-        : document.documentElement.lang === 'en'
-        ? 'Long texts scare, carousels captivate! The easiest way to pack your expertise into clear, digestible slides.\n\n#contentmarketing #ai #personalbrand #automation'
-        : 'Длинные тексты пугают, а карусели влюбляют! Это самый простой способ упаковать вашу экспертность в понятные смыслы. Без воды и пафоса показываю, как делать контент на автопилоте и сохранять охваты.\n\n#контентмаркетинг #нейросети #личныйбренд #автоматизация',
-    },
-  ];
+  document.querySelectorAll('.insta-carousel').forEach(carousel => {
+    const slides = carousel.querySelectorAll('.insta-slide');
+    const dots = carousel.querySelectorAll('.insta-dot');
+    let cur = 0;
 
-  const overlay = document.getElementById('showcaseModal');
-  const modalInner = document.getElementById('modalInner');
-  const modalClose = document.getElementById('modalClose');
-
-  function openModal(cardIndex) {
-    const card = cards[cardIndex];
-    modalInner.innerHTML = '';
-
-    if (card.type === 'post') {
-      modalInner.innerHTML = `
-        <div class="modal-post">
-          <div class="modal-post-image">
-            <img src="${card.image}" alt="Post" />
-          </div>
-          <div class="modal-post-sidebar">
-            <div class="modal-post-header">
-              <div class="modal-post-avatar">P</div>
-              <div>
-                <div class="modal-post-username">prizma.to</div>
-                <div class="modal-post-platform">Instagram · Sponsored</div>
-              </div>
-            </div>
-            <div class="modal-post-caption">${card.caption.replace(/#\S+/g, '<span class="hashtags">$&</span>').replace(/\n/g, '<br>')}</div>
-            <div class="modal-post-stats">
-              <div class="modal-post-stat"><strong>2.4K</strong> likes</div>
-              <div class="modal-post-stat"><strong>184</strong> comments</div>
-              <div class="modal-post-stat"><strong>312</strong> shares</div>
-            </div>
-          </div>
-        </div>
-      `;
-    } else if (card.type === 'reel') {
-      const reelLabel = document.documentElement.lang === 'de' ? 'Reel wird bald verfügbar sein' : document.documentElement.lang === 'en' ? 'Reel coming soon' : 'Рилс скоро появится';
-      modalInner.innerHTML = `
-        <div class="modal-reel">
-          <div class="modal-reel-placeholder">
-            <div class="icon">▶</div>
-            <p>${reelLabel}</p>
-          </div>
-        </div>
-      `;
-    } else if (card.type === 'carousel') {
-      let slidesHtml = card.slides.map((src, i) => `
-        <div class="modal-carousel-slide${i === 0 ? ' active' : ''}" data-mslide="${i}">
-          <img src="${src}" alt="Slide ${i+1}" />
-        </div>
-      `).join('');
-      let dotsHtml = card.slides.map((_, i) => `
-        <span class="modal-carousel-dot${i === 0 ? ' active' : ''}" data-mdot="${i}"></span>
-      `).join('');
-
-      modalInner.innerHTML = `
-        <div class="modal-carousel">
-          <div class="modal-carousel-viewer">
-            ${slidesHtml}
-            <div class="modal-carousel-nav">
-              <button class="modal-carousel-btn" id="mPrev">‹</button>
-              <button class="modal-carousel-btn" id="mNext">›</button>
-            </div>
-            <div class="modal-carousel-counter">${dotsHtml}</div>
-          </div>
-          <div class="modal-carousel-sidebar">
-            <div class="modal-post-header">
-              <div class="modal-post-avatar">P</div>
-              <div>
-                <div class="modal-post-username">prizma.to</div>
-                <div class="modal-post-platform">Instagram · Carousel</div>
-              </div>
-            </div>
-            <div class="modal-carousel-caption">${card.caption.replace(/#\S+/g, '<span style="color:#67E8F9">$&</span>').replace(/\n/g, '<br>')}</div>
-          </div>
-        </div>
-      `;
-
-      // Carousel logic in modal
-      let mCurrent = 0;
-      const mSlides = modalInner.querySelectorAll('.modal-carousel-slide');
-      const mDots = modalInner.querySelectorAll('.modal-carousel-dot');
-
-      function mGoTo(index) {
-        mSlides[mCurrent].classList.remove('active');
-        mDots[mCurrent].classList.remove('active');
-        mCurrent = (index + mSlides.length) % mSlides.length;
-        mSlides[mCurrent].classList.add('active');
-        mDots[mCurrent].classList.add('active');
-      }
-
-      document.getElementById('mPrev')?.addEventListener('click', (e) => { e.stopPropagation(); mGoTo(mCurrent - 1); });
-      document.getElementById('mNext')?.addEventListener('click', (e) => { e.stopPropagation(); mGoTo(mCurrent + 1); });
-      mDots.forEach((dot, i) => dot.addEventListener('click', () => mGoTo(i)));
+    function goTo(n) {
+      slides[cur].classList.remove('active');
+      dots[cur].classList.remove('active');
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.add('active');
+      dots[cur].classList.add('active');
     }
 
-    overlay.classList.add('open');
-    overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    overlay.classList.remove('open');
-    overlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    setTimeout(() => { modalInner.innerHTML = ''; }, 300);
-  }
-
-  document.querySelectorAll('.showcase-card[data-card]').forEach(card => {
-    card.addEventListener('click', () => openModal(parseInt(card.dataset.card)));
+    carousel.querySelector('.insta-arr-l')?.addEventListener('click', () => goTo(cur - 1));
+    carousel.querySelector('.insta-arr-r')?.addEventListener('click', () => goTo(cur + 1));
+    dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
   });
-
-  modalClose.addEventListener('click', closeModal);
-  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 </script>
