@@ -11,7 +11,7 @@ const cards = [
     title: t.lang === 'ru' ? 'Как эксперту быть в ленте каждый день без копирайтера' : t.lang === 'de' ? 'Wie Experten täglich präsent sind — ohne Texter' : 'How experts stay visible every day — without a copywriter',
     meta: t.lang === 'ru' ? 'Пост · Instagram / LinkedIn' : t.lang === 'de' ? 'Post · Instagram / LinkedIn' : 'Post · Instagram / LinkedIn',
     gradient: 'linear-gradient(135deg, #1a1040, #2d1f5e)',
-    previewText: t.lang === 'ru' ? 'ЭКСПЕРТНЫЙ ПОСТ' : t.lang === 'de' ? 'EXPERTENBEITRAG' : 'EXPERT POST',
+    image: '/showcase-post.png',
   },
   {
     tag: t.modules.items[1].name,
@@ -19,7 +19,7 @@ const cards = [
     title: t.lang === 'ru' ? 'Автопостинг для экспертов: как это работает' : t.lang === 'de' ? 'Automatisches Posting für Experten: So geht\'s' : 'Automated posting for experts: how it works',
     meta: t.lang === 'ru' ? 'Рилс · 30 сек' : t.lang === 'de' ? 'Reel · 30 Sek.' : 'Reel · 30 sec',
     gradient: 'linear-gradient(135deg, #1e3a5f, #0e4155)',
-    previewText: t.lang === 'ru' ? 'ЦЕПЛЯЮЩИЙ РИЛС' : t.lang === 'de' ? 'FESSELNDES REEL' : 'HOOKING REEL',
+    image: null,
   },
   {
     tag: t.modules.items[2].name,
@@ -27,7 +27,7 @@ const cards = [
     title: t.lang === 'ru' ? 'Слайды, которые объясняют лучше, чем длинный пост' : t.lang === 'de' ? 'Slides, die mehr sagen als ein langer Post' : 'Slides that explain more than a long post',
     meta: t.lang === 'ru' ? 'Карусель · Instagram / LinkedIn' : t.lang === 'de' ? 'Karussell · Instagram / LinkedIn' : 'Carousel · Instagram / LinkedIn',
     gradient: 'linear-gradient(135deg, #14332a, #1a4037)',
-    previewText: t.lang === 'ru' ? 'ЭКСПЕРТНАЯ КАРУСЕЛЬ' : t.lang === 'de' ? 'EXPERTENKARUSSELL' : 'EXPERT CAROUSEL',
+    image: null,
   },
 ];
 ---
@@ -41,9 +41,10 @@ const cards = [
       {cards.map(card => (
         <div class="showcase-card glass-card">
           <div class="showcase-preview" style={`background: ${card.gradient};`}>
-            <div class="showcase-preview-content">
-              <span class="showcase-preview-text">{card.previewText}</span>
-            </div>
+            {card.image
+              ? <img src={card.image} alt={card.tag} class="showcase-preview-img" />
+              : <div class="showcase-preview-content"><span class="showcase-preview-text">{card.tag}</span></div>
+            }
             <span class={`showcase-tag ${card.tagClass}`}>{card.tag}</span>
           </div>
           <div class="showcase-info">
@@ -93,6 +94,13 @@ const cards = [
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .showcase-preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .showcase-preview-content {
