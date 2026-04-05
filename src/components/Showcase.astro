@@ -29,6 +29,7 @@ const cards = [
     gradient: 'linear-gradient(135deg, #14332a, #1a4037)',
     image: null,
     carousel: ['/showcase-carousel-1.png', '/showcase-carousel-2.png', '/showcase-carousel-3.png'],
+    caption: t.lang === 'ru' ? 'Длинные тексты пугают, а карусели влюбляют! Это самый простой способ упаковать вашу экспертность в понятные смыслы. Без воды и пафоса показываю, как делать контент на автопилоте и сохранять охваты. #контентмаркетинг #нейросети #личныйбренд #автоматизация' : t.lang === 'de' ? 'Lange Texte schrecken ab, Karussells begeistern! Der einfachste Weg, Expertise in klare Botschaften zu verpacken. Ohne Wasser und Pathos. #contentmarketing #ki #personalbranding #automatisierung' : 'Long texts scare, carousels captivate! The easiest way to pack your expertise into clear, digestible slides. No fluff, no filler. #contentmarketing #ai #personalbrand #automation',
   },
 ];
 ---
@@ -66,6 +67,7 @@ const cards = [
           <div class="showcase-info">
             <div class="showcase-title">{card.title}</div>
             <div class="showcase-meta">{card.meta}</div>
+            {card.caption && <div class="showcase-caption">{card.caption}</div>}
           </div>
         </div>
       ))}
@@ -226,6 +228,13 @@ const cards = [
   .showcase-meta {
     font-size: 0.8rem;
     color: var(--text-dim);
+  }
+
+  .showcase-caption {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-top: 10px;
+    line-height: 1.5;
   }
 
   @media (max-width: 900px) {
