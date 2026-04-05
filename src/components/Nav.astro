@@ -9,7 +9,7 @@ const langs = ['EN', 'DE', 'RU'];
 ---
 
 <nav class="nav" id="nav">
-  <a href={`${prefix}/#`} class="nav-logo text-unbounded gradient-text">PRIZMA</a>
+  <a href={`${prefix}/#`} class="nav-logo text-unbounded gradient-text">PRIZM<svg class="logo-a" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="100,5 50,90 150,90" fill="#8B5CF6"/><polygon points="5,175 50,90 100,175" fill="#06B6D4"/><polygon points="195,175 150,90 100,175" fill="#10B981"/></svg></a>
 
   <div class="nav-links">
     <a href={`${prefix}/#modules`}>{t.nav.modules}</a>
@@ -75,6 +75,15 @@ const langs = ['EN', 'DE', 'RU'];
     font-weight: 900;
     font-size: 1.2rem;
     letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .logo-a {
+    width: 18px;
+    height: 16px;
+    margin-bottom: 1px;
   }
 
   .nav-links {
