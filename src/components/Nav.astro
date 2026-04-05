@@ -5,7 +5,7 @@ interface Props {
 const { t } = Astro.props;
 const lang = t.lang;
 const prefix = lang === 'en' ? '' : `/${lang}`;
-const langs = ['EN', 'DE', 'RU'];
+const langs = ['RU', 'DE', 'EN'];
 ---
 
 <nav class="nav" id="nav">
