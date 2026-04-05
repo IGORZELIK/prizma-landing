@@ -28,6 +28,7 @@ const cards = [
     meta: t.lang === 'ru' ? 'Карусель · Instagram / LinkedIn' : t.lang === 'de' ? 'Karussell · Instagram / LinkedIn' : 'Carousel · Instagram / LinkedIn',
     gradient: 'linear-gradient(135deg, #14332a, #1a4037)',
     image: null,
+    carousel: ['/showcase-carousel-1.png', '/showcase-carousel-2.png', '/showcase-carousel-3.png'],
   },
 ];
 ---
@@ -38,11 +39,26 @@ const cards = [
     <p class="section-subtitle reveal">{t.showcase.subtitle}</p>
 
     <div class="showcase-grid" data-stagger>
-      {cards.map(card => (
+      {cards.map((card, cardIndex) => (
         <div class="showcase-card glass-card">
           <div class="showcase-preview" style={`background: ${card.gradient};`}>
             {card.image
               ? <img src={card.image} alt={card.tag} class="showcase-preview-img" />
+              : card.carousel
+              ? (
+                <div class="carousel-wrapper" data-carousel={cardIndex}>
+                  {card.carousel.map((src, i) => (
+                    <img src={src} alt={`${card.tag} ${i+1}`} class={`showcase-preview-img carousel-slide${i === 0 ? ' active' : ''}`} data-slide={i} />
+                  ))}
+                  <button class="carousel-btn carousel-prev" data-dir="prev">‹</button>
+                  <button class="carousel-btn carousel-next" data-dir="next">›</button>
+                  <div class="carousel-dots">
+                    {card.carousel.map((_, i) => (
+                      <span class={`carousel-dot${i === 0 ? ' active' : ''}`} data-dot={i}></span>
+                    ))}
+                  </div>
+                </div>
+              )
               : <div class="showcase-preview-content"><span class="showcase-preview-text">{card.tag}</span></div>
             }
             <span class={`showcase-tag ${card.tagClass}`}>{card.tag}</span>
@@ -103,6 +119,69 @@ const cards = [
     display: block;
   }
 
+  .carousel-wrapper {
+    position: absolute;
+    inset: 0;
+  }
+
+  .carousel-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .carousel-slide.active {
+    opacity: 1;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background 0.2s;
+  }
+
+  .carousel-btn:hover { background: rgba(0,0,0,0.8); }
+  .carousel-prev { left: 8px; }
+  .carousel-next { right: 8px; }
+
+  .carousel-dots {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+  }
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    transition: background 0.2s;
+  }
+
+  .carousel-dot.active { background: #fff; }
+
   .showcase-preview-content {
     text-align: center;
     position: relative;
@@ -153,3 +232,23 @@ const cards = [
     .showcase-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
   }
 </style>
+
+<script>
+  document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+    const slides = wrapper.querySelectorAll('.carousel-slide');
+    const dots = wrapper.querySelectorAll('.carousel-dot');
+    let current = 0;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    wrapper.querySelector('.carousel-prev')?.addEventListener('click', () => goTo(current - 1));
+    wrapper.querySelector('.carousel-next')?.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+  });
+</script>
