@@ -30,12 +30,37 @@ const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
   <link rel="alternate" hreflang="x-default" href="https://prizma.to/en" />
   <link rel="canonical" href={`https://prizma.to/${lang === 'en' ? '' : lang}`} />
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={t.seo.title} />
+  <meta name="twitter:description" content={t.seo.description} />
+  <meta name="twitter:image" content="https://prizma.to/og-image.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PRIZMA",
+    "url": "https://prizma.to",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": t.seo.description,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PRIZMA",
+      "url": "https://prizma.to",
+      "logo": "https://prizma.to/favicon.png"
+    }
+  })} />
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
 
-  <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body>
   <!-- Background orbs -->
@@ -47,6 +72,12 @@ const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
   <canvas id="particles" style="position:fixed;inset:0;z-index:0;pointer-events:none;"></canvas>
 
   <slot />
+
+  <!-- Vercel Analytics (GDPR-compliant, no cookies) -->
+  <script>
+    import { inject } from '@vercel/analytics';
+    inject();
+  </script>
 
   <!-- GSAP -->
   <script>

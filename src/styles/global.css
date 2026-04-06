@@ -2,7 +2,15 @@
    PRIZMA — Liquid Glass Design System
    ═══════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Unbounded:wght@400;700;900&display=swap');
+/* Self-hosted fonts (GDPR compliant — no external requests) */
+@font-face { font-family: 'Outfit'; font-weight: 300; font-display: swap; src: url('/fonts/outfit-300.ttf') format('truetype'); }
+@font-face { font-family: 'Outfit'; font-weight: 400; font-display: swap; src: url('/fonts/outfit-400.ttf') format('truetype'); }
+@font-face { font-family: 'Outfit'; font-weight: 500; font-display: swap; src: url('/fonts/outfit-500.ttf') format('truetype'); }
+@font-face { font-family: 'Outfit'; font-weight: 600; font-display: swap; src: url('/fonts/outfit-600.ttf') format('truetype'); }
+@font-face { font-family: 'Outfit'; font-weight: 800; font-display: swap; src: url('/fonts/outfit-800.ttf') format('truetype'); }
+@font-face { font-family: 'Unbounded'; font-weight: 400; font-display: swap; src: url('/fonts/unbounded-400.ttf') format('truetype'); }
+@font-face { font-family: 'Unbounded'; font-weight: 700; font-display: swap; src: url('/fonts/unbounded-700.ttf') format('truetype'); }
+@font-face { font-family: 'Unbounded'; font-weight: 900; font-display: swap; src: url('/fonts/unbounded-900.ttf') format('truetype'); }
 
 :root {
   /* Brand — три грани призмы */

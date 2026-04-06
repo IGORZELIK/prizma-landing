@@ -6,24 +6,25 @@ const { t } = Astro.props;
 
 const reviews = [
   {
-    text: 'У нас был клиент-юрист с огромной экспертизой, но нулевым присутствием онлайн. За месяц с PRIZMA он получил SEO-блог, регулярные рилсы и карусели. Сейчас к нему приходят клиенты из поиска.',
-    name: 'Анна Козлова',
-    role: 'CEO, Digital Fox Agency',
-    initials: 'АК',
+    text: 'Долгое время строили автоматизацию контента на Make — связки, вебхуки, костыли. Работало, но каждое обновление что-то ломало, поддержка съедала время. Перешли на PRIZMA и просто выдохнули. Всё в одном месте, стабильно работает, не нужно ничего чинить. Теперь фокус на клиентах, а не на технике.',
+    name: 'Дмитрий Моргунов',
+    role: 'Основатель, ПОТОК',
+    logo: '/testimonial-potok.png',
+    initials: 'ДМ',
     gradient: 'linear-gradient(135deg, #8B5CF6, #7C3AED)',
   },
   {
-    text: 'Самое ценное — что из одной темы рождается целый пакет контента. Раньше копирайтер писал статью, отдельно SMM-щик делал пост, отдельно дизайнер — карусель. Сейчас это один процесс в PRIZMA.',
-    name: 'Дмитрий Морозов',
-    role: 'Head of SEO, WebPro Studio',
-    initials: 'ДМ',
+    text: 'Первое впечатление, честно, кайф. Пост выложился сам, без моего участия. Зашла в канал, а там уже всё готово. Фотка, текст, всё по делу. Теперь просто веду клиентов, а контент идёт сам.',
+    name: 'Галина Веретенникова',
+    role: 'Психолог-консультант',
+    initials: 'ГВ',
     gradient: 'linear-gradient(135deg, #06B6D4, #0891B2)',
   },
   {
-    text: 'Подключили 12 клиентов за первый месяц. Эксперты в восторге — их знания наконец-то работают на них, а не лежат в голове. Один стоматолог сказал: «Я впервые вижу свои мысли в виде контента».',
-    name: 'Елена Сидорова',
-    role: 'Founder, ContentLab',
-    initials: 'ЕС',
+    text: 'Менеджеры скидывают туры в Telegram, и дальше всё само расходится по соцсетям. TikTok, Instagram, везде. Раньше держали отдельного человека только для этого. Сейчас это просто не занимает время.',
+    name: 'Сергей Ковальчук',
+    role: 'Руководитель отдела продаж, туристическое агентство',
+    initials: 'СК',
     gradient: 'linear-gradient(135deg, #10B981, #059669)',
   },
 ];
@@ -42,9 +43,10 @@ const starSvg = `<svg width="18" height="18" viewBox="0 0 20 20" fill="#F59E0B">
           <div class="stars" set:html={starSvg.repeat(5)} />
           <p class="review-text">{review.text}</p>
           <div class="review-author">
-            <div class="review-avatar" style={`background: ${review.gradient};`}>
-              {review.initials}
-            </div>
+            {review.logo
+              ? <img src={review.logo} alt={review.name} class="review-avatar review-avatar-logo" />
+              : <div class="review-avatar" style={`background: ${review.gradient};`}>{review.initials}</div>
+            }
             <div>
               <div class="review-name">{review.name}</div>
               <div class="review-role">{review.role}</div>
@@ -113,6 +115,11 @@ const starSvg = `<svg width="18" height="18" viewBox="0 0 20 20" fill="#F59E0B">
     font-size: 0.95rem;
     color: #fff;
     flex-shrink: 0;
+  }
+  .review-avatar-logo {
+    object-fit: contain;
+    background: #fff;
+    padding: 4px;
   }
 
   .review-name {

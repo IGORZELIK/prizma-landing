@@ -163,29 +163,30 @@ const { t } = Astro.props;
   const successBlock = document.querySelector('.form-success') as HTMLElement;
   const submitBtn = form?.querySelector('.submit-btn') as HTMLButtonElement;
 
-  const BOT_TOKEN = '8641927444:AAEKyMLgqvPgvDhuUM-hTrD4FAE2GglBdVk';
-  const CHAT_ID = '691305339';
-
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     submitBtn.classList.add('loading');
 
     const data = new FormData(form);
-    const name    = data.get('name')    || '—';
-    const email   = data.get('email')   || '—';
-    const company = data.get('company') || '—';
-    const message = data.get('message') || '—';
-
-    const text = `🚀 *Новая заявка с PRIZMA*\n\n👤 *Имя:* ${name}\n📧 *Email:* ${email}\n🏢 *Компания:* ${company}\n💬 *Сообщение:* ${message}`;
 
     try {
-      await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: CHAT_ID, text, parse_mode: 'Markdown' }),
+        body: JSON.stringify({
+          name: data.get('name') || '',
+          email: data.get('email') || '',
+          company: data.get('company') || '',
+          message: data.get('message') || '',
+        }),
       });
-      form.classList.add('hidden');
-      successBlock.classList.add('visible');
+
+      if (res.ok) {
+        form.classList.add('hidden');
+        successBlock.classList.add('visible');
+      } else {
+        throw new Error('Send failed');
+      }
     } catch {
       submitBtn.classList.remove('loading');
       alert('Ошибка отправки. Попробуйте ещё раз.');

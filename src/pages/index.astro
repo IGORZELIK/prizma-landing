@@ -46,7 +46,7 @@ import t from '../i18n/en.json';
 
   if (!saved && window.location.pathname === '/') {
     // Only redirect from root page, not from /en, /ru, /de
-    fetch('https://ipapi.co/json/')
+    fetch('/api/geo')
       .then(r => r.json())
       .then(data => {
         const country = (data.country_code || '').toUpperCase();
