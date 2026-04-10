@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIZMA × AntonivTour — Кейс</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0B0B10;
+  --bg-card: #13131A;
+  --bg-card-border: rgba(255,255,255,0.06);
+  --purple: #9B6BF2;
+  --purple-dim: rgba(155,107,242,0.12);
+  --cyan: #3DD8D8;
+  --cyan-dim: rgba(61,216,216,0.10);
+  --green: #2DD881;
+  --green-dim: rgba(45,216,129,0.10);
+  --orange: #FF8C42;
+  --orange-dim: rgba(255,140,66,0.08);
+  --text: #EEEEF2;
+  --text-sec: #9898AA;
+  --text-muted: #5C5C6E;
+  --grad: linear-gradient(135deg, #3DD8D8, #9B6BF2, #2DD881);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+.topbar { height: 3px; background: var(--grad); }
+.wrap { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+/* Header */
+.header {
+  padding: 36px 0 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { display: flex; align-items: center; }
+.logo img { height: 32px; width: auto; }
+.tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+  color: var(--purple); background: var(--purple-dim);
+  padding: 5px 14px; border-radius: 100px;
+}
+
+/* Hero */
+.hero { padding: 16px 0 44px; }
+.hero-niche {
+  font-size: 12px; color: var(--text-muted);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.hero h1 {
+  font-size: 40px; font-weight: 800; line-height: 1.15;
+  margin-bottom: 18px;
+}
+.hero h1 .accent { color: var(--cyan); }
+.hero-sub {
+  font-size: 18px; color: var(--text-sec); line-height: 1.55;
+  max-width: 620px;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, var(--cyan), var(--purple), transparent);
+  margin-bottom: 40px;
+}
+
+/* Info grid */
+.info-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; margin-bottom: 48px;
+}
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.info-card .label {
+  font-size: 11px; color: var(--text-muted);
+  letter-spacing: 1px; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.info-card .value {
+  font-size: 16px; font-weight: 700;
+}
+
+/* Sections */
+.section-tag {
+  font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px; border-radius: 6px;
+  display: inline-block; margin-bottom: 16px;
+}
+.section-tag.problem { color: var(--orange); background: var(--orange-dim); }
+.section-tag.solution { color: var(--green); background: var(--green-dim); }
+.section-tag.results { color: var(--cyan); background: var(--cyan-dim); }
+
+.section { margin-bottom: 48px; }
+.section p {
+  font-size: 15px; color: var(--text-sec); max-width: 640px;
+  margin-bottom: 8px;
+}
+.section p strong { color: var(--text); font-weight: 600; }
+
+/* Pipeline — numbered step cards */
+.pipeline-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.pipe-card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: border-color 0.2s;
+}
+.pipe-card:hover {
+  border-color: rgba(155,107,242,0.25);
+}
+.pipe-num {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 800;
+  color: var(--bg);
+}
+.pipe-num.n1 { background: var(--cyan); }
+.pipe-num.n2 { background: #6DA0F2; }
+.pipe-num.n3 { background: var(--purple); }
+.pipe-num.n4 { background: #B96BF2; }
+.pipe-num.n5 { background: #6BF2A0; }
+.pipe-num.n6 { background: var(--green); }
+
+.pipe-content { flex: 1; }
+.pipe-title {
+  font-size: 14px; font-weight: 600;
+  margin-bottom: 3px;
+}
+.pipe-desc {
+  font-size: 13px; color: var(--text-sec); line-height: 1.45;
+}
+
+/* Arrow connector between input and pipeline */
+.input-block {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--cyan-dim);
+  border: 1px solid rgba(61,216,216,0.2);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+.input-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+.input-text {
+  font-size: 15px; font-weight: 600;
+  color: var(--cyan);
+}
+.input-text span {
+  font-weight: 400;
+  color: var(--text-sec);
+}
+
+.arrow-down {
+  text-align: center;
+  font-size: 20px;
+  color: var(--text-muted);
+  padding: 4px 0;
+}
+
+/* Results */
+.results-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-top: 24px;
+}
+.result-card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  border-radius: 14px;
+  padding: 28px 20px;
+  text-align: center;
+}
+.result-card .number {
+  font-size: 36px; font-weight: 800; margin-bottom: 6px;
+}
+.result-card .number.c { color: var(--cyan); }
+.result-card .number.p { color: var(--purple); }
+.result-card .number.g { color: var(--green); }
+.result-card .desc {
+  font-size: 13px; color: var(--text-sec); line-height: 1.5;
+}
+
+/* Before/After */
+.ba-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; margin-top: 24px;
+}
+.ba-card {
+  border-radius: 14px; padding: 24px;
+  border: 1px solid var(--bg-card-border);
+}
+.ba-card.before { background: var(--orange-dim); }
+.ba-card.after { background: var(--green-dim); }
+.ba-card .ba-tag {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 1px; margin-bottom: 12px;
+}
+.ba-card.before .ba-tag { color: var(--orange); }
+.ba-card.after .ba-tag { color: var(--green); }
+.ba-card p {
+  font-size: 14px; color: var(--text-sec); line-height: 1.6;
+  max-width: 100%;
+}
+.ba-card.after p { color: var(--text); }
+
+/* Quote */
+.quote-block {
+  margin: 48px 0;
+  padding: 32px;
+  background: var(--bg-card);
+  border-left: 3px solid var(--purple);
+  border-radius: 0 14px 14px 0;
+}
+.quote-block p {
+  font-size: 17px; font-style: italic;
+  color: var(--text); line-height: 1.65;
+}
+.quote-block .author {
+  margin-top: 14px;
+  font-size: 13px; font-style: normal;
+  color: var(--text-muted);
+}
+
+/* Footer */
+.footer {
+  margin-top: 48px;
+  padding: 32px 0;
+  border-top: 1px solid var(--bg-card-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .slogan { font-size: 14px; color: var(--text-muted); }
+.footer .cta {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--grad);
+  color: #0B0B10;
+  font-weight: 700; font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.footer .cta:hover { opacity: 0.9; }
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 28px; }
+  .hero-sub { font-size: 16px; }
+  .info-grid { grid-template-columns: repeat(2, 1fr); }
+  .pipeline-grid { grid-template-columns: 1fr; }
+  .results-grid { grid-template-columns: 1fr; }
+  .ba-grid { grid-template-columns: 1fr; }
+  .header { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .footer { flex-direction: column; gap: 16px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"></div>
+
+<div class="wrap">
+
+  <div class="header">
+    <div class="logo">
+      <img src="https://prizma.to/logo-prizma.png" alt="PRIZMA">
+    </div>
+    <div class="tag">CASE STUDY</div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-niche">Туризм / Travel & Tourism</div>
+    <h1>AntonivTour: <span class="accent">контент-фабрика</span> з Telegram-бота</h1>
+    <p class="hero-sub">Як турагентство з 485 000 підписників автоматизувало створення та публікацію 600+ постів на місяць у 5 соцмережах</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="label">Клієнт</div>
+      <div class="value">AntonivTour</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Ринок</div>
+      <div class="value">Україна / EU</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Підписники</div>
+      <div class="value">485 000+</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Модуль</div>
+      <div class="value">Reposting</div>
+    </div>
+  </div>
+
+  <!-- Problem -->
+  <div class="section">
+    <div class="section-tag problem">Проблема</div>
+    <p>Менеджери AntonivTour щодня публікували <strong>20–25 турів</strong> на 5 платформах: TikTok, Instagram, Facebook, Pinterest, Threads.</p>
+    <p>Кожен пост вимагав: зібрати фото, написати текст, зробити банер з ціною та датами, вручну завантажити в кожну соцмережу.</p>
+    <p><strong>100–125 ручних дій на день.</strong> Менеджери витрачали години на копіювання замість роботи з клієнтами.</p>
+  </div>
+
+  <!-- Solution -->
+  <div class="section">
+    <div class="section-tag solution">Рішення PRIZMA</div>
+
+    <div class="input-block">
+      <div class="input-icon">✈️</div>
+      <div class="input-text">7 фото + посилання в Telegram <span>— це все, що робить менеджер</span></div>
+    </div>
+
+    <div class="arrow-down">↓</div>
+
+    <div class="pipeline-grid">
+      <div class="pipe-card">
+        <div class="pipe-num n1">1</div>
+        <div class="pipe-content">
+          <div class="pipe-title">Парсинг посилання</div>
+          <div class="pipe-desc">Ціна, дати, опис туру — все автоматично</div>
+        </div>
+      </div>
+      <div class="pipe-card">
+        <div class="pipe-num n2">2</div>
+        <div class="pipe-content">
+          <div class="pipe-title">Колаж із фото</div>
+          <div class="pipe-desc">4 фото збираються в одне зображення</div>
+        </div>
+      </div>
+      <div class="pipe-card">
+        <div class="pipe-num n3">3</div>
+        <div class="pipe-content">
+          <div class="pipe-title">Генерація банера</div>
+          <div class="pipe-desc">Заголовок, ціна, дати, емодзі</div>
+        </div>
+      </div>
+      <div class="pipe-card">
+        <div class="pipe-num n4">4</div>
+        <div class="pipe-content">
+          <div class="pipe-title">Контактні дані</div>
+          <div class="pipe-desc">Фото менеджера та його контакт</div>
+        </div>
+      </div>
+      <div class="pipe-card">
+        <div class="pipe-num n5">5</div>
+        <div class="pipe-content">
+          <div class="pipe-title">Текст посту</div>
+          <div class="pipe-desc">Генерується українською мовою</div>
+        </div>
+      </div>
+      <div class="pipe-card">
+        <div class="pipe-num n6">6</div>
+        <div class="pipe-content">
+          <div class="pipe-title">Публікація</div>
+          <div class="pipe-desc">TikTok, Instagram, Facebook, Pinterest, Threads</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Before/After -->
+  <div class="section">
+    <div class="ba-grid">
+      <div class="ba-card before">
+        <div class="ba-tag">ДО</div>
+        <p>Ручне копіювання фото і тексту в кожну соцмережу окремо. 15–20 хвилин на один тур. Менеджер як контент-мейкер замість продавця.</p>
+      </div>
+      <div class="ba-card after">
+        <div class="ba-tag">ПІСЛЯ</div>
+        <p>30 секунд: 7 фото + посилання в Telegram. PRIZMA створює готовий брендований пост із дизайном і публікує в 5 соцмереж автоматично.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div class="section">
+    <div class="section-tag results">Результати</div>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="number c">30 сек</div>
+        <div class="desc">час менеджера на 1 пост замість 15–20 хвилин</div>
+      </div>
+      <div class="result-card">
+        <div class="number p">600+</div>
+        <div class="desc">постів на місяць у 5 соцмережах</div>
+      </div>
+      <div class="result-card">
+        <div class="number g">5</div>
+        <div class="desc">платформ одночасно з одного повідомлення</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quote -->
+  <div class="quote-block">
+    <p>«Менеджери скидають тури в Telegram, і далі все само розходиться по соцмережах. TikTok, Instagram, всюди. Раніше тримали окрему людину тільки для цього. Зараз це просто не займає часу.»</p>
+    <div class="author">— Сергій Ковальчук, керівник відділу продажів</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="slogan">Одна ідея. Всі форми.</div>
+    <a href="https://prizma.to/#contact" class="cta">Спробувати PRIZMA →</a>
+  </div>
+
+</div>
+
+</body>
+</html>
