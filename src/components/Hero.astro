@@ -37,12 +37,12 @@ const { t } = Astro.props;
   }
 
   .hero-slogan {
-    opacity: 0;
-    animation: revealUp 1s ease-out 2.0s forwards;
+    opacity: 1;
     background: linear-gradient(135deg, #fff 0%, #E5E7EB 50%, rgba(139, 92, 246, 0.9) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: revealUp 0.8s ease-out 0.3s both;
   }
 
   .hero-subtitle {
@@ -53,7 +53,7 @@ const { t } = Astro.props;
     line-height: 1.75;
     margin-top: 20px;
     opacity: 0;
-    animation: revealUp 1s ease-out 2.3s forwards;
+    animation: revealUp 0.8s ease-out 0.6s forwards;
   }
 
   .hero-cta {
@@ -61,7 +61,7 @@ const { t } = Astro.props;
     gap: 16px;
     margin-top: 40px;
     opacity: 0;
-    animation: revealUp 1s ease-out 2.6s forwards;
+    animation: revealUp 0.8s ease-out 0.9s forwards;
   }
 
   .scroll-hint {
@@ -70,7 +70,7 @@ const { t } = Astro.props;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    animation: revealUp 1s ease-out 3.2s forwards;
+    animation: revealUp 0.8s ease-out 1.4s forwards;
   }
 
   .scroll-line {
@@ -109,5 +109,5 @@ const { t } = Astro.props;
       nav.style.opacity = '1';
       nav.style.transform = 'translateY(0)';
     }
-  }, 3000);
+  }, 1200);
 </script>

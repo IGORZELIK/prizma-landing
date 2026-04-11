@@ -227,7 +227,7 @@ h2 {
 .orb {
   position: fixed;
   border-radius: 50%;
-  filter: blur(120px);
+  filter: blur(80px);
   z-index: 0;
   pointer-events: none;
 }

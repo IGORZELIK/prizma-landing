@@ -58,6 +58,10 @@ const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
     }
   })} />
 
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="/fonts/unbounded-900.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="/fonts/outfit-400.ttf" as="font" type="font/ttf" crossorigin />
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
 
@@ -153,8 +157,9 @@ const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
     }
   </script>
 
-  <!-- Particles -->
+  <!-- Particles (deferred to after first paint) -->
   <script>
+    function initParticles() {
     const canvas = document.getElementById('particles') as HTMLCanvasElement;
     if (canvas) {
       const ctx = canvas.getContext('2d')!;
@@ -163,7 +168,7 @@ const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
       const isMobile = window.innerWidth < 768;
 
       const colors = ['#8B5CF6', '#06B6D4', '#10B981', '#ffffff', '#ffffff', '#ffffff'];
-      const count = isMobile ? 20 : 50;
+      const count = isMobile ? 15 : 30;
 
       interface Particle { x: number; y: number; vx: number; vy: number; r: number; color: string; }
       const particles: Particle[] = [];
@@ -189,8 +194,8 @@ const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
               const dx = particles[i].x - particles[j].x;
               const dy = particles[i].y - particles[j].y;
               const dist = Math.sqrt(dx * dx + dy * dy);
-              if (dist < 100) {
-                ctx.strokeStyle = `rgba(255,255,255,${0.04 * (1 - dist / 100)})`;
+              if (dist < 70) {
+                ctx.strokeStyle = `rgba(255,255,255,${0.04 * (1 - dist / 70)})`;
                 ctx.lineWidth = 0.5;
                 ctx.beginPath();
                 ctx.moveTo(particles[i].x, particles[i].y);
@@ -225,6 +230,13 @@ const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
         w = canvas.width = window.innerWidth;
         h = canvas.height = window.innerHeight;
       });
+    }
+    }
+    // Defer particles until after main content is painted
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(initParticles);
+    } else {
+      setTimeout(initParticles, 200);
     }
   </script>
 </body>

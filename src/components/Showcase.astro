@@ -10,7 +10,7 @@ const cards = [
     tag: t.modules.items[0].name,
     tagClass: 'tag-post',
     username: 'prizma.to',
-    image: '/showcase-post.png',
+    image: '/showcase-post.webp',
     caption: t.lang === 'ru'
       ? 'Контент-план готов. Посты написаны. Публикации запланированы. Ты просто занималась своим делом. Именно так работает PRIZMA.'
       : t.lang === 'de'
@@ -39,10 +39,10 @@ const cards = [
     tagClass: 'tag-carousel',
     username: 'prizma.to',
     carousel: t.lang === 'de'
-      ? ['/de-carousel-1.png', '/de-carousel-2.png', '/de-carousel-3.png']
+      ? ['/de-carousel-1.webp', '/de-carousel-2.webp', '/de-carousel-3.webp']
       : t.lang === 'en'
-      ? ['/en-carousel-1.png', '/en-carousel-2.png', '/en-carousel-3.png']
-      : ['/showcase-carousel-2.png', '/showcase-carousel-1.png', '/showcase-carousel-3.png'],
+      ? ['/en-carousel-1.webp', '/en-carousel-2.webp', '/en-carousel-3.webp']
+      : ['/showcase-carousel-2.webp', '/showcase-carousel-1.webp', '/showcase-carousel-3.webp'],
     caption: t.lang === 'ru'
       ? 'Слайды, которые объясняют лучше, чем длинный пост! Почему карусели в Instagram и LinkedIn получают больше охватов и сохранений, чем обычные посты. Как эксперту быстро создавать слайды по своей теме — без дизайнера и сложных инструментов.'
       : t.lang === 'de'
@@ -75,7 +75,7 @@ const cards = [
           <!-- Media -->
           <div class="insta-media">
             {card.type === 'post' && card.image && (
-              <img src={card.image} alt={card.tag} class="insta-img" />
+              <img src={card.image} alt={card.tag} class="insta-img" width="1024" height="1024" loading="lazy" />
             )}
             {card.type === 'reel' && card.video && (
               <video
@@ -96,7 +96,7 @@ const cards = [
                   ))}
                 </div>
                 {card.carousel.map((src, j) => (
-                  <img src={src} alt={`slide ${j+1}`} class={`insta-img insta-slide${j === 0 ? ' active' : ''}`} data-slide={j} />
+                  <img src={src} alt={`slide ${j+1}`} class={`insta-img insta-slide${j === 0 ? ' active' : ''}`} data-slide={j} width="928" height="1152" loading="lazy" />
                 ))}
                 <div class="insta-tap-l" data-dir="-1"></div>
                 <div class="insta-tap-r" data-dir="1"></div>
