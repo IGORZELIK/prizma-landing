@@ -4,108 +4,61 @@ interface Props {
 }
 const { t } = Astro.props;
 
-const phases = [
-  {
-    id: 'launched',
-    status: 'done',
-    period: 'Запущено',
-    date: '2025',
-    title: 'Ядро платформы',
-    color: '#22c55e',
-    items: [
-      { label: '6 модулей контента', desc: 'Аватар, Reels, посты, карусели, SEO-статьи, репостинг — все форматы в одной системе' },
-      { label: 'Единый контент-план', desc: 'Один источник идей разворачивается во все форматы автоматически' },
-      { label: 'Мультитенантная архитектура', desc: 'Изолированные данные и настройки для каждого клиента' },
-      { label: 'AI-онбординг', desc: 'Анализ tone of voice, ниши и аудитории при подключении клиента' },
-      { label: 'BYOK и BYOB', desc: 'Клиент подключает свои ключи API и Telegram-бота для модерации' },
-      { label: 'Human in the loop', desc: 'Контент проходит согласование перед публикацией — ничего не уходит без одобрения' },
-      { label: 'SEO + GEO оптимизация', desc: 'Семантическое ядро, ключевые слова и геотаргетинг встроены в генерацию' },
-      { label: 'Humanizer', desc: 'AI-тексты проходят обработку для естественного звучания и уникальности' },
-    ],
-  },
-  {
-    id: 'current',
-    status: 'in-progress',
-    period: 'В разработке',
-    date: 'Q2 2026',
-    title: 'Расширение рынков и форматов',
-    color: '#f59e0b',
-    items: [
-      { label: 'Полный SEO-цикл', desc: 'Семантическое ядро, генерация статей, автопубликация на блог клиента' },
-      { label: 'Мультиязычный SEO-модуль', desc: 'Статьи на нескольких языках с раздельной оптимизацией под каждый рынок' },
-      { label: 'Автопостинг во все соцсети', desc: 'Instagram, LinkedIn, Telegram, TikTok — публикация без ручного труда' },
-      { label: 'Публичный запуск prizma.to', desc: 'Открытый доступ, онбординг и первые клиенты' },
-    ],
-  },
-  {
-    id: 'q3',
-    status: 'planned',
-    period: 'Планируется',
-    date: 'Q3 2026',
-    title: 'AI-агенты: контроль качества',
-    color: '#8b5cf6',
-    items: [
-      { label: 'Quality Gate Agent', desc: 'AI-проверка контента перед публикацией: факты, стиль, tone of voice' },
-      { label: 'Аналитика постов', desc: 'Автосбор метрик: охваты, лайки, вовлечённость по каждому клиенту' },
-      { label: 'Astro SSR блог', desc: 'Рендеринг клиентских блогов с идеальными Core Web Vitals' },
-    ],
-  },
-  {
-    id: 'q4',
-    status: 'planned',
-    period: 'Планируется',
-    date: 'Q4 2026',
-    title: 'Самообучающаяся система',
-    color: '#ec4899',
-    items: [
-      { label: 'SEO Feedback Loop', desc: 'Мониторинг позиций, автодоработка статей и переиндексация по результатам' },
-      { label: 'Content Performance Agent', desc: 'Анализ что работает у клиента, автокоррекция контент-плана' },
-      { label: 'Кросс-модульная связность', desc: 'AI-агент синхронизирует нарратив между всеми форматами контента' },
-    ],
-  },
-];
+const phases = (t.roadmap.phases as any[]).map((phase: any) => ({
+  ...phase,
+  color: phase.status === 'done' ? '#22c55e'
+    : phase.status === 'in-progress' ? '#f59e0b'
+    : phase.status === 'planned' && phase.date?.includes('Q3') ? '#8b5cf6'
+    : '#ec4899',
+}));
 
-const statusConfig: Record<string, { label: string; icon: string }> = {
-  'done':        { label: 'Готово',    icon: '✓' },
-  'in-progress': { label: 'В работе', icon: '◉' },
-  'planned':     { label: 'В планах', icon: '◎' },
+const statusLabels: Record<string, Record<string, { label: string; icon: string }>> = {
+  en: { 'done': { label: 'Done', icon: '✓' }, 'in-progress': { label: 'In progress', icon: '◉' }, 'planned': { label: 'Planned', icon: '◎' } },
+  de: { 'done': { label: 'Fertig', icon: '✓' }, 'in-progress': { label: 'In Arbeit', icon: '◉' }, 'planned': { label: 'Geplant', icon: '◎' } },
+  ru: { 'done': { label: 'Готово', icon: '✓' }, 'in-progress': { label: 'В работе', icon: '◉' }, 'planned': { label: 'В планах', icon: '◎' } },
 };
+
+const statusConfig = statusLabels[t.lang] || statusLabels.en;
+
+function featureCount(count: number): string {
+  if (t.lang === 'ru') {
+    return count > 4 ? `${count} фич` : count > 1 ? `${count} фичи` : `${count} фича`;
+  }
+  if (t.lang === 'de') {
+    return count === 1 ? `${count} Feature` : `${count} Features`;
+  }
+  return count === 1 ? `${count} feature` : `${count} features`;
+}
 ---
 
 <section class="roadmap" id="roadmap">
   <div class="section-wrap">
-    <!-- Header -->
     <div class="roadmap-header reveal">
       <div class="roadmap-pill">
         <span class="pill-dot">◉</span>
         Roadmap 2025–2026
       </div>
-      <h2>Куда движется PRIZMA</h2>
-      <p class="roadmap-sub">От автоматизации контента к самообучающейся системе, которая сама улучшает результаты ваших публикаций</p>
+      <h2>{t.roadmap.heading}</h2>
+      <p class="roadmap-sub">{t.roadmap.subtitle}</p>
     </div>
 
-    <!-- Timeline -->
     <div class="timeline">
       {phases.map((phase, i) => (
         <div class="phase-row reveal" data-index={i} style={`--phase-color: ${phase.color};`}>
-          <!-- Node -->
           <div class={`phase-node node-${phase.status}`}>
             <span class="node-icon">{statusConfig[phase.status].icon}</span>
           </div>
 
-          <!-- Connector line -->
           {i < phases.length - 1 && (
             <div class={`connector connector-${phase.status}`}
               style={`--next-color: ${phases[i + 1].color};`}
             ></div>
           )}
 
-          <!-- Card -->
           <div
             class={`phase-card phase-${phase.status}`}
             data-open={phase.status === 'in-progress' ? 'true' : 'false'}
           >
-            <!-- Card header -->
             <div class="phase-header">
               <div class="phase-top-row">
                 <span class="phase-date">{phase.date}</span>
@@ -120,13 +73,10 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
               <h3 class="phase-title">{phase.title}</h3>
             </div>
 
-            <!-- Card body -->
             <div class="phase-body">
-              <p class="phase-count">
-                {phase.items.length} {phase.items.length > 4 ? 'фич' : phase.items.length > 1 ? 'фичи' : 'фича'}
-              </p>
+              <p class="phase-count">{featureCount(phase.items.length)}</p>
               <div class="phase-items">
-                {phase.items.map((item, idx) => (
+                {phase.items.map((item: any, idx: number) => (
                   <div class="phase-item" style={`--item-delay: ${idx * 0.06}s`}>
                     <div class="item-dot"></div>
                     <div class="item-text">
@@ -142,13 +92,12 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
       ))}
     </div>
 
-    <!-- CTA -->
     <div class="roadmap-cta reveal">
       <div class="cta-text">
-        <div class="cta-title">Хотите повлиять на приоритеты?</div>
-        <div class="cta-desc">Напишите нам, какие функции важны для вас</div>
+        <div class="cta-title">{t.roadmap.cta_title}</div>
+        <div class="cta-desc">{t.roadmap.cta_desc}</div>
       </div>
-      <a href="#contact" class="cta-btn">Связаться</a>
+      <a href="#contact" class="cta-btn">{t.roadmap.cta_btn}</a>
     </div>
   </div>
 </section>
@@ -159,7 +108,6 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
     z-index: 1;
   }
 
-  /* Header */
   .roadmap-header {
     max-width: 640px;
     margin: 0 auto 56px;
@@ -211,19 +159,16 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
     margin: 0 auto;
   }
 
-  /* Timeline */
   .timeline {
     max-width: 560px;
     margin: 0 auto;
   }
 
-  /* Phase row */
   .phase-row {
     position: relative;
     padding-left: 48px;
   }
 
-  /* Node */
   .phase-node {
     position: absolute;
     left: 0;
@@ -262,7 +207,6 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
     background: linear-gradient(135deg, color-mix(in srgb, var(--phase-color) 20%, transparent), color-mix(in srgb, var(--phase-color) 7%, transparent));
   }
 
-  /* Connector line */
   .connector {
     position: absolute;
     left: 15px;
@@ -281,7 +225,6 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
     background: linear-gradient(to bottom, color-mix(in srgb, var(--phase-color) 27%, transparent), color-mix(in srgb, var(--next-color) 14%, transparent));
   }
 
-  /* Card */
   .phase-card {
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.06);
@@ -305,7 +248,6 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
     background: color-mix(in srgb, var(--phase-color) 10%, transparent);
   }
 
-  /* Header */
   .phase-header {
     padding: 20px 24px;
   }
@@ -357,7 +299,6 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
     line-height: 1.3;
   }
 
-  /* Body (collapsible) */
   .phase-body {
     max-height: 0;
     overflow: hidden;
@@ -376,7 +317,6 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
     font-family: monospace;
   }
 
-  /* Items */
   .phase-items {
     display: flex;
     flex-direction: column;
@@ -429,26 +369,9 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
     margin-top: 2px;
   }
 
-  /* CTA */
   .roadmap-cta {
     max-width: 560px;
     margin: 40px auto 0;
-    padding-left: 48px;
-  }
-
-  .roadmap-cta > * {
-    padding: 20px 24px;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.06);
-    background: linear-gradient(135deg, rgba(139,92,246,0.05), rgba(236,72,153,0.03));
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  /* override: make cta itself the flex container */
-  .roadmap-cta {
     padding: 20px 24px 20px 72px;
     border-radius: 16px;
     border: 1px solid rgba(255,255,255,0.06);
@@ -491,7 +414,6 @@ const statusConfig: Record<string, { label: string; icon: string }> = {
     box-shadow: 0 4px 20px rgba(139,92,246,0.4);
   }
 
-  /* Mobile */
   @media (max-width: 768px) {
     .phase-row { padding-left: 40px; }
     .phase-node { width: 26px; height: 26px; }

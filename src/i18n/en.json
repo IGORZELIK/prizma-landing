@@ -60,11 +60,90 @@
     "subtitle": "One expert idea. Three finished pieces, ready to publish."
   },
   "testimonials": {
-    "heading": "What clients say"
+    "heading": "What clients say",
+    "reviews": [
+      {
+        "text": "We used to build content automation on Make — webhooks, workarounds, duct tape. It worked, but every update broke something, and maintenance ate up our time. We switched to PRIZMA and just exhaled. Everything in one place, stable, nothing to fix. Now we focus on clients, not on tech.",
+        "name": "Dmitry Morgunov",
+        "role": "Founder, POTOK",
+        "logo": "/testimonial-potok.png",
+        "initials": "DM",
+        "gradient": "linear-gradient(135deg, #8B5CF6, #7C3AED)"
+      },
+      {
+        "text": "First impression — honestly, amazing. A post went out on its own, without me lifting a finger. I opened the channel and everything was already there. Photo, text, all on point. Now I just work with clients, and the content runs itself.",
+        "name": "Galina Veretennikova",
+        "role": "Consulting psychologist",
+        "initials": "GV",
+        "gradient": "linear-gradient(135deg, #06B6D4, #0891B2)"
+      },
+      {
+        "text": "Managers drop tours into Telegram, and everything spreads across social media on its own. TikTok, Instagram, everywhere. We used to have a dedicated person just for that. Now it simply takes no time.",
+        "name": "Sergiy Kovalchuk",
+        "role": "Head of Sales, travel agency",
+        "initials": "SK",
+        "gradient": "linear-gradient(135deg, #10B981, #059669)"
+      }
+    ]
   },
-  "demo": {
-    "heading": "See PRIZMA in action",
-    "caption": "Two-minute walkthrough"
+  "roadmap": {
+    "heading": "Where PRIZMA is heading",
+    "subtitle": "From content automation to a self-learning system that improves your publishing results on its own",
+    "cta_title": "Want to influence priorities?",
+    "cta_desc": "Tell us which features matter most to you",
+    "cta_btn": "Get in touch",
+    "phases": [
+      {
+        "period": "Launched",
+        "date": "2025",
+        "title": "Platform core",
+        "status": "done",
+        "items": [
+          { "label": "6 content modules", "desc": "Avatar, Reels, posts, carousels, SEO articles, reposting — all formats in one system" },
+          { "label": "Unified content plan", "desc": "One source of ideas unfolds into all formats automatically" },
+          { "label": "Multi-tenant architecture", "desc": "Isolated data and settings for each client" },
+          { "label": "AI onboarding", "desc": "Tone of voice, niche and audience analysis during client setup" },
+          { "label": "BYOK and BYOB", "desc": "Client connects their own API keys and Telegram bot for moderation" },
+          { "label": "Human in the loop", "desc": "Content goes through approval before publishing — nothing goes out without sign-off" },
+          { "label": "SEO + GEO optimization", "desc": "Semantic core, keywords and geotargeting are built into generation" },
+          { "label": "Humanizer", "desc": "AI texts are processed for natural sound and uniqueness" }
+        ]
+      },
+      {
+        "period": "In progress",
+        "date": "Q2 2026",
+        "title": "Expanding markets and formats",
+        "status": "in-progress",
+        "items": [
+          { "label": "Full SEO cycle", "desc": "Semantic core, article generation, auto-publishing to client blog" },
+          { "label": "Multilingual SEO module", "desc": "Articles in multiple languages with separate optimization per market" },
+          { "label": "Auto-posting to all social media", "desc": "Instagram, LinkedIn, Telegram, TikTok — publishing without manual work" },
+          { "label": "Public launch of prizma.to", "desc": "Open access, onboarding and first clients" }
+        ]
+      },
+      {
+        "period": "Planned",
+        "date": "Q3 2026",
+        "title": "AI agents: quality control",
+        "status": "planned",
+        "items": [
+          { "label": "Quality Gate Agent", "desc": "AI content check before publishing: facts, style, tone of voice" },
+          { "label": "Post analytics", "desc": "Auto-collection of metrics: reach, likes, engagement per client" },
+          { "label": "Astro SSR blog", "desc": "Client blog rendering with perfect Core Web Vitals" }
+        ]
+      },
+      {
+        "period": "Planned",
+        "date": "Q4 2026",
+        "title": "Self-learning system",
+        "status": "planned",
+        "items": [
+          { "label": "SEO Feedback Loop", "desc": "Position monitoring, auto-refinement of articles and re-indexing based on results" },
+          { "label": "Content Performance Agent", "desc": "Analyzes what works for the client, auto-corrects the content plan" },
+          { "label": "Cross-module coherence", "desc": "AI agent synchronizes narrative across all content formats" }
+        ]
+      }
+    ]
   },
   "cta": {
     "heading": "7 days free. No commitment.",

@@ -60,11 +60,90 @@
     "subtitle": "Eine Expertenidee. Drei fertige Posts, bereit zum Teilen."
   },
   "testimonials": {
-    "heading": "Was Kunden sagen"
+    "heading": "Was Kunden sagen",
+    "reviews": [
+      {
+        "text": "Wir haben lange mit Make automatisiert — Webhooks, Workarounds, Klebeband. Es funktionierte, aber jedes Update hat etwas kaputtgemacht, und die Wartung hat uns Zeit gekostet. Mit PRIZMA konnten wir einfach durchatmen. Alles an einem Ort, stabil, nichts zu reparieren. Jetzt konzentrieren wir uns auf Kunden, nicht auf Technik.",
+        "name": "Dmitry Morgunov",
+        "role": "Gründer, POTOK",
+        "logo": "/testimonial-potok.png",
+        "initials": "DM",
+        "gradient": "linear-gradient(135deg, #8B5CF6, #7C3AED)"
+      },
+      {
+        "text": "Erster Eindruck — ehrlich gesagt, großartig. Ein Post ging ganz von allein raus. Ich habe den Kanal geöffnet und alles war schon da. Foto, Text, alles passt. Jetzt arbeite ich einfach mit Kunden, und der Content läuft von selbst.",
+        "name": "Galina Veretennikova",
+        "role": "Beratende Psychologin",
+        "initials": "GV",
+        "gradient": "linear-gradient(135deg, #06B6D4, #0891B2)"
+      },
+      {
+        "text": "Manager schicken Reisen per Telegram, und alles verbreitet sich automatisch in den sozialen Medien. TikTok, Instagram, überall. Früher hatten wir eine eigene Person nur dafür. Jetzt kostet es einfach keine Zeit mehr.",
+        "name": "Sergiy Kovalchuk",
+        "role": "Vertriebsleiter, Reisebüro",
+        "initials": "SK",
+        "gradient": "linear-gradient(135deg, #10B981, #059669)"
+      }
+    ]
   },
-  "demo": {
-    "heading": "PRIZMA in der Praxis erleben",
-    "caption": "Zwei Minuten Überblick"
+  "roadmap": {
+    "heading": "Wohin PRIZMA sich entwickelt",
+    "subtitle": "Von der Content-Automatisierung zum selbstlernenden System, das Ihre Veröffentlichungsergebnisse selbständig verbessert",
+    "cta_title": "Möchten Sie die Prioritäten beeinflussen?",
+    "cta_desc": "Sagen Sie uns, welche Funktionen für Sie wichtig sind",
+    "cta_btn": "Kontakt aufnehmen",
+    "phases": [
+      {
+        "period": "Gestartet",
+        "date": "2025",
+        "title": "Plattform-Kern",
+        "status": "done",
+        "items": [
+          { "label": "6 Content-Module", "desc": "Avatar, Reels, Posts, Karussells, SEO-Artikel, Reposting — alle Formate in einem System" },
+          { "label": "Einheitlicher Content-Plan", "desc": "Eine Ideenquelle entfaltet sich automatisch in alle Formate" },
+          { "label": "Multi-Tenant-Architektur", "desc": "Isolierte Daten und Einstellungen für jeden Kunden" },
+          { "label": "KI-Onboarding", "desc": "Analyse von Tonalität, Nische und Zielgruppe bei der Kundeneinrichtung" },
+          { "label": "BYOK und BYOB", "desc": "Kunde verbindet eigene API-Schlüssel und Telegram-Bot zur Moderation" },
+          { "label": "Human in the Loop", "desc": "Content durchläuft Freigabe vor Veröffentlichung — nichts geht ohne Zustimmung raus" },
+          { "label": "SEO + GEO-Optimierung", "desc": "Semantischer Kern, Keywords und Geotargeting sind in die Generierung integriert" },
+          { "label": "Humanizer", "desc": "KI-Texte werden für natürlichen Klang und Einzigartigkeit nachbearbeitet" }
+        ]
+      },
+      {
+        "period": "In Arbeit",
+        "date": "Q2 2026",
+        "title": "Expansion in Märkte und Formate",
+        "status": "in-progress",
+        "items": [
+          { "label": "Vollständiger SEO-Zyklus", "desc": "Semantischer Kern, Artikelgenerierung, automatische Veröffentlichung auf dem Kundenblog" },
+          { "label": "Mehrsprachiges SEO-Modul", "desc": "Artikel in mehreren Sprachen mit separater Optimierung pro Markt" },
+          { "label": "Auto-Posting in alle sozialen Medien", "desc": "Instagram, LinkedIn, Telegram, TikTok — Veröffentlichung ohne Handarbeit" },
+          { "label": "Öffentlicher Launch von prizma.to", "desc": "Offener Zugang, Onboarding und erste Kunden" }
+        ]
+      },
+      {
+        "period": "Geplant",
+        "date": "Q3 2026",
+        "title": "KI-Agenten: Qualitätskontrolle",
+        "status": "planned",
+        "items": [
+          { "label": "Quality Gate Agent", "desc": "KI-Prüfung vor Veröffentlichung: Fakten, Stil, Tonalität" },
+          { "label": "Post-Analytik", "desc": "Automatische Erfassung von Metriken: Reichweite, Likes, Engagement pro Kunde" },
+          { "label": "Astro SSR Blog", "desc": "Kundenblog-Rendering mit perfekten Core Web Vitals" }
+        ]
+      },
+      {
+        "period": "Geplant",
+        "date": "Q4 2026",
+        "title": "Selbstlernendes System",
+        "status": "planned",
+        "items": [
+          { "label": "SEO Feedback Loop", "desc": "Positionsüberwachung, automatische Artikelverbesserung und Neuindexierung anhand der Ergebnisse" },
+          { "label": "Content Performance Agent", "desc": "Analysiert, was beim Kunden funktioniert, korrigiert den Content-Plan automatisch" },
+          { "label": "Modulübergreifende Kohärenz", "desc": "KI-Agent synchronisiert die Erzählung über alle Content-Formate hinweg" }
+        ]
+      }
+    ]
   },
   "cta": {
     "heading": "7 Tage kostenlos. Unverbindlich.",
