@@ -19,8 +19,12 @@ const prefix = lang === 'en' ? '' : `/${lang}`;
         <a href={`${prefix}/#modules`}>{t.footer.modules}</a>
         <span class="footer-dot">&middot;</span>
         <a href={`${prefix}/#cases`}>{t.footer.cases}</a>
-        <span class="footer-dot">&middot;</span>
-        <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>
+        {lang === 'ru' && (
+          <>
+            <span class="footer-dot">&middot;</span>
+            <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>
+          </>
+        )}
         <span class="footer-dot">&middot;</span>
         <a href={`${prefix}/#contact`}>{t.footer.contact}</a>
       </nav>

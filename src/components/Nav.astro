@@ -14,7 +14,7 @@ const langs = ['EN', 'DE', 'RU'];
   <div class="nav-links">
     <a href={`${prefix}/#modules`}>{t.nav.modules}</a>
     <a href={`${prefix}/#cases`}>{t.nav.cases}</a>
-    <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>
+    {lang === 'ru' && <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>}
     <a href={`${prefix}/#contact`} class="nav-cta-btn">{t.nav.cta}</a>
   </div>
 
@@ -36,7 +36,7 @@ const langs = ['EN', 'DE', 'RU'];
   <div class="nav-mobile">
     <a href={`${prefix}/#modules`}>{t.nav.modules}</a>
     <a href={`${prefix}/#cases`}>{t.nav.cases}</a>
-    <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>
+    {lang === 'ru' && <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>}
     <a href={`${prefix}/#contact`} class="nav-cta-btn">{t.nav.cta}</a>
     <div class="lang-switch mobile">
       {langs.map(l => (
