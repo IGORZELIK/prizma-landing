@@ -45,6 +45,15 @@ const { t } = Astro.props;
           name="message"
           rows="4"
         ></textarea>
+        <!-- Honeypot: hidden from humans, bots fill it -> request is dropped server-side -->
+        <input
+          type="text"
+          name="website"
+          class="hp-field"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+        />
         <button type="submit" class="btn-primary submit-btn">
           <span>{t.cta.submit}</span>
         </button>
@@ -139,6 +148,16 @@ const { t } = Astro.props;
     min-height: 100px;
   }
 
+  /* Honeypot: visually and physically hidden, but present in the DOM for bots. */
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
   .submit-btn {
     width: 100%;
     margin-top: 8px;
@@ -178,6 +197,7 @@ const { t } = Astro.props;
           email: data.get('email') || '',
           company: data.get('company') || '',
           message: data.get('message') || '',
+          website: data.get('website') || '',
         }),
       });
 
