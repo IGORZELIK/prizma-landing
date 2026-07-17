@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+import t from '../../i18n/ru.json';
+---
+
+<Layout t={t}>
+  <Nav t={t} />
+  <main class="legal-page">
+    <div class="section-wrap">
+      <h1>Выходные данные (Impressum)</h1>
+      <p class="legal-date">Актуально на: июль 2026</p>
+
+      <div class="legal-body">
+
+        <p class="legal-note">Выходные данные публикуются согласно § 5 DDG (законодательство Германии). При расхождениях преимущественную силу имеет <a href="/de/impressum">немецкая версия</a>.</p>
+
+        <h2>Сведения согласно § 5 DDG</h2>
+        <p>
+          <strong>Igor Zelikovsky</strong><br/>
+          Digitalkin AI (коммерческое обозначение)<br/>
+          Bleicherfeldstraße 31<br/>
+          33689 Bielefeld<br/>
+          Германия
+        </p>
+
+        <h2>Контакт</h2>
+        <p>E-mail: <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+        <h2>Ответственный за содержание согласно § 18 абз. 2 MStV</h2>
+        <p>Igor Zelikovsky (адрес указан выше)<br/>
+        E-mail: <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+        <h2>Отказ от ответственности</h2>
+        <p>Содержание этого сайта подготовлено с максимальной тщательностью. Тем не менее мы не можем гарантировать точность, полноту и актуальность материалов.</p>
+
+        <h2>Авторское право</h2>
+        <p>Содержание и материалы, созданные владельцем сайта, охраняются авторским правом Германии. Воспроизведение, переработка, распространение и любое использование за пределами, установленными законом об авторском праве, требуют письменного согласия автора или создателя.</p>
+
+        <h2>Разрешение споров с потребителями</h2>
+        <p>Мы не готовы и не обязаны участвовать в процедурах разрешения споров в согласительной комиссии по делам потребителей.</p>
+
+      </div>
+    </div>
+  </main>
+  <Footer t={t} />
+</Layout>
+
+<style>
+  .legal-page { min-height: 80vh; }
+  .legal-page h1 { margin-bottom: 8px; }
+  .legal-date { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 60px; }
+  .legal-note { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 32px; }
+  .legal-body h2 { font-size: 1.2rem; margin-top: 40px; margin-bottom: 12px; color: var(--text-primary); }
+  .legal-body p, .legal-body ul { color: var(--text-secondary, #9CA3AF); line-height: 1.8; font-size: 0.95rem; }
+  .legal-body ul { padding-left: 20px; margin-top: 8px; }
+  .legal-body li { margin-bottom: 6px; }
+  .legal-body a { color: var(--purple); text-decoration: none; }
+  .legal-body a:hover { text-decoration: underline; }
+  .legal-body strong { color: var(--text-primary); }
+</style>
