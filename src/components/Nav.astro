@@ -196,4 +196,12 @@ const langs = ['EN', 'DE', 'RU'];
   mobile?.querySelectorAll('a[href*="#"]').forEach(a => {
     a.addEventListener('click', () => mobile?.classList.remove('open'));
   });
+
+  // Remember an explicit language choice so the root-page auto-redirect respects it.
+  document.querySelectorAll('.lang-switch a').forEach(a => {
+    a.addEventListener('click', () => {
+      const lang = (a.getAttribute('href') || '').replace('/', '').toLowerCase();
+      if (lang) localStorage.setItem('prizma_locale', lang);
+    });
+  });
 </script>

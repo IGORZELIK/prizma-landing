@@ -37,31 +37,41 @@ import t from '../i18n/en.json';
 </Layout>
 
 <script>
-  // GeoIP-based language redirect (runs once on first visit)
-  const LANG_KEY = 'prizma_lang';
-  const saved = localStorage.getItem(LANG_KEY);
+  // Language routing — runs only on the root page "/".
+  // Goal: visitors in DE/RU regions always land on their localized version, and
+  // an explicit choice made via the language switcher is remembered and honored.
+  const LOCALE_KEY = 'prizma_locale';
 
-  if (!saved && window.location.pathname === '/') {
-    // Only redirect from root page, not from /en, /ru, /de
-    fetch('/api/geo')
-      .then(r => r.json())
-      .then(data => {
-        const country = (data.country_code || '').toUpperCase();
-        const ruCountries = ['RU', 'UA', 'BY', 'KZ', 'UZ', 'KG', 'TJ', 'TM', 'AZ', 'AM', 'GE', 'MD'];
-        const deCountries = ['DE', 'AT', 'CH', 'LI', 'LU'];
+  if (window.location.pathname === '/') {
+    const saved = localStorage.getItem(LOCALE_KEY);
 
-        let lang = 'en';
-        if (ruCountries.includes(country)) lang = 'ru';
-        else if (deCountries.includes(country)) lang = 'de';
+    if (saved && saved !== 'en') {
+      // Returning visitor with a stored non-English locale → send them there.
+      window.location.replace(`/${saved}`);
+    } else if (!saved) {
+      // First visit: detect country and route accordingly.
+      fetch('/api/geo')
+        .then(r => r.json())
+        .then(data => {
+          const country = (data.country_code || '').toUpperCase();
+          const ruCountries = ['RU', 'UA', 'BY', 'KZ', 'UZ', 'KG', 'TJ', 'TM', 'AZ', 'AM', 'GE', 'MD'];
+          const deCountries = ['DE', 'AT', 'CH', 'LI', 'LU'];
 
-        localStorage.setItem(LANG_KEY, lang);
-        if (lang !== 'en') {
-          window.location.href = `/${lang}`;
-        }
-      })
-      .catch(() => {
-        // On error, stay on English
-        localStorage.setItem(LANG_KEY, 'en');
-      });
+          let lang = 'en';
+          if (ruCountries.includes(country)) lang = 'ru';
+          else if (deCountries.includes(country)) lang = 'de';
+
+          if (lang !== 'en') {
+            localStorage.setItem(LOCALE_KEY, lang);
+            window.location.replace(`/${lang}`);
+          }
+          // English-region visitors stay on "/". We intentionally do not persist
+          // "en" here, so the stored value only ever reflects an explicit choice.
+        })
+        .catch(() => {
+          // Network error → no redirect; retry on the next visit.
+        });
+    }
+    // saved === 'en' → explicit English choice → stay on "/".
   }
 </script>
