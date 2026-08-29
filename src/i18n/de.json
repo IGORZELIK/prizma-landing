@@ -16,20 +16,20 @@
     "heading": "Ein Thema. Sechs Formate. Alle Kanäle."
   },
   "modules": {
-    "heading": "Der Ansatz hat sich verändert. Das Werkzeug auch.",
+    "heading": "Was PRIZMA erstellt",
     "subheading": "Regelmäßig posten reicht heute nicht mehr. Algorithmen bewerten Konsistenz, thematische Relevanz und Nutzerverhalten. PRIZMA erstellt die gewünschten Formate aus einem einzigen Thema, jedes passgenau für seinen Kanal.",
     "items": [
-      { "name": "Post", "desc": "Ein Beitrag, der zeigt, was Ihr Unternehmen kann. Kein beliebiges Bild, sondern eine Aussage, die im Feed hängen bleibt und Vertrauen aufbaut." },
-      { "name": "Reel", "desc": "Kurzvideo mit klarer Botschaft. Algorithmen spielen es organisch aus. Der direkteste Weg zu neuer Reichweite, ohne Anzeigenbudget." },
+      { "name": "Post", "desc": "Ein Beitrag, der zeigt, was Ihr Unternehmen kann. Kein beliebiges Bild, sondern eine Aussage, die in Erinnerung bleibt und Vertrauen aufbaut." },
+      { "name": "Reel", "desc": "Kurzvideo mit klarer Botschaft. Die Plattformen verbreiten es organisch. Der direkteste Weg zu neuer Reichweite, ohne Anzeigenbudget." },
       { "name": "Karussell", "desc": "Komplexe Inhalte, übersichtlich aufbereitet. Karussells werden gespeichert und geteilt. Inhalte, zu denen man zurückkommt." },
-      { "name": "Story", "desc": "Kurz, tagesaktuell und beiläufig. Stories halten Ihre Kanäle zwischen den großen Beiträgen lebendig und werden zuerst gesehen." },
-      { "name": "Blog-Artikel", "desc": "Ein Artikel, der jahrelang Besucher bringt. PRIZMA sieht sich echte Suchanfragen an und baut den Text so, dass er in den Ergebnissen oben landet." },
+      { "name": "Story", "desc": "Kurz und tagesaktuell. Stories halten Ihre Kanäle zwischen den größeren Beiträgen präsent und werden meist zuerst gesehen." },
+      { "name": "Blog-Artikel", "desc": "Ein Artikel, der über Jahre Besucher bringt. PRIZMA wertet echte Suchanfragen aus und strukturiert den Text auf gute Platzierungen hin." },
       { "name": "KI-Avatar", "desc": "Ein Gesicht für Ihre Marke, ohne Kamera und ohne Drehtermin. Der KI-Avatar spricht Ihre Texte im Videoformat, regelmäßig und in gleichbleibender Qualität." }
     ]
   },
   "why": {
-    "heading": "Kein Text-Generator. Ein System, das Ihre Kanäle betreibt.",
-    "text": "Die meisten Werkzeuge erzeugen Text, und danach bleibt die Arbeit bei Ihnen. PRIZMA übernimmt die ganze Kette: Es macht aus Ihren Themen die passenden Formate, richtet sie auf echte Suchanfragen und Ihre Region aus, spielt sie auf Ihren Kanälen aus und lernt aus dem, was funktioniert. Jeder Text wird auf die Sprache Ihres Unternehmens abgestimmt, ohne maschinellen Klang und ohne Standardfloskeln. Das letzte Wort haben immer Sie.",
+    "heading": "Vom Thema bis zur Veröffentlichung",
+    "text": "Die meisten Tools liefern Texte. Alles danach bleibt Ihre Aufgabe. PRIZMA deckt den gesamten Ablauf ab: Aus einem Thema entstehen die passenden Formate, abgestimmt auf Suchanfragen und Ihre Region. Die Veröffentlichung erfolgt über Ihre Kanäle, die Ergebnisse fließen in die weitere Planung ein. Jeder Text wird an die Sprache Ihres Unternehmens angepasst. Die Freigabe liegt bei Ihnen.",
     "stats": [
       { "value": "6", "label": "Formate aus einem Thema" },
       { "value": "SEO", "label": "in jedem Inhalt mitgedacht" },
@@ -62,8 +62,8 @@
   },
   "roadmap": {
     "heading": "Wohin PRIZMA sich entwickelt",
-    "subtitle": "Von der Content-Automatisierung zum selbstlernenden System, das Ihre Veröffentlichungsergebnisse selbständig verbessert",
-    "cta_title": "Möchten Sie die Prioritäten beeinflussen?",
+    "subtitle": "Von der Automatisierung einzelner Beiträge zu einem System, das die Ergebnisse Ihrer Veröffentlichungen laufend verbessert",
+    "cta_title": "Fehlt Ihnen eine Funktion?",
     "cta_desc": "Sagen Sie uns, welche Funktionen für Sie wichtig sind",
     "cta_btn": "Kontakt aufnehmen",
     "phases": [

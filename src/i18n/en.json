@@ -16,20 +16,20 @@
     "heading": "One topic. Six formats. Every channel."
   },
   "modules": {
-    "heading": "Content has evolved. Your tools should too.",
+    "heading": "What PRIZMA produces",
     "subheading": "Publishing regularly is no longer enough. Algorithms weigh consistency, topical relevance and how people behave. PRIZMA builds the formats you need from a single topic, each one tuned to its channel.",
     "items": [
-      { "name": "Post", "desc": "A post that shows what your company can do. Not just an image, but a statement that stays in the feed and builds trust." },
-      { "name": "Reel", "desc": "Short-form video with a clear message. Algorithms distribute it organically. The most direct route to new reach, with no ad budget." },
+      { "name": "Post", "desc": "A post that shows what your company can do. Not just an image, but a statement that stays in mind and builds trust." },
+      { "name": "Reel", "desc": "Short-form video with a clear message. The platforms distribute it organically. The most direct route to new reach, with no ad budget." },
       { "name": "Carousel", "desc": "Complex ideas, broken down clearly. Carousels earn saves and shares. The kind of content people bookmark and come back to." },
-      { "name": "Story", "desc": "Short, current and casual. Stories keep your channels alive between the bigger posts, and they are what people see first." },
-      { "name": "Article", "desc": "An article that keeps bringing visitors for years. PRIZMA looks at real search queries and builds the text so it lands near the top." },
+      { "name": "Story", "desc": "Short and current. Stories keep your channels present between the larger posts and are usually seen first." },
+      { "name": "Article", "desc": "An article that brings visitors for years. PRIZMA evaluates real search queries and structures the text for good placement." },
       { "name": "Avatar", "desc": "A face for your brand, with no camera and no shoot. The AI avatar delivers your script on video, regularly and at consistent quality." }
     ]
   },
   "why": {
-    "heading": "Not a text generator. A system that runs your channels.",
-    "text": "Most tools produce text and stop there, which leaves the work with you. PRIZMA takes on the whole chain: it turns your topics into the right formats, aims them at real search queries and your region, publishes them on your channels and learns from what works. Every text is tuned to the way your company speaks, with no robotic tone and no filler. The final call is always yours.",
+    "heading": "From topic to publication",
+    "text": "Most tools deliver text. Everything after that stays your job. PRIZMA covers the whole process: one topic becomes the formats you need, aimed at real search queries and your region. Publication runs through your channels, and the results feed into the next round of planning. Every text is adapted to the way your company writes. Approval stays with you.",
     "stats": [
       { "value": "6", "label": "formats from one topic" },
       { "value": "SEO", "label": "considered in every piece" },
@@ -62,8 +62,8 @@
   },
   "roadmap": {
     "heading": "Where PRIZMA is heading",
-    "subtitle": "From content automation to a self-learning system that improves your publishing results on its own",
-    "cta_title": "Want to influence priorities?",
+    "subtitle": "From automating individual posts to a system that keeps improving the results of your publishing",
+    "cta_title": "Missing a feature?",
     "cta_desc": "Tell us which features matter most to you",
     "cta_btn": "Get in touch",
     "phases": [
