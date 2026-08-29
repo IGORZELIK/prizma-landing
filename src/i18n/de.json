@@ -4,6 +4,7 @@
     "modules": "Module",
     "cases": "Beispiel",
     "reviews": "Anwendungsfälle",
+    "pricing": "Preise",
     "cta": "Zugang anfragen"
   },
   "hero": {
@@ -121,6 +122,15 @@
         ]
       }
     ]
+  },
+  "pricing": {
+    "heading": "Preise",
+    "lead": "Der Preis richtet sich nach der Zahl der Kanäle, den Formaten und den Sprachen. Zur Orientierung:",
+    "items": [
+      { "label": "Einrichtung", "amount": "ab 900 € einmalig", "desc": "Analyse der Tonalität, Anbindung der Kanäle und erste Inhalte zur Abstimmung." },
+      { "label": "Betrieb", "amount": "ab 490 € pro Monat", "desc": "Laufende Erstellung und Veröffentlichung in den vereinbarten Formaten, mit Freigabe nach Ihren Regeln." }
+    ],
+    "note": "Alle Preise verstehen sich zzgl. gesetzlicher Umsatzsteuer. Für Agenturen und Reseller gelten eigene Konditionen."
   },
   "trust": {
     "heading": "Datenschutz und Betrieb",

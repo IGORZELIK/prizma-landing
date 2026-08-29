@@ -4,6 +4,7 @@
     "modules": "Modules",
     "cases": "Example",
     "reviews": "Use cases",
+    "pricing": "Pricing",
     "cta": "Request access"
   },
   "hero": {
@@ -121,6 +122,15 @@
         ]
       }
     ]
+  },
+  "pricing": {
+    "heading": "Pricing",
+    "lead": "The price depends on the number of channels, the formats and the languages. For orientation:",
+    "items": [
+      { "label": "Setup", "amount": "from €900 one-off", "desc": "Analysis of your tone, connection of the channels and first content for review." },
+      { "label": "Operation", "amount": "from €490 per month", "desc": "Ongoing creation and publication in the agreed formats, released under your rules." }
+    ],
+    "note": "All prices are exclusive of statutory VAT. Separate terms apply to agencies and resellers."
   },
   "trust": {
     "heading": "Data protection and operations",

@@ -1,0 +1,90 @@
+---
+// German B2B expects a price anchor on the page. Two "ab" figures plus what
+// moves them, so the anchor does not read as bait.
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+if (!t.pricing) return;
+---
+
+<section class="pricing" id="pricing">
+  <div class="section-wrap">
+    <h2 class="reveal">{t.pricing.heading}</h2>
+    <p class="section-subtitle pricing-lead reveal">{t.pricing.lead}</p>
+
+    <div class="pricing-grid" data-stagger>
+      {t.pricing.items.map((item: any) => (
+        <div class="pricing-card glass-card">
+          <div class="pricing-label">{item.label}</div>
+          <div class="pricing-amount gradient-text text-unbounded">{item.amount}</div>
+          <div class="pricing-desc">{item.desc}</div>
+        </div>
+      ))}
+    </div>
+
+    <p class="pricing-note reveal">{t.pricing.note}</p>
+  </div>
+</section>
+
+<style>
+  .pricing h2 {
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pricing-lead {
+    margin: 16px auto 0;
+    max-width: 640px;
+    text-align: center;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .pricing-card {
+    padding: 32px;
+    border-radius: 18px;
+    text-align: center;
+  }
+
+  .pricing-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+
+  .pricing-amount {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .pricing-desc {
+    color: var(--text-secondary, #9CA3AF);
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .pricing-note {
+    margin: 28px auto 0;
+    max-width: 640px;
+    text-align: center;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 768px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+    .pricing-card { padding: 24px; }
+  }
+</style>
