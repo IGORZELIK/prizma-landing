@@ -23,6 +23,7 @@ const icons = [
 <section class="trust" id="trust">
   <div class="section-wrap">
     <h2 class="reveal">{t.trust.heading}</h2>
+    {t.trust.lead && <p class="section-subtitle trust-lead reveal">{t.trust.lead}</p>}
     <div class="trust-grid" data-stagger>
       {t.trust.items.map((item: any, i: number) => (
         <div class="trust-card glass-card">
@@ -36,11 +37,16 @@ const icons = [
 </section>
 
 <style>
+  .trust-lead {
+    margin: 16px auto 0;
+    text-align: center;
+  }
+
   .trust-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-top: 60px;
+    margin-top: 48px;
   }
 
   .trust-card {

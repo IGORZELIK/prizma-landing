@@ -124,8 +124,9 @@
   },
   "trust": {
     "heading": "Was deutschen Unternehmen wichtig ist",
+    "lead": "PRIZMA arbeitet mit Ihren Unternehmensinhalten: Produkten, Angeboten, Terminen und Ankündigungen. Kundendaten aus Ihrem CRM braucht das System dafür nicht.",
     "items": [
-      { "title": "Anbieter in Deutschland", "desc": "Ihr Vertragspartner sitzt in Bielefeld. Rechnung, Vertrag und Ansprechpartner bleiben in Deutschland, ohne Umweg über eine ausländische Konzernstruktur." },
+      { "title": "Anbieter und Betrieb in der EU", "desc": "Ihr Vertragspartner sitzt in Bielefeld, die Server laufen in der EU bei Hetzner, einem deutschen Rechenzentrumsbetreiber. Rechnung, Vertrag und Ansprechpartner bleiben in Deutschland." },
       { "title": "AVV nach Art. 28 DSGVO", "desc": "Einen Auftragsverarbeitungsvertrag stellen wir auf Anfrage bereit, inklusive Anlagen zu Art der Verarbeitung und technischen Maßnahmen." },
       { "title": "Ihre Zugänge, Ihre Verträge", "desc": "Sie können eigene API-Schlüssel und Ihren eigenen Bot verbinden. Dann laufen die eingesetzten Dienste unter Ihren Verträgen und nicht unter unseren." },
       { "title": "Nichts läuft ohne Ihre Regeln", "desc": "Sie legen fest, was automatisch veröffentlicht wird und was Sie einzeln freigeben. Ihre Inhalte werden ohne Ihre ausdrückliche Zustimmung nicht zum Training von KI-Modellen verwendet." }
