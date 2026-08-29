@@ -6,6 +6,12 @@ interface Props {
 const { t } = Astro.props;
 const lang = t.lang || 'en';
 const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
+
+// Canonical must be the page's own URL. Legal pages were previously declaring the
+// language homepage, which tells Google they are duplicates of it.
+// The root page is a copy of /de, so it points there on purpose.
+const path = Astro.url.pathname.replace(/\/+$/, '');
+const canonical = `https://prizma.to${path === '' ? `/${lang}` : path}`;
 ---
 
 <!DOCTYPE html>
@@ -20,15 +26,15 @@ const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
   <meta property="og:title" content={t.seo.title} />
   <meta property="og:description" content={t.seo.description} />
   <meta property="og:image" content="https://prizma.to/og-image.png" />
-  <meta property="og:url" content={`https://prizma.to/${lang === 'en' ? '' : lang}`} />
+  <meta property="og:url" content={canonical} />
   <meta property="og:type" content="website" />
 
   <!-- hreflang -->
   <link rel="alternate" hreflang="ru" href="https://prizma.to/ru" />
   <link rel="alternate" hreflang="de" href="https://prizma.to/de" />
   <link rel="alternate" hreflang="en" href="https://prizma.to/en" />
-  <link rel="alternate" hreflang="x-default" href="https://prizma.to/en" />
-  <link rel="canonical" href={`https://prizma.to/${lang === 'en' ? '' : lang}`} />
+  <link rel="alternate" hreflang="x-default" href="https://prizma.to/" />
+  <link rel="canonical" href={canonical} />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
