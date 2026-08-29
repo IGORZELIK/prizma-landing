@@ -2,15 +2,15 @@
   "lang": "de",
   "nav": {
     "modules": "Module",
-    "cases": "Referenzen",
+    "cases": "Beispiel",
     "demo": "Demo",
-    "reviews": "Stimmen",
-    "cta": "Kostenlos testen"
+    "reviews": "Referenzen",
+    "cta": "Zugang anfragen"
   },
   "hero": {
     "slogan": "Eine Idee. Alle Formen.",
     "subtitle": "Aus einem Thema werden alle Formate, jedes passgenau für seinen Kanal.",
-    "cta_primary": "Jetzt starten",
+    "cta_primary": "Zugang anfragen",
     "cta_secondary": "Demo ansehen"
   },
   "visual_demo": {
@@ -40,10 +40,10 @@
   "for_whom": {
     "heading": "Für wen PRIZMA ist",
     "items": [
-      { "title": "Experten und Gründer", "desc": "Sie haben das Know-how. PRIZMA sorgt dafür, dass es auf allen Plattformen sichtbar wird. Ohne Texter, ohne Filmteam, ohne Kompromisse bei Ihrer Ausdrucksweise." },
+      { "title": "Online-Shops", "desc": "Aus dem Produktkatalog entstehen Artikel, Posts und Karussells zu den Produkten, die verkauft werden sollen. Ohne dass jemand jede Karte von Hand beschreibt." },
       { "title": "Marketing-Teams", "desc": "Sechsmal mehr Output mit demselben Team. Jedes Format ist auf den jeweiligen Algorithmus abgestimmt. Mehr Reichweite. Ohne Mehrkosten." },
-      { "title": "Agenturen", "desc": "Mehrere Kundenmarken aus einem System steuern. Jede Marke behält ihre eigene Tonalität. Kein Mehraufwand beim Personal." },
-      { "title": "Personal Brands", "desc": "Täglich auf allen Kanälen sichtbar, ohne selbst ständig aktiv zu sein. PRIZMA pflegt Ihr Expertenprofil, während Sie sich aufs Wesentliche konzentrieren." }
+      { "title": "Agenturen und Reseller", "desc": "Mehrere Kundenmarken aus einem System steuern. Jede Marke behält ihre eigene Tonalität. Kein Mehraufwand beim Personal." },
+      { "title": "Unternehmen mit mehreren Kanälen", "desc": "Ein Thema geht gleichzeitig auf alle Kanäle, in der jeweils passenden Form. Konsistente Kommunikation ohne zusätzliche Abstimmung." }
     ]
   },
   "how": {
@@ -115,14 +115,13 @@
       {
         "period": "In Arbeit",
         "date": "Q3 2026",
-        "title": "Expansion in Märkte und Formate",
+        "title": "SEO, E-Commerce und Qualität",
         "status": "in-progress",
         "items": [
           { "label": "Vollständiger SEO-Zyklus", "desc": "Semantischer Kern, Artikelgenerierung, automatische Veröffentlichung auf dem Kundenblog" },
           { "label": "Mehrsprachiges SEO-Modul", "desc": "Artikel in mehreren Sprachen mit separater Optimierung pro Markt" },
           { "label": "Qualitätswächter", "desc": "Automatische Überwachung der Produktionskette: Störungen werden erkannt und mit Ursache gemeldet" },
-          { "label": "Shop-Anbindung", "desc": "Der Produktkatalog wird zur Themenquelle: passende Produkte werden zu Content-Themen" },
-          { "label": "Öffnung für den deutschsprachigen Markt", "desc": "Onboarding und erste Kunden, Zugang auf Anfrage" }
+          { "label": "Start im E-Commerce", "desc": "Für Online-Shops: aus dem Produktkatalog entstehen Artikel, Posts und Karussells zu den passenden Produkten" }
         ]
       },
       {
@@ -151,25 +150,35 @@
     ]
   },
   "cta": {
-    "heading": "5 Tage kostenlos. Unverbindlich.",
-    "subtitle": "Hinterlassen Sie eine Anfrage. Schildern Sie Ihre Expertise — wir zeigen, was PRIZMA daraus macht.",
+    "heading": "Zugang auf Anfrage.",
+    "subtitle": "Hinterlassen Sie eine Anfrage. Erzählen Sie uns von Ihrem Unternehmen und Ihren Kanälen, wir zeigen, was PRIZMA daraus macht.",
     "name": "Ihr Name",
     "email": "E-Mail",
     "company": "Unternehmen",
     "message": "Beschreiben Sie kurz Ihre Expertise und Ihr Ziel",
     "submit": "Anfrage senden",
-    "privacy": "Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu"
+    "privacy": "Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu",
+    "contacts": {
+      "heading": "Oder direkt:",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "location": "Standort",
+      "location_value": "Bielefeld, Deutschland",
+      "languages": "Sprachen",
+      "languages_value": "Deutsch · Englisch · Russisch",
+      "ai_note": "Ihren Anruf nimmt rund um die Uhr unser KI-Telefonassistent entgegen. Er notiert Ihr Anliegen, vereinbart einen Termin und leitet alles weiter. Zu Beginn des Gesprächs weist er darauf hin, dass Sie mit einem KI-System sprechen. Wenn Sie das nicht möchten, schreiben Sie uns einfach eine E-Mail."
+    }
   },
   "footer": {
     "tagline": "Eine Idee. Alle Formen.",
     "modules": "Module",
-    "cases": "Referenzen",
+    "cases": "Beispiel",
     "demo": "Demo",
     "contact": "Kontakt",
     "copyright": "© 2026 PRIZMA. Alle Rechte vorbehalten."
   },
   "seo": {
-    "title": "PRIZMA: Intelligentes Content-System für Experten und Marken",
+    "title": "PRIZMA: Content-System für Unternehmen und Online-Shops",
     "description": "Aus einer Idee werden sechs Content-Formate: Posts, Reels, Karussells, Artikel, KI-Avatar-Videos und kanalübergreifende Reposts. SEO- und GEO-optimiert, mit menschlicher Freigabe bei jedem Schritt."
   }
 }

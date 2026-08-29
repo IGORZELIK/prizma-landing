@@ -1,7 +1,7 @@
 ---
-// Root page — GeoIP-based redirect
-// For SSG, we render the English version by default
-// and add client-side geo-detection to redirect
+// Root page. PRIZMA is a German service, so "/" serves German directly:
+// visitors from DE/AT/CH see their language with no redirect and no flash of
+// another language. Everyone else is routed to /en or /ru by the script below.
 
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
@@ -10,13 +10,14 @@ import VisualDemo from '../components/VisualDemo.astro';
 import Modules from '../components/Modules.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import Showcase from '../components/Showcase.astro';
+import Testimonials from '../components/Testimonials.astro';
 import Roadmap from '../components/Roadmap.astro';
 import CtaForm from '../components/CtaForm.astro';
 import Footer from '../components/Footer.astro';
 import Stats from '../components/Stats.astro';
 import '../styles/global.css';
 
-import t from '../i18n/en.json';
+import t from '../i18n/de.json';
 ---
 
 <Layout t={t}>
@@ -32,24 +33,24 @@ import t from '../i18n/en.json';
   <hr class="divider" />
   <Showcase t={t} />
   <hr class="divider" />
+  <Testimonials t={t} />
+  <hr class="divider" />
   <CtaForm t={t} />
   <Footer t={t} />
 </Layout>
 
 <script>
-  // Language routing — runs only on the root page "/".
-  // Goal: visitors in DE/RU regions always land on their localized version, and
-  // an explicit choice made via the language switcher is remembered and honored.
+  // Language routing — runs only on the root page "/", which already serves German.
   const LOCALE_KEY = 'prizma_locale';
 
   if (window.location.pathname === '/') {
     const saved = localStorage.getItem(LOCALE_KEY);
 
-    if (saved && saved !== 'en') {
-      // Returning visitor with a stored non-English locale → send them there.
+    if (saved && saved !== 'de') {
+      // Returning visitor who picked another language → send them there.
       window.location.replace(`/${saved}`);
     } else if (!saved) {
-      // First visit: detect country and route accordingly.
+      // First visit: German-speaking regions stay here, everyone else is routed away.
       fetch('/api/geo')
         .then(r => r.json())
         .then(data => {
@@ -58,20 +59,20 @@ import t from '../i18n/en.json';
           const deCountries = ['DE', 'AT', 'CH', 'LI', 'LU'];
 
           let lang = 'en';
-          if (ruCountries.includes(country)) lang = 'ru';
-          else if (deCountries.includes(country)) lang = 'de';
+          if (deCountries.includes(country)) lang = 'de';
+          else if (ruCountries.includes(country)) lang = 'ru';
 
-          if (lang !== 'en') {
+          if (lang !== 'de') {
             localStorage.setItem(LOCALE_KEY, lang);
             window.location.replace(`/${lang}`);
           }
-          // English-region visitors stay on "/". We intentionally do not persist
-          // "en" here, so the stored value only ever reflects an explicit choice.
+          // German-region visitors stay on "/". Nothing is persisted, so the
+          // stored value only ever reflects an explicit choice or a redirect.
         })
         .catch(() => {
-          // Network error → no redirect; retry on the next visit.
+          // Network error → no redirect; German stays on screen.
         });
     }
-    // saved === 'en' → explicit English choice → stay on "/".
+    // saved === 'de' → stay.
   }
 </script>

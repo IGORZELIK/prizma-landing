@@ -2,15 +2,15 @@
   "lang": "en",
   "nav": {
     "modules": "Modules",
-    "cases": "Cases",
+    "cases": "Example",
     "demo": "Demo",
-    "reviews": "Reviews",
-    "cta": "Get started"
+    "reviews": "References",
+    "cta": "Request access"
   },
   "hero": {
     "slogan": "One idea. Every form.",
     "subtitle": "One topic becomes every format, each one tailored to its channel.",
-    "cta_primary": "Start free",
+    "cta_primary": "Request access",
     "cta_secondary": "Watch demo"
   },
   "visual_demo": {
@@ -40,10 +40,10 @@
   "for_whom": {
     "heading": "Built for",
     "items": [
-      { "title": "Experts and founders", "desc": "You have the knowledge. PRIZMA turns it into a consistent presence across every platform — no copywriter, no film crew, no compromise on your voice." },
+      { "title": "Online shops", "desc": "The product catalog turns into articles, posts and carousels for the products you want to sell, without anyone describing every item by hand." },
       { "title": "Marketing teams", "desc": "Six times the output, same team size. Every format is algorithm-ready. Organic growth without growing the budget." },
-      { "title": "Agencies", "desc": "Run multiple client brands from one system. Each brand keeps its distinct voice. No extra headcount needed." },
-      { "title": "Personal brands", "desc": "Show up everywhere, every day — without being everywhere yourself. PRIZMA keeps your expert presence active while you focus on your work." }
+      { "title": "Agencies and resellers", "desc": "Run multiple client brands from one system. Each brand keeps its distinct voice. No extra headcount needed." },
+      { "title": "Companies with several channels", "desc": "One topic goes out to every channel at once, in the form each one needs. Consistent communication without extra coordination." }
     ]
   },
   "how": {
@@ -115,14 +115,13 @@
       {
         "period": "In progress",
         "date": "Q3 2026",
-        "title": "Expanding markets and formats",
+        "title": "SEO, e-commerce and quality",
         "status": "in-progress",
         "items": [
           { "label": "Full SEO cycle", "desc": "Semantic core, article generation, auto-publishing to client blog" },
           { "label": "Multilingual SEO module", "desc": "Articles in multiple languages with separate optimization per market" },
           { "label": "Quality watchdog", "desc": "Automatic supervision of the pipeline: failures are detected and reported with their cause" },
-          { "label": "Shop integration", "desc": "The product catalog becomes a source of topics: suitable products turn into content themes" },
-          { "label": "Opening up the German-speaking market", "desc": "Onboarding and first clients, access on request" }
+          { "label": "Start in e-commerce", "desc": "For online shops: the product catalog turns into articles, posts and carousels for the matching products" }
         ]
       },
       {
@@ -151,25 +150,35 @@
     ]
   },
   "cta": {
-    "heading": "5 days free. No commitment.",
-    "subtitle": "Leave a request. Tell us about your expertise — we'll show you what PRIZMA builds from it.",
+    "heading": "Access on request.",
+    "subtitle": "Leave a request. Tell us about your company and your channels, and we'll show you what PRIZMA builds from them.",
     "name": "Your name",
     "email": "Email",
     "company": "Company",
     "message": "Tell us about your expertise and what you are trying to achieve",
     "submit": "Send request",
-    "privacy": "By submitting you agree to our privacy policy"
+    "privacy": "By submitting you agree to our privacy policy",
+    "contacts": {
+      "heading": "Or reach us directly:",
+      "phone": "Phone",
+      "email": "Email",
+      "location": "Location",
+      "location_value": "Bielefeld, Germany",
+      "languages": "Languages",
+      "languages_value": "German · English · Russian",
+      "ai_note": "Your call is answered around the clock by our AI phone assistant. It notes what you need, books an appointment and passes everything on. At the start of the call it states that you are speaking to an AI system. If you would rather not, simply send us an email."
+    }
   },
   "footer": {
     "tagline": "One idea. Every form.",
     "modules": "Modules",
-    "cases": "Cases",
+    "cases": "Example",
     "demo": "Demo",
     "contact": "Contact",
     "copyright": "© 2026 PRIZMA. All rights reserved."
   },
   "seo": {
-    "title": "PRIZMA — Intelligent content system for experts and brands",
+    "title": "PRIZMA — Content system for companies and online shops",
     "description": "Turn one idea into six content formats — posts, reels, carousels, articles, AI avatar videos and cross-platform reposts. SEO and GEO optimized, with human approval at every step."
   }
 }

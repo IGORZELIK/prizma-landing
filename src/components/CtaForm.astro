@@ -71,10 +71,91 @@ const { t } = Astro.props;
 
       <p class="cta-privacy">{t.cta.privacy}</p>
     </div>
+
+    <div class="contacts glass-card reveal">
+      <h3 class="contacts-heading">{t.cta.contacts.heading}</h3>
+      <div class="contacts-grid">
+        <div class="contact-row">
+          <span class="contact-k">{t.cta.contacts.phone}</span>
+          <a class="contact-v" href="tel:+493082688241">+49 30 82688241</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-k">{t.cta.contacts.email}</span>
+          <a class="contact-v" href="mailto:contact@digitalkin.co">contact@digitalkin.co</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-k">{t.cta.contacts.location}</span>
+          <span class="contact-v">{t.cta.contacts.location_value}</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-k">{t.cta.contacts.languages}</span>
+          <span class="contact-v">{t.cta.contacts.languages_value}</span>
+        </div>
+      </div>
+      <p class="contacts-note">{t.cta.contacts.ai_note}</p>
+    </div>
   </div>
 </section>
 
 <style>
+  .contacts {
+    max-width: 640px;
+    margin: 32px auto 0;
+    padding: 28px 32px;
+    text-align: left;
+  }
+
+  .contacts-heading {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 18px;
+    color: var(--text-secondary, #9CA3AF);
+  }
+
+  .contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 24px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+
+  .contact-k {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+  }
+
+  .contact-v {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    overflow-wrap: anywhere;
+  }
+
+  a.contact-v { color: var(--purple); text-decoration: none; }
+  a.contact-v:hover { text-decoration: underline; }
+
+  .contacts-note {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-glass);
+    font-size: 0.8rem;
+    line-height: 1.65;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 600px) {
+    .contacts { padding: 22px 20px; }
+    .contacts-grid { grid-template-columns: 1fr; }
+  }
+
   .cta-section {
     position: relative;
     z-index: 1;

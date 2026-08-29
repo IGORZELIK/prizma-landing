@@ -4,8 +4,9 @@ interface Props {
 }
 const { t } = Astro.props;
 const lang = t.lang;
-const prefix = lang === 'en' ? '' : `/${lang}`;
-const langs = ['EN', 'DE', 'RU'];
+// Every locale lives under its own path (/de, /en, /ru); the root page mirrors German.
+const prefix = `/${lang}`;
+const langs = ['DE', 'EN', 'RU'];
 ---
 
 <nav class="nav" id="nav">
@@ -14,7 +15,7 @@ const langs = ['EN', 'DE', 'RU'];
   <div class="nav-links">
     <a href={`${prefix}/#modules`}>{t.nav.modules}</a>
     <a href={`${prefix}/#cases`}>{t.nav.cases}</a>
-    {lang === 'ru' && <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>}
+    <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>
     <a href={`${prefix}/#contact`} class="nav-cta-btn">{t.nav.cta}</a>
   </div>
 
@@ -36,7 +37,7 @@ const langs = ['EN', 'DE', 'RU'];
   <div class="nav-mobile">
     <a href={`${prefix}/#modules`}>{t.nav.modules}</a>
     <a href={`${prefix}/#cases`}>{t.nav.cases}</a>
-    {lang === 'ru' && <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>}
+    <a href={`${prefix}/#reviews`}>{t.nav.reviews}</a>
     <a href={`${prefix}/#contact`} class="nav-cta-btn">{t.nav.cta}</a>
     <div class="lang-switch mobile">
       {langs.map(l => (
