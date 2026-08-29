@@ -8,11 +8,11 @@
   },
   "hero": {
     "slogan": "Eine Idee. Alle Formen.",
-    "subtitle": "Aus einem Thema werden alle Formate, jedes passgenau für seinen Kanal.",
+    "subtitle": "Content-System für Unternehmen, Online-Shops und Agenturen. Aus einem Thema entstehen alle Formate, jedes passgenau für seinen Kanal.",
     "cta_primary": "Zugang anfragen"
   },
   "visual_demo": {
-    "heading": "Ein Thema. Sechs fertige Formate."
+    "heading": "Ein Thema. Sechs Formate. Alle Kanäle."
   },
   "modules": {
     "heading": "Der Ansatz hat sich verändert. Das Werkzeug auch.",
@@ -21,16 +21,16 @@
       { "name": "Post", "desc": "Ein Beitrag, der zeigt, was Ihr Unternehmen kann. Kein beliebiges Bild, sondern eine Aussage, die im Feed hängen bleibt und Vertrauen aufbaut." },
       { "name": "Reel", "desc": "Kurzvideo mit klarer Botschaft. Algorithmen spielen es organisch aus. Der direkteste Weg zu neuer Reichweite, ohne Anzeigenbudget." },
       { "name": "Karussell", "desc": "Komplexe Inhalte, übersichtlich aufbereitet. Karussells werden gespeichert und geteilt. Content, zu dem man immer wieder zurückkommt." },
+      { "name": "Story", "desc": "Kurz, tagesaktuell und beiläufig. Stories halten Ihre Kanäle zwischen den großen Beiträgen lebendig und werden zuerst gesehen." },
       { "name": "Blog-Artikel", "desc": "SEO- und GEO-optimierter Blogartikel, der jahrelang Traffic bringt. PRIZMA analysiert echte Suchanfragen und strukturiert Texte, die ranken." },
-      { "name": "KI-Avatar", "desc": "Ein Gesicht für Ihre Marke, ohne Kamera und ohne Drehtermin. Der KI-Avatar spricht Ihre Texte im Videoformat, regelmäßig und in gleichbleibender Qualität." },
-      { "name": "Repost", "desc": "Ein Inhalt, auf allen Kanälen. Ton, Länge und Format werden je Plattform angepasst. Die Botschaft bleibt dieselbe." }
+      { "name": "KI-Avatar", "desc": "Ein Gesicht für Ihre Marke, ohne Kamera und ohne Drehtermin. Der KI-Avatar spricht Ihre Texte im Videoformat, regelmäßig und in gleichbleibender Qualität." }
     ]
   },
   "why": {
     "heading": "Kein Text-Generator. Ein System, das Ihre Kanäle betreibt.",
     "text": "Die meisten Werkzeuge erzeugen Text, und danach bleibt die Arbeit bei Ihnen. PRIZMA übernimmt die ganze Kette: Es macht aus Ihren Themen die passenden Formate, berücksichtigt SEO- und GEO-Signale, spielt sie auf Ihren Kanälen aus und lernt aus dem, was funktioniert. Jeder Text wird auf die Sprache Ihres Unternehmens abgestimmt, ohne maschinellen Klang und ohne Standardfloskeln. Das letzte Wort haben immer Sie.",
     "stats": [
-      { "value": "6x", "label": "mehr Formate aus einem Thema" },
+      { "value": "6", "label": "Formate aus einem Thema" },
       { "value": "SEO+GEO", "label": "in jeden Inhalt eingebaut" },
       { "value": "Sie", "label": "entscheiden, was veröffentlicht wird" }
     ]
@@ -72,14 +72,14 @@
         "title": "Plattform-Kern",
         "status": "done",
         "items": [
-          { "label": "6 Content-Module", "desc": "Avatar, Reels, Posts, Karussells, SEO-Artikel, Reposting — alle Formate in einem System" },
+          { "label": "Sechs Formate plus Reposting", "desc": "Posts, Reels, Karussells, Stories, SEO-Artikel und KI-Avatar, dazu kanalübergreifendes Reposting" },
           { "label": "Einheitlicher Content-Plan", "desc": "Ein Thema entfaltet sich automatisch in alle Formate" },
-          { "label": "Multi-Tenant-Architektur", "desc": "Isolierte Daten und Einstellungen für jeden Kunden" },
+          { "label": "Getrennte Mandanten", "desc": "Isolierte Daten und Einstellungen für jeden Kunden" },
           { "label": "KI-Onboarding", "desc": "Analyse von Tonalität, Nische und Zielgruppe bei der Kundeneinrichtung" },
-          { "label": "BYOK und BYOB", "desc": "Kunde verbindet eigene API-Schlüssel und Telegram-Bot zur Moderation" },
-          { "label": "Human in the Loop", "desc": "Content durchläuft Freigabe vor Veröffentlichung — nichts geht ohne Zustimmung raus" },
+          { "label": "Eigene Zugänge", "desc": "Kunde verbindet eigene API-Schlüssel und Telegram-Bot zur Moderation" },
+          { "label": "Freigabe durch Sie", "desc": "Content durchläuft Freigabe vor Veröffentlichung — nichts geht ohne Zustimmung raus" },
           { "label": "SEO + GEO-Optimierung", "desc": "Semantischer Kern, Keywords und Geotargeting sind in die Generierung integriert" },
-          { "label": "Humanizer", "desc": "KI-Texte werden für natürlichen Klang und Einzigartigkeit nachbearbeitet" },
+          { "label": "Natürliche Sprache", "desc": "KI-Texte werden für natürlichen Klang und Einzigartigkeit nachbearbeitet" },
           { "label": "Auto-Posting in alle sozialen Medien", "desc": "Instagram, Facebook, LinkedIn, TikTok, Telegram — Veröffentlichung ohne Handarbeit" },
           { "label": "Konfigurierbarer Automatisierungsgrad", "desc": "Voll automatisch, teilautomatisch oder mit Freigabe jedes Beitrags — Sie entscheiden" },
           { "label": "Agentur- und Reseller-Ebene", "desc": "Agenturen und Reseller betreuen ihre eigenen Kunden in einem Konto" }
@@ -103,10 +103,10 @@
         "title": "KI-Agenten: Qualitätskontrolle",
         "status": "planned",
         "items": [
-          { "label": "Quality Gate Agent", "desc": "KI-Prüfung vor Veröffentlichung: Fakten, Stil, Tonalität" },
-          { "label": "Post-Analytik", "desc": "Automatische Erfassung von Metriken: Reichweite, Likes, Engagement pro Kunde" },
-          { "label": "Social Inbox", "desc": "Kommentare von allen Plattformen an einem Ort, ohne Wechsel zwischen Apps" },
-          { "label": "Astro SSR Blog", "desc": "Kundenblog-Rendering mit perfekten Core Web Vitals" }
+          { "label": "Inhaltsprüfung vor Veröffentlichung", "desc": "KI-Prüfung vor Veröffentlichung: Fakten, Stil, Tonalität" },
+          { "label": "Auswertung der Beiträge", "desc": "Automatische Erfassung von Metriken: Reichweite, Likes, Engagement pro Kunde" },
+          { "label": "Kommentare an einem Ort", "desc": "Kommentare von allen Plattformen an einem Ort, ohne Wechsel zwischen Apps" },
+          { "label": "Schneller Kundenblog", "desc": "Kundenblog-Rendering mit perfekten Core Web Vitals" }
         ]
       },
       {
@@ -115,9 +115,9 @@
         "title": "Selbstlernendes System",
         "status": "planned",
         "items": [
-          { "label": "SEO Feedback Loop", "desc": "Positionsüberwachung, automatische Artikelverbesserung und Neuindexierung anhand der Ergebnisse" },
-          { "label": "Content Performance Agent", "desc": "Analysiert, was beim Kunden funktioniert, korrigiert den Content-Plan automatisch" },
-          { "label": "Modulübergreifende Kohärenz", "desc": "KI-Agent synchronisiert die Erzählung über alle Content-Formate hinweg" }
+          { "label": "SEO-Regelkreis", "desc": "Positionsüberwachung, automatische Artikelverbesserung und Neuindexierung anhand der Ergebnisse" },
+          { "label": "Korrektur des Plans nach Ergebnissen", "desc": "Analysiert, was beim Kunden funktioniert, korrigiert den Content-Plan automatisch" },
+          { "label": "Einheitliche Erzählung über alle Formate", "desc": "KI-Agent synchronisiert die Erzählung über alle Content-Formate hinweg" }
         ]
       }
     ]

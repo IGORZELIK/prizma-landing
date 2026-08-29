@@ -8,11 +8,11 @@
   },
   "hero": {
     "slogan": "One idea. Every form.",
-    "subtitle": "One topic becomes every format, each one tailored to its channel.",
+    "subtitle": "A content system for companies, online shops and agencies. One topic becomes every format, each one tailored to its channel.",
     "cta_primary": "Request access"
   },
   "visual_demo": {
-    "heading": "One topic. Six finished formats."
+    "heading": "One topic. Six formats. Every channel."
   },
   "modules": {
     "heading": "Content has evolved. Your tools should too.",
@@ -21,16 +21,16 @@
       { "name": "Post", "desc": "A post that shows what your company can do. Not just an image, but a statement that stays in the feed and builds trust." },
       { "name": "Reel", "desc": "Short-form video with a clear message. Algorithms distribute it organically. The most direct route to new reach, with no ad budget." },
       { "name": "Carousel", "desc": "Complex ideas, broken down clearly. Carousels earn saves and shares. The kind of content people bookmark and come back to." },
+      { "name": "Story", "desc": "Short, current and casual. Stories keep your channels alive between the bigger posts, and they are what people see first." },
       { "name": "Article", "desc": "Long-form content built for search. PRIZMA maps real queries, applies SEO and GEO logic, and structures articles that rank and hold attention." },
-      { "name": "Avatar", "desc": "A face for your brand, with no camera and no shoot. The AI avatar delivers your script on video, regularly and at consistent quality." },
-      { "name": "Repost", "desc": "One piece of content, everywhere. Tone, length and format adapted per channel. The message stays the same." }
+      { "name": "Avatar", "desc": "A face for your brand, with no camera and no shoot. The AI avatar delivers your script on video, regularly and at consistent quality." }
     ]
   },
   "why": {
     "heading": "Not a text generator. A system that runs your channels.",
     "text": "Most tools produce text and stop there, which leaves the work with you. PRIZMA takes on the whole chain: it turns your topics into the right formats, applies SEO and GEO signals, publishes them on your channels and learns from what works. Every text is tuned to the way your company speaks, with no robotic tone and no filler. The final call is always yours.",
     "stats": [
-      { "value": "6x", "label": "more formats from one topic" },
+      { "value": "6", "label": "formats from one topic" },
       { "value": "SEO+GEO", "label": "built into every piece of content" },
       { "value": "You", "label": "decide what goes out" }
     ]
@@ -72,14 +72,14 @@
         "title": "Platform core",
         "status": "done",
         "items": [
-          { "label": "6 content modules", "desc": "Avatar, Reels, posts, carousels, SEO articles, reposting — all formats in one system" },
+          { "label": "Six formats plus reposting", "desc": "Posts, reels, carousels, stories, SEO articles and AI avatar, plus cross-channel reposting" },
           { "label": "Unified content plan", "desc": "One topic unfolds into all formats automatically" },
-          { "label": "Multi-tenant architecture", "desc": "Isolated data and settings for each client" },
+          { "label": "Separate client workspaces", "desc": "Isolated data and settings for each client" },
           { "label": "AI onboarding", "desc": "Tone of voice, niche and audience analysis during client setup" },
-          { "label": "BYOK and BYOB", "desc": "Client connects their own API keys and Telegram bot for moderation" },
-          { "label": "Human in the loop", "desc": "Content goes through approval before publishing — nothing goes out without sign-off" },
+          { "label": "Your own keys and bot", "desc": "Client connects their own API keys and Telegram bot for moderation" },
+          { "label": "Your approval", "desc": "Content goes through approval before publishing — nothing goes out without sign-off" },
           { "label": "SEO + GEO optimization", "desc": "Semantic core, keywords and geotargeting are built into generation" },
-          { "label": "Humanizer", "desc": "AI texts are processed for natural sound and uniqueness" },
+          { "label": "Natural language", "desc": "AI texts are processed for natural sound and uniqueness" },
           { "label": "Auto-posting to all social media", "desc": "Instagram, Facebook, LinkedIn, TikTok, Telegram — publishing without manual work" },
           { "label": "Configurable level of automation", "desc": "Fully automatic, semi-automatic, or approval for every post — your choice" },
           { "label": "Agency and reseller layer", "desc": "Agencies and resellers manage their own clients from a single account" }
@@ -103,10 +103,10 @@
         "title": "AI agents: quality control",
         "status": "planned",
         "items": [
-          { "label": "Quality Gate Agent", "desc": "AI content check before publishing: facts, style, tone of voice" },
-          { "label": "Post analytics", "desc": "Auto-collection of metrics: reach, likes, engagement per client" },
-          { "label": "Social inbox", "desc": "Comments from every platform in one place, without switching apps" },
-          { "label": "Astro SSR blog", "desc": "Client blog rendering with perfect Core Web Vitals" }
+          { "label": "Content check before publishing", "desc": "AI content check before publishing: facts, style, tone of voice" },
+          { "label": "Post performance", "desc": "Auto-collection of metrics: reach, likes, engagement per client" },
+          { "label": "Comments in one place", "desc": "Comments from every platform in one place, without switching apps" },
+          { "label": "Fast client blog", "desc": "Client blog rendering with perfect Core Web Vitals" }
         ]
       },
       {
@@ -115,9 +115,9 @@
         "title": "Self-learning system",
         "status": "planned",
         "items": [
-          { "label": "SEO Feedback Loop", "desc": "Position monitoring, auto-refinement of articles and re-indexing based on results" },
-          { "label": "Content Performance Agent", "desc": "Analyzes what works for the client, auto-corrects the content plan" },
-          { "label": "Cross-module coherence", "desc": "AI agent synchronizes narrative across all content formats" }
+          { "label": "SEO feedback cycle", "desc": "Position monitoring, auto-refinement of articles and re-indexing based on results" },
+          { "label": "Plan corrected from results", "desc": "Analyzes what works for the client, auto-corrects the content plan" },
+          { "label": "One story across all formats", "desc": "AI agent synchronizes narrative across all content formats" }
         ]
       }
     ]
