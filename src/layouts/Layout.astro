@@ -81,7 +81,9 @@ const canonical = `https://prizma.to${path === '' ? `/${lang}` : path}`;
   <!-- Particle canvas -->
   <canvas id="particles" style="position:fixed;inset:0;z-index:0;pointer-events:none;"></canvas>
 
-  <slot />
+  <main>
+    <slot />
+  </main>
 
   <!-- Vercel Analytics (GDPR-compliant, no cookies) -->
   <script>
