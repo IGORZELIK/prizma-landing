@@ -20,18 +20,18 @@
     "items": [
       { "name": "Post", "desc": "Ein Beitrag, der zeigt, was Ihr Unternehmen kann. Kein beliebiges Bild, sondern eine Aussage, die im Feed hängen bleibt und Vertrauen aufbaut." },
       { "name": "Reel", "desc": "Kurzvideo mit klarer Botschaft. Algorithmen spielen es organisch aus. Der direkteste Weg zu neuer Reichweite, ohne Anzeigenbudget." },
-      { "name": "Karussell", "desc": "Komplexe Inhalte, übersichtlich aufbereitet. Karussells werden gespeichert und geteilt. Content, zu dem man immer wieder zurückkommt." },
+      { "name": "Karussell", "desc": "Komplexe Inhalte, übersichtlich aufbereitet. Karussells werden gespeichert und geteilt. Inhalte, zu denen man zurückkommt." },
       { "name": "Story", "desc": "Kurz, tagesaktuell und beiläufig. Stories halten Ihre Kanäle zwischen den großen Beiträgen lebendig und werden zuerst gesehen." },
-      { "name": "Blog-Artikel", "desc": "SEO- und GEO-optimierter Blogartikel, der jahrelang Traffic bringt. PRIZMA analysiert echte Suchanfragen und strukturiert Texte, die ranken." },
+      { "name": "Blog-Artikel", "desc": "Ein Artikel, der jahrelang Besucher bringt. PRIZMA sieht sich echte Suchanfragen an und baut den Text so, dass er in den Ergebnissen oben landet." },
       { "name": "KI-Avatar", "desc": "Ein Gesicht für Ihre Marke, ohne Kamera und ohne Drehtermin. Der KI-Avatar spricht Ihre Texte im Videoformat, regelmäßig und in gleichbleibender Qualität." }
     ]
   },
   "why": {
     "heading": "Kein Text-Generator. Ein System, das Ihre Kanäle betreibt.",
-    "text": "Die meisten Werkzeuge erzeugen Text, und danach bleibt die Arbeit bei Ihnen. PRIZMA übernimmt die ganze Kette: Es macht aus Ihren Themen die passenden Formate, berücksichtigt SEO- und GEO-Signale, spielt sie auf Ihren Kanälen aus und lernt aus dem, was funktioniert. Jeder Text wird auf die Sprache Ihres Unternehmens abgestimmt, ohne maschinellen Klang und ohne Standardfloskeln. Das letzte Wort haben immer Sie.",
+    "text": "Die meisten Werkzeuge erzeugen Text, und danach bleibt die Arbeit bei Ihnen. PRIZMA übernimmt die ganze Kette: Es macht aus Ihren Themen die passenden Formate, richtet sie auf echte Suchanfragen und Ihre Region aus, spielt sie auf Ihren Kanälen aus und lernt aus dem, was funktioniert. Jeder Text wird auf die Sprache Ihres Unternehmens abgestimmt, ohne maschinellen Klang und ohne Standardfloskeln. Das letzte Wort haben immer Sie.",
     "stats": [
       { "value": "6", "label": "Formate aus einem Thema" },
-      { "value": "SEO+GEO", "label": "in jeden Inhalt eingebaut" },
+      { "value": "SEO", "label": "in jedem Inhalt mitgedacht" },
       { "value": "Sie", "label": "entscheiden, was veröffentlicht wird" }
     ]
   },
@@ -50,9 +50,9 @@
     "heading": "So funktioniert es",
     "steps": [
       { "title": "Thema", "desc": "Ein Produkt, ein Angebot oder eine Ankündigung. Auf Wunsch automatisch aus Ihrem Katalog oder Kanal" },
-      { "title": "PRIZMA", "desc": "Die KI recherchiert, berücksichtigt SEO- und GEO-Signale und erstellt die gewählten Formate" },
+      { "title": "PRIZMA", "desc": "Die KI recherchiert das Thema, richtet den Text auf echte Suchanfragen und Ihre Region aus und erstellt die gewählten Formate" },
       { "title": "Freigabe", "desc": "Sie prüfen das Ergebnis. Wie viel Freigabe Sie möchten, stellen Sie selbst ein: voll automatisch, teilweise oder jeder Beitrag einzeln." },
-      { "title": "Live", "desc": "Der Content wird nach Ihren Regeln automatisch auf allen Kanälen ausgespielt." }
+      { "title": "Live", "desc": "Ihre Beiträge gehen nach Ihren Regeln automatisch auf allen Kanälen raus." }
     ]
   },
   "showcase": {
@@ -74,15 +74,15 @@
         "items": [
           { "label": "Sechs Formate plus Reposting", "desc": "Posts, Reels, Karussells, Stories, SEO-Artikel und KI-Avatar, dazu kanalübergreifendes Reposting" },
           { "label": "Einheitlicher Content-Plan", "desc": "Ein Thema entfaltet sich automatisch in alle Formate" },
-          { "label": "Getrennte Mandanten", "desc": "Isolierte Daten und Einstellungen für jeden Kunden" },
-          { "label": "KI-Onboarding", "desc": "Analyse von Tonalität, Nische und Zielgruppe bei der Kundeneinrichtung" },
-          { "label": "Eigene Zugänge", "desc": "Kunde verbindet eigene API-Schlüssel und Telegram-Bot zur Moderation" },
-          { "label": "Freigabe durch Sie", "desc": "Content durchläuft Freigabe vor Veröffentlichung — nichts geht ohne Zustimmung raus" },
-          { "label": "SEO + GEO-Optimierung", "desc": "Semantischer Kern, Keywords und Geotargeting sind in die Generierung integriert" },
-          { "label": "Natürliche Sprache", "desc": "KI-Texte werden für natürlichen Klang und Einzigartigkeit nachbearbeitet" },
+          { "label": "Ihre Daten bleiben getrennt", "desc": "Jedes Unternehmen arbeitet in seinem eigenen Bereich, Daten und Einstellungen vermischen sich nicht" },
+          { "label": "Einrichtung mit Analyse", "desc": "Zum Start sehen wir uns Tonalität, Branche und Zielgruppe Ihres Unternehmens an" },
+          { "label": "Eigene Konten möglich", "desc": "Sie können Ihre eigenen Konten bei den KI-Diensten und Ihren eigenen Telegram-Kanal nutzen" },
+          { "label": "Freigabe durch Sie", "desc": "Jeder Beitrag durchläuft die Freigabe, nichts geht ohne Ihre Zustimmung raus" },
+          { "label": "Gefunden werden", "desc": "Suchbegriffe, Themen und die Ausrichtung auf Ihre Region sind in die Erstellung eingebaut" },
+          { "label": "Klingt nicht nach Maschine", "desc": "Jeder Text wird nachbearbeitet, damit er nach Ihrem Unternehmen klingt und nicht nach KI" },
           { "label": "Auto-Posting in alle sozialen Medien", "desc": "Instagram, Facebook, LinkedIn, TikTok, Telegram — Veröffentlichung ohne Handarbeit" },
-          { "label": "Konfigurierbarer Automatisierungsgrad", "desc": "Voll automatisch, teilautomatisch oder mit Freigabe jedes Beitrags — Sie entscheiden" },
-          { "label": "Agentur- und Reseller-Ebene", "desc": "Agenturen und Reseller betreuen ihre eigenen Kunden in einem Konto" }
+          { "label": "Automatik nach Ihrem Maß", "desc": "Voll automatisch, teilautomatisch oder mit Freigabe jedes Beitrags — Sie entscheiden" },
+          { "label": "Für Agenturen und Wiederverkäufer", "desc": "Eine Agentur betreut mehrere Kundenmarken in einem einzigen Konto" }
         ]
       },
       {
@@ -91,9 +91,9 @@
         "title": "SEO, E-Commerce und Qualität",
         "status": "in-progress",
         "items": [
-          { "label": "Vollständiger SEO-Zyklus", "desc": "Semantischer Kern, Artikelgenerierung, automatische Veröffentlichung auf dem Kundenblog" },
+          { "label": "Der ganze Weg bis zum Artikel", "desc": "Von der Themenrecherche über den fertigen Text bis zur Veröffentlichung in Ihrem Blog" },
           { "label": "Mehrsprachiges SEO-Modul", "desc": "Artikel in mehreren Sprachen mit separater Optimierung pro Markt" },
-          { "label": "Qualitätswächter", "desc": "Automatische Überwachung der Produktionskette: Störungen werden erkannt und mit Ursache gemeldet" },
+          { "label": "Störungen fallen sofort auf", "desc": "Das System bemerkt selbst, wenn etwas hängt, und meldet die Ursache, bevor Sie es merken" },
           { "label": "Start im E-Commerce", "desc": "Für Online-Shops: aus dem Produktkatalog entstehen Artikel, Posts und Karussells zu den passenden Produkten" }
         ]
       },
@@ -103,10 +103,10 @@
         "title": "KI-Agenten: Qualitätskontrolle",
         "status": "planned",
         "items": [
-          { "label": "Inhaltsprüfung vor Veröffentlichung", "desc": "KI-Prüfung vor Veröffentlichung: Fakten, Stil, Tonalität" },
-          { "label": "Auswertung der Beiträge", "desc": "Automatische Erfassung von Metriken: Reichweite, Likes, Engagement pro Kunde" },
+          { "label": "Prüfung vor Veröffentlichung", "desc": "Fakten, Stil und Tonalität werden geprüft, bevor ein Beitrag rausgeht" },
+          { "label": "Auswertung der Beiträge", "desc": "Reichweite, Likes und Interaktionen werden automatisch erfasst" },
           { "label": "Kommentare an einem Ort", "desc": "Kommentare von allen Plattformen an einem Ort, ohne Wechsel zwischen Apps" },
-          { "label": "Schneller Kundenblog", "desc": "Kundenblog-Rendering mit perfekten Core Web Vitals" }
+          { "label": "Schneller Blog", "desc": "Ihr Blog lädt schnell, und Suchmaschinen belohnen das" }
         ]
       },
       {
@@ -115,21 +115,21 @@
         "title": "Selbstlernendes System",
         "status": "planned",
         "items": [
-          { "label": "SEO-Regelkreis", "desc": "Positionsüberwachung, automatische Artikelverbesserung und Neuindexierung anhand der Ergebnisse" },
-          { "label": "Korrektur des Plans nach Ergebnissen", "desc": "Analysiert, was beim Kunden funktioniert, korrigiert den Content-Plan automatisch" },
-          { "label": "Einheitliche Erzählung über alle Formate", "desc": "KI-Agent synchronisiert die Erzählung über alle Content-Formate hinweg" }
+          { "label": "SEO verbessert sich von selbst", "desc": "Das System beobachtet Ihre Positionen, überarbeitet Artikel und meldet sie neu an" },
+          { "label": "Der Plan lernt mit", "desc": "Das System erkennt, was bei Ihrer Zielgruppe funktioniert, und passt den Plan an" },
+          { "label": "Eine Geschichte statt sechs", "desc": "Alle Formate erzählen dieselbe Geschichte, statt nebeneinander herzulaufen" }
         ]
       }
     ]
   },
   "trust": {
     "heading": "Was deutschen Unternehmen wichtig ist",
-    "lead": "PRIZMA arbeitet mit Ihren Unternehmensinhalten: Produkten, Angeboten, Terminen und Ankündigungen. Kundendaten aus Ihrem CRM braucht das System dafür nicht.",
+    "lead": "PRIZMA arbeitet mit dem, was Ihr Unternehmen ohnehin hat: Produkte, Angebote, Termine, Neuigkeiten. Zugriff auf Ihre Kundendaten braucht das System dafür nicht.",
     "items": [
-      { "title": "Anbieter und Betrieb in der EU", "desc": "Ihr Vertragspartner sitzt in Bielefeld, die Server laufen in der EU bei Hetzner, einem deutschen Rechenzentrumsbetreiber. Rechnung, Vertrag und Ansprechpartner bleiben in Deutschland." },
-      { "title": "AVV nach Art. 28 DSGVO", "desc": "Einen Auftragsverarbeitungsvertrag stellen wir auf Anfrage bereit, inklusive Anlagen zu Art der Verarbeitung und technischen Maßnahmen." },
-      { "title": "Modelle nach Ihrer Vorgabe", "desc": "Sie verbinden eigene API-Schlüssel und Ihren eigenen Bot. Auf Wunsch arbeiten wir mit einem europäischen Modell oder betreiben es auf Ihrem eigenen Server. Dann laufen die Dienste unter Ihren Verträgen und nicht unter unseren." },
-      { "title": "Nichts läuft ohne Ihre Regeln", "desc": "Sie legen fest, was automatisch veröffentlicht wird und was Sie einzeln freigeben. Ihre Inhalte werden ohne Ihre ausdrückliche Zustimmung nicht zum Training von KI-Modellen verwendet." }
+      { "title": "Anbieter und Server in der EU", "desc": "Ihr Vertragspartner sitzt in Bielefeld, die Server stehen in der EU. Vertrag, Rechnung und Ansprechpartner haben Sie in Deutschland, auf Deutsch und in Ihrer Zeitzone." },
+      { "title": "Auftragsverarbeitungsvertrag inklusive", "desc": "Verlangt Ihr Datenschutz einen AVV nach Art. 28 DSGVO, bekommen Sie ihn von uns, zugeschnitten auf Ihr Projekt. Ihre Rechtsabteilung hat damit alles, was sie braucht." },
+      { "title": "Sie bestimmen, wo Ihre Texte entstehen", "desc": "Im Normalfall kümmern wir uns um alles. Verlangen Ihre internen Vorgaben mehr, arbeiten wir mit einem europäischen Anbieter oder richten das System auf Ihrem eigenen Server ein." },
+      { "title": "Nichts geht ohne Ihre Freigabe raus", "desc": "Sie entscheiden, was automatisch veröffentlicht wird und was Sie vorher sehen wollen. Ihre Inhalte werden ohne Ihre Zustimmung nicht zum Training von KI-Modellen verwendet." }
     ]
   },
   "cta": {
@@ -161,6 +161,6 @@
   },
   "seo": {
     "title": "PRIZMA: Content-System für Unternehmen und Online-Shops",
-    "description": "Aus einem Thema werden sechs Content-Formate: Beiträge, Reels, Karussells, Artikel, KI-Avatar-Videos und kanalübergreifende Reposts. Für Unternehmen, Online-Shops und Agenturen, SEO- und GEO-optimiert, mit Freigabe nach Ihren Regeln."
+    "description": "Aus einem Thema werden sechs Content-Formate: Beiträge, Reels, Karussells, Artikel, KI-Avatar-Videos und kanalübergreifende Reposts. Für Unternehmen, Online-Shops und Agenturen, Für Suchmaschinen optimiert, veröffentlicht nach Ihren Freigaberegeln."
   }
 }

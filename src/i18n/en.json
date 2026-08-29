@@ -22,16 +22,16 @@
       { "name": "Reel", "desc": "Short-form video with a clear message. Algorithms distribute it organically. The most direct route to new reach, with no ad budget." },
       { "name": "Carousel", "desc": "Complex ideas, broken down clearly. Carousels earn saves and shares. The kind of content people bookmark and come back to." },
       { "name": "Story", "desc": "Short, current and casual. Stories keep your channels alive between the bigger posts, and they are what people see first." },
-      { "name": "Article", "desc": "Long-form content built for search. PRIZMA maps real queries, applies SEO and GEO logic, and structures articles that rank and hold attention." },
+      { "name": "Article", "desc": "An article that keeps bringing visitors for years. PRIZMA looks at real search queries and builds the text so it lands near the top." },
       { "name": "Avatar", "desc": "A face for your brand, with no camera and no shoot. The AI avatar delivers your script on video, regularly and at consistent quality." }
     ]
   },
   "why": {
     "heading": "Not a text generator. A system that runs your channels.",
-    "text": "Most tools produce text and stop there, which leaves the work with you. PRIZMA takes on the whole chain: it turns your topics into the right formats, applies SEO and GEO signals, publishes them on your channels and learns from what works. Every text is tuned to the way your company speaks, with no robotic tone and no filler. The final call is always yours.",
+    "text": "Most tools produce text and stop there, which leaves the work with you. PRIZMA takes on the whole chain: it turns your topics into the right formats, aims them at real search queries and your region, publishes them on your channels and learns from what works. Every text is tuned to the way your company speaks, with no robotic tone and no filler. The final call is always yours.",
     "stats": [
       { "value": "6", "label": "formats from one topic" },
-      { "value": "SEO+GEO", "label": "built into every piece of content" },
+      { "value": "SEO", "label": "considered in every piece" },
       { "value": "You", "label": "decide what goes out" }
     ]
   },
@@ -50,9 +50,9 @@
     "heading": "How it works",
     "steps": [
       { "title": "Topic", "desc": "A product, an offer or an announcement. Optionally straight from your catalog or channel" },
-      { "title": "PRIZMA", "desc": "AI researches it, applies SEO and GEO signals, and produces the selected formats" },
+      { "title": "PRIZMA", "desc": "The AI researches the topic, aims the text at real search queries and your region, and produces the selected formats" },
       { "title": "You review", "desc": "You check the output. You set how much approval you want: fully automatic, partial, or every post individually" },
-      { "title": "Published", "desc": "Content goes out automatically across all your channels, following your rules" }
+      { "title": "Published", "desc": "Your posts go out automatically across all your channels, following your rules" }
     ]
   },
   "showcase": {
@@ -74,15 +74,15 @@
         "items": [
           { "label": "Six formats plus reposting", "desc": "Posts, reels, carousels, stories, SEO articles and AI avatar, plus cross-channel reposting" },
           { "label": "Unified content plan", "desc": "One topic unfolds into all formats automatically" },
-          { "label": "Separate client workspaces", "desc": "Isolated data and settings for each client" },
-          { "label": "AI onboarding", "desc": "Tone of voice, niche and audience analysis during client setup" },
-          { "label": "Your own keys and bot", "desc": "Client connects their own API keys and Telegram bot for moderation" },
-          { "label": "Your approval", "desc": "Content goes through approval before publishing — nothing goes out without sign-off" },
-          { "label": "SEO + GEO optimization", "desc": "Semantic core, keywords and geotargeting are built into generation" },
-          { "label": "Natural language", "desc": "AI texts are processed for natural sound and uniqueness" },
+          { "label": "Your data stays separate", "desc": "Every business works in its own space, data and settings never mix" },
+          { "label": "Setup with an analysis", "desc": "At the start we look at the tone, the industry and the audience of your business" },
+          { "label": "Your own accounts if you want", "desc": "You can use your own accounts with the AI services and your own Telegram channel" },
+          { "label": "Your approval", "desc": "Every post goes through approval, nothing is published without your sign-off" },
+          { "label": "Getting found", "desc": "Search terms, topics and the focus on your region are built into how content is made" },
+          { "label": "Does not sound like a machine", "desc": "Every text is reworked so it sounds like your business and not like AI" },
           { "label": "Auto-posting to all social media", "desc": "Instagram, Facebook, LinkedIn, TikTok, Telegram — publishing without manual work" },
-          { "label": "Configurable level of automation", "desc": "Fully automatic, semi-automatic, or approval for every post — your choice" },
-          { "label": "Agency and reseller layer", "desc": "Agencies and resellers manage their own clients from a single account" }
+          { "label": "Automation to your measure", "desc": "Fully automatic, semi-automatic, or approval for every post — your choice" },
+          { "label": "Built for agencies and resellers", "desc": "One agency runs several client brands from a single account" }
         ]
       },
       {
@@ -91,9 +91,9 @@
         "title": "SEO, e-commerce and quality",
         "status": "in-progress",
         "items": [
-          { "label": "Full SEO cycle", "desc": "Semantic core, article generation, auto-publishing to client blog" },
+          { "label": "The whole way to the article", "desc": "From researching the topic to the finished text and publishing it on your blog" },
           { "label": "Multilingual SEO module", "desc": "Articles in multiple languages with separate optimization per market" },
-          { "label": "Quality watchdog", "desc": "Automatic supervision of the pipeline: failures are detected and reported with their cause" },
+          { "label": "Problems show up straight away", "desc": "The system notices when something is stuck and reports the cause before you notice it" },
           { "label": "Start in e-commerce", "desc": "For online shops: the product catalog turns into articles, posts and carousels for the matching products" }
         ]
       },
@@ -103,10 +103,10 @@
         "title": "AI agents: quality control",
         "status": "planned",
         "items": [
-          { "label": "Content check before publishing", "desc": "AI content check before publishing: facts, style, tone of voice" },
-          { "label": "Post performance", "desc": "Auto-collection of metrics: reach, likes, engagement per client" },
+          { "label": "Checked before publishing", "desc": "Facts, style and tone are checked before a post goes out" },
+          { "label": "Post performance", "desc": "Reach, likes and interactions are collected automatically" },
           { "label": "Comments in one place", "desc": "Comments from every platform in one place, without switching apps" },
-          { "label": "Fast client blog", "desc": "Client blog rendering with perfect Core Web Vitals" }
+          { "label": "A fast blog", "desc": "Your blog loads quickly, and search engines reward that" }
         ]
       },
       {
@@ -115,21 +115,21 @@
         "title": "Self-learning system",
         "status": "planned",
         "items": [
-          { "label": "SEO feedback cycle", "desc": "Position monitoring, auto-refinement of articles and re-indexing based on results" },
-          { "label": "Plan corrected from results", "desc": "Analyzes what works for the client, auto-corrects the content plan" },
-          { "label": "One story across all formats", "desc": "AI agent synchronizes narrative across all content formats" }
+          { "label": "SEO that improves itself", "desc": "The system watches your positions, reworks articles and submits them again" },
+          { "label": "The plan learns as it goes", "desc": "The system sees what works with your audience and adjusts the plan" },
+          { "label": "One story, not six", "desc": "Every format tells the same story instead of running side by side" }
         ]
       }
     ]
   },
   "trust": {
     "heading": "What German companies ask about first",
-    "lead": "PRIZMA works with your company content: products, offers, dates and announcements. It does not need customer data from your CRM to do that.",
+    "lead": "PRIZMA works with what your business already has: products, offers, dates and news. It needs no access to your customer records.",
     "items": [
-      { "title": "Provider and servers in the EU", "desc": "Your contracting party is based in Bielefeld and the servers run inside the EU at Hetzner, a German data centre operator. Invoicing, contract and your contact person stay in Germany." },
-      { "title": "Data processing agreement", "desc": "We provide a processing agreement under Art. 28 GDPR on request, including annexes on the nature of processing and technical measures." },
-      { "title": "Models on your terms", "desc": "You connect your own API keys and your own bot. On request we work with a European model or run it on a server of your choosing, so the services run under your contracts rather than ours." },
-      { "title": "Nothing runs outside your rules", "desc": "You decide what goes out automatically and what you approve individually. Your content is not used to train AI models without your explicit consent." }
+      { "title": "Provider and servers in the EU", "desc": "Your contracting party is based in Bielefeld and the servers sit inside the EU. Contract, invoice and your contact person are all in Germany." },
+      { "title": "Data processing agreement included", "desc": "If your data protection people need an agreement under Art. 28 GDPR, you get one from us, written for your project. Your legal team has everything it needs." },
+      { "title": "You decide where your texts are written", "desc": "Normally we take care of everything. If your internal rules ask for more, we work with a European provider or set the system up on a server of your own." },
+      { "title": "Nothing goes out without your approval", "desc": "You decide what is published automatically and what you want to see first. Your content is not used to train AI models without your consent." }
     ]
   },
   "cta": {
@@ -161,6 +161,6 @@
   },
   "seo": {
     "title": "PRIZMA — Content system for companies and online shops",
-    "description": "One topic becomes six content formats: posts, reels, carousels, articles, AI avatar videos and cross-channel reposts. For companies, online shops and agencies, SEO and GEO optimized, published under your own approval rules."
+    "description": "One topic becomes six content formats: posts, reels, carousels, articles, AI avatar videos and cross-channel reposts. For companies, online shops and agencies, Optimized for search and published under your own approval rules."
   }
 }
