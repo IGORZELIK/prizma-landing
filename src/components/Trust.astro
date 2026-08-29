@@ -1,0 +1,74 @@
+---
+// Objection handling for German B2B buyers, placed right before the contact form.
+// Every claim here has to stay literally true: no promises about where models run,
+// only what the operator actually controls.
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+if (!t.trust) return;
+
+const icons = [
+  // provider based in Germany
+  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>`,
+  // data processing agreement
+  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`,
+  // your own keys
+  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 8.6-8.6"/><path d="m17 6 2.5 2.5"/><path d="m14 9 2.5 2.5"/></svg>`,
+  // you set the rules
+  `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/><circle cx="9" cy="6" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="8" cy="18" r="2"/></svg>`,
+];
+---
+
+<section class="trust" id="trust">
+  <div class="section-wrap">
+    <h2 class="reveal">{t.trust.heading}</h2>
+    <div class="trust-grid" data-stagger>
+      {t.trust.items.map((item: any, i: number) => (
+        <div class="trust-card glass-card">
+          <div class="trust-icon" set:html={icons[i % icons.length]} />
+          <div class="trust-title">{item.title}</div>
+          <div class="trust-desc">{item.desc}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 60px;
+  }
+
+  .trust-card {
+    padding: 28px;
+    border-radius: 18px;
+  }
+
+  .trust-icon {
+    color: var(--purple);
+    margin-bottom: 14px;
+    display: flex;
+  }
+
+  .trust-title {
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .trust-desc {
+    color: var(--text-secondary, #9CA3AF);
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .trust-grid { grid-template-columns: 1fr; }
+    .trust-card { padding: 22px; }
+  }
+</style>

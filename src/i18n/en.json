@@ -122,6 +122,15 @@
       }
     ]
   },
+  "trust": {
+    "heading": "What German companies ask about first",
+    "items": [
+      { "title": "A provider based in Germany", "desc": "Your contracting party is based in Bielefeld. Invoicing, contract and your contact person stay in Germany, with no detour through a foreign group structure." },
+      { "title": "Data processing agreement", "desc": "We provide a processing agreement under Art. 28 GDPR on request, including annexes on the nature of processing and technical measures." },
+      { "title": "Your accounts, your contracts", "desc": "You can connect your own API keys and your own bot. The services in use then run under your contracts rather than ours." },
+      { "title": "Nothing runs outside your rules", "desc": "You decide what goes out automatically and what you approve individually. Your content is not used to train AI models without your explicit consent." }
+    ]
+  },
   "cta": {
     "heading": "Access on request.",
     "subtitle": "Leave a request. Tell us about your company and your channels, and we'll show you what PRIZMA builds from them.",

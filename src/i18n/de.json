@@ -122,6 +122,15 @@
       }
     ]
   },
+  "trust": {
+    "heading": "Was deutschen Unternehmen wichtig ist",
+    "items": [
+      { "title": "Anbieter in Deutschland", "desc": "Ihr Vertragspartner sitzt in Bielefeld. Rechnung, Vertrag und Ansprechpartner bleiben in Deutschland, ohne Umweg über eine ausländische Konzernstruktur." },
+      { "title": "AVV nach Art. 28 DSGVO", "desc": "Einen Auftragsverarbeitungsvertrag stellen wir auf Anfrage bereit, inklusive Anlagen zu Art der Verarbeitung und technischen Maßnahmen." },
+      { "title": "Ihre Zugänge, Ihre Verträge", "desc": "Sie können eigene API-Schlüssel und Ihren eigenen Bot verbinden. Dann laufen die eingesetzten Dienste unter Ihren Verträgen und nicht unter unseren." },
+      { "title": "Nichts läuft ohne Ihre Regeln", "desc": "Sie legen fest, was automatisch veröffentlicht wird und was Sie einzeln freigeben. Ihre Inhalte werden ohne Ihre ausdrückliche Zustimmung nicht zum Training von KI-Modellen verwendet." }
+    ]
+  },
   "cta": {
     "heading": "Zugang auf Anfrage.",
     "subtitle": "Hinterlassen Sie eine Anfrage. Erzählen Sie uns von Ihrem Unternehmen und Ihren Kanälen, wir zeigen, was PRIZMA daraus macht.",

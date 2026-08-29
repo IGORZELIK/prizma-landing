@@ -5,20 +5,20 @@ interface Props {
 const { t } = Astro.props;
 
 const stats = t.lang === 'ru' ? [
-  { value: 1, label: 'Источник. Одна тема.' },
+  { value: 1, label: 'Тема как источник' },
   { value: 6, label: 'Форматов контента' },
-  { value: 24, label: 'Автоматизация 24/7' },
-  { value: 85, label: '% Экономии времени' },
+  { value: 5, label: 'Каналов подключены сразу' },
+  { value: 24, label: 'Часа в сутки автоматически' },
 ] : t.lang === 'de' ? [
-  { value: 1, label: 'Quelle. Ein Thema.' },
+  { value: 1, label: 'Thema als Quelle' },
   { value: 6, label: 'Content-Formate' },
-  { value: 24, label: 'Automatisierung 24/7' },
-  { value: 85, label: '% Zeitersparnis' },
+  { value: 5, label: 'Kanäle direkt angebunden' },
+  { value: 24, label: 'Stunden am Tag automatisch' },
 ] : [
-  { value: 1, label: 'Source. One topic.' },
+  { value: 1, label: 'Topic as the source' },
   { value: 6, label: 'Content formats' },
-  { value: 24, label: 'Automation 24/7' },
-  { value: 85, label: '% Time saved' },
+  { value: 5, label: 'Channels connected out of the box' },
+  { value: 24, label: 'Hours a day, automatically' },
 ];
 ---
 
