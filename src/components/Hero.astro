@@ -51,7 +51,7 @@ const { t } = Astro.props;
     line-height: 1.75;
     margin-top: 20px;
     opacity: 0;
-    animation: revealUp 0.8s ease-out 0.6s forwards;
+    animation: revealUp 0.5s ease-out 0.18s forwards;
   }
 
   .hero-cta {
@@ -59,7 +59,7 @@ const { t } = Astro.props;
     gap: 16px;
     margin-top: 40px;
     opacity: 0;
-    animation: revealUp 0.8s ease-out 0.9s forwards;
+    animation: revealUp 0.5s ease-out 0.32s forwards;
   }
 
   .scroll-hint {
@@ -68,7 +68,7 @@ const { t } = Astro.props;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    animation: revealUp 0.8s ease-out 1.4s forwards;
+    animation: revealUp 0.5s ease-out 0.5s forwards;
   }
 
   .scroll-line {
@@ -107,5 +107,5 @@ const { t } = Astro.props;
       nav.style.opacity = '1';
       nav.style.transform = 'translateY(0)';
     }
-  }, 1200);
+  }, 450);
 </script>
