@@ -74,15 +74,15 @@
         "items": [
           { "label": "Six formats plus reposting", "desc": "Posts, reels, carousels, stories, SEO articles and AI avatar, plus cross-channel reposting" },
           { "label": "Unified content plan", "desc": "One topic unfolds into all formats automatically" },
-          { "label": "Your data stays separate", "desc": "Every business works in its own space, data and settings never mix" },
-          { "label": "Setup with an analysis", "desc": "At the start we look at the tone, the industry and the audience of your business" },
-          { "label": "Your own accounts if you want", "desc": "You can use your own accounts with the AI services and your own Telegram channel" },
-          { "label": "Your approval", "desc": "Every post goes through approval, nothing is published without your sign-off" },
-          { "label": "Getting found", "desc": "Search terms, topics and the focus on your region are built into how content is made" },
-          { "label": "Does not sound like a machine", "desc": "Every text is reworked so it sounds like your business and not like AI" },
+          { "label": "Separate data storage", "desc": "Data and settings are stored separately for each company" },
+          { "label": "Analysis during setup", "desc": "Tone, industry and audience of your company are assessed at the start" },
+          { "label": "Use of your own accounts", "desc": "Your own accounts with the AI services and your own Telegram channel can be connected" },
+          { "label": "Approval before publishing", "desc": "Every post is approved before it is published" },
+          { "label": "Search engine optimisation", "desc": "Search terms, topics and regional focus are built into content creation" },
+          { "label": "Text quality", "desc": "Every text is reworked to match the way your company writes" },
           { "label": "Auto-posting to all social media", "desc": "Instagram, Facebook, LinkedIn, TikTok, Telegram — publishing without manual work" },
-          { "label": "Automation to your measure", "desc": "Fully automatic, semi-automatic, or approval for every post — your choice" },
-          { "label": "Built for agencies and resellers", "desc": "One agency runs several client brands from a single account" }
+          { "label": "Adjustable level of automation", "desc": "Fully automatic, semi-automatic or with individual approval per post" },
+          { "label": "Agency and reseller operation", "desc": "One agency manages several client brands from a single account" }
         ]
       },
       {
@@ -91,9 +91,9 @@
         "title": "SEO, e-commerce and quality",
         "status": "in-progress",
         "items": [
-          { "label": "The whole way to the article", "desc": "From researching the topic to the finished text and publishing it on your blog" },
+          { "label": "Complete SEO process", "desc": "From topic research through the text to publication on the blog" },
           { "label": "Multilingual SEO module", "desc": "Articles in multiple languages with separate optimization per market" },
-          { "label": "Problems show up straight away", "desc": "The system notices when something is stuck and reports the cause before you notice it" },
+          { "label": "Operational monitoring", "desc": "Failures are detected automatically and reported with their cause" },
           { "label": "Start in e-commerce", "desc": "For online shops: the product catalog turns into articles, posts and carousels for the matching products" }
         ]
       },
@@ -103,10 +103,10 @@
         "title": "AI agents: quality control",
         "status": "planned",
         "items": [
-          { "label": "Checked before publishing", "desc": "Facts, style and tone are checked before a post goes out" },
+          { "label": "Check before publishing", "desc": "Facts, style and tone are checked prior to publication" },
           { "label": "Post performance", "desc": "Reach, likes and interactions are collected automatically" },
-          { "label": "Comments in one place", "desc": "Comments from every platform in one place, without switching apps" },
-          { "label": "A fast blog", "desc": "Your blog loads quickly, and search engines reward that" }
+          { "label": "Central comment management", "desc": "Comments from all platforms in one place" },
+          { "label": "Short loading times", "desc": "Short loading times have a positive effect on ranking" }
         ]
       },
       {
@@ -115,21 +115,21 @@
         "title": "Self-learning system",
         "status": "planned",
         "items": [
-          { "label": "SEO that improves itself", "desc": "The system watches your positions, reworks articles and submits them again" },
-          { "label": "The plan learns as it goes", "desc": "The system sees what works with your audience and adjusts the plan" },
-          { "label": "One story, not six", "desc": "Every format tells the same story instead of running side by side" }
+          { "label": "Continuous SEO optimisation", "desc": "Positions are monitored, articles reworked and resubmitted for indexing" },
+          { "label": "Content plan adjustment", "desc": "The plan is adjusted based on the results achieved" },
+          { "label": "Consistent message across formats", "desc": "All formats carry the same message" }
         ]
       }
     ]
   },
   "trust": {
-    "heading": "What German companies ask about first",
-    "lead": "PRIZMA works with what your business already has: products, offers, dates and news. It needs no access to your customer records.",
+    "heading": "Data protection and operations",
+    "lead": "PRIZMA processes your company content: products, offers, dates and announcements. Access to customer records is not required.",
     "items": [
-      { "title": "Provider and servers in the EU", "desc": "Your contracting party is based in Bielefeld and the servers sit inside the EU. Contract, invoice and your contact person are all in Germany." },
-      { "title": "Data processing agreement included", "desc": "If your data protection people need an agreement under Art. 28 GDPR, you get one from us, written for your project. Your legal team has everything it needs." },
-      { "title": "You decide where your texts are written", "desc": "Normally we take care of everything. If your internal rules ask for more, we work with a European provider or set the system up on a server of your own." },
-      { "title": "Nothing goes out without your approval", "desc": "You decide what is published automatically and what you want to see first. Your content is not used to train AI models without your consent." }
+      { "title": "Contracting party and servers in the EU", "desc": "The contracting party is a company based in Bielefeld and the servers are located within the EU. Contracts, invoicing and support are handled from Germany." },
+      { "title": "Processing agreement under Art. 28 GDPR", "desc": "We provide a data processing agreement, tailored to how the system is actually used in your company." },
+      { "title": "Processing to your specification", "desc": "By default, processing runs on our infrastructure. On request we use a European provider or install the system on a server of your own." },
+      { "title": "Approval and control", "desc": "You define which content is published automatically and which is reviewed beforehand. Your content is used to train AI models only with your consent." }
     ]
   },
   "cta": {
@@ -142,7 +142,7 @@
     "submit": "Send request",
     "privacy": "By submitting you agree to our privacy policy",
     "contacts": {
-      "heading": "Or reach us directly:",
+      "heading": "Direct contact",
       "phone": "Phone",
       "email": "Email",
       "location": "Location",

@@ -51,8 +51,8 @@
     "steps": [
       { "title": "Thema", "desc": "Ein Produkt, ein Angebot oder eine Ankündigung. Auf Wunsch automatisch aus Ihrem Katalog oder Kanal" },
       { "title": "PRIZMA", "desc": "Die KI recherchiert das Thema, richtet den Text auf echte Suchanfragen und Ihre Region aus und erstellt die gewählten Formate" },
-      { "title": "Freigabe", "desc": "Sie prüfen das Ergebnis. Wie viel Freigabe Sie möchten, stellen Sie selbst ein: voll automatisch, teilweise oder jeder Beitrag einzeln." },
-      { "title": "Live", "desc": "Ihre Beiträge gehen nach Ihren Regeln automatisch auf allen Kanälen raus." }
+      { "title": "Freigabe", "desc": "Sie prüfen das Ergebnis. Den Umfang der Freigabe legen Sie selbst fest: vollautomatisch, teilweise oder je Beitrag." },
+      { "title": "Live", "desc": "Die Veröffentlichung auf allen Kanälen erfolgt automatisch nach Ihren Regeln." }
     ]
   },
   "showcase": {
@@ -74,15 +74,15 @@
         "items": [
           { "label": "Sechs Formate plus Reposting", "desc": "Posts, Reels, Karussells, Stories, SEO-Artikel und KI-Avatar, dazu kanalübergreifendes Reposting" },
           { "label": "Einheitlicher Content-Plan", "desc": "Ein Thema entfaltet sich automatisch in alle Formate" },
-          { "label": "Ihre Daten bleiben getrennt", "desc": "Jedes Unternehmen arbeitet in seinem eigenen Bereich, Daten und Einstellungen vermischen sich nicht" },
-          { "label": "Einrichtung mit Analyse", "desc": "Zum Start sehen wir uns Tonalität, Branche und Zielgruppe Ihres Unternehmens an" },
-          { "label": "Eigene Konten möglich", "desc": "Sie können Ihre eigenen Konten bei den KI-Diensten und Ihren eigenen Telegram-Kanal nutzen" },
-          { "label": "Freigabe durch Sie", "desc": "Jeder Beitrag durchläuft die Freigabe, nichts geht ohne Ihre Zustimmung raus" },
-          { "label": "Gefunden werden", "desc": "Suchbegriffe, Themen und die Ausrichtung auf Ihre Region sind in die Erstellung eingebaut" },
-          { "label": "Klingt nicht nach Maschine", "desc": "Jeder Text wird nachbearbeitet, damit er nach Ihrem Unternehmen klingt und nicht nach KI" },
+          { "label": "Getrennte Datenhaltung", "desc": "Daten und Einstellungen werden je Unternehmen getrennt gespeichert" },
+          { "label": "Analyse bei der Einrichtung", "desc": "Zu Beginn werden Tonalität, Branche und Zielgruppe Ihres Unternehmens erfasst" },
+          { "label": "Nutzung eigener Konten", "desc": "Eigene Konten bei den KI-Diensten und ein eigener Telegram-Kanal können eingebunden werden" },
+          { "label": "Freigabe vor Veröffentlichung", "desc": "Jeder Beitrag wird vor der Veröffentlichung freigegeben" },
+          { "label": "Suchmaschinenoptimierung", "desc": "Suchbegriffe, Themen und regionale Ausrichtung sind in die Erstellung eingebunden" },
+          { "label": "Textqualität", "desc": "Jeder Text wird nachbearbeitet, damit er der Sprache Ihres Unternehmens entspricht" },
           { "label": "Auto-Posting in alle sozialen Medien", "desc": "Instagram, Facebook, LinkedIn, TikTok, Telegram — Veröffentlichung ohne Handarbeit" },
-          { "label": "Automatik nach Ihrem Maß", "desc": "Voll automatisch, teilautomatisch oder mit Freigabe jedes Beitrags — Sie entscheiden" },
-          { "label": "Für Agenturen und Wiederverkäufer", "desc": "Eine Agentur betreut mehrere Kundenmarken in einem einzigen Konto" }
+          { "label": "Einstellbarer Automatisierungsgrad", "desc": "Vollautomatisch, teilautomatisch oder mit Einzelfreigabe je Beitrag" },
+          { "label": "Agentur- und Resellerbetrieb", "desc": "Eine Agentur betreut mehrere Kundenmarken in einem Konto" }
         ]
       },
       {
@@ -91,9 +91,9 @@
         "title": "SEO, E-Commerce und Qualität",
         "status": "in-progress",
         "items": [
-          { "label": "Der ganze Weg bis zum Artikel", "desc": "Von der Themenrecherche über den fertigen Text bis zur Veröffentlichung in Ihrem Blog" },
+          { "label": "Vollständiger SEO-Prozess", "desc": "Von der Themenrecherche über den Text bis zur Veröffentlichung im Blog" },
           { "label": "Mehrsprachiges SEO-Modul", "desc": "Artikel in mehreren Sprachen mit separater Optimierung pro Markt" },
-          { "label": "Störungen fallen sofort auf", "desc": "Das System bemerkt selbst, wenn etwas hängt, und meldet die Ursache, bevor Sie es merken" },
+          { "label": "Überwachung des Betriebs", "desc": "Störungen werden automatisch erkannt und mit Ursache gemeldet" },
           { "label": "Start im E-Commerce", "desc": "Für Online-Shops: aus dem Produktkatalog entstehen Artikel, Posts und Karussells zu den passenden Produkten" }
         ]
       },
@@ -103,10 +103,10 @@
         "title": "KI-Agenten: Qualitätskontrolle",
         "status": "planned",
         "items": [
-          { "label": "Prüfung vor Veröffentlichung", "desc": "Fakten, Stil und Tonalität werden geprüft, bevor ein Beitrag rausgeht" },
+          { "label": "Prüfung vor Veröffentlichung", "desc": "Fakten, Stil und Tonalität werden vor der Veröffentlichung geprüft" },
           { "label": "Auswertung der Beiträge", "desc": "Reichweite, Likes und Interaktionen werden automatisch erfasst" },
-          { "label": "Kommentare an einem Ort", "desc": "Kommentare von allen Plattformen an einem Ort, ohne Wechsel zwischen Apps" },
-          { "label": "Schneller Blog", "desc": "Ihr Blog lädt schnell, und Suchmaschinen belohnen das" }
+          { "label": "Zentrale Kommentarverwaltung", "desc": "Kommentare aller Plattformen an einer Stelle" },
+          { "label": "Kurze Ladezeiten im Blog", "desc": "Kurze Ladezeiten wirken sich positiv auf die Platzierung aus" }
         ]
       },
       {
@@ -115,21 +115,21 @@
         "title": "Selbstlernendes System",
         "status": "planned",
         "items": [
-          { "label": "SEO verbessert sich von selbst", "desc": "Das System beobachtet Ihre Positionen, überarbeitet Artikel und meldet sie neu an" },
-          { "label": "Der Plan lernt mit", "desc": "Das System erkennt, was bei Ihrer Zielgruppe funktioniert, und passt den Plan an" },
-          { "label": "Eine Geschichte statt sechs", "desc": "Alle Formate erzählen dieselbe Geschichte, statt nebeneinander herzulaufen" }
+          { "label": "Laufende SEO-Optimierung", "desc": "Positionen werden überwacht, Artikel überarbeitet und erneut zur Indexierung angemeldet" },
+          { "label": "Anpassung des Content-Plans", "desc": "Der Plan wird anhand der erzielten Ergebnisse angepasst" },
+          { "label": "Einheitliche Aussage über alle Formate", "desc": "Alle Formate greifen dieselbe Aussage auf" }
         ]
       }
     ]
   },
   "trust": {
-    "heading": "Was deutschen Unternehmen wichtig ist",
-    "lead": "PRIZMA arbeitet mit dem, was Ihr Unternehmen ohnehin hat: Produkte, Angebote, Termine, Neuigkeiten. Zugriff auf Ihre Kundendaten braucht das System dafür nicht.",
+    "heading": "Datenschutz und Betrieb",
+    "lead": "PRIZMA verarbeitet Inhalte Ihres Unternehmens: Produkte, Angebote, Termine und Ankündigungen. Ein Zugriff auf Kundendaten ist dafür nicht erforderlich.",
     "items": [
-      { "title": "Anbieter und Server in der EU", "desc": "Ihr Vertragspartner sitzt in Bielefeld, die Server stehen in der EU. Vertrag, Rechnung und Ansprechpartner haben Sie in Deutschland, auf Deutsch und in Ihrer Zeitzone." },
-      { "title": "Auftragsverarbeitungsvertrag inklusive", "desc": "Verlangt Ihr Datenschutz einen AVV nach Art. 28 DSGVO, bekommen Sie ihn von uns, zugeschnitten auf Ihr Projekt. Ihre Rechtsabteilung hat damit alles, was sie braucht." },
-      { "title": "Sie bestimmen, wo Ihre Texte entstehen", "desc": "Im Normalfall kümmern wir uns um alles. Verlangen Ihre internen Vorgaben mehr, arbeiten wir mit einem europäischen Anbieter oder richten das System auf Ihrem eigenen Server ein." },
-      { "title": "Nichts geht ohne Ihre Freigabe raus", "desc": "Sie entscheiden, was automatisch veröffentlicht wird und was Sie vorher sehen wollen. Ihre Inhalte werden ohne Ihre Zustimmung nicht zum Training von KI-Modellen verwendet." }
+      { "title": "Vertragspartner und Server in der EU", "desc": "Vertragspartner ist ein Unternehmen mit Sitz in Bielefeld, die Server stehen innerhalb der EU. Vertragsabwicklung, Rechnungsstellung und Ansprechpartner in Deutschland." },
+      { "title": "Auftragsverarbeitung nach Art. 28 DSGVO", "desc": "Einen Auftragsverarbeitungsvertrag stellen wir bereit, abgestimmt auf den konkreten Einsatz in Ihrem Unternehmen." },
+      { "title": "Verarbeitung nach Ihren Vorgaben", "desc": "Standardmäßig erfolgt die Verarbeitung über unsere Infrastruktur. Auf Wunsch setzen wir einen europäischen Anbieter ein oder installieren das System auf Ihrem eigenen Server." },
+      { "title": "Freigabe und Kontrolle", "desc": "Sie legen fest, welche Inhalte automatisch veröffentlicht und welche vorab geprüft werden. Eine Nutzung Ihrer Inhalte zum Training von KI-Modellen erfolgt nur mit Ihrer Zustimmung." }
     ]
   },
   "cta": {
@@ -142,7 +142,7 @@
     "submit": "Anfrage senden",
     "privacy": "Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu",
     "contacts": {
-      "heading": "Oder direkt:",
+      "heading": "Direkter Kontakt",
       "phone": "Telefon",
       "email": "E-Mail",
       "location": "Standort",
