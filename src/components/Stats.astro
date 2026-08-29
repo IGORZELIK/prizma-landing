@@ -5,17 +5,17 @@ interface Props {
 const { t } = Astro.props;
 
 const stats = t.lang === 'ru' ? [
-  { value: 1, label: 'Источник. Одна идея.' },
+  { value: 1, label: 'Источник. Одна тема.' },
   { value: 6, label: 'Форматов контента' },
   { value: 24, label: 'Автоматизация 24/7' },
   { value: 85, label: '% Экономии времени' },
 ] : t.lang === 'de' ? [
-  { value: 1, label: 'Quelle. Eine Idee.' },
+  { value: 1, label: 'Quelle. Ein Thema.' },
   { value: 6, label: 'Content-Formate' },
   { value: 24, label: 'Automatisierung 24/7' },
   { value: 85, label: '% Zeitersparnis' },
 ] : [
-  { value: 1, label: 'Source. One idea.' },
+  { value: 1, label: 'Source. One topic.' },
   { value: 6, label: 'Content formats' },
   { value: 24, label: 'Automation 24/7' },
   { value: 85, label: '% Time saved' },

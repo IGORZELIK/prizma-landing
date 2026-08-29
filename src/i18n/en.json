@@ -3,38 +3,36 @@
   "nav": {
     "modules": "Modules",
     "cases": "Example",
-    "demo": "Demo",
     "reviews": "Use cases",
     "cta": "Request access"
   },
   "hero": {
     "slogan": "One idea. Every form.",
     "subtitle": "One topic becomes every format, each one tailored to its channel.",
-    "cta_primary": "Request access",
-    "cta_secondary": "Watch demo"
+    "cta_primary": "Request access"
   },
   "visual_demo": {
-    "heading": "One source of expertise. Six points of presence."
+    "heading": "One topic. Six finished formats."
   },
   "modules": {
     "heading": "Content has evolved. Your tools should too.",
-    "subheading": "Publishing alone is not enough anymore. Platform algorithms reward consistency, topical authority, and behavioral signals. PRIZMA builds the formats you need from a single idea, each one tuned to its channel.",
+    "subheading": "Publishing regularly is no longer enough. Algorithms weigh consistency, topical relevance and how people behave. PRIZMA builds the formats you need from a single topic, each one tuned to its channel.",
     "items": [
-      { "name": "Post", "desc": "Authority, made visible. A well-crafted post positions the expert in the feed and earns trust over time — not just a one-time impression." },
-      { "name": "Reel", "desc": "Short-form video that carries real expertise. Algorithms distribute it organically. The most effective way to reach a new audience without paid media." },
+      { "name": "Post", "desc": "A post that shows what your company can do. Not just an image, but a statement that stays in the feed and builds trust." },
+      { "name": "Reel", "desc": "Short-form video with a clear message. Algorithms distribute it organically. The most direct route to new reach, with no ad budget." },
       { "name": "Carousel", "desc": "Complex ideas, broken down clearly. Carousels earn saves and shares. The kind of content people bookmark and come back to." },
       { "name": "Article", "desc": "Long-form content built for search. PRIZMA maps real queries, applies SEO and GEO logic, and structures articles that rank and hold attention." },
-      { "name": "Avatar", "desc": "The expert, present every day — without filming. An AI avatar delivers their voice and likeness in video format on a continuous basis." },
-      { "name": "Repost", "desc": "One piece of content, distributed everywhere. Tone, length, and format adapted per channel — the core message stays intact." }
+      { "name": "Avatar", "desc": "A face for your brand, with no camera and no shoot. The AI avatar delivers your script on video, regularly and at consistent quality." },
+      { "name": "Repost", "desc": "One piece of content, everywhere. Tone, length and format adapted per channel. The message stays the same." }
     ]
   },
   "why": {
-    "heading": "Not a content generator. An intelligent content system.",
-    "text": "Most tools generate text and stop there. PRIZMA goes further: it reads audience behavior, factors in SEO and GEO signals, tracks what performs, and refines over time. Every piece is shaped into the real voice of an expert. No robotic tone, no generic phrasing. The final call is always yours.",
+    "heading": "Not a text generator. A system that runs your channels.",
+    "text": "Most tools produce text and stop there, which leaves the work with you. PRIZMA takes on the whole chain: it turns your topics into the right formats, applies SEO and GEO signals, publishes them on your channels and learns from what works. Every text is tuned to the way your company speaks, with no robotic tone and no filler. The final call is always yours.",
     "stats": [
-      { "value": "6x", "label": "more formats from a single idea" },
+      { "value": "6x", "label": "more formats from one topic" },
       { "value": "SEO+GEO", "label": "built into every piece of content" },
-      { "value": "Human", "label": "in the loop. Full control is yours" }
+      { "value": "You", "label": "decide what goes out" }
     ]
   },
   "for_whom": {
@@ -51,7 +49,7 @@
   "how": {
     "heading": "How it works",
     "steps": [
-      { "title": "Topic", "desc": "You provide a topic, idea, or expert perspective" },
+      { "title": "Topic", "desc": "A product, an offer or an announcement. Optionally straight from your catalog or channel" },
       { "title": "PRIZMA", "desc": "AI researches it, applies SEO and GEO signals, and produces the selected formats" },
       { "title": "You review", "desc": "You check the output. You set how much approval you want: fully automatic, partial, or every post individually" },
       { "title": "Published", "desc": "Content goes out automatically across all your channels, following your rules" }
@@ -59,7 +57,7 @@
   },
   "showcase": {
     "heading": "See it in practice.",
-    "subtitle": "One expert idea. Three finished pieces, ready to publish."
+    "subtitle": "One topic. Three finished posts, ready to publish."
   },
   "roadmap": {
     "heading": "Where PRIZMA is heading",
@@ -75,7 +73,7 @@
         "status": "done",
         "items": [
           { "label": "6 content modules", "desc": "Avatar, Reels, posts, carousels, SEO articles, reposting — all formats in one system" },
-          { "label": "Unified content plan", "desc": "One source of ideas unfolds into all formats automatically" },
+          { "label": "Unified content plan", "desc": "One topic unfolds into all formats automatically" },
           { "label": "Multi-tenant architecture", "desc": "Isolated data and settings for each client" },
           { "label": "AI onboarding", "desc": "Tone of voice, niche and audience analysis during client setup" },
           { "label": "BYOK and BYOB", "desc": "Client connects their own API keys and Telegram bot for moderation" },
@@ -130,7 +128,7 @@
     "name": "Your name",
     "email": "Email",
     "company": "Company",
-    "message": "Tell us about your expertise and what you are trying to achieve",
+    "message": "Tell us about your company and what you want to achieve",
     "submit": "Send request",
     "privacy": "By submitting you agree to our privacy policy",
     "contacts": {
@@ -148,12 +146,11 @@
     "tagline": "One idea. Every form.",
     "modules": "Modules",
     "cases": "Example",
-    "demo": "Demo",
     "contact": "Contact",
     "copyright": "© 2026 PRIZMA. All rights reserved."
   },
   "seo": {
     "title": "PRIZMA — Content system for companies and online shops",
-    "description": "Turn one idea into six content formats — posts, reels, carousels, articles, AI avatar videos and cross-platform reposts. SEO and GEO optimized, with human approval at every step."
+    "description": "One topic becomes six content formats: posts, reels, carousels, articles, AI avatar videos and cross-channel reposts. For companies, online shops and agencies, SEO and GEO optimized, published under your own approval rules."
   }
 }
