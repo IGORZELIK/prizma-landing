@@ -4,7 +4,7 @@
     "modules": "Modules",
     "cases": "Example",
     "demo": "Demo",
-    "reviews": "References",
+    "reviews": "Use cases",
     "cta": "Request access"
   },
   "hero": {
@@ -38,12 +38,14 @@
     ]
   },
   "for_whom": {
-    "heading": "Built for",
+    "heading": "What PRIZMA is used for",
     "items": [
-      { "title": "Online shops", "desc": "The product catalog turns into articles, posts and carousels for the products you want to sell, without anyone describing every item by hand." },
-      { "title": "Marketing teams", "desc": "Six times the output, same team size. Every format is algorithm-ready. Organic growth without growing the budget." },
-      { "title": "Agencies and resellers", "desc": "Run multiple client brands from one system. Each brand keeps its distinct voice. No extra headcount needed." },
-      { "title": "Companies with several channels", "desc": "One topic goes out to every channel at once, in the form each one needs. Consistent communication without extra coordination." }
+      { "title": "Travel agencies", "desc": "New tours arrive via Telegram and go out as reels, stories and carousels across every channel, without anyone preparing them one by one." },
+      { "title": "Online shops", "desc": "The product catalog becomes the source: SEO articles, posts and carousels for the products you want to sell, linking straight to the product page." },
+      { "title": "Hotels and hospitality", "desc": "Rooms, offers and events run as a steady stream of posts while the team stays with the guest." },
+      { "title": "Schools and kindergartens", "desc": "Announcements, dates and everyday life reach parents regularly and in one consistent voice, with nobody writing copy at night." },
+      { "title": "Manufacturing and trade", "desc": "Know-how from the business turns into articles and posts that customers actually find and understand." },
+      { "title": "Agencies and resellers", "desc": "Run multiple client brands from one system. Each brand keeps its distinct voice. No extra headcount needed." }
     ]
   },
   "how": {
@@ -58,33 +60,6 @@
   "showcase": {
     "heading": "See it in practice.",
     "subtitle": "One expert idea. Three finished pieces, ready to publish."
-  },
-  "testimonials": {
-    "heading": "What clients say",
-    "reviews": [
-      {
-        "text": "We used to build content automation on Make — webhooks, workarounds, duct tape. It worked, but every update broke something, and maintenance ate up our time. We switched to PRIZMA and just exhaled. Everything in one place, stable, nothing to fix. Now we focus on clients, not on tech.",
-        "name": "Dmitry Morgunov",
-        "role": "Founder, POTOK",
-        "logo": "/testimonial-potok.png",
-        "initials": "DM",
-        "gradient": "linear-gradient(135deg, #8B5CF6, #7C3AED)"
-      },
-      {
-        "text": "First impression — honestly, amazing. A post went out on its own, without me lifting a finger. I opened the channel and everything was already there. Photo, text, all on point. Now I just work with clients, and the content runs itself.",
-        "name": "Galina Veretennikova",
-        "role": "Consulting psychologist",
-        "initials": "GV",
-        "gradient": "linear-gradient(135deg, #06B6D4, #0891B2)"
-      },
-      {
-        "text": "Managers drop tours into Telegram, and everything spreads across social media on its own. TikTok, Instagram, everywhere. We used to have a dedicated person just for that. Now it simply takes no time.",
-        "name": "Sergiy Kovalchuk",
-        "role": "Head of Sales, travel agency",
-        "initials": "SK",
-        "gradient": "linear-gradient(135deg, #10B981, #059669)"
-      }
-    ]
   },
   "roadmap": {
     "heading": "Where PRIZMA is heading",

@@ -4,7 +4,7 @@
     "modules": "Module",
     "cases": "Beispiel",
     "demo": "Demo",
-    "reviews": "Referenzen",
+    "reviews": "Anwendungsfälle",
     "cta": "Zugang anfragen"
   },
   "hero": {
@@ -38,12 +38,14 @@
     ]
   },
   "for_whom": {
-    "heading": "Für wen PRIZMA ist",
+    "heading": "Wofür PRIZMA eingesetzt wird",
     "items": [
-      { "title": "Online-Shops", "desc": "Aus dem Produktkatalog entstehen Artikel, Posts und Karussells zu den Produkten, die verkauft werden sollen. Ohne dass jemand jede Karte von Hand beschreibt." },
-      { "title": "Marketing-Teams", "desc": "Sechsmal mehr Output mit demselben Team. Jedes Format ist auf den jeweiligen Algorithmus abgestimmt. Mehr Reichweite. Ohne Mehrkosten." },
-      { "title": "Agenturen und Reseller", "desc": "Mehrere Kundenmarken aus einem System steuern. Jede Marke behält ihre eigene Tonalität. Kein Mehraufwand beim Personal." },
-      { "title": "Unternehmen mit mehreren Kanälen", "desc": "Ein Thema geht gleichzeitig auf alle Kanäle, in der jeweils passenden Form. Konsistente Kommunikation ohne zusätzliche Abstimmung." }
+      { "title": "Reisebüros", "desc": "Neue Reisen kommen per Telegram herein und gehen als Reel, Story und Karussell auf alle Kanäle. Ohne dass jemand sie einzeln aufbereitet." },
+      { "title": "Online-Shops", "desc": "Der Produktkatalog wird zur Themenquelle: SEO-Artikel, Posts und Karussells zu den Produkten, die verkauft werden sollen, mit Link auf die Produktseite." },
+      { "title": "Hotels und Gastgewerbe", "desc": "Zimmer, Angebote und Veranstaltungen laufen als regelmäßiger Strom von Beiträgen, während das Team beim Gast bleibt." },
+      { "title": "Schulen und Kindergärten", "desc": "Ankündigungen, Termine und Alltag erreichen Eltern regelmäßig und in gleicher Tonalität, ohne dass abends jemand Texte schreibt." },
+      { "title": "Produktion und Handel", "desc": "Fachwissen aus dem Betrieb wird zu Artikeln und Beiträgen, die Kunden finden und verstehen." },
+      { "title": "Agenturen und Reseller", "desc": "Mehrere Kundenmarken aus einem System steuern. Jede Marke behält ihre eigene Tonalität. Kein Mehraufwand beim Personal." }
     ]
   },
   "how": {
@@ -58,33 +60,6 @@
   "showcase": {
     "heading": "Ein echtes Beispiel.",
     "subtitle": "Eine Expertenidee. Drei fertige Posts, bereit zum Teilen."
-  },
-  "testimonials": {
-    "heading": "Was Kunden sagen",
-    "reviews": [
-      {
-        "text": "Wir haben lange mit Make automatisiert — Webhooks, Workarounds, Klebeband. Es funktionierte, aber jedes Update hat etwas kaputtgemacht, und die Wartung hat uns Zeit gekostet. Mit PRIZMA konnten wir einfach durchatmen. Alles an einem Ort, stabil, nichts zu reparieren. Jetzt konzentrieren wir uns auf Kunden, nicht auf Technik.",
-        "name": "Dmitry Morgunov",
-        "role": "Gründer, POTOK",
-        "logo": "/testimonial-potok.png",
-        "initials": "DM",
-        "gradient": "linear-gradient(135deg, #8B5CF6, #7C3AED)"
-      },
-      {
-        "text": "Erster Eindruck — ehrlich gesagt, großartig. Ein Post ging ganz von allein raus. Ich habe den Kanal geöffnet und alles war schon da. Foto, Text, alles passt. Jetzt arbeite ich einfach mit Kunden, und der Content läuft von selbst.",
-        "name": "Galina Veretennikova",
-        "role": "Beratende Psychologin",
-        "initials": "GV",
-        "gradient": "linear-gradient(135deg, #06B6D4, #0891B2)"
-      },
-      {
-        "text": "Manager schicken Reisen per Telegram, und alles verbreitet sich automatisch in den sozialen Medien. TikTok, Instagram, überall. Früher hatten wir eine eigene Person nur dafür. Jetzt kostet es einfach keine Zeit mehr.",
-        "name": "Sergiy Kovalchuk",
-        "role": "Vertriebsleiter, Reisebüro",
-        "initials": "SK",
-        "gradient": "linear-gradient(135deg, #10B981, #059669)"
-      }
-    ]
   },
   "roadmap": {
     "heading": "Wohin PRIZMA sich entwickelt",
