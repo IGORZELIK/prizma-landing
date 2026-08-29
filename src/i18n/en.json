@@ -128,7 +128,7 @@
     "items": [
       { "title": "Provider and servers in the EU", "desc": "Your contracting party is based in Bielefeld and the servers run inside the EU at Hetzner, a German data centre operator. Invoicing, contract and your contact person stay in Germany." },
       { "title": "Data processing agreement", "desc": "We provide a processing agreement under Art. 28 GDPR on request, including annexes on the nature of processing and technical measures." },
-      { "title": "Your accounts, your contracts", "desc": "You can connect your own API keys and your own bot. The services in use then run under your contracts rather than ours." },
+      { "title": "Models on your terms", "desc": "You connect your own API keys and your own bot. On request we work with a European model or run it on a server of your choosing, so the services run under your contracts rather than ours." },
       { "title": "Nothing runs outside your rules", "desc": "You decide what goes out automatically and what you approve individually. Your content is not used to train AI models without your explicit consent." }
     ]
   },

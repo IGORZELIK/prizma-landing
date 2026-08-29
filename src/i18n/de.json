@@ -128,7 +128,7 @@
     "items": [
       { "title": "Anbieter und Betrieb in der EU", "desc": "Ihr Vertragspartner sitzt in Bielefeld, die Server laufen in der EU bei Hetzner, einem deutschen Rechenzentrumsbetreiber. Rechnung, Vertrag und Ansprechpartner bleiben in Deutschland." },
       { "title": "AVV nach Art. 28 DSGVO", "desc": "Einen Auftragsverarbeitungsvertrag stellen wir auf Anfrage bereit, inklusive Anlagen zu Art der Verarbeitung und technischen Maßnahmen." },
-      { "title": "Ihre Zugänge, Ihre Verträge", "desc": "Sie können eigene API-Schlüssel und Ihren eigenen Bot verbinden. Dann laufen die eingesetzten Dienste unter Ihren Verträgen und nicht unter unseren." },
+      { "title": "Modelle nach Ihrer Vorgabe", "desc": "Sie verbinden eigene API-Schlüssel und Ihren eigenen Bot. Auf Wunsch arbeiten wir mit einem europäischen Modell oder betreiben es auf Ihrem eigenen Server. Dann laufen die Dienste unter Ihren Verträgen und nicht unter unseren." },
       { "title": "Nichts läuft ohne Ihre Regeln", "desc": "Sie legen fest, was automatisch veröffentlicht wird und was Sie einzeln freigeben. Ihre Inhalte werden ohne Ihre ausdrückliche Zustimmung nicht zum Training von KI-Modellen verwendet." }
     ]
   },
