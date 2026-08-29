@@ -38,12 +38,12 @@
   "for_whom": {
     "heading": "What PRIZMA is used for",
     "items": [
-      { "title": "Travel agencies", "desc": "New tours arrive via Telegram and go out as reels, stories and carousels across every channel, without anyone preparing them one by one." },
-      { "title": "Online shops", "desc": "The product catalog becomes the source: SEO articles, posts and carousels for the products you want to sell, linking straight to the product page." },
-      { "title": "Hotels and hospitality", "desc": "Rooms, offers and events run as a steady stream of posts while the team stays with the guest." },
-      { "title": "Schools and kindergartens", "desc": "Announcements, dates and everyday life reach parents regularly and in one consistent voice, with nobody writing copy at night." },
-      { "title": "Manufacturing and trade", "desc": "Know-how from the business turns into articles and posts that customers actually find and understand." },
-      { "title": "Agencies and resellers", "desc": "Run multiple client brands from one system. Each brand keeps its distinct voice. No extra headcount needed." }
+      { "title": "Travel agencies", "desc": "Offers stay visible continuously, without anyone preparing them one by one." },
+      { "title": "Online shops", "desc": "Products get content that sells and gets found in search." },
+      { "title": "Hotels and hospitality", "desc": "A steady presence on every channel while the team stays with the guest." },
+      { "title": "Schools and kindergartens", "desc": "Parents stay informed, in one consistent voice and with no extra workload." },
+      { "title": "Manufacturing and trade", "desc": "Know-how from the business becomes content that customers find and understand." },
+      { "title": "Agencies and resellers", "desc": "Several client brands from one system, each with its own voice." }
     ]
   },
   "how": {

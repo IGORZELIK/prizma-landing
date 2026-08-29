@@ -38,12 +38,12 @@
   "for_whom": {
     "heading": "Wofür PRIZMA eingesetzt wird",
     "items": [
-      { "title": "Reisebüros", "desc": "Neue Reisen kommen per Telegram herein und gehen als Reel, Story und Karussell auf alle Kanäle. Ohne dass jemand sie einzeln aufbereitet." },
-      { "title": "Online-Shops", "desc": "Der Produktkatalog wird zur Themenquelle: SEO-Artikel, Posts und Karussells zu den Produkten, die verkauft werden sollen, mit Link auf die Produktseite." },
-      { "title": "Hotels und Gastgewerbe", "desc": "Zimmer, Angebote und Veranstaltungen laufen als regelmäßiger Strom von Beiträgen, während das Team beim Gast bleibt." },
-      { "title": "Schulen und Kindergärten", "desc": "Ankündigungen, Termine und Alltag erreichen Eltern regelmäßig und in gleicher Tonalität, ohne dass abends jemand Texte schreibt." },
-      { "title": "Produktion und Handel", "desc": "Fachwissen aus dem Betrieb wird zu Artikeln und Beiträgen, die Kunden finden und verstehen." },
-      { "title": "Agenturen und Reseller", "desc": "Mehrere Kundenmarken aus einem System steuern. Jede Marke behält ihre eigene Tonalität. Kein Mehraufwand beim Personal." }
+      { "title": "Reisebüros", "desc": "Angebote bleiben durchgehend sichtbar, ohne dass jemand sie einzeln aufbereitet." },
+      { "title": "Online-Shops", "desc": "Produkte bekommen Inhalte, die verkaufen und in der Suche gefunden werden." },
+      { "title": "Hotels und Gastgewerbe", "desc": "Regelmäßige Präsenz auf allen Kanälen, während das Team beim Gast bleibt." },
+      { "title": "Schulen und Kindergärten", "desc": "Eltern bleiben informiert, in gleichbleibender Tonalität und ohne Mehrarbeit." },
+      { "title": "Produktion und Handel", "desc": "Fachwissen aus dem Betrieb wird zu Inhalten, die Kunden finden und verstehen." },
+      { "title": "Agenturen und Reseller", "desc": "Mehrere Kundenmarken aus einem System, jede mit eigener Tonalität." }
     ]
   },
   "how": {
