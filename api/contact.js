@@ -31,6 +31,10 @@ export default async function handler(req, res) {
 
   const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
   const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+  // Раздел «Клиенты» единой группы Prizma. Переменной нет — заявка идёт туда же,
+  // куда шла раньше, поэтому переезд не требует одновременной правки кода и
+  // настроек.
+  const TOPIC_ID = (process.env.TELEGRAM_TOPIC_ID || "").trim();
 
   if (!BOT_TOKEN || !CHAT_ID) {
     return res.status(500).json({ error: "Server misconfigured" });
@@ -71,7 +75,14 @@ export default async function handler(req, res) {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chat_id: CHAT_ID, text, parse_mode: "HTML" }),
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text,
+          parse_mode: "HTML",
+          // Пустое поле Telegram считает ошибкой, а не «в общую тему»,
+          // поэтому его именно нет, а не ноль.
+          ...(TOPIC_ID ? { message_thread_id: Number(TOPIC_ID) } : {}),
+        }),
       }
     );
 
