@@ -5,7 +5,6 @@ interface Props {
 
 const { t } = Astro.props;
 const lang = t.lang || 'en';
-const otherLangs = ['ru', 'de', 'en'].filter(l => l !== lang);
 
 // Canonical must be the page's own URL. Legal pages were previously declaring the
 // language homepage, which tells Google they are duplicates of it.
@@ -29,8 +28,11 @@ const canonical = `https://prizma.to${path === '' ? `/${lang}` : path}`;
   <meta property="og:url" content={canonical} />
   <meta property="og:type" content="website" />
 
+  <!-- /ru stays reachable by direct link for existing clients, but is not promoted:
+       out of hreflang, out of the language switcher, closed to search engines. -->
+  {lang === 'ru' && <meta name="robots" content="noindex, nofollow" />}
+
   <!-- hreflang -->
-  <link rel="alternate" hreflang="ru" href="https://prizma.to/ru" />
   <link rel="alternate" hreflang="de" href="https://prizma.to/de" />
   <link rel="alternate" hreflang="en" href="https://prizma.to/en" />
   <link rel="alternate" hreflang="x-default" href="https://prizma.to/" />

@@ -5,8 +5,9 @@ interface Props {
 const { t } = Astro.props;
 const lang = t.lang;
 // Every locale lives under its own path (/de, /en, /ru); the root page mirrors German.
+// /ru is left out of the switcher on purpose: reachable by direct link only.
 const prefix = `/${lang}`;
-const langs = ['DE', 'EN', 'RU'];
+const langs = ['DE', 'EN'];
 ---
 
 <nav class="nav" id="nav">

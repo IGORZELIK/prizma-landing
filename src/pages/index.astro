@@ -1,7 +1,8 @@
 ---
 // Root page. PRIZMA is a German service, so "/" serves German directly:
 // visitors from DE/AT/CH see their language with no redirect and no flash of
-// another language. Everyone else is routed to /en or /ru by the script below.
+// another language. Everyone else is routed to /en by the script below.
+// /ru exists but is never chosen automatically; it is shared by direct link only.
 
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
@@ -53,7 +54,13 @@ import t from '../i18n/de.json';
   const LOCALE_KEY = 'prizma_locale';
 
   if (window.location.pathname === '/') {
-    const saved = localStorage.getItem(LOCALE_KEY);
+    let saved = localStorage.getItem(LOCALE_KEY);
+    // Visitors auto-routed to /ru before it was hidden still carry 'ru'. Forget it
+    // so they get routed like everyone else.
+    if (saved === 'ru') {
+      localStorage.removeItem(LOCALE_KEY);
+      saved = null;
+    }
 
     if (saved && saved !== 'de') {
       // Returning visitor who picked another language → send them there.
@@ -64,12 +71,10 @@ import t from '../i18n/de.json';
         .then(r => r.json())
         .then(data => {
           const country = (data.country_code || '').toUpperCase();
-          const ruCountries = ['RU', 'UA', 'BY', 'KZ', 'UZ', 'KG', 'TJ', 'TM', 'AZ', 'AM', 'GE', 'MD'];
           const deCountries = ['DE', 'AT', 'CH', 'LI', 'LU'];
 
           let lang = 'en';
           if (deCountries.includes(country)) lang = 'de';
-          else if (ruCountries.includes(country)) lang = 'ru';
 
           if (lang !== 'de') {
             localStorage.setItem(LOCALE_KEY, lang);
