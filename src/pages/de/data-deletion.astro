@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+import t from '../../i18n/de.json';
+---
+
+<Layout t={t}>
+  <Nav t={t} />
+  <div class="legal-page">
+    <div class="section-wrap">
+      <h1>Datenlöschung</h1>
+      <p class="legal-date">Stand: Oktober 2026</p>
+
+      <div class="legal-body">
+
+        <p>Prizma verarbeitet Kommentare und Nachrichten aus Facebook und Instagram im Auftrag der Unternehmen, die Prizma nutzen. Einzelheiten stehen in Abschnitt 9 unserer <a href="/de/privacy">Datenschutzerklärung</a>.</p>
+
+        <h2>Sie haben bei einem Unternehmen kommentiert oder ihm geschrieben, das Prizma nutzt</h2>
+        <p>Schreiben Sie an <a href="mailto:contact@digitalkin.co?subject=Datenl%C3%B6schung">contact@digitalkin.co</a> mit dem Betreff „Datenlöschung“. Geben Sie Ihren Facebook-Namen oder Instagram-Benutzernamen an und, falls bekannt, den Namen des Unternehmens.</p>
+        <p>Innerhalb von 30 Tagen löschen wir Ihre Kommentare, Ihre Nachrichten und die daraus übernommenen Kontaktdaten und bestätigen das per E-Mail. Liegt Ihre Anfrage bereits im CRM des Unternehmens, entscheidet das Unternehmen über die Löschung dort. Wir leiten Ihr Anliegen an das Unternehmen weiter.</p>
+
+        <h2>Sie haben Ihr Unternehmenskonto mit Prizma verbunden</h2>
+        <p>Zum Trennen von Facebook oder Instagram schreiben Sie an <a href="mailto:contact@digitalkin.co?subject=Trennen">contact@digitalkin.co</a>, wir erledigen das am selben Werktag. Alternativ entfernen Sie unsere App selbst in den Einstellungen von Facebook oder Instagram unter „Apps und Websites“. In beiden Fällen werden Kommentare, Nachrichten und Zugriffstokens Ihres Kontos innerhalb von 30 Tagen automatisch gelöscht.</p>
+        <p>Wenn Sie die App in Facebook entfernen, sendet Facebook uns eine Löschanfrage und zeigt Ihnen einen Bestätigungscode. Bei Fragen zu Ihrer Anfrage schreiben Sie an <a href="mailto:contact@digitalkin.co?subject=Datenl%C3%B6schung">contact@digitalkin.co</a> und nennen Sie den Code. Wenn die Daten früher als nach 30 Tagen gelöscht werden sollen, genügt eine E-Mail an dieselbe Adresse.</p>
+
+        <h2>Kontakt</h2>
+        <p>Igor Zelikovsky, Digitalkin AI<br/>
+        Bleicherfeldstraße 31, 33689 Bielefeld, Deutschland<br/>
+        <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+      </div>
+    </div>
+  </div>
+  <Footer t={t} />
+</Layout>
+
+<style>
+  .legal-page { min-height: 80vh; }
+  .legal-page h1 { margin-bottom: 8px; }
+  .legal-date { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 60px; }
+  .legal-body h2 { font-size: 1.2rem; margin-top: 40px; margin-bottom: 12px; color: var(--text-primary); }
+  .legal-body p { color: var(--text-secondary, #9CA3AF); line-height: 1.8; font-size: 0.95rem; }
+  .legal-body a { color: var(--purple); text-decoration: none; }
+  .legal-body a:hover { text-decoration: underline; }
+  .legal-body strong { color: var(--text-primary); }
+</style>

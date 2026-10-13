@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+import t from '../../i18n/en.json';
+---
+
+<Layout t={t}>
+  <Nav t={t} />
+  <div class="legal-page">
+    <div class="section-wrap">
+      <h1>Data deletion</h1>
+      <p class="legal-date">Last updated: October 2026</p>
+
+      <div class="legal-body">
+
+        <p>Prizma processes comments and messages from Facebook and Instagram on behalf of the businesses that use it. Details are in section 9 of our <a href="/en/privacy">Privacy Policy</a>.</p>
+
+        <h2>If you commented on or wrote to a business that uses Prizma</h2>
+        <p>Email <a href="mailto:contact@digitalkin.co?subject=Data%20deletion">contact@digitalkin.co</a> with the subject "Data deletion". Include your Facebook name or Instagram username and, if you know it, the name of the business.</p>
+        <p>Within 30 days we delete your comments, your messages and the contact details taken from them, and confirm this by email. If the business has already received your enquiry in its own CRM, deleting it there is up to the business. We forward your request to it.</p>
+
+        <h2>If you connected your business account to Prizma</h2>
+        <p>To disconnect Facebook or Instagram, write to <a href="mailto:contact@digitalkin.co?subject=Disconnect">contact@digitalkin.co</a> and we will do it the same working day. You can also remove our app yourself in your Facebook or Instagram settings under "Apps and websites". In both cases the comments, messages and access tokens of your account are deleted automatically within 30 days.</p>
+        <p>When you remove the app in Facebook, Facebook sends us a deletion request and shows you a confirmation code. If you have questions about your request, write to <a href="mailto:contact@digitalkin.co?subject=Data%20deletion">contact@digitalkin.co</a> and include the code. To have the data deleted sooner than 30 days, write to the same address.</p>
+
+        <h2>Contact</h2>
+        <p>Igor Zelikovsky, Digitalkin AI<br/>
+        Bleicherfeldstraße 31, 33689 Bielefeld, Germany<br/>
+        <a href="mailto:contact@digitalkin.co">contact@digitalkin.co</a></p>
+
+      </div>
+    </div>
+  </div>
+  <Footer t={t} />
+</Layout>
+
+<style>
+  .legal-page { min-height: 80vh; }
+  .legal-page h1 { margin-bottom: 8px; }
+  .legal-date { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 60px; }
+  .legal-body h2 { font-size: 1.2rem; margin-top: 40px; margin-bottom: 12px; color: var(--text-primary); }
+  .legal-body p { color: var(--text-secondary, #9CA3AF); line-height: 1.8; font-size: 0.95rem; }
+  .legal-body a { color: var(--purple); text-decoration: none; }
+  .legal-body a:hover { text-decoration: underline; }
+  .legal-body strong { color: var(--text-primary); }
+</style>
