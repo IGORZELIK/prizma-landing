@@ -81,7 +81,7 @@
           { "label": "Freigabe vor Veröffentlichung", "desc": "Jeder Beitrag wird vor der Veröffentlichung freigegeben" },
           { "label": "Suchmaschinenoptimierung", "desc": "Suchbegriffe, Themen und regionale Ausrichtung sind in die Erstellung eingebunden" },
           { "label": "Textqualität", "desc": "Jeder Text wird nachbearbeitet, damit er der Sprache Ihres Unternehmens entspricht" },
-          { "label": "Auto-Posting in alle sozialen Medien", "desc": "Instagram, Facebook, LinkedIn, TikTok, Telegram — Veröffentlichung ohne Handarbeit" },
+          { "label": "Auto-Posting in alle sozialen Medien", "desc": "Instagram, Facebook, YouTube, LinkedIn, TikTok, Telegram: Veröffentlichung ohne Handarbeit" },
           { "label": "Einstellbarer Automatisierungsgrad", "desc": "Vollautomatisch, teilautomatisch oder mit Einzelfreigabe je Beitrag" },
           { "label": "Agentur- und Resellerbetrieb", "desc": "Eine Agentur betreut mehrere Kundenmarken in einem Konto" }
         ]

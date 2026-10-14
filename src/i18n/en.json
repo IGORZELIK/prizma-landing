@@ -81,7 +81,7 @@
           { "label": "Approval before publishing", "desc": "Every post is approved before it is published" },
           { "label": "Search engine optimisation", "desc": "Search terms, topics and regional focus are built into content creation" },
           { "label": "Text quality", "desc": "Every text is reworked to match the way your company writes" },
-          { "label": "Auto-posting to all social media", "desc": "Instagram, Facebook, LinkedIn, TikTok, Telegram — publishing without manual work" },
+          { "label": "Auto-posting to all social media", "desc": "Instagram, Facebook, YouTube, LinkedIn, TikTok, Telegram: publishing without manual work" },
           { "label": "Adjustable level of automation", "desc": "Fully automatic, semi-automatic or with individual approval per post" },
           { "label": "Agency and reseller operation", "desc": "One agency manages several client brands from a single account" }
         ]
