@@ -24,36 +24,53 @@ const { t } = Astro.props;
     <div class="cta-form-wrap glass-card reveal">
       <form class="cta-form" data-astro-reload>
         <div class="form-row">
+          <div class="form-field">
+            <label class="form-label" for="cta-name">{t.cta.label_name}</label>
+            <input
+              id="cta-name"
+              type="text"
+              class="form-input"
+              name="name"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="cta-email">{t.cta.label_email}</label>
+            <input
+              id="cta-email"
+              type="email"
+              class="form-input"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="cta-company">
+            {t.cta.label_company} <span class="form-optional">({t.cta.optional})</span>
+          </label>
           <input
+            id="cta-company"
             type="text"
             class="form-input"
-            placeholder={t.cta.name}
-            name="name"
-            required
-            autocomplete="name"
-          />
-          <input
-            type="email"
-            class="form-input"
-            placeholder={t.cta.email}
-            name="email"
-            required
-            autocomplete="email"
+            name="company"
+            autocomplete="organization"
           />
         </div>
-        <input
-          type="text"
-          class="form-input"
-          placeholder={t.cta.company}
-          name="company"
-          autocomplete="organization"
-        />
-        <textarea
-          class="form-input form-textarea"
-          placeholder={t.cta.message}
-          name="message"
-          rows="4"
-        ></textarea>
+        <div class="form-field">
+          <label class="form-label" for="cta-message">
+            {t.cta.label_message} <span class="form-optional">({t.cta.optional})</span>
+          </label>
+          <textarea
+            id="cta-message"
+            class="form-input form-textarea"
+            placeholder={t.cta.message}
+            name="message"
+            rows="4"
+          ></textarea>
+        </div>
         <!-- Honeypot: hidden from humans, bots fill it -> request is dropped server-side -->
         <input
           type="text"
@@ -63,12 +80,13 @@ const { t } = Astro.props;
           autocomplete="off"
           aria-hidden="true"
         />
-        <button type="submit" class="btn-primary submit-btn">
+        <button type="submit" class="btn-primary submit-btn" data-label={t.cta.submit} data-sending={t.cta.sending}>
           <span>{t.cta.submit}</span>
         </button>
+        <p class="form-error" role="alert" data-text={t.cta.error}></p>
       </form>
 
-      <div class="form-success">
+      <div class="form-success" role="status" tabindex="-1">
         <div class="success-icon">✓</div>
         <div class="success-title">
           {t.lang === 'ru' ? 'Заявка отправлена!' : t.lang === 'de' ? 'Anfrage gesendet!' : 'Request sent!'}
@@ -255,8 +273,28 @@ const { t } = Astro.props;
     gap: 16px;
   }
 
-  .form-input {
+  .form-field {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .form-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  .form-optional {
+    font-weight: 400;
+    color: var(--text-dim);
+  }
+
+  .form-input {
+    width: 100%;
     padding: 16px 20px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-glass);
@@ -298,6 +336,22 @@ const { t } = Astro.props;
     font-size: 1.05rem;
   }
 
+  .form-error {
+    font-size: 0.9rem;
+    color: #FCA5A5;
+    text-align: center;
+  }
+
+  .form-error:empty { display: none; }
+
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+  }
+
+  .form-success:focus { outline: none; }
+
   .cta-privacy {
     margin-top: 16px;
     font-size: 0.8rem;
@@ -314,10 +368,21 @@ const { t } = Astro.props;
   const form = document.querySelector('.cta-form') as HTMLFormElement;
   const successBlock = document.querySelector('.form-success') as HTMLElement;
   const submitBtn = form?.querySelector('.submit-btn') as HTMLButtonElement;
+  const submitLabel = submitBtn?.querySelector('span') as HTMLElement;
+  const errorBox = form?.querySelector('.form-error') as HTMLElement;
+
+  // Texts come from the page's dictionary, so the messages match the page language.
+  function setSending(sending: boolean) {
+    submitBtn.disabled = sending;
+    submitBtn.classList.toggle('loading', sending);
+    submitLabel.textContent = (sending ? submitBtn.dataset.sending : submitBtn.dataset.label) || '';
+  }
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    submitBtn.classList.add('loading');
+    if (submitBtn.disabled) return;
+    errorBox.textContent = '';
+    setSending(true);
 
     const data = new FormData(form);
 
@@ -337,12 +402,14 @@ const { t } = Astro.props;
       if (res.ok) {
         form.classList.add('hidden');
         successBlock.classList.add('visible');
+        // The form disappears, so move focus to the confirmation and let screen readers read it.
+        successBlock.focus();
       } else {
         throw new Error('Send failed');
       }
     } catch {
-      submitBtn.classList.remove('loading');
-      alert('Ошибка отправки. Попробуйте ещё раз.');
+      setSending(false);
+      errorBox.textContent = errorBox.dataset.text || '';
     }
   });
 </script>

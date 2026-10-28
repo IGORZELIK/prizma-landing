@@ -149,6 +149,13 @@
     "company": "Company",
     "message": "Which products, which channels, how often?",
     "submit": "Send request",
+    "label_name": "Name",
+    "label_email": "Email",
+    "label_company": "Company",
+    "label_message": "Your request",
+    "optional": "optional",
+    "sending": "Sending …",
+    "error": "Your request was not sent. Please try again or write to contact@digitalkin.co.",
     "privacy": "By submitting you agree to our privacy policy",
     "contacts": {
       "heading": "Direct contact",
