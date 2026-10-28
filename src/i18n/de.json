@@ -137,9 +137,9 @@
   },
   "sofie": {
     "name": "Sofie",
-    "role": "KI-Assistentin von PRIZMA",
+    "role": "KI-Assistentin",
     "text": "Sofie beantwortet Ihre Fragen zu Leistungen, Ablauf und Preisen und trägt Ihnen direkt einen Termin für ein Beratungsgespräch ein. Erreichbar rund um die Uhr.",
-    "alt": "Sofie, KI-Assistentin von PRIZMA (Bild mit KI erzeugt)"
+    "alt": "Sofie, KI-Assistentin (Bild mit KI erzeugt)"
   },
   "cta": {
     "heading": "Was soll bei Ihnen jeden Monat erscheinen?",

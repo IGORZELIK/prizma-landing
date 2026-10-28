@@ -137,9 +137,9 @@
   },
   "sofie": {
     "name": "Sofie",
-    "role": "PRIZMA's AI assistant",
+    "role": "AI assistant",
     "text": "Sofie answers your questions about our services, process and pricing, and books a consultation slot for you right away. Available around the clock.",
-    "alt": "Sofie, PRIZMA's AI assistant (AI-generated image)"
+    "alt": "Sofie, AI assistant (AI-generated image)"
   },
   "cta": {
     "heading": "What should go out every month?",
