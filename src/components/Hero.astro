@@ -14,8 +14,10 @@ const { t } = Astro.props;
   <p class="hero-subtitle">{t.hero.subtitle}</p>
 
   <div class="hero-cta">
-    <a href="#contact" class="btn-primary"><span>{t.hero.cta_primary}</span></a>
+    <a href="tel:+4952196377655" class="btn-primary"><span>{t.hero.cta_primary}</span></a>
+    <a href="#contact" class="btn-secondary">{t.hero.cta_secondary}</a>
   </div>
+  <p class="hero-phone">{t.hero.phone_hint}</p>
 
   <div class="scroll-hint" aria-hidden="true">
     <div class="scroll-line"></div>
@@ -60,6 +62,14 @@ const { t } = Astro.props;
     margin-top: 40px;
     opacity: 0;
     animation: revealUp 0.5s ease-out 0.32s forwards;
+  }
+
+  .hero-phone {
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    opacity: 0;
+    animation: revealUp 0.5s ease-out 0.4s forwards;
   }
 
   .scroll-hint {

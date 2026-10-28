@@ -12,6 +12,16 @@ const { t } = Astro.props;
     <h2 class="reveal">{t.cta.heading}</h2>
     <p class="section-subtitle cta-sub reveal">{t.cta.subtitle}</p>
 
+    <div class="sofie glass-card reveal">
+      <img class="sofie-avatar" src="/sofie.webp" alt={t.sofie.alt} width="96" height="96" loading="lazy" />
+      <div class="sofie-body">
+        <div class="sofie-name">{t.sofie.name} <span class="sofie-role">{t.sofie.role}</span></div>
+        <p class="sofie-text">{t.sofie.text}</p>
+        <a href="tel:+4952196377655" class="btn-primary sofie-btn"><span>{t.hero.cta_primary} · +49 521 96377655</span></a>
+        <p class="sofie-note">{t.cta.contacts.ai_note}</p>
+      </div>
+    </div>
+
     <div class="cta-form-wrap glass-card reveal">
       <form class="cta-form" data-astro-reload>
         <div class="form-row">
@@ -92,12 +102,74 @@ const { t } = Astro.props;
           <span class="contact-v">{t.cta.contacts.languages_value}</span>
         </div>
       </div>
-      <p class="contacts-note">{t.cta.contacts.ai_note}</p>
     </div>
   </div>
 </section>
 
 <style>
+  .sofie {
+    max-width: 640px;
+    margin: 0 auto 32px;
+    padding: 28px 32px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .sofie-avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 32px rgba(139, 92, 246, 0.25);
+  }
+
+  .sofie-name {
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+  }
+
+  .sofie-role {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+  }
+
+  .sofie-text {
+    margin: 12px 0 18px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .sofie-btn {
+    padding: 14px 28px;
+  }
+
+  .sofie-note {
+    margin: 14px 0 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 600px) {
+    .sofie {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px 20px;
+    }
+    .sofie-btn { width: 100%; }
+  }
+
   .contacts {
     max-width: 640px;
     margin: 32px auto 0;
@@ -141,15 +213,6 @@ const { t } = Astro.props;
 
   a.contact-v { color: var(--purple); text-decoration: none; }
   a.contact-v:hover { text-decoration: underline; }
-
-  .contacts-note {
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border-glass);
-    font-size: 0.8rem;
-    line-height: 1.65;
-    color: var(--text-dim);
-  }
 
   @media (max-width: 600px) {
     .contacts { padding: 22px 20px; }

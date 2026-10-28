@@ -5,12 +5,14 @@
     "cases": "Example",
     "reviews": "Use cases",
     "pricing": "Pricing",
-    "cta": "Request access"
+    "cta": "Book a consultation"
   },
   "hero": {
     "slogan": "One idea. Every form.",
-    "subtitle": "A content system for companies, online shops and agencies. One topic becomes every format, each one tailored to its channel.",
-    "cta_primary": "Request access"
+    "subtitle": "We take over your ongoing content production. Your product data becomes posts, reels, carousels and articles that go out on your channels on a regular schedule. The monthly volume is agreed up front.",
+    "cta_primary": "Call Sofie",
+    "cta_secondary": "Write to us",
+    "phone_hint": "AI assistant, around the clock: +49 521 96377655"
   },
   "visual_demo": {
     "heading": "One topic. Six formats. Every channel."
@@ -19,17 +21,17 @@
     "heading": "What PRIZMA produces",
     "subheading": "Publishing regularly is no longer enough. Algorithms weigh consistency, topical relevance and how people behave. PRIZMA builds the formats you need from a single topic, each one tuned to its channel.",
     "items": [
-      { "name": "Post", "desc": "A post that shows what your company can do. Not just an image, but a statement that stays in mind and builds trust." },
-      { "name": "Reel", "desc": "Short-form video with a clear message. The platforms distribute it organically. The most direct route to new reach, with no ad budget." },
+      { "name": "Post", "desc": "A post with a clear message about your product or offer. Image and text fit each other and the channel." },
+      { "name": "Reel", "desc": "A short video with a clear message. Platforms show reels to people who don't follow you yet, so you reach new people without an ad budget." },
       { "name": "Carousel", "desc": "Complex ideas, broken down clearly. Carousels earn saves and shares. The kind of content people bookmark and come back to." },
       { "name": "Story", "desc": "Short and current. Stories keep your channels present between the larger posts and are usually seen first." },
-      { "name": "Article", "desc": "An article that brings visitors for years. PRIZMA evaluates real search queries and structures the text for good placement." },
+      { "name": "Article", "desc": "An article for search. PRIZMA analyses real search queries and shapes the text around them." },
       { "name": "Avatar", "desc": "A face for your brand, with no camera and no shoot. The AI avatar delivers your script on video, regularly and at consistent quality." }
     ]
   },
   "why": {
-    "heading": "From topic to publication",
-    "text": "Most tools deliver text. Everything after that stays your job. PRIZMA covers the whole process: one topic becomes the formats you need, aimed at real search queries and your region. Publication runs through your channels, and the results feed into the next round of planning. Every text is adapted to the way your company writes. Approval stays with you.",
+    "heading": "You provide the product data. We deliver the content.",
+    "text": "There is no shortage of content software, but someone still has to run it. With PRIZMA you don't need anyone in-house for that. We pick topics from your catalog, produce the right format for each channel and publish on schedule. The texts sound like your company and target real search queries. You decide what gets checked before it goes out.",
     "stats": [
       { "value": "6", "label": "formats from one topic" },
       { "value": "SEO", "label": "considered in every piece" },
@@ -37,28 +39,26 @@
     ]
   },
   "for_whom": {
-    "heading": "What PRIZMA is used for",
+    "heading": "Who PRIZMA works for",
     "items": [
+      { "title": "Online retailers", "desc": "Your range stays visible on your channels: products, prices and promotions that also get found in search." },
+      { "title": "Manufacturers and brands", "desc": "Product data and in-house know-how become content that customers find and understand." },
       { "title": "Travel agencies", "desc": "Offers stay visible continuously, without anyone preparing them one by one." },
-      { "title": "Online shops", "desc": "Products get content that sells and gets found in search." },
-      { "title": "Hotels and hospitality", "desc": "A steady presence on every channel while the team stays with the guest." },
-      { "title": "Schools and kindergartens", "desc": "Parents stay informed, in one consistent voice and with no extra workload." },
-      { "title": "Manufacturing and trade", "desc": "Know-how from the business becomes content that customers find and understand." },
-      { "title": "Agencies and resellers", "desc": "Several client brands from one system, each with its own voice." }
+      { "title": "Agencies and resellers", "desc": "We produce for your client brands, each in its own voice. You stay the contact for your clients." }
     ]
   },
   "how": {
     "heading": "How it works",
     "steps": [
-      { "title": "Topic", "desc": "A product, an offer or an announcement. Optionally straight from your catalog or channel" },
-      { "title": "PRIZMA", "desc": "The AI researches the topic, aims the text at real search queries and your region, and produces the selected formats" },
-      { "title": "You review", "desc": "You check the output. You set how much approval you want: fully automatic, partial, or every post individually" },
-      { "title": "Published", "desc": "Your posts go out automatically across all your channels, following your rules" }
+      { "title": "Scope", "desc": "You decide how much content of which kind goes out on which channels." },
+      { "title": "Product data", "desc": "Catalog, product feed, website or your Telegram channel. If you like, we pick up new topics automatically." },
+      { "title": "Production", "desc": "PRIZMA researches the topic, aims the text at real search queries and your region, and produces the agreed formats." },
+      { "title": "Publishing", "desc": "Approval fully automatic, partial or per post, following your rules. Then the post goes live on the agreed channels." }
     ]
   },
   "showcase": {
     "heading": "Content for your industry.",
-    "subtitle": "E-commerce, manufacturing, travel. This is the content PRIZMA produces. Images and videos are made with AI."
+    "subtitle": "E-commerce, manufacturing, travel. This is the content PRIZMA produces. Most of it is built on our clients' real photos and videos. Whether and where AI is added is the client's call. In the examples, the caption says so."
   },
   "roadmap": {
     "heading": "Where PRIZMA is heading",
@@ -70,18 +70,17 @@
       {
         "period": "Launched",
         "date": "2025–2026",
-        "title": "Platform core",
+        "title": "Included in the service today",
         "status": "done",
         "items": [
           { "label": "Six formats plus reposting", "desc": "Posts, reels, carousels, stories, SEO articles and AI avatar, plus cross-channel reposting" },
           { "label": "Unified content plan", "desc": "One topic unfolds into all formats automatically" },
           { "label": "Separate data storage", "desc": "Data and settings are stored separately for each company" },
           { "label": "Analysis during setup", "desc": "Tone, industry and audience of your company are assessed at the start" },
-          { "label": "Use of your own accounts", "desc": "Your own accounts with the AI services and your own Telegram channel can be connected" },
-          { "label": "Approval before publishing", "desc": "Every post is approved before it is published" },
+          { "label": "Approval before publishing", "desc": "If you want, nothing goes live without your approval" },
           { "label": "Search engine optimisation", "desc": "Search terms, topics and regional focus are built into content creation" },
           { "label": "Text quality", "desc": "Every text is reworked to match the way your company writes" },
-          { "label": "Auto-posting to all social media", "desc": "Instagram, Facebook, YouTube, LinkedIn, TikTok, Telegram: publishing without manual work" },
+          { "label": "Auto-posting to social networks", "desc": "Instagram, Facebook, YouTube, LinkedIn, TikTok, Pinterest, Telegram: publishing without manual work" },
           { "label": "Adjustable level of automation", "desc": "Fully automatic, semi-automatic or with individual approval per post" },
           { "label": "Agency and reseller operation", "desc": "One agency manages several client brands from a single account" }
         ]
@@ -125,10 +124,10 @@
   },
   "pricing": {
     "heading": "Pricing",
-    "lead": "The price depends on the number of channels, the formats and the languages. For orientation:",
+    "lead": "You pay for the agreed content. You don't need a software licence or extra staff for it. The price depends on volume, formats, channels and languages. For orientation:",
     "items": [
       { "label": "Setup", "amount": "from €900 one-off", "desc": "Analysis of your tone, connection of the channels and first content for review." },
-      { "label": "Operation", "amount": "from €490 per month", "desc": "Ongoing creation and publication in the agreed formats, released under your rules." }
+      { "label": "Operation", "amount": "from €490 per month", "desc": "A fixed monthly scope: which content, how much, on which channels. Creation and publishing are included, released under your rules." }
     ],
     "note": "All prices are exclusive of statutory VAT. Separate terms apply to agencies and resellers."
   },
@@ -139,16 +138,22 @@
       { "title": "Contracting party and servers in the EU", "desc": "The contracting party is a company based in Bielefeld and the servers are located within the EU. Contracts, invoicing and support are handled from Germany." },
       { "title": "Processing agreement under Art. 28 GDPR", "desc": "We provide a data processing agreement, tailored to how the system is actually used in your company." },
       { "title": "Processing to your specification", "desc": "By default, processing runs on our infrastructure. On request we use a European provider or install the system on a server of your own." },
-      { "title": "Approval and control", "desc": "You define which content is published automatically and which is reviewed beforehand. Your content is used to train AI models only with your consent." }
+      { "title": "Approval and control", "desc": "You decide which content is published automatically and which is reviewed first. You also decide whether we work with your own photos and videos or have AI generate images, video or a voice. Your content is used to train AI models only with your consent." }
     ]
   },
+  "sofie": {
+    "name": "Sofie",
+    "role": "PRIZMA's AI assistant",
+    "text": "Sofie answers your questions about our services, process and pricing, and books a consultation slot for you right away. Available around the clock.",
+    "alt": "Sofie, PRIZMA's AI assistant (AI-generated image)"
+  },
   "cta": {
-    "heading": "Access on request.",
-    "subtitle": "Leave a request. Tell us about your company and your channels, and we'll show you what PRIZMA builds from them.",
+    "heading": "What should go out every month?",
+    "subtitle": "Tell us about your products and channels. We'll suggest a monthly scope and show with examples what it could look like for you.",
     "name": "Your name",
     "email": "Email",
     "company": "Company",
-    "message": "Tell us about your company and what you want to achieve",
+    "message": "Which products, which channels, how often?",
     "submit": "Send request",
     "privacy": "By submitting you agree to our privacy policy",
     "contacts": {
@@ -159,7 +164,7 @@
       "location_value": "Bielefeld, Germany",
       "languages": "Languages",
       "languages_value": "German · English · Russian",
-      "ai_note": "Your call is answered around the clock by our AI phone assistant. It notes what you need, books an appointment and passes everything on. At the start of the call it states that you are speaking to an AI system. If you would rather not, simply send us an email."
+      "ai_note": "At the start of the call Sofie tells you that you are talking to an AI system. Prefer to write? Use the form or send us an email."
     }
   },
   "footer": {
@@ -170,7 +175,7 @@
     "copyright": "© 2026 PRIZMA. All rights reserved."
   },
   "seo": {
-    "title": "PRIZMA — Content system for companies and online shops",
-    "description": "One topic becomes six content formats: posts, reels, carousels, articles, AI avatar videos and cross-channel reposts. For companies, online shops and agencies, Optimized for search and published under your own approval rules."
+    "title": "PRIZMA: Content production as a service for online retailers and manufacturers",
+    "description": "PRIZMA takes over your ongoing content production: posts, reels, carousels, SEO articles and AI avatar videos from your product data, published under your approval rules. With a fixed monthly scope."
   }
 }

@@ -5,12 +5,14 @@
     "cases": "Beispiel",
     "reviews": "Anwendungsfälle",
     "pricing": "Preise",
-    "cta": "Zugang anfragen"
+    "cta": "Beratung buchen"
   },
   "hero": {
     "slogan": "Eine Idee. Alle Formen.",
-    "subtitle": "Content-System für Unternehmen, Online-Shops und Agenturen. Aus einem Thema entstehen alle Formate, jedes passgenau für seinen Kanal.",
-    "cta_primary": "Zugang anfragen"
+    "subtitle": "Wir übernehmen Ihre laufende Content-Produktion. Aus Ihren Produktdaten entstehen Beiträge, Reels, Karussells und Artikel, die regelmäßig auf Ihren Kanälen erscheinen. Der Umfang pro Monat ist fest vereinbart.",
+    "cta_primary": "Sofie anrufen",
+    "cta_secondary": "Anfrage schreiben",
+    "phone_hint": "KI-Assistentin, rund um die Uhr: +49 521 96377655"
   },
   "visual_demo": {
     "heading": "Ein Thema. Sechs Formate. Alle Kanäle."
@@ -19,17 +21,17 @@
     "heading": "Was PRIZMA erstellt",
     "subheading": "Regelmäßig posten reicht heute nicht mehr. Algorithmen bewerten Konsistenz, thematische Relevanz und Nutzerverhalten. PRIZMA erstellt die gewünschten Formate aus einem einzigen Thema, jedes passgenau für seinen Kanal.",
     "items": [
-      { "name": "Post", "desc": "Ein Beitrag, der zeigt, was Ihr Unternehmen kann. Kein beliebiges Bild, sondern eine Aussage, die in Erinnerung bleibt und Vertrauen aufbaut." },
-      { "name": "Reel", "desc": "Kurzvideo mit klarer Botschaft. Die Plattformen verbreiten es organisch. Der direkteste Weg zu neuer Reichweite, ohne Anzeigenbudget." },
+      { "name": "Post", "desc": "Ein Beitrag mit einer klaren Aussage zu Ihrem Produkt oder Angebot. Bild und Text passen zueinander und zum Kanal." },
+      { "name": "Reel", "desc": "Kurzvideo mit klarer Botschaft. Reels zeigen die Plattformen auch Menschen, die Ihnen noch nicht folgen. So erreichen Sie neue Leute ohne Anzeigenbudget." },
       { "name": "Karussell", "desc": "Komplexe Inhalte, übersichtlich aufbereitet. Karussells werden gespeichert und geteilt. Inhalte, zu denen man zurückkommt." },
       { "name": "Story", "desc": "Kurz und tagesaktuell. Stories halten Ihre Kanäle zwischen den größeren Beiträgen präsent und werden meist zuerst gesehen." },
-      { "name": "Blog-Artikel", "desc": "Ein Artikel, der über Jahre Besucher bringt. PRIZMA wertet echte Suchanfragen aus und strukturiert den Text auf gute Platzierungen hin." },
+      { "name": "Blog-Artikel", "desc": "Ein Artikel für die Suche. PRIZMA wertet echte Suchanfragen aus und richtet den Text danach aus." },
       { "name": "KI-Avatar", "desc": "Ein Gesicht für Ihre Marke, ohne Kamera und ohne Drehtermin. Der KI-Avatar spricht Ihre Texte im Videoformat, regelmäßig und in gleichbleibender Qualität." }
     ]
   },
   "why": {
-    "heading": "Vom Thema bis zur Veröffentlichung",
-    "text": "Die meisten Tools liefern Texte. Alles danach bleibt Ihre Aufgabe. PRIZMA deckt den gesamten Ablauf ab: Aus einem Thema entstehen die passenden Formate, abgestimmt auf Suchanfragen und Ihre Region. Die Veröffentlichung erfolgt über Ihre Kanäle, die Ergebnisse fließen in die weitere Planung ein. Jeder Text wird an die Sprache Ihres Unternehmens angepasst. Die Freigabe liegt bei Ihnen.",
+    "heading": "Sie liefern die Produktdaten. Wir liefern den Content.",
+    "text": "Programme zur Content-Erstellung gibt es viele, bedienen muss sie trotzdem jemand. Mit PRIZMA brauchen Sie dafür niemanden im Haus. Wir wählen die Themen aus Ihrem Katalog, erstellen die passenden Formate für jeden Kanal und veröffentlichen nach Plan. Die Texte klingen nach Ihrem Unternehmen und sind auf echte Suchanfragen ausgerichtet. Was vorab geprüft wird, entscheiden Sie.",
     "stats": [
       { "value": "6", "label": "Formate aus einem Thema" },
       { "value": "SEO", "label": "in jedem Inhalt mitgedacht" },
@@ -37,28 +39,26 @@
     ]
   },
   "for_whom": {
-    "heading": "Wofür PRIZMA eingesetzt wird",
+    "heading": "Für wen PRIZMA arbeitet",
     "items": [
+      { "title": "Online-Händler", "desc": "Ihr Sortiment ist laufend auf Ihren Kanälen zu sehen: Produkte, Preise und Aktionen, die auch in der Suche gefunden werden." },
+      { "title": "Hersteller und Marken", "desc": "Aus Produktdaten und Fachwissen entstehen Inhalte, die Kunden finden und verstehen." },
       { "title": "Reisebüros", "desc": "Angebote bleiben durchgehend sichtbar, ohne dass jemand sie einzeln aufbereitet." },
-      { "title": "Online-Shops", "desc": "Produkte bekommen Inhalte, die verkaufen und in der Suche gefunden werden." },
-      { "title": "Hotels und Gastgewerbe", "desc": "Regelmäßige Präsenz auf allen Kanälen, während das Team beim Gast bleibt." },
-      { "title": "Schulen und Kindergärten", "desc": "Eltern bleiben informiert, in gleichbleibender Tonalität und ohne Mehrarbeit." },
-      { "title": "Produktion und Handel", "desc": "Fachwissen aus dem Betrieb wird zu Inhalten, die Kunden finden und verstehen." },
-      { "title": "Agenturen und Reseller", "desc": "Mehrere Kundenmarken aus einem System, jede mit eigener Tonalität." }
+      { "title": "Agenturen und Reseller", "desc": "Wir produzieren für Ihre Kundenmarken, jede mit eigener Tonalität. Ansprechpartner Ihrer Kunden bleiben Sie." }
     ]
   },
   "how": {
     "heading": "So funktioniert es",
     "steps": [
-      { "title": "Thema", "desc": "Ein Produkt, ein Angebot oder eine Ankündigung. Auf Wunsch automatisch aus Ihrem Katalog oder Kanal" },
-      { "title": "PRIZMA", "desc": "Die KI recherchiert das Thema, richtet den Text auf echte Suchanfragen und Ihre Region aus und erstellt die gewählten Formate" },
-      { "title": "Freigabe", "desc": "Sie prüfen das Ergebnis. Den Umfang der Freigabe legen Sie selbst fest: vollautomatisch, teilweise oder je Beitrag." },
-      { "title": "Live", "desc": "Die Veröffentlichung auf allen Kanälen erfolgt automatisch nach Ihren Regeln." }
+      { "title": "Umfang", "desc": "Sie legen fest, wie viele Inhalte welcher Art auf welchen Kanälen erscheinen." },
+      { "title": "Produktdaten", "desc": "Katalog, Produktfeed, Website oder Ihr Telegram-Kanal. Auf Wunsch holen wir neue Themen automatisch ab." },
+      { "title": "Produktion", "desc": "PRIZMA recherchiert das Thema, richtet den Text auf echte Suchanfragen und Ihre Region aus und erstellt die vereinbarten Formate." },
+      { "title": "Veröffentlichung", "desc": "Freigabe vollautomatisch, teilweise oder je Beitrag, ganz nach Ihren Regeln. Danach geht der Beitrag auf den vereinbarten Kanälen live." }
     ]
   },
   "showcase": {
     "heading": "Content für Ihre Branche.",
-    "subtitle": "Online-Handel, Produktion, Reisebüro. So sieht der Content aus, den PRIZMA erstellt. Bilder und Videos entstehen mit KI."
+    "subtitle": "Online-Handel, Produktion, Reisebüro. So sieht der Content aus, den PRIZMA erstellt. Grundlage sind meist echte Fotos und Videos der Kunden. Ob und wo KI dazukommt, entscheidet der Kunde. In den Beispielen steht es in der Beschreibung."
   },
   "roadmap": {
     "heading": "Wohin PRIZMA sich entwickelt",
@@ -70,18 +70,17 @@
       {
         "period": "Gestartet",
         "date": "2025–2026",
-        "title": "Plattform-Kern",
+        "title": "Heute im Service enthalten",
         "status": "done",
         "items": [
           { "label": "Sechs Formate plus Reposting", "desc": "Posts, Reels, Karussells, Stories, SEO-Artikel und KI-Avatar, dazu kanalübergreifendes Reposting" },
           { "label": "Einheitlicher Content-Plan", "desc": "Ein Thema entfaltet sich automatisch in alle Formate" },
           { "label": "Getrennte Datenhaltung", "desc": "Daten und Einstellungen werden je Unternehmen getrennt gespeichert" },
           { "label": "Analyse bei der Einrichtung", "desc": "Zu Beginn werden Tonalität, Branche und Zielgruppe Ihres Unternehmens erfasst" },
-          { "label": "Nutzung eigener Konten", "desc": "Eigene Konten bei den KI-Diensten und ein eigener Telegram-Kanal können eingebunden werden" },
-          { "label": "Freigabe vor Veröffentlichung", "desc": "Jeder Beitrag wird vor der Veröffentlichung freigegeben" },
+          { "label": "Freigabe vor Veröffentlichung", "desc": "Auf Wunsch geht kein Beitrag ohne Ihre Freigabe online" },
           { "label": "Suchmaschinenoptimierung", "desc": "Suchbegriffe, Themen und regionale Ausrichtung sind in die Erstellung eingebunden" },
           { "label": "Textqualität", "desc": "Jeder Text wird nachbearbeitet, damit er der Sprache Ihres Unternehmens entspricht" },
-          { "label": "Auto-Posting in alle sozialen Medien", "desc": "Instagram, Facebook, YouTube, LinkedIn, TikTok, Telegram: Veröffentlichung ohne Handarbeit" },
+          { "label": "Auto-Posting in soziale Netzwerke", "desc": "Instagram, Facebook, YouTube, LinkedIn, TikTok, Pinterest, Telegram: Veröffentlichung ohne Handarbeit" },
           { "label": "Einstellbarer Automatisierungsgrad", "desc": "Vollautomatisch, teilautomatisch oder mit Einzelfreigabe je Beitrag" },
           { "label": "Agentur- und Resellerbetrieb", "desc": "Eine Agentur betreut mehrere Kundenmarken in einem Konto" }
         ]
@@ -125,10 +124,10 @@
   },
   "pricing": {
     "heading": "Preise",
-    "lead": "Der Preis richtet sich nach der Zahl der Kanäle, den Formaten und den Sprachen. Zur Orientierung:",
+    "lead": "Sie bezahlen für die vereinbarten Inhalte. Eine Softwarelizenz oder zusätzliches Personal brauchen Sie dafür nicht. Der Preis hängt von Menge, Formaten, Kanälen und Sprachen ab. Zur Orientierung:",
     "items": [
       { "label": "Einrichtung", "amount": "ab 900 € einmalig", "desc": "Analyse der Tonalität, Anbindung der Kanäle und erste Inhalte zur Abstimmung." },
-      { "label": "Betrieb", "amount": "ab 490 € pro Monat", "desc": "Laufende Erstellung und Veröffentlichung in den vereinbarten Formaten, mit Freigabe nach Ihren Regeln." }
+      { "label": "Betrieb", "amount": "ab 490 € pro Monat", "desc": "Ein fester Monatsumfang: welche Inhalte, wie viele, auf welchen Kanälen. Erstellung und Veröffentlichung sind enthalten, freigegeben nach Ihren Regeln." }
     ],
     "note": "Alle Preise verstehen sich zzgl. gesetzlicher Umsatzsteuer. Für Agenturen und Reseller gelten eigene Konditionen."
   },
@@ -139,16 +138,22 @@
       { "title": "Vertragspartner und Server in der EU", "desc": "Vertragspartner ist ein Unternehmen mit Sitz in Bielefeld, die Server stehen innerhalb der EU. Vertragsabwicklung, Rechnungsstellung und Ansprechpartner in Deutschland." },
       { "title": "Auftragsverarbeitung nach Art. 28 DSGVO", "desc": "Einen Auftragsverarbeitungsvertrag stellen wir bereit, abgestimmt auf den konkreten Einsatz in Ihrem Unternehmen." },
       { "title": "Verarbeitung nach Ihren Vorgaben", "desc": "Standardmäßig erfolgt die Verarbeitung über unsere Infrastruktur. Auf Wunsch setzen wir einen europäischen Anbieter ein oder installieren das System auf Ihrem eigenen Server." },
-      { "title": "Freigabe und Kontrolle", "desc": "Sie legen fest, welche Inhalte automatisch veröffentlicht und welche vorab geprüft werden. Eine Nutzung Ihrer Inhalte zum Training von KI-Modellen erfolgt nur mit Ihrer Zustimmung." }
+      { "title": "Freigabe und Kontrolle", "desc": "Sie legen fest, welche Inhalte automatisch veröffentlicht und welche vorab geprüft werden. Ebenso entscheiden Sie, ob mit Ihren eigenen Fotos und Videos gearbeitet wird oder ob KI Bilder, Videos oder eine Stimme erzeugt. Eine Nutzung Ihrer Inhalte zum Training von KI-Modellen erfolgt nur mit Ihrer Zustimmung." }
     ]
   },
+  "sofie": {
+    "name": "Sofie",
+    "role": "KI-Assistentin von PRIZMA",
+    "text": "Sofie beantwortet Ihre Fragen zu Leistungen, Ablauf und Preisen und trägt Ihnen direkt einen Termin für ein Beratungsgespräch ein. Erreichbar rund um die Uhr.",
+    "alt": "Sofie, KI-Assistentin von PRIZMA (Bild mit KI erzeugt)"
+  },
   "cta": {
-    "heading": "Zugang auf Anfrage.",
-    "subtitle": "Hinterlassen Sie eine Anfrage. Erzählen Sie uns von Ihrem Unternehmen und Ihren Kanälen, wir zeigen, was PRIZMA daraus macht.",
+    "heading": "Was soll bei Ihnen jeden Monat erscheinen?",
+    "subtitle": "Nennen Sie uns Ihre Produkte und Kanäle. Wir schlagen einen Monatsumfang vor und zeigen an Beispielen, wie das bei Ihnen aussehen kann.",
     "name": "Ihr Name",
     "email": "E-Mail",
     "company": "Unternehmen",
-    "message": "Beschreiben Sie kurz Ihr Unternehmen und Ihr Ziel",
+    "message": "Welche Produkte, welche Kanäle, wie oft?",
     "submit": "Anfrage senden",
     "privacy": "Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu",
     "contacts": {
@@ -159,7 +164,7 @@
       "location_value": "Bielefeld, Deutschland",
       "languages": "Sprachen",
       "languages_value": "Deutsch · Englisch · Russisch",
-      "ai_note": "Ihren Anruf nimmt rund um die Uhr unser KI-Telefonassistent entgegen. Er notiert Ihr Anliegen, vereinbart einen Termin und leitet alles weiter. Zu Beginn des Gesprächs weist er darauf hin, dass Sie mit einem KI-System sprechen. Wenn Sie das nicht möchten, schreiben Sie uns einfach eine E-Mail."
+      "ai_note": "Zu Beginn des Gesprächs sagt Sofie, dass Sie mit einem KI-System sprechen. Lieber schreiben? Dann nutzen Sie das Formular oder schicken uns eine E-Mail."
     }
   },
   "footer": {
@@ -170,7 +175,7 @@
     "copyright": "© 2026 PRIZMA. Alle Rechte vorbehalten."
   },
   "seo": {
-    "title": "PRIZMA: Content-System für Unternehmen und Online-Shops",
-    "description": "Aus einem Thema werden sechs Content-Formate: Beiträge, Reels, Karussells, Artikel, KI-Avatar-Videos und kanalübergreifende Reposts. Für Unternehmen, Online-Shops und Agenturen, Für Suchmaschinen optimiert, veröffentlicht nach Ihren Freigaberegeln."
+    "title": "PRIZMA: Content-Produktion als Service für Online-Händler und Hersteller",
+    "description": "PRIZMA übernimmt die laufende Content-Produktion: Beiträge, Reels, Karussells, SEO-Artikel und KI-Avatar-Videos aus Ihren Produktdaten, veröffentlicht nach Ihren Freigaberegeln. Mit fest vereinbartem Monatsumfang."
   }
 }
