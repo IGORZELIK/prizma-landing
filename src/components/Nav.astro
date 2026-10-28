@@ -202,10 +202,12 @@ const langs = ['DE', 'EN'];
   });
 
   // Remember an explicit language choice so the root-page auto-redirect respects it.
+  // This is the only place the choice is stored (key read in pages/index.astro).
   document.querySelectorAll('.lang-switch a').forEach(a => {
     a.addEventListener('click', () => {
       const lang = (a.getAttribute('href') || '').replace('/', '').toLowerCase();
-      if (lang) localStorage.setItem('prizma_locale', lang);
+      if (lang !== 'de' && lang !== 'en') return;
+      try { localStorage.setItem('prizma_lang', lang); } catch {}
     });
   });
 </script>
