@@ -3,55 +3,60 @@ interface Props {
   t: Record<string, any>;
 }
 const { t } = Astro.props;
+const L = (de: string, en: string, ru: string) => (t.lang === 'ru' ? ru : t.lang === 'en' ? en : de);
+const slides = (dir: string, count = 6) => Array.from({ length: count }, (_, i) => `/cases/${dir}/slide-${i + 1}.webp`);
 
-const cards = [
+
+const cases = [
   {
-    type: 'post',
-    tag: t.modules.items[0].name,
-    tagClass: 'tag-post',
-    username: 'prizma.to',
-    image: '/showcase-post.webp',
-    caption: t.lang === 'ru'
-      ? 'Контент-план готов. Посты написаны. Публикации запланированы. Команда занималась своим делом. Именно так работает PRIZMA.'
-      : t.lang === 'de'
-      ? 'Content-Plan fertig. Posts geschrieben. Veröffentlichungen geplant. Genau so funktioniert PRIZMA.'
-      : 'Content plan ready. Posts written. Publications scheduled. That\'s exactly how PRIZMA works.',
-    hashtags: t.lang === 'ru' ? '#контентмаркетинг #автоматизация #b2b' : t.lang === 'de' ? '#contentmarketing #automatisierung #b2b' : '#contentmarketing #automation #b2b',
-    likes: '2,4K',
+    id: 'shop',
+    tab: L('Online-Handel', 'E-commerce', 'Онлайн-торговля'),
+    name: L('Online-Shop', 'Online shop', 'Интернет-магазин'),
+    place: L('Feinkost & Haushalt', 'Food & household', 'Продукты и товары для дома'),
+    items: [
+      { type: 'reel', video: '/cases/shop/reel.mp4', poster: '/cases/shop/reel-poster.webp', sound: true,
+        caption: L('Genuss-Deals: Honig, Kräutertee, Apfelringe, mit KI-Stimme. Ton an: unten rechts.', 'Food deals: honey, herbal tea, apple rings, with an AI voice. Sound on: bottom right.', 'Вкусные предложения: мёд, травяной чай, яблочные кольца, с ИИ-голосом. Звук: справа внизу.') },
+      { type: 'carousel', carousel: slides('shop'),
+        caption: L('Konserven aus dem Sortiment: je Slide ein Produkt mit Preis, zum Schluss die Übersicht.', 'Canned goods from the range: one product and price per slide, overview at the end.', 'Консервы из ассортимента: по товару с ценой на слайд, в конце сводка.') },
+      { type: 'pin', image: '/cases/shop/salat.webp',
+        caption: L('Rezept-Pin: führt auf die Rezeptseite, dort zu den passenden Produkten.', 'Recipe pin: leads to the recipe page and on to matching products.', 'Пин рецепта: ведёт на страницу рецепта, оттуда к товарам.') },
+    ],
   },
   {
-    type: 'reel',
-    tag: t.modules.items[1].name,
-    tagClass: 'tag-reel',
-    username: 'prizma.to',
-    video: '/showcase-reel.mp4',
-    caption: t.lang === 'ru'
-      ? 'Не копируем чужие тренды, а делаем контент из того, чем занимается ваша компания. PRIZMA пишет сценарий и собирает рилс, который показывает ваш бренд.'
-      : t.lang === 'de'
-      ? 'Wir kopieren keine fremden Trends, sondern erstellen Content aus dem, was Ihr Unternehmen ausmacht. PRIZMA schreibt das Skript und erzeugt ein Reel, das Ihre Marke sichtbar macht.'
-      : 'No copying other people\'s trends. PRIZMA builds content from what your business actually does, writes the script and generates a reel that makes your brand visible.',
-    hashtags: t.lang === 'ru' ? '#рилс #автоматизация #prizma' : t.lang === 'de' ? '#reels #automatisierung #prizma' : '#reels #automation #prizma',
-    likes: '5,1K',
+    id: 'pfanne',
+    tab: L('Produktion', 'Manufacturing', 'Производство'),
+    name: L('Hersteller', 'Manufacturer', 'Производитель'),
+    place: L('Gusseisenpfannen', 'Cast iron pans', 'Чугунные сковороды'),
+    items: [
+      { type: 'reel', video: '/cases/pfanne/reel.mp4', poster: '/cases/pfanne/reel-poster.webp', sound: true,
+        caption: L('Drei Einstellungen: Steak auf die heiße Pfanne, Grillstreifen, Schlussbild mit Claim. Ton an: unten rechts.', 'Three shots: steak onto the hot pan, grill marks, closing shot with claim. Sound on: bottom right.', 'Три плана: стейк на горячую сковороду, полосы гриля, финал со слоганом. Звук: справа внизу.') },
+      { type: 'carousel', carousel: slides('pfanne', 5),
+        caption: L('Fünf Slides, je Slide ein Vorteil des Produkts: Hitze, Grillstreifen, Ofen, Pflege.', 'Five slides, one product benefit each: heat, grill marks, oven, care.', 'Пять слайдов, на каждом одно преимущество: жар, полосы, духовка, уход.') },
+      { type: 'pin', image: '/cases/pfanne/post.webp',
+        caption: L('Saisonpost für Herbst: Grillabend in der Küche statt draußen.', 'Seasonal autumn post: barbecue night in the kitchen instead of outdoors.', 'Сезонный пост на осень: гриль на кухне вместо улицы.') },
+    ],
   },
   {
-    type: 'carousel',
-    tag: t.modules.items[2].name,
-    tagClass: 'tag-carousel',
-    username: 'prizma.to',
-    carousel: t.lang === 'de'
-      ? ['/de-carousel-1.webp', '/de-carousel-2.webp', '/de-carousel-3.webp']
-      : t.lang === 'en'
-      ? ['/en-carousel-1.webp', '/en-carousel-2.webp', '/en-carousel-3.webp']
-      : ['/showcase-carousel-2.webp', '/showcase-carousel-1.webp', '/showcase-carousel-3.webp'],
-    caption: t.lang === 'ru'
-      ? 'Слайды, которые объясняют лучше длинного поста. Почему карусели в Instagram и LinkedIn получают больше охватов и сохранений, чем обычные посты. Как команде быстро собрать карусель по своей теме, без дизайнера и сложных инструментов.'
-      : t.lang === 'de'
-      ? 'Karussell-Slides, die besser erklären als ein langer Post. Warum Karussells auf Instagram und LinkedIn mehr Reichweite und Saves bekommen als normale Beiträge. Wie Teams schnell Karussells zu ihrem Thema erstellen, ohne Designer und ohne komplizierte Tools.'
-      : 'Slides that explain better than a long post. Why carousels on Instagram and LinkedIn get more reach and saves than regular posts. How teams can quickly build carousels on their topic, with no designer and no complicated tools.',
-    hashtags: t.lang === 'ru' ? '#контентмаркетинг #нейросети #b2b' : t.lang === 'de' ? '#contentmarketing #ki #b2b' : '#contentmarketing #ai #b2b',
-    likes: '3,7K',
+    id: 'reise',
+    tab: L('Reisebüro', 'Travel agency', 'Турагентство'),
+    name: L('Reisebüro', 'Travel agency', 'Турагентство'),
+    place: L('Inhalte auf Ukrainisch', 'Content in Ukrainian', 'Контент на украинском'),
+    items: [
+      { type: 'reel', video: '/cases/reise/avatar.mp4', poster: '/cases/reise/avatar-poster.webp',
+        caption: L('KI-Avatar der Managerin stellt die Reise vor, darüber die Bilder des Hotels.', 'An AI avatar of the manager presents the trip over the hotel footage.', 'ИИ-аватар менеджера рассказывает о туре на фоне кадров отеля.') },
+      { type: 'carousel', carousel: slides('reise', 5),
+        caption: L('Aus einem Angebot des Veranstalters wird ein Album: Preis, Termine, Kontakt der Managerin, je Slide ein Vorteil.', 'A tour operator offer becomes an album: price, dates, the manager’s contact, one highlight per slide.', 'Предложение туроператора превращается в альбом: цена, даты, контакт менеджера, по преимуществу на слайд.') },
+      { type: 'reel', video: '/cases/reise/paper.mp4', poster: '/cases/reise/paper-poster.webp',
+        caption: L('Hook in den ersten Sekunden, dann Hotels, Preis und Kontakt der Managerin.', 'A hook in the first seconds, then hotels, price and the manager’s contact.', 'Хук в первые секунды, потом отели, цена и контакт менеджера.') },
+    ],
   },
 ];
+
+const TAGS: Record<string, { label: string; cls: string }> = {
+  reel: { label: 'Reel', cls: 'tag-reel' },
+  pin: { label: 'Pin', cls: 'tag-post' },
+  carousel: { label: L('Karussell', 'Carousel', 'Карусель'), cls: 'tag-carousel' },
+};
 ---
 
 <section class="showcase-section" id="cases">
@@ -59,65 +64,72 @@ const cards = [
     <h2 class="reveal">{t.showcase.heading}</h2>
     <p class="section-subtitle reveal">{t.showcase.subtitle}</p>
 
-    <div class="showcase-grid" data-stagger>
-      {cards.map((card, i) => (
-        <div class="insta-card glass-card">
-          <!-- Header -->
-          <div class="insta-header">
-            <div class="insta-avatar">P</div>
-            <div class="insta-user">
-              <span class="insta-username">{card.username}</span>
-              <span class="insta-platform">Instagram</span>
-            </div>
-            <span class={`insta-tag ${card.tagClass}`}>{card.tag}</span>
-          </div>
+    <div class="case-switch reveal" data-cases>
+      <div class="case-tabs" role="tablist">
+        {cases.map((c, i) => (
+          <button class={`case-tab${i === 0 ? ' active' : ''}`} role="tab" aria-selected={i === 0 ? 'true' : 'false'} aria-controls={`case-${c.id}`} data-case={i}>
+            <span class="case-tab-label">{c.tab}</span>
+            <span class="case-tab-bar"><span class="case-tab-fill"></span></span>
+          </button>
+        ))}
+      </div>
 
-          <!-- Media -->
-          <div class="insta-media">
-            {card.type === 'post' && card.image && (
-              <img src={card.image} alt={card.tag} class="insta-img" width="1024" height="1024" loading="lazy" />
-            )}
-            {card.type === 'reel' && card.video && (
-              <video
-                class="insta-video"
-                src={card.video}
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                poster=""
-              />
-            )}
-            {card.type === 'carousel' && card.carousel && (
-              <div class="insta-carousel" data-idx={i}>
-                <div class="insta-progress">
-                  {card.carousel.map((_, j) => (
-                    <div class={`insta-progress-bar${j === 0 ? ' active' : ''}`}></div>
-                  ))}
+      {cases.map((c, i) => (
+        <div class={`case-panel${i === 0 ? ' active' : ''}`} id={`case-${c.id}`} role="tabpanel" data-panel={i}>
+          <div class="showcase-grid">
+            {c.items.map((card) => (
+              <div class="insta-card glass-card">
+                <div class="insta-header">
+                  <div class="insta-avatar">{c.tab.charAt(0)}</div>
+                  <div class="insta-user">
+                    <span class="insta-username">{c.name}</span>
+                    <span class="insta-platform">{c.place}</span>
+                  </div>
+                  <span class={`insta-tag ${TAGS[card.type].cls}`}>{TAGS[card.type].label}</span>
                 </div>
-                {card.carousel.map((src, j) => (
-                  <img src={src} alt={`slide ${j+1}`} class={`insta-img insta-slide${j === 0 ? ' active' : ''}`} data-slide={j} width="928" height="1152" loading="lazy" />
-                ))}
-                <div class="insta-tap-l" data-dir="-1"></div>
-                <div class="insta-tap-r" data-dir="1"></div>
+
+                <div class={`insta-media media-${card.type}`}>
+                  {card.type === 'pin' && card.image && (
+                    <>
+                    <img src={card.image} alt="" class="insta-backdrop" loading="lazy" aria-hidden="true" />
+                    <img src={card.image} alt={card.caption} class="insta-img insta-fit" loading="lazy" />
+                    </>
+                  )}
+                  {card.type === 'reel' && card.video && (
+                    <>
+                    <video class="insta-video" src={card.video} poster={card.poster} muted loop playsinline preload="none" />
+                    {card.sound && (
+                      <button class="insta-sound" type="button" aria-pressed="false" aria-label={L('Ton an', 'Sound on', 'Включить звук')}>
+                        <svg class="i-off" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M17 9l4 6M21 9l-4 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        <svg class="i-on" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                      </button>
+                    )}
+                    </>
+                  )}
+                  {card.type === 'carousel' && card.carousel && (
+                    <div class="insta-carousel">
+                      <div class="insta-progress">
+                        {card.carousel.map((_, j) => (
+                          <div class={`insta-progress-bar${j === 0 ? ' active' : ''}`}></div>
+                        ))}
+                      </div>
+                      {card.carousel.map((s, j) => (
+                        <div class={`insta-slide${j === 0 ? ' active' : ''}`}>
+                          <img src={s} alt="" class="insta-backdrop" loading="lazy" aria-hidden="true" />
+                          <img src={s} alt={`${c.name}, Slide ${j + 1}`} class="insta-img insta-fit" loading="lazy" />
+                        </div>
+                      ))}
+                      <div class="insta-tap-l" data-dir="-1"></div>
+                      <div class="insta-tap-r" data-dir="1"></div>
+                    </div>
+                  )}
+                </div>
+
+                <div class="insta-body">
+                  <div class="insta-caption">{card.caption}</div>
+                </div>
               </div>
-            )}
-          </div>
-
-          <!-- Actions -->
-          <div class="insta-actions">
-            <span class="insta-action">♡</span>
-            <span class="insta-action">💬</span>
-            <span class="insta-action">↗</span>
-          </div>
-
-          <!-- Likes + Caption -->
-          <div class="insta-body">
-            <div class="insta-likes">{card.likes} {t.lang === 'ru' ? 'отметок «Нравится»' : t.lang === 'de' ? 'Gefällt mir' : 'likes'}</div>
-            <div class="insta-caption">
-              {card.caption}
-            </div>
-            <div class="insta-hashtags">{card.hashtags}</div>
+            ))}
           </div>
         </div>
       ))}
@@ -139,9 +151,61 @@ const cards = [
   .showcase-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 24px;
     align-items: stretch;
+    max-width: 860px;
+    margin: 0 auto;
   }
+
+  /* Case tabs */
+  .case-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 36px;
+    flex-wrap: wrap;
+  }
+  .case-tab {
+    position: relative;
+    min-width: 150px;
+    padding: 12px 20px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border-glass);
+    background: var(--bg-glass);
+    color: var(--text-secondary);
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .case-tab:hover { color: var(--text-primary); border-color: var(--border-glass-hover); }
+  .case-tab.active {
+    color: var(--text-primary);
+    border-color: rgba(139,92,246,0.5);
+    background: var(--bg-glass-hover);
+  }
+  .case-tab-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: transparent;
+  }
+  .case-tab-fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--purple), var(--cyan));
+  }
+  .case-tab.active .case-tab-fill { width: 100%; }
+  .case-switch.auto .case-tab.active .case-tab-fill { width: var(--case-p, 0%); }
+
+  .case-panel { display: none; }
+  .case-panel.active { display: block; animation: case-in 0.45s ease; }
+  @keyframes case-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
   .insta-card {
     padding: 0;
@@ -155,8 +219,8 @@ const cards = [
   .insta-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 14px;
+    gap: 9px;
+    padding: 12px 12px;
   }
   .insta-avatar {
     width: 34px;
@@ -176,6 +240,12 @@ const cards = [
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-width: 0;
+  }
+  .insta-username, .insta-platform {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .insta-username {
     font-weight: 600;
@@ -187,11 +257,12 @@ const cards = [
     color: var(--text-dim);
   }
   .insta-tag {
-    padding: 3px 10px;
+    flex-shrink: 0;
+    padding: 3px 7px;
     border-radius: 6px;
-    font-size: 0.7rem;
+    font-size: 0.66rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     text-transform: uppercase;
   }
   .tag-post     { background: rgba(99,102,241,0.25); color: #A5B4FC; }
@@ -199,9 +270,10 @@ const cards = [
   .tag-carousel { background: rgba(6,182,212,0.25);  color: #67E8F9; }
 
   /* Media */
+  /* One 9:16 frame for every format: reels fill it, pins and slides sit inside it whole. */
   .insta-media {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 9 / 16;
     position: relative;
     overflow: hidden;
     background: #0a0a0f;
@@ -226,6 +298,40 @@ const cards = [
     position: relative;
     width: 100%;
     height: 100%;
+  }
+  .insta-sound {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 6;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(10,10,15,0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .insta-sound .i-on { display: none; }
+  .insta-sound[aria-pressed='true'] .i-on { display: block; }
+  .insta-sound[aria-pressed='true'] .i-off { display: none; }
+
+  .insta-img.insta-fit {
+    position: relative;
+    z-index: 1;
+    object-fit: contain;
+  }
+  /* Blurred copy fills the bars above and below a pin or slide. */
+  .insta-backdrop {
+    position: absolute;
+    inset: -8%;
+    width: 116%;
+    height: 116%;
+    object-fit: cover;
+    filter: blur(22px) brightness(0.55) saturate(1.2);
   }
   .insta-slide {
     position: absolute;
@@ -266,33 +372,13 @@ const cards = [
   .insta-tap-l { left: 0; }
   .insta-tap-r { right: 0; }
 
-  /* Actions */
-  .insta-actions {
-    display: flex;
-    gap: 14px;
-    padding: 10px 14px 4px;
-  }
-  .insta-action {
-    font-size: 1.3rem;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-  }
-  .insta-action:hover { opacity: 1; }
-
   /* Body */
   .insta-body {
-    padding: 0 14px 16px;
+    padding: 12px 14px 16px;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-  }
-  .insta-likes {
-    font-weight: 600;
-    font-size: 0.85rem;
-    color: var(--text-primary);
-    margin-bottom: 6px;
   }
   .insta-caption {
     font-size: 0.83rem;
@@ -300,36 +386,23 @@ const cards = [
     line-height: 1.5;
     margin-bottom: 4px;
   }
-  .insta-caption-user {
-    font-weight: 700;
-    color: var(--text-primary);
-  }
-  .insta-hashtags {
-    font-size: 0.8rem;
-    color: #A5B4FC;
-    margin-top: 4px;
+
+  @media (prefers-reduced-motion: reduce) {
+    .case-panel.active { animation: none; }
   }
 
   @media (max-width: 900px) {
     .showcase-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+    .case-tab { min-width: 0; flex: 1; padding: 10px 8px 12px; font-size: 0.85rem; }
   }
 </style>
 
 <script>
-  // Auto-play reel video when visible
-  document.querySelectorAll('.insta-video').forEach(video => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          (video as HTMLVideoElement).play().catch(() => {});
-        } else {
-          (video as HTMLVideoElement).pause();
-        }
-      });
-    }, { threshold: 0.3 });
-    observer.observe(video);
-  });
+  const CASE_MS = 12000;
+  const SLIDE_MS = 2600;
 
+  // Per-card carousels; step() is reused by the case autoplay below.
+  const carousels = new Map<Element, (d: number) => void>();
   document.querySelectorAll('.insta-carousel').forEach(carousel => {
     const slides = carousel.querySelectorAll('.insta-slide');
     const bars = carousel.querySelectorAll('.insta-progress-bar');
@@ -342,12 +415,11 @@ const cards = [
       slides[cur].classList.add('active');
       bars[cur].classList.add('active');
     }
+    carousels.set(carousel, (d: number) => goTo(cur + d));
 
-    // Tap zones
     carousel.querySelector('.insta-tap-l')?.addEventListener('click', () => goTo(cur - 1));
     carousel.querySelector('.insta-tap-r')?.addEventListener('click', () => goTo(cur + 1));
 
-    // Swipe support
     let touchStartX = 0;
     carousel.addEventListener('touchstart', (e: TouchEvent) => {
       touchStartX = e.touches[0].clientX;
@@ -357,4 +429,88 @@ const cards = [
       if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
     }, { passive: true });
   });
+
+  // Sound only after an explicit click; one reel at a time.
+  document.querySelectorAll<HTMLButtonElement>('.insta-sound').forEach(btn => {
+    const video = btn.parentElement?.querySelector('video');
+    if (!video) return;
+    // Bubbles up to the panel, which also stops the autoplay.
+    btn.addEventListener('click', () => {
+      const on = video.muted;
+      document.querySelectorAll<HTMLVideoElement>('.insta-video').forEach(v => { v.muted = true; });
+      document.querySelectorAll('.insta-sound').forEach(b => b.setAttribute('aria-pressed', 'false'));
+      video.muted = !on;
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (on) { video.currentTime = 0; video.play().catch(() => {}); }
+    });
+  });
+
+  // Case switcher: rotates by itself until the visitor touches it, then stays put.
+  const root = document.querySelector('[data-cases]') as HTMLElement | null;
+  if (root) {
+    const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>('.case-tab'));
+    const panels = Array.from(root.querySelectorAll<HTMLElement>('.case-panel'));
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let active = 0;
+    let auto = !reduced;
+    let inView = false;
+    let hover = false;
+    let elapsed = 0;
+    let last = 0;
+    let slideAcc = 0;
+
+    root.classList.toggle('auto', auto);
+
+    function playVideos() {
+      panels.forEach((p, i) => p.querySelectorAll('video').forEach(v => {
+        if (i === active && inView) v.play().catch(() => {});
+        else v.pause();
+      }));
+    }
+
+    function show(n: number) {
+      active = (n + panels.length) % panels.length;
+      tabs.forEach((t, i) => {
+        t.classList.toggle('active', i === active);
+        t.setAttribute('aria-selected', i === active ? 'true' : 'false');
+      });
+      panels.forEach((p, i) => p.classList.toggle('active', i === active));
+      elapsed = 0;
+      slideAcc = 0;
+      playVideos();
+    }
+
+    function stopAuto() {
+      auto = false;
+      root!.classList.remove('auto');
+    }
+
+    tabs.forEach((t, i) => t.addEventListener('click', () => { stopAuto(); show(i); }));
+    panels.forEach(p => p.addEventListener('click', stopAuto));
+    panels.forEach(p => p.addEventListener('touchstart', stopAuto, { passive: true }));
+    root.addEventListener('mouseenter', () => { hover = true; });
+    root.addEventListener('mouseleave', () => { hover = false; });
+
+    new IntersectionObserver(entries => {
+      inView = entries[0].isIntersecting;
+      playVideos();
+    }, { threshold: 0.3 }).observe(root);
+
+    function tick(now: number) {
+      const dt = last ? now - last : 0;
+      last = now;
+      if (auto && inView && !hover && !document.hidden) {
+        elapsed += dt;
+        slideAcc += dt;
+        if (slideAcc >= SLIDE_MS) {
+          slideAcc = 0;
+          panels[active].querySelectorAll('.insta-carousel').forEach(c => carousels.get(c)?.(1));
+        }
+        if (elapsed >= CASE_MS) show(active + 1);
+        root!.style.setProperty('--case-p', `${(elapsed / CASE_MS) * 100}%`);
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
 </script>

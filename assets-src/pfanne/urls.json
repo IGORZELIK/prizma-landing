@@ -1,0 +1,175 @@
+{
+ "img1": {
+  "task": "eeeecdd1d8e52028c94e48161ea5ac3b",
+  "url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000009e9081fd8a980bd8d4951aed.png",
+  "body": {
+   "model": "gpt-image-2-5-flare-text-to-image",
+   "input": {
+    "prompt": "Low-angle close-up at the height of the pan rim. The pan sits on a gas burner with blue flames under it, the dry grill ribs are smoking hot. Steel kitchen tongs hold a thick raw ribeye steak, seasoned with coarse salt and pepper, just above the pan, about to lay it down. A round matte black cast iron grill pan: raised parallel grill ribs across the whole bottom, two pouring lips, a small loop helper handle opposite a long plain black cast iron handle. No plate, no label, no logo, no lettering anywhere on the pan. Dark slate kitchen, black gas stove, one warm key light from the left, deep soft shadows, light smoke haze. High-end food commercial photography, photorealistic, shallow depth of field. The pan is the sharpest thing in the frame. No text, no watermark, no oil or butter in the pan.",
+    "aspect_ratio": "9:16",
+    "resolution": "1K"
+   }
+  }
+ },
+ "img3": {
+  "task": "6c4a07b2e8a141a781e7ec3ca1fa579c",
+  "url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000007cbc81f6a0853514be0a367f.png",
+  "body": {
+   "model": "gpt-image-2-5-flare-image-to-image",
+   "input": {
+    "prompt": "Wide three-quarter hero shot. The pan stands on a dark wooden board next to the stove, the whole pan and the whole handle inside the frame with space around them. The seared steak with dark crisp diagonal grill marks lies in the pan, a rosemary sprig on top, gentle steam. The lower third of the frame is calm dark wood. The pan is exactly the pan in Picture 1, same shape and proportions, no logo, no lettering. Dark slate kitchen, black gas stove, one warm key light from the left, deep soft shadows, light smoke haze. High-end food commercial photography, photorealistic, shallow depth of field. The pan is the sharpest thing in the frame. No text, no watermark, no oil or butter in the pan.",
+    "aspect_ratio": "9:16",
+    "resolution": "1K",
+    "input_urls": [
+     "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000009e9081fd8a980bd8d4951aed.png"
+    ]
+   }
+  }
+ },
+ "c1": {
+  "task": "c028094225b1c812ec20d499842e615e",
+  "url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000000bd481f59ef76e23041d30e1.png",
+  "body": {
+   "model": "gpt-image-2-5-flare-image-to-image",
+   "input": {
+    "prompt": "Moody product hero shot of the empty pan standing on a dark wooden board, seen from a 30-degree angle, the grill ribs catching the warm light. Lots of dark empty space in the upper half. The pan is exactly the pan in Picture 1, same shape and proportions, no logo, no lettering. Dark slate kitchen, black gas stove, one warm key light from the left, deep soft shadows, light smoke haze. High-end food commercial photography, photorealistic, shallow depth of field. No text, no watermark.",
+    "aspect_ratio": "9:16",
+    "resolution": "1K",
+    "input_urls": [
+     "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000009e9081fd8a980bd8d4951aed.png"
+    ]
+   }
+  }
+ },
+ "img2": {
+  "task": "7b8456c51e0bce96078993d46cacc4ee",
+  "url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_00000000111482309c33f62b49f783ed.png",
+  "body": {
+   "model": "gpt-image-2-5-flare-image-to-image",
+   "input": {
+    "prompt": "High camera looking down at the pan at a steep 45-degree angle, the whole round pan visible on the gas burner. A thick ribeye steak lies flat on the grill ribs and sears, its edges browned, light smoke rising. The tips of steel tongs grip the edge of the steak. The pan is exactly the pan in Picture 1, same shape and proportions, no logo, no lettering. Dark slate kitchen, black gas stove, one warm key light from the left, deep soft shadows, light smoke haze. High-end food commercial photography, photorealistic, shallow depth of field. The pan is the sharpest thing in the frame. No text, no watermark, no oil or butter in the pan.",
+    "aspect_ratio": "9:16",
+    "resolution": "1K",
+    "input_urls": [
+     "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000009e9081fd8a980bd8d4951aed.png"
+    ]
+   }
+  }
+ },
+ "c2": {
+  "task": "1b5c9c6f9705c25373a63a6d24fec7ed",
+  "url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_00000000366881f8a7b3fa0e80c8861c.png",
+  "body": {
+   "model": "gpt-image-2-5-flare-image-to-image",
+   "input": {
+    "prompt": "Close-up of the pan on the gas burner, heat shimmer above the empty dry grill ribs, blue flame glow underneath, a few faint wisps of smoke. The pan is exactly the pan in Picture 1, same shape and proportions, no logo, no lettering. Dark slate kitchen, black gas stove, one warm key light from the left, deep soft shadows, light smoke haze. High-end food commercial photography, photorealistic, shallow depth of field. No text, no watermark.",
+    "aspect_ratio": "9:16",
+    "resolution": "1K",
+    "input_urls": [
+     "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000009e9081fd8a980bd8d4951aed.png"
+    ]
+   }
+  }
+ },
+ "c3": {
+  "task": "f5b57fc2bf24d6892b51be48fec1ca75",
+  "url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_00000000a2fc81f5a2ce2ecb75d7566d.png",
+  "body": {
+   "model": "gpt-image-2-5-flare-image-to-image",
+   "input": {
+    "prompt": "Overhead close-up of a seared ribeye steak lifted by steel tongs above the pan, showing perfect dark diagonal grill marks, the grill ribs of the pan visible below. The pan is exactly the pan in Picture 1, same shape and proportions, no logo, no lettering. Dark slate kitchen, black gas stove, one warm key light from the left, deep soft shadows, light smoke haze. High-end food commercial photography, photorealistic, shallow depth of field. The pan is the sharpest thing in the frame. No text, no watermark, no oil or butter in the pan.",
+    "aspect_ratio": "9:16",
+    "resolution": "1K",
+    "input_urls": [
+     "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000009e9081fd8a980bd8d4951aed.png"
+    ]
+   }
+  }
+ },
+ "c4": {
+  "task": "4c1fc65bc6e2349e53fdd357e915a015",
+  "url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_00000000c89c8230a1eb4c028678e4cd.png",
+  "body": {
+   "model": "gpt-image-2-5-flare-image-to-image",
+   "input": {
+    "prompt": "The pan inside a dark home oven on the rack, roasted vegetables and a chicken thigh with crisp skin in it, warm oven light. The pan is exactly the pan in Picture 1, same shape and proportions, no logo, no lettering. Photorealistic food commercial photography, warm tones. No text, no watermark.",
+    "aspect_ratio": "9:16",
+    "resolution": "1K",
+    "input_urls": [
+     "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000009e9081fd8a980bd8d4951aed.png"
+    ]
+   }
+  }
+ },
+ "c5": {
+  "task": "ce19134a6a691a5b9cf1f6c6be3a8271",
+  "url": "https://tempfile.aiquickdraw.com/a2/ce19134a6a691a5b9cf1f6c6be3a8271_1793175007829.png",
+  "body": {
+   "model": "gpt-image-2-5-flare-image-to-image",
+   "input": {
+    "prompt": "Close-up of hands with a soft cloth wiping a thin layer onto the clean empty dry pan on a wooden counter, calm care moment, warm light. The pan is exactly the pan in Picture 1, same shape and proportions, no logo, no lettering. Photorealistic, shallow depth of field. No text, no watermark.",
+    "aspect_ratio": "9:16",
+    "resolution": "1K",
+    "input_urls": [
+     "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000009e9081fd8a980bd8d4951aed.png"
+    ]
+   }
+  }
+ },
+ "v2": {
+  "task": "b2e886de39bc2e265c802e2ed17682a5",
+  "url": "https://tempfile.aiquickdraw.com/pixverse-v6/1793175074728-2zea9s52o03.mp4",
+  "body": {
+   "model": "runway",
+   "input": {
+    "prompt": "The tongs turn the steak over in one smooth motion, revealing dark grill marks. Smoke rises. Locked camera, one continuous shot, no cuts. Cinematic live-action food commercial.",
+    "image_url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_00000000111482309c33f62b49f783ed.png",
+    "duration": 5,
+    "quality": "720p",
+    "watermark": ""
+   }
+  }
+ },
+ "v3": {
+  "task": "71e4671e1a03cd07badea14387fc2a4d",
+  "url": "https://tempfile.aiquickdraw.com/pixverse-v6/1793175075036-9y02flv2ms.mp4",
+  "body": {
+   "model": "runway",
+   "input": {
+    "prompt": "Steam rises gently from the steak. The rosemary leaves tremble slightly. Locked camera, one continuous shot. Cinematic live-action food commercial.",
+    "image_url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000007cbc81f6a0853514be0a367f.png",
+    "duration": 5,
+    "quality": "720p",
+    "watermark": ""
+   }
+  }
+ },
+ "v1": {
+  "task": "f0f389498d5dd975c734c9e32b3f21fd",
+  "url": "https://tempfile.aiquickdraw.com/pixverse-v6/1793175074962-fcf6h5jcnp.mp4",
+  "body": {
+   "model": "runway",
+   "input": {
+    "prompt": "The tongs slowly lower the steak onto the hot grill ribs. The steak sizzles and smoke rises. Locked camera, one continuous shot. Cinematic live-action food commercial.",
+    "image_url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_000000009e9081fd8a980bd8d4951aed.png",
+    "duration": 5,
+    "quality": "720p",
+    "watermark": ""
+   }
+  }
+ },
+ "v2b": {
+  "task": "340be37622ec76031d3e101a198465b5",
+  "url": "https://tempfile.aiquickdraw.com/pixverse-v6/1793175156308-2vge9jiui66.mp4",
+  "body": {
+   "model": "runway",
+   "input": {
+    "prompt": "The tongs slowly lay the steak back down onto the hot grill ribs, the dark grill marks facing up. Smoke rises. Locked camera, one continuous shot, no cuts. Cinematic live-action food commercial.",
+    "image_url": "https://tempfile.aiquickdraw.com/images/chatgpt/file_00000000a2fc81f5a2ce2ecb75d7566d.png",
+    "duration": 5,
+    "quality": "720p",
+    "watermark": ""
+   }
+  }
+ }
+}
