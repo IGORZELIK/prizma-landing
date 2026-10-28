@@ -163,8 +163,7 @@
       "location": "Standort",
       "location_value": "Bielefeld, Deutschland",
       "languages": "Sprachen",
-      "languages_value": "Deutsch · Englisch · Russisch",
-      "ai_note": "Zu Beginn des Gesprächs sagt Sofie, dass Sie mit einem KI-System sprechen. Lieber schreiben? Dann nutzen Sie das Formular oder schicken uns eine E-Mail."
+      "languages_value": "Deutsch · Englisch · Russisch"
     }
   },
   "footer": {

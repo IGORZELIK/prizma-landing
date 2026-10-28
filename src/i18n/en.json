@@ -163,8 +163,7 @@
       "location": "Location",
       "location_value": "Bielefeld, Germany",
       "languages": "Languages",
-      "languages_value": "German · English · Russian",
-      "ai_note": "At the start of the call Sofie tells you that you are talking to an AI system. Prefer to write? Use the form or send us an email."
+      "languages_value": "German · English · Russian"
     }
   },
   "footer": {

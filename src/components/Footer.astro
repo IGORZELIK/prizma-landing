@@ -52,7 +52,7 @@ const prefix = `/${lang}`;
         <span class="footer-dot">&middot;</span>
         <a href={`${prefix}/impressum`}>{t.lang === 'ru' ? 'Выходные данные' : 'Impressum'}</a>
         <span class="footer-dot">&middot;</span>
-        <span>A <a href={t.lang === 'ru' ? 'https://www.digitalkinai.ru/' : 'https://digitalkin.co'} target="_blank" rel="noopener noreferrer">Digitalkin</a> product</span>
+        <span>{t.lang === 'ru' ? 'Продукт ' : t.lang === 'de' ? 'Ein Produkt von ' : 'A product by '}<a href={t.lang === 'ru' ? 'https://www.digitalkinai.ru/' : 'https://digitalkin.co'} target="_blank" rel="noopener noreferrer">Digitalkin AI</a></span>
       </div>
     </div>
   </div>
