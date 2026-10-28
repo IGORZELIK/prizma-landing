@@ -68,56 +68,50 @@
     "cta_btn": "Get in touch",
     "phases": [
       {
-        "period": "Launched",
-        "date": "2025–2026",
+        "period": "In use",
+        "date": "Since 2025",
         "title": "Included in the service today",
         "status": "done",
         "items": [
           { "label": "Six formats plus reposting", "desc": "Posts, reels, carousels, stories, SEO articles and AI avatar, plus cross-channel reposting" },
-          { "label": "Unified content plan", "desc": "One topic unfolds into all formats automatically" },
-          { "label": "Separate data storage", "desc": "Data and settings are stored separately for each company" },
-          { "label": "Analysis during setup", "desc": "Tone, industry and audience of your company are assessed at the start" },
+          { "label": "Unified content plan", "desc": "One topic unfolds automatically into every format" },
+          { "label": "Product catalog as the source", "desc": "Topics come from your range. Before publishing we check that the products are still available" },
+          { "label": "Review by an AI editor", "desc": "An agent checks every text against your company's knowledge base and approves or holds it" },
+          { "label": "Analysis during setup", "desc": "At the start we capture your company's tone, industry and audience" },
           { "label": "Approval before publishing", "desc": "If you want, nothing goes live without your approval" },
-          { "label": "Search engine optimisation", "desc": "Search terms, topics and regional focus are built into content creation" },
-          { "label": "Text quality", "desc": "Every text is reworked to match the way your company writes" },
-          { "label": "Auto-posting to social networks", "desc": "Instagram, Facebook, YouTube, LinkedIn, TikTok, Pinterest, Telegram: publishing without manual work" },
-          { "label": "Adjustable level of automation", "desc": "Fully automatic, semi-automatic or with individual approval per post" },
-          { "label": "Agency and reseller operation", "desc": "One agency manages several client brands from a single account" }
+          { "label": "Adjustable level of automation", "desc": "Fully automatic, partly automatic or approval of every post" },
+          { "label": "Search engine optimisation", "desc": "Keywords, topics and regional targeting are built into production" },
+          { "label": "Text quality", "desc": "Every text is edited to match the way your company writes" },
+          { "label": "Auto-posting to social networks", "desc": "Instagram, Facebook, Threads, TikTok, YouTube, Pinterest, Telegram: publishing without manual work" },
+          { "label": "Leads from direct messages", "desc": "Name and phone number in Facebook messages are recognised and passed to your CRM as a lead" },
+          { "label": "Operations monitoring", "desc": "Failures are detected automatically and reported with their cause" },
+          { "label": "Separate data storage", "desc": "Data and settings are stored separately for each company" },
+          { "label": "Agency and reseller operation", "desc": "One agency manages several client brands in one account" }
         ]
       },
       {
         "period": "In progress",
-        "date": "Q3 2026",
-        "title": "SEO, e-commerce and quality",
+        "date": "Now",
+        "title": "Conversations, own media, direct connections",
         "status": "in-progress",
         "items": [
-          { "label": "Complete SEO process", "desc": "From topic research through the text to publication on the blog" },
-          { "label": "Multilingual SEO module", "desc": "Articles in multiple languages with separate optimization per market" },
-          { "label": "Operational monitoring", "desc": "Failures are detected automatically and reported with their cause" },
-          { "label": "Start in e-commerce", "desc": "For online shops: the product catalog turns into articles, posts and carousels for the matching products" }
-        ]
-      },
-      {
-        "period": "Planned",
-        "date": "Q4 2026",
-        "title": "AI agents: quality control",
-        "status": "planned",
-        "items": [
-          { "label": "Check before publishing", "desc": "Facts, style and tone are checked prior to publication" },
-          { "label": "Post performance", "desc": "Reach, likes and interactions are collected automatically" },
-          { "label": "Central comment management", "desc": "Comments from all platforms in one place" },
-          { "label": "Short loading times", "desc": "Short loading times have a positive effect on ranking" }
+          { "label": "Comments and messages in one place", "desc": "Comments and direct messages from all platforms in one view, with replies under your rules" },
+          { "label": "Media library", "desc": "Your own videos are split into scenes, described and used for reels" },
+          { "label": "Direct platform connections", "desc": "Our own connection to Instagram, Facebook, TikTok, YouTube, LinkedIn and Pinterest. Platform reviews are under way" },
+          { "label": "Recipes with matching products", "desc": "For food retailers: recipe pages that point to matching products from the range" },
+          { "label": "Post analytics", "desc": "Reach and interactions are recorded automatically for every post" }
         ]
       },
       {
         "period": "Planned",
         "date": "2027",
-        "title": "Self-learning system",
+        "title": "A self-learning system",
         "status": "planned",
         "items": [
-          { "label": "Continuous SEO optimisation", "desc": "Positions are monitored, articles reworked and resubmitted for indexing" },
-          { "label": "Content plan adjustment", "desc": "The plan is adjusted based on the results achieved" },
-          { "label": "Consistent message across formats", "desc": "All formats carry the same message" }
+          { "label": "Content plan that adapts", "desc": "The plan is adjusted based on the results achieved" },
+          { "label": "Ongoing SEO optimisation", "desc": "Rankings are monitored, articles revised and resubmitted for indexing" },
+          { "label": "Multilingual SEO", "desc": "Articles in several languages, optimised separately for each market" },
+          { "label": "One message across all formats", "desc": "All formats carry the same core message" }
         ]
       }
     ]

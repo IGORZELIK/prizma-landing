@@ -7,17 +7,17 @@ const { t } = Astro.props;
 const stats = t.lang === 'ru' ? [
   { value: 1, label: 'Тема как источник' },
   { value: 6, label: 'Форматов контента' },
-  { value: 5, label: 'Каналов подключено' },
+  { value: 7, label: 'Площадок подключено' },
   { value: 24, label: 'Часа в сутки в работе' },
 ] : t.lang === 'de' ? [
   { value: 1, label: 'Thema als Quelle' },
   { value: 6, label: 'Content-Formate' },
-  { value: 5, label: 'Kanäle angebunden' },
+  { value: 7, label: 'Plattformen angebunden' },
   { value: 24, label: 'Stunden am Tag in Betrieb' },
 ] : [
   { value: 1, label: 'Topic as the source' },
   { value: 6, label: 'Content formats' },
-  { value: 5, label: 'Channels connected' },
+  { value: 7, label: 'Platforms connected' },
   { value: 24, label: 'Hours a day in operation' },
 ];
 ---

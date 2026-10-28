@@ -68,45 +68,38 @@
     "cta_btn": "Kontakt aufnehmen",
     "phases": [
       {
-        "period": "Gestartet",
-        "date": "2025–2026",
+        "period": "Im Einsatz",
+        "date": "Seit 2025",
         "title": "Heute im Service enthalten",
         "status": "done",
         "items": [
           { "label": "Sechs Formate plus Reposting", "desc": "Posts, Reels, Karussells, Stories, SEO-Artikel und KI-Avatar, dazu kanalübergreifendes Reposting" },
           { "label": "Einheitlicher Content-Plan", "desc": "Ein Thema entfaltet sich automatisch in alle Formate" },
-          { "label": "Getrennte Datenhaltung", "desc": "Daten und Einstellungen werden je Unternehmen getrennt gespeichert" },
+          { "label": "Produktkatalog als Quelle", "desc": "Themen entstehen aus Ihrem Sortiment. Vor der Veröffentlichung wird geprüft, ob die Produkte noch erhältlich sind" },
+          { "label": "Prüfung durch einen KI-Redakteur", "desc": "Ein Agent prüft jeden Text anhand der Wissensbasis Ihres Unternehmens und gibt ihn frei oder hält ihn an" },
           { "label": "Analyse bei der Einrichtung", "desc": "Zu Beginn werden Tonalität, Branche und Zielgruppe Ihres Unternehmens erfasst" },
           { "label": "Freigabe vor Veröffentlichung", "desc": "Auf Wunsch geht kein Beitrag ohne Ihre Freigabe online" },
+          { "label": "Einstellbarer Automatisierungsgrad", "desc": "Vollautomatisch, teilautomatisch oder mit Einzelfreigabe je Beitrag" },
           { "label": "Suchmaschinenoptimierung", "desc": "Suchbegriffe, Themen und regionale Ausrichtung sind in die Erstellung eingebunden" },
           { "label": "Textqualität", "desc": "Jeder Text wird nachbearbeitet, damit er der Sprache Ihres Unternehmens entspricht" },
-          { "label": "Auto-Posting in soziale Netzwerke", "desc": "Instagram, Facebook, YouTube, LinkedIn, TikTok, Pinterest, Telegram: Veröffentlichung ohne Handarbeit" },
-          { "label": "Einstellbarer Automatisierungsgrad", "desc": "Vollautomatisch, teilautomatisch oder mit Einzelfreigabe je Beitrag" },
+          { "label": "Auto-Posting in soziale Netzwerke", "desc": "Instagram, Facebook, Threads, TikTok, YouTube, Pinterest, Telegram: Veröffentlichung ohne Handarbeit" },
+          { "label": "Anfragen aus Direktnachrichten", "desc": "Name und Telefonnummer aus Facebook-Nachrichten werden erkannt und als Anfrage in Ihr CRM übertragen" },
+          { "label": "Überwachung des Betriebs", "desc": "Störungen werden automatisch erkannt und mit Ursache gemeldet" },
+          { "label": "Getrennte Datenhaltung", "desc": "Daten und Einstellungen werden je Unternehmen getrennt gespeichert" },
           { "label": "Agentur- und Resellerbetrieb", "desc": "Eine Agentur betreut mehrere Kundenmarken in einem Konto" }
         ]
       },
       {
         "period": "In Arbeit",
-        "date": "Q3 2026",
-        "title": "SEO, E-Commerce und Qualität",
+        "date": "Jetzt",
+        "title": "Dialog, eigene Medien, direkte Anbindungen",
         "status": "in-progress",
         "items": [
-          { "label": "Vollständiger SEO-Prozess", "desc": "Von der Themenrecherche über den Text bis zur Veröffentlichung im Blog" },
-          { "label": "Mehrsprachiges SEO-Modul", "desc": "Artikel in mehreren Sprachen mit separater Optimierung pro Markt" },
-          { "label": "Überwachung des Betriebs", "desc": "Störungen werden automatisch erkannt und mit Ursache gemeldet" },
-          { "label": "Start im E-Commerce", "desc": "Für Online-Shops: aus dem Produktkatalog entstehen Artikel, Posts und Karussells zu den passenden Produkten" }
-        ]
-      },
-      {
-        "period": "Geplant",
-        "date": "Q4 2026",
-        "title": "KI-Agenten: Qualitätskontrolle",
-        "status": "planned",
-        "items": [
-          { "label": "Prüfung vor Veröffentlichung", "desc": "Fakten, Stil und Tonalität werden vor der Veröffentlichung geprüft" },
-          { "label": "Auswertung der Beiträge", "desc": "Reichweite, Likes und Interaktionen werden automatisch erfasst" },
-          { "label": "Zentrale Kommentarverwaltung", "desc": "Kommentare aller Plattformen an einer Stelle" },
-          { "label": "Kurze Ladezeiten im Blog", "desc": "Kurze Ladezeiten wirken sich positiv auf die Platzierung aus" }
+          { "label": "Kommentare und Nachrichten an einer Stelle", "desc": "Kommentare und Direktnachrichten aller Plattformen in einer Ansicht, mit Antworten nach Ihren Regeln" },
+          { "label": "Medienbibliothek", "desc": "Ihre eigenen Videos werden in Szenen zerlegt, beschrieben und für Reels verwendet" },
+          { "label": "Direkte Anbindung der Plattformen", "desc": "Eigene Verbindung zu Instagram, Facebook, TikTok, YouTube, LinkedIn und Pinterest. Die Prüfung durch die Plattformen läuft" },
+          { "label": "Rezepte mit passenden Produkten", "desc": "Für Lebensmittelhändler: Rezeptseiten, die auf passende Produkte aus dem Sortiment verweisen" },
+          { "label": "Auswertung der Beiträge", "desc": "Reichweite und Interaktionen je Beitrag werden automatisch erfasst" }
         ]
       },
       {
@@ -115,8 +108,9 @@
         "title": "Selbstlernendes System",
         "status": "planned",
         "items": [
-          { "label": "Laufende SEO-Optimierung", "desc": "Positionen werden überwacht, Artikel überarbeitet und erneut zur Indexierung angemeldet" },
           { "label": "Anpassung des Content-Plans", "desc": "Der Plan wird anhand der erzielten Ergebnisse angepasst" },
+          { "label": "Laufende SEO-Optimierung", "desc": "Positionen werden überwacht, Artikel überarbeitet und erneut zur Indexierung angemeldet" },
+          { "label": "Mehrsprachiges SEO", "desc": "Artikel in mehreren Sprachen mit separater Optimierung pro Markt" },
           { "label": "Einheitliche Aussage über alle Formate", "desc": "Alle Formate greifen dieselbe Aussage auf" }
         ]
       }
