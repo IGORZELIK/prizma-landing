@@ -12,7 +12,12 @@ const cases = [
     id: 'shop',
     tab: L('Online-Handel', 'E-commerce', 'Онлайн-торговля'),
     name: L('Online-Shop', 'Online shop', 'Интернет-магазин'),
-    place: L('Feinkost & Haushalt', 'Food & household', 'Продукты и товары для дома'),
+    place: L('Lebensmittel & Haushalt', 'Food & household', 'Продукты и товары для дома'),
+    // DE and EN only: the block is skipped when the title is empty.
+    practice: {
+      title: L('Aus der Praxis: Online-Shop für Lebensmittel und Haushalt', 'In practice: online shop for food and household goods', ''),
+      text: L('Rund 19.000 Artikel von über 70 Anbietern. PRIZMA wählt die Themen direkt aus dem Katalog, prüft vor der Veröffentlichung die Verfügbarkeit und erstellt Reels, Karussells und Pins. Im Oktober 2026: 274 veröffentlichte Inhalte.', 'Around 19,000 items from over 70 sellers. PRIZMA picks topics straight from the catalog, checks availability before publishing and produces reels, carousels and pins. In October 2026: 274 published pieces.', ''),
+    },
     items: [
       { type: 'reel', video: '/cases/shop/reel.mp4', poster: '/cases/shop/reel-poster.webp', sound: true,
         caption: L('Genuss-Deals: Honig, Kräutertee, Apfelringe. Echte Produktfotos vom Hersteller, nur die Stimme ist KI. Ton an: unten rechts.', 'Food deals: honey, herbal tea, apple rings. Real product photos from the manufacturer, only the voice is AI. Sound on: bottom right.', 'Вкусные предложения: мёд, травяной чай, яблочные кольца. Настоящие фото производителя, ИИ только голос. Звук: справа внизу.') },
@@ -131,6 +136,12 @@ const TAGS: Record<string, { label: string; cls: string }> = {
               </div>
             ))}
           </div>
+          {c.practice?.title && (
+            <div class="case-practice glass-card">
+              <h3 class="case-practice-title">{c.practice.title}</h3>
+              <p class="case-practice-text">{c.practice.text}</p>
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -387,12 +398,33 @@ const TAGS: Record<string, { label: string; cls: string }> = {
     margin-bottom: 4px;
   }
 
+  /* Text block under the example cards, same width as the grid. */
+  .case-practice {
+    max-width: 860px;
+    margin: 24px auto 0;
+    padding: 20px 24px;
+    border-radius: 16px;
+  }
+  .case-practice-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-primary);
+  }
+  .case-practice-text {
+    margin-top: 6px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .case-panel.active { animation: none; }
   }
 
   @media (max-width: 900px) {
     .showcase-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+    .case-practice { max-width: 420px; padding: 16px 18px; }
     .case-tab { min-width: 0; flex: 1; padding: 10px 8px 12px; font-size: 0.85rem; }
   }
 </style>
