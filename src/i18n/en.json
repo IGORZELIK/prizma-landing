@@ -9,7 +9,7 @@
   },
   "hero": {
     "slogan": "One idea. Every form.",
-    "subtitle": "We take over your ongoing content production. Your product data becomes posts, reels, carousels and articles that go out on your channels on a regular schedule. The monthly volume is agreed up front.",
+    "subtitle": "PRIZMA is a system that turns your product data into posts, reels, carousels and articles and publishes them on your channels on schedule. We set it up and run it for you. The monthly volume is agreed up front.",
     "cta_primary": "Call Sofie",
     "cta_secondary": "Write to us",
     "phone_hint": "AI assistant, around the clock: +49 521 96377655"
@@ -30,8 +30,8 @@
     ]
   },
   "why": {
-    "heading": "You provide the product data. We deliver the content.",
-    "text": "There is no shortage of content software, but someone still has to run it. With PRIZMA you don't need anyone in-house for that. We pick topics from your catalog, produce the right format for each channel and publish on schedule. The texts sound like your company and target real search queries. You decide what gets checked before it goes out.",
+    "heading": "You provide the product data. PRIZMA turns it into content.",
+    "text": "There are plenty of AI tools for content, but someone still has to run them. With PRIZMA you don't need anyone in-house for that. There is no editorial team behind it. The content is produced automatically: the system picks topics from your catalog, produces the right format for each channel and publishes on schedule. The texts sound like your company and target real search queries. We set everything up and monitor operations. You decide what gets checked before it goes out.",
     "stats": [
       { "value": "6", "label": "formats from one topic" },
       { "value": "SEO", "label": "considered in every piece" },
@@ -118,7 +118,7 @@
   },
   "pricing": {
     "heading": "Pricing",
-    "lead": "You pay for the agreed content. You don't need a software licence or extra staff for it. The price depends on volume, formats, channels and languages. For orientation:",
+    "lead": "You pay for the agreed content. You don't need a software licence or extra staff, because production is automated. The price depends on volume, formats, channels and languages. For orientation:",
     "items": [
       { "label": "Setup", "amount": "from €900 one-off", "desc": "Analysis of your tone, connection of the channels and first content for review." },
       { "label": "Operation", "amount": "from €490 per month", "desc": "For example, around 60 pieces a month, each adapted for four channels, so around 240 publications: posts, carousels and stories plus one reel a week. We agree together on what exactly goes out for you. Creation and publishing are included, released under your rules." }
