@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/de",
+      "statusCode": 301
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

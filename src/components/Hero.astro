@@ -5,12 +5,14 @@ interface Props {
   t: Record<string, any>;
 }
 const { t } = Astro.props;
+const headline = t.hero.h1 as string | undefined;
 ---
 
 <section class="hero" id="hero">
   <PrismLogo />
 
-  <h1 class="hero-slogan">{t.hero.slogan}</h1>
+  <h1 class:list={['hero-slogan', { 'hero-h1-long': Boolean(headline) }]}>{headline || t.hero.slogan}</h1>
+  {headline && <p class="hero-subline">{t.hero.slogan}</p>}
   <p class="hero-subtitle">{t.hero.subtitle}</p>
 
   <div class="hero-cta">
@@ -43,6 +45,26 @@ const { t } = Astro.props;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* Longer search headline. The short brand line stays underneath, not as the H1. */
+  .hero-h1-long {
+    font-size: clamp(1.7rem, 4.4vw, 3.15rem);
+    line-height: 1.18;
+    max-width: 16em;
+    text-wrap: balance;
+  }
+
+  .hero-subline {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.05rem, 2.1vw, 1.45rem);
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-top: 18px;
+    opacity: 0;
+    animation: revealUp 0.5s ease-out 0.12s forwards;
   }
 
   .hero-subtitle {
@@ -103,6 +125,10 @@ const { t } = Astro.props;
       flex-direction: column;
       width: 100%;
       max-width: 300px;
+    }
+    .hero-h1-long {
+      font-size: clamp(1.45rem, 7.4vw, 1.9rem);
+      max-width: 100%;
     }
     .scroll-hint { display: none; }
   }

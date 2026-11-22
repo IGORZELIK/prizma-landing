@@ -12,6 +12,7 @@ import Roadmap from '../../components/Roadmap.astro';
 import Pricing from '../../components/Pricing.astro';
 import Trust from '../../components/Trust.astro';
 import CtaForm from '../../components/CtaForm.astro';
+import Faq from '../../components/Faq.astro';
 import Footer from '../../components/Footer.astro';
 import Stats from '../../components/Stats.astro';
 import '../../styles/global.css';
@@ -19,7 +20,7 @@ import '../../styles/global.css';
 import t from '../../i18n/de.json';
 ---
 
-<Layout t={t}>
+<Layout t={t} title={t.seo_home.title} description={t.seo_home.description}>
   <Nav t={t} />
   <Hero t={t} />
   <VisualDemo t={t} />
@@ -39,6 +40,8 @@ import t from '../../i18n/de.json';
   <Roadmap t={t} />
   <hr class="divider" />
   <Trust t={t} />
+  <hr class="divider" />
+  <Faq t={t} />
   <hr class="divider" />
   <CtaForm t={t} />
   <Footer t={t} />
