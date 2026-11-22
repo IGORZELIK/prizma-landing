@@ -8,6 +8,7 @@
     "cta": "Beratung buchen"
   },
   "hero": {
+    "h1": "Social-Media-Content erstellen lassen",
     "slogan": "Eine Idee. Alle Formen.",
     "subtitle": "PRIZMA ist ein System, das aus Ihren Produktdaten Beiträge, Reels, Karussells und Artikel erstellt und nach Plan auf Ihren Kanälen veröffentlicht. Wir richten es für Sie ein und betreiben es. Der Umfang pro Monat ist fest vereinbart.",
     "cta_primary": "Sofie anrufen",
@@ -173,6 +174,47 @@
     "cases": "Beispiel",
     "contact": "Kontakt",
     "copyright": "© 2026 PRIZMA. Alle Rechte vorbehalten."
+  },
+  "faq": {
+    "heading": "Häufige Fragen",
+    "items": [
+      {
+        "q": "Was ist PRIZMA?",
+        "a": "PRIZMA ist ein System, das aus Ihren Produktdaten Beiträge, Reels, Karussells, Stories, Blog-Artikel und KI-Avatar-Videos erstellt und nach Plan auf Ihren Kanälen veröffentlicht. Wir richten es für Sie ein und betreiben es. Der Umfang pro Monat ist fest vereinbart."
+      },
+      {
+        "q": "Was kostet PRIZMA?",
+        "a": "Die Einrichtung kostet ab 900 € einmalig und umfasst die Analyse der Tonalität, die Anbindung der Kanäle und erste Inhalte zur Abstimmung. Der Betrieb kostet ab 490 € pro Monat. Der Preis hängt von Menge, Formaten, Kanälen und Sprachen ab. Alle Preise verstehen sich zzgl. gesetzlicher Umsatzsteuer. Für Agenturen und Reseller gelten eigene Konditionen."
+      },
+      {
+        "q": "Was ist im monatlichen Betrieb enthalten?",
+        "a": "Erstellung und Veröffentlichung sind enthalten, freigegeben nach Ihren Regeln. Zur Orientierung: rund 60 Inhalte im Monat, jeweils angepasst für vier Kanäle, also rund 240 Veröffentlichungen — Posts, Karussells und Stories plus ein Reel pro Woche. Was genau bei Ihnen erscheint, legen wir gemeinsam fest. Eine Softwarelizenz oder zusätzliches Personal brauchen Sie nicht."
+      },
+      {
+        "q": "Welche Formate erstellt PRIZMA?",
+        "a": "PRIZMA erstellt sechs Formate aus einem Thema: Post, Reel, Karussell, Story, Blog-Artikel und KI-Avatar."
+      },
+      {
+        "q": "Wird der Content automatisch veröffentlicht?",
+        "a": "Die Freigabe kann vollautomatisch, teilweise oder je Beitrag erfolgen, ganz nach Ihren Regeln. Danach geht der Beitrag auf den vereinbarten Kanälen live. Auf Wunsch geht kein Beitrag ohne Ihre Freigabe online. Auto-Posting ist für Instagram, Facebook, Threads, TikTok, YouTube, Pinterest und Telegram enthalten."
+      },
+      {
+        "q": "Für wen ist PRIZMA geeignet?",
+        "a": "PRIZMA arbeitet für Online-Händler, Hersteller und Marken, Reisebüros sowie Agenturen und Reseller."
+      },
+      {
+        "q": "Wie geht PRIZMA mit Datenschutz um?",
+        "a": "PRIZMA verarbeitet Inhalte Ihres Unternehmens: Produkte, Angebote, Termine und Ankündigungen. Ein Zugriff auf Kundendaten ist dafür nicht erforderlich. Sie legen fest, welche Inhalte automatisch veröffentlicht und welche vorab geprüft werden. Ebenso entscheiden Sie, ob mit Ihren eigenen Fotos und Videos gearbeitet wird oder ob KI Bilder, Videos oder eine Stimme erzeugt. Eine Nutzung Ihrer Inhalte zum Training von KI-Modellen erfolgt nur mit Ihrer Zustimmung."
+      },
+      {
+        "q": "Wo sitzt PRIZMA und für welche Region werden die Texte ausgerichtet?",
+        "a": "Der Standort ist Bielefeld, Deutschland. Die Sprachen sind Deutsch, Englisch und Russisch. PRIZMA richtet den Text auf echte Suchanfragen und Ihre Region aus. Kontakt: Telefon +49 521 96377655, E-Mail contact@digitalkin.co. Die KI-Assistentin Sofie ist rund um die Uhr unter derselben Nummer erreichbar."
+      }
+    ]
+  },
+  "seo_home": {
+    "title": "Social-Media-Content erstellen lassen | PRIZMA",
+    "description": "PRIZMA erstellt aus Produktdaten Beiträge, Reels, Karussells, Stories, SEO-Artikel und KI-Avatare und veröffentlicht sie nach Plan. Betrieb ab 490 €/Monat."
   },
   "seo": {
     "title": "PRIZMA: Content-Produktion als Service für Online-Händler und Hersteller",

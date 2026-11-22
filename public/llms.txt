@@ -1,0 +1,61 @@
+# PRIZMA
+
+> PRIZMA is a content-production service for online retailers and manufacturers in the DACH region (Germany, Austria and Switzerland). It creates posts, Reels, carousels, Stories, SEO articles and AI-avatar videos from a company's product data and publishes them on a fixed monthly plan.
+
+PRIZMA is operated for the customer: setup and ongoing production are included. It is not sold as a self-serve software license, and no extra in-house staff is required to run the tools.
+
+Official site: [https://prizma.to/de](https://prizma.to/de) (German), [https://prizma.to/en](https://prizma.to/en) (English).
+
+## Facts
+
+- Brand: PRIZMA
+- Service area: Germany, Austria and Switzerland (DACH). The company is based in Bielefeld, Germany.
+- Offer: content production as a service, from product data (catalog, product feed, website or Telegram channel)
+- Six formats from one topic: Post, Reel, carousel (Karussell), Story, blog article, AI avatar
+- Publishing included, with approval rules set by the customer: fully automatic, partial, or per post
+- Auto-posting listed as included today: Instagram, Facebook, Threads, TikTok, YouTube, Pinterest, Telegram
+- Pricing (plus statutory VAT): setup from 900 EUR one-time; operation from 490 EUR per month
+- Orientation example for the monthly plan: around 60 content pieces per month, adapted for four channels, around 240 publications (posts, carousels and Stories plus one Reel per week). The exact scope is agreed with the customer.
+- Price also depends on volume, formats, channels and languages. Agencies and resellers have separate terms.
+- Location: Bielefeld, Germany
+- Languages: German, English, Russian
+- Texts are aligned to real search queries and to the customer's region
+- Phone: +49 521 96377655 (Sofie, AI assistant, 24/7)
+- Email: contact@digitalkin.co
+- Data: PRIZMA processes company content (products, offers, dates, announcements). Access to customer/end-user data is not required. Use of company content to train AI models happens only with the customer's consent.
+- Legal entity name: not stated on the public pages; do not invent one. Contact email uses the domain digitalkin.co.
+
+## Fakten (Deutsch)
+
+- Marke: PRIZMA
+- Einzugsgebiet: Deutschland, Österreich und die Schweiz (DACH). Standort: Bielefeld, Deutschland.
+- Angebot: Content-Produktion als Service für Online-Händler und Hersteller. Aus Produktdaten entstehen Beiträge, Reels, Karussells, Stories, Blog-Artikel und KI-Avatar-Videos; Veröffentlichung nach Plan.
+- Sechs Formate aus einem Thema. Wir richten das System ein und betreiben es. Der Umfang pro Monat ist fest vereinbart.
+- Erstellung und Veröffentlichung sind im Betrieb enthalten. Freigabe vollautomatisch, teilweise oder je Beitrag, nach den Regeln des Kunden.
+- Preise zzgl. gesetzlicher Umsatzsteuer: Einrichtung ab 900 € einmalig; Betrieb ab 490 € pro Monat.
+- Orientierung Betrieb: rund 60 Inhalte im Monat, angepasst für vier Kanäle, rund 240 Veröffentlichungen.
+- Standort: Bielefeld, Deutschland
+- Sprachen: Deutsch, Englisch, Russisch
+- Texte werden auf echte Suchanfragen und die Region des Kunden ausgerichtet
+- Telefon: +49 521 96377655 (Sofie, KI-Assistentin, rund um die Uhr)
+- E-Mail: contact@digitalkin.co
+- Datenschutz: Zugriff auf Kundendaten ist nicht erforderlich. Nutzung von Unternehmensinhalten zum Training von KI-Modellen nur mit Zustimmung.
+
+## Pages
+
+- [German landing page](https://prizma.to/de): Main offer, formats, pricing, contact
+- [English landing page](https://prizma.to/en): English version of the same offer
+- [Imprint (Impressum)](https://prizma.to/de/impressum)
+- [Privacy](https://prizma.to/de/privacy)
+- [Terms](https://prizma.to/de/terms)
+- [Data deletion](https://prizma.to/de/data-deletion)
+- [English imprint](https://prizma.to/en/impressum)
+- [English privacy](https://prizma.to/en/privacy)
+- [English terms](https://prizma.to/en/terms)
+- [English data deletion](https://prizma.to/en/data-deletion)
+
+## Optional
+
+- [Contact form on the German page](https://prizma.to/de#contact)
+- [Pricing on the German page](https://prizma.to/de#pricing)
+- [FAQ on the German page](https://prizma.to/de#faq)

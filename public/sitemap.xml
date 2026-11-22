@@ -1,13 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://prizma.to/de</loc></url>
-  <url><loc>https://prizma.to/de/impressum</loc></url>
-  <url><loc>https://prizma.to/de/privacy</loc></url>
-  <url><loc>https://prizma.to/de/terms</loc></url>
-  <url><loc>https://prizma.to/de/data-deletion</loc></url>
-  <url><loc>https://prizma.to/en</loc></url>
-  <url><loc>https://prizma.to/en/impressum</loc></url>
-  <url><loc>https://prizma.to/en/privacy</loc></url>
-  <url><loc>https://prizma.to/en/terms</loc></url>
-  <url><loc>https://prizma.to/en/data-deletion</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://prizma.to/de</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://prizma.to/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prizma.to/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prizma.to/de"/>
+  </url>
+  <url>
+    <loc>https://prizma.to/en</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://prizma.to/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prizma.to/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prizma.to/de"/>
+  </url>
+  <url>
+    <loc>https://prizma.to/de/impressum</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://prizma.to/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prizma.to/en/impressum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prizma.to/de/impressum"/>
+  </url>
+  <url>
+    <loc>https://prizma.to/en/impressum</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://prizma.to/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prizma.to/en/impressum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prizma.to/de/impressum"/>
+  </url>
+  <url>
+    <loc>https://prizma.to/de/privacy</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://prizma.to/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prizma.to/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prizma.to/de/privacy"/>
+  </url>
+  <url>
+    <loc>https://prizma.to/en/privacy</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://prizma.to/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prizma.to/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prizma.to/de/privacy"/>
+  </url>
+  <url>
+    <loc>https://prizma.to/de/terms</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://prizma.to/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prizma.to/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prizma.to/de/terms"/>
+  </url>
+  <url>
+    <loc>https://prizma.to/en/terms</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://prizma.to/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prizma.to/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prizma.to/de/terms"/>
+  </url>
+  <url>
+    <loc>https://prizma.to/de/data-deletion</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://prizma.to/de/data-deletion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prizma.to/en/data-deletion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prizma.to/de/data-deletion"/>
+  </url>
+  <url>
+    <loc>https://prizma.to/en/data-deletion</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://prizma.to/de/data-deletion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://prizma.to/en/data-deletion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://prizma.to/de/data-deletion"/>
+  </url>
 </urlset>

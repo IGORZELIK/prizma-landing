@@ -1,0 +1,161 @@
+---
+// German FAQ. Questions and answers are the same strings as the FAQPage JSON-LD.
+interface Props {
+  t: Record<string, any>;
+}
+const { t } = Astro.props;
+const items = (t.faq?.items ?? []) as { q: string; a: string }[];
+const show = items.length > 0;
+
+const countries = [
+  { '@type': 'Country', name: 'Germany' },
+  { '@type': 'Country', name: 'Austria' },
+  { '@type': 'Country', name: 'Switzerland' },
+];
+
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://prizma.to/#organization',
+      name: 'PRIZMA',
+      url: 'https://prizma.to',
+      logo: 'https://prizma.to/favicon.png',
+      email: 'contact@digitalkin.co',
+      telephone: '+49-521-96377655',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Bielefeld',
+        addressCountry: 'DE',
+      },
+      areaServed: countries,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+49-521-96377655',
+        email: 'contact@digitalkin.co',
+        contactType: 'customer service',
+        areaServed: countries,
+        availableLanguage: ['German', 'English', 'Russian'],
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://prizma.to/#service',
+      name: 'Content-Produktion als Service',
+      serviceType: 'Content-Produktion und Veröffentlichung in sozialen Netzwerken',
+      description:
+        'PRIZMA erstellt aus Produktdaten Beiträge, Reels, Karussells, Stories, Blog-Artikel und KI-Avatar-Videos und veröffentlicht sie nach Plan auf den vereinbarten Kanälen. Einrichtung und Betrieb sind enthalten. Der Umfang pro Monat ist fest vereinbart.',
+      url: 'https://prizma.to/de',
+      provider: { '@id': 'https://prizma.to/#organization' },
+      areaServed: countries,
+      availableLanguage: ['de', 'en', 'ru'],
+      offers: [
+        {
+          '@type': 'Offer',
+          name: 'Einrichtung',
+          description:
+            'ab 900 € einmalig. Analyse der Tonalität, Anbindung der Kanäle und erste Inhalte zur Abstimmung. Zzgl. gesetzlicher Umsatzsteuer.',
+          priceCurrency: 'EUR',
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            minPrice: 900,
+            priceCurrency: 'EUR',
+            valueAddedTaxIncluded: false,
+          },
+        },
+        {
+          '@type': 'Offer',
+          name: 'Betrieb',
+          description:
+            'ab 490 € pro Monat. Erstellung und Veröffentlichung sind enthalten, freigegeben nach Ihren Regeln. Der Preis hängt von Menge, Formaten, Kanälen und Sprachen ab. Zzgl. gesetzlicher Umsatzsteuer.',
+          priceCurrency: 'EUR',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            minPrice: 490,
+            priceCurrency: 'EUR',
+            unitCode: 'MON',
+            valueAddedTaxIncluded: false,
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://prizma.to/de#faq',
+      url: 'https://prizma.to/de',
+      inLanguage: 'de',
+      mainEntity: items.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a,
+        },
+      })),
+    },
+  ],
+};
+---
+
+{show && <script type="application/ld+json" set:html={JSON.stringify(graph)} />}
+
+{show && (
+<section class="faq" id="faq">
+  <div class="section-wrap">
+    <h2 class="reveal">{t.faq.heading}</h2>
+    <div class="faq-list">
+      {items.map((item) => (
+        <article class="faq-item glass-card reveal">
+          <h3>{item.q}</h3>
+          <p>{item.a}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+)}
+
+<style>
+  .faq h2 {
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 860px;
+    margin: 48px auto 0;
+  }
+
+  .faq-item {
+    padding: 28px 32px;
+    border-radius: 18px;
+  }
+
+  .faq-item h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .faq-item p {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    .faq-item {
+      padding: 22px 18px;
+    }
+  }
+</style>

@@ -1,16 +1,27 @@
 ---
 interface Props {
   t: Record<string, any>;
+  title?: string;
+  description?: string;
 }
 
 const { t } = Astro.props;
 const lang = t.lang || 'en';
+const title = Astro.props.title ?? t.seo.title;
+const description = Astro.props.description ?? t.seo.description;
 
-// Canonical must be the page's own URL. Legal pages were previously declaring the
-// language homepage, which tells Google they are duplicates of it.
-// The root page is a copy of /de, so it points there on purpose.
-const path = Astro.url.pathname.replace(/\/+$/, '');
-const canonical = `https://prizma.to${path === '' ? `/${lang}` : path}`;
+// Canonical is the page's own URL. Legal pages must not point at the language homepage.
+// "/" is a copy of /de (and 301s there in production), so its canonical is /de.
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const canonical = path === '/' ? 'https://prizma.to/de' : `https://prizma.to${path}`;
+
+// hreflang follows the concrete page, not always the homepage.
+// /ru is noindex and is not part of the set. x-default is the German canonical URL.
+const locale = path.match(/^\/(de|en|ru)(\/.*)?$/);
+const suffix = locale?.[2] ?? '';
+const deHref = `https://prizma.to/de${suffix}`;
+const enHref = `https://prizma.to/en${suffix}`;
+const emitHreflang = lang !== 'ru';
 ---
 
 <!DOCTYPE html>
@@ -18,12 +29,12 @@ const canonical = `https://prizma.to${path === '' ? `/${lang}` : path}`;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{t.seo.title}</title>
-  <meta name="description" content={t.seo.description} />
+  <title>{title}</title>
+  <meta name="description" content={description} />
 
   <!-- OG -->
-  <meta property="og:title" content={t.seo.title} />
-  <meta property="og:description" content={t.seo.description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta property="og:image" content="https://prizma.to/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -34,39 +45,21 @@ const canonical = `https://prizma.to${path === '' ? `/${lang}` : path}`;
        out of hreflang, out of the language switcher, closed to search engines. -->
   {lang === 'ru' && <meta name="robots" content="noindex, nofollow" />}
 
-  <!-- hreflang -->
-  <link rel="alternate" hreflang="de" href="https://prizma.to/de" />
-  <link rel="alternate" hreflang="en" href="https://prizma.to/en" />
-  <link rel="alternate" hreflang="x-default" href="https://prizma.to/" />
+  <!-- hreflang: same three links on every indexable language version of this path -->
+  {emitHreflang && (
+    <>
+      <link rel="alternate" hreflang="de" href={deHref} />
+      <link rel="alternate" hreflang="en" href={enHref} />
+      <link rel="alternate" hreflang="x-default" href={deHref} />
+    </>
+  )}
   <link rel="canonical" href={canonical} />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={t.seo.title} />
-  <meta name="twitter:description" content={t.seo.description} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content="https://prizma.to/og-image.png" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "PRIZMA",
-    "url": "https://prizma.to",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "description": t.seo.description,
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "EUR"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "PRIZMA",
-      "url": "https://prizma.to",
-      "logo": "https://prizma.to/favicon.png"
-    }
-  })} />
 
   <!-- Preload critical fonts -->
   <link rel="preload" href={`/fonts/unbounded-900-${lang === 'ru' ? 'cyrillic' : 'latin'}.woff2`} as="font" type="font/woff2" crossorigin />
