@@ -4,7 +4,7 @@
   "description": "PRIZMA — AI content automation platform landing page",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/build-agent-markdown.mjs && astro build",
     "preview": "astro preview"
   },
   "keywords": [],
@@ -13,6 +13,7 @@
   "type": "module",
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
+    "@vercel/functions": "^3.11.3",
     "astro": "^6.1.3",
     "gsap": "^3.14.2"
   }
