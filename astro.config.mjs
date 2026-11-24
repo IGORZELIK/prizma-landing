@@ -1,4 +1,9 @@
 import { defineConfig } from 'astro/config';
+import { generateAgentMarkdown } from './scripts/build-agent-markdown.mjs';
+
+// Vercel’s Astro preset may call `astro build` directly, so the markdown
+// alternates are generated here rather than only from package.json.
+generateAgentMarkdown();
 
 export default defineConfig({
   output: 'static',
