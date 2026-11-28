@@ -1,12 +1,12 @@
 ---
-title: "PRIZMA: Content-Produktion als Service für Online-Händler und Hersteller"
-description: "PRIZMA übernimmt die laufende Content-Produktion: Beiträge, Reels, Karussells, SEO-Artikel und KI-Avatar-Videos aus Ihren Produktdaten, veröffentlicht nach Ihren Freigaberegeln. Mit fest vereinbartem Monatsumfang."
+title: "Datenschutzerklärung | PRIZMA"
+description: "Wie prizma.to Hosting-Logs, Vercel Web Analytics ohne Cookies und einen anonymen Klickzähler behandelt. Für Unternehmer."
 image: "https://prizma.to/og-image.png"
 ---
 
 # Datenschutzerklärung
 
-Stand: Oktober 2026
+Stand: November 2026
 
 Diese Datenschutzerklärung gilt für die Website prizma.to und die Plattform Prizma (app.prizma.to). Sie richtet sich ausschließlich an Unternehmer im Sinne des § 14 BGB.
 
@@ -26,9 +26,11 @@ Diese Website wird bei der Vercel Inc. (340 S Lemon Ave #4133, Walnut, CA 91789,
 
 Zur Auswahl der passenden Sprachversion wertet unser Server das von der Hosting-Infrastruktur bereitgestellte Länderkennzeichen aus, das aus Ihrer IP-Adresse abgeleitet wird. Es wird lediglich das Länderkürzel verarbeitet; die IP-Adresse wird hierbei nicht gespeichert. Ihre Sprachauswahl wird ausschließlich lokal in Ihrem Browser (localStorage) abgelegt und nicht an uns übertragen. Rechtsgrundlage ist unser berechtigtes Interesse an einer nutzerfreundlichen Darstellung (Art. 6 Abs. 1 lit. f DSGVO).
 
-## 4. Reichweitenmessung (Vercel Analytics)
+## 4. Reichweitenmessung (Vercel Web Analytics)
 
-Wir nutzen Vercel Analytics zur anonymen, aggregierten Auswertung der Seitennutzung. Dabei werden keine Cookies gesetzt und es werden keine Profile über einzelne Besucher gebildet; die erhobenen Daten lassen keinen Rückschluss auf Ihre Person zu. Rechtsgrundlage ist unser berechtigtes Interesse an der statistischen Auswertung und Verbesserung unseres Angebots (Art. 6 Abs. 1 lit. f DSGVO).
+Wir nutzen Vercel Web Analytics, um Seitenaufrufe zusammengefasst und anonym zu zählen. Das Tool setzt keine Cookies und legt keine Profile einzelner Besucher an.
+
+Zusätzlich betreiben wir einen anonymen Klickzähler für Terminlinks auf calendly.com, für Telefon- und E-Mail-Links und für das Absenden des Kontaktformulars. Gespeichert werden nur die Art des Ereignisses, der Seitenpfad und der Link, ohne Abfrageparameter. Name, E-Mail-Adresse und der Inhalt des Formulars werden dabei nicht gespeichert. Ein Cookie wird nicht gesetzt. Rechtsgrundlage ist unser berechtigtes Interesse an der Verbesserung des Angebots (Art. 6 Abs. 1 lit. f DSGVO).
 
 ## 5. Kontaktformular
 

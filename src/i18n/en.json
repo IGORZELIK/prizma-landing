@@ -174,6 +174,28 @@
     "contact": "Contact",
     "copyright": "© 2026 PRIZMA. All rights reserved."
   },
+  "seo_home": {
+    "title": "Done-for-you content from your product catalog | PRIZMA",
+    "description": "Set up and run for retailers, brands and agencies: a fixed monthly volume of posts, short video and articles. You decide what gets published."
+  },
+  "seo_legal": {
+    "impressum": {
+      "title": "Company details | PRIZMA",
+      "description": "Who runs PRIZMA: Igor Zelikovsky, Digitalkin AI, Bielefeld, Germany. English summary of the German legal notice."
+    },
+    "privacy": {
+      "title": "How PRIZMA handles website data",
+      "description": "Cookieless page stats from Vercel Web Analytics, an anonymous click counter, and where contact-form messages go. Written for business customers."
+    },
+    "terms": {
+      "title": "Terms for using the PRIZMA system",
+      "description": "Rules for companies that use PRIZMA to produce and publish content. English summary; the German terms control if the texts differ."
+    },
+    "data-deletion": {
+      "title": "Delete Facebook or Instagram data held by PRIZMA",
+      "description": "How to ask for deletion of comments, messages and tokens stored when a business connects Facebook or Instagram to Prizma."
+    }
+  },
   "seo": {
     "title": "PRIZMA: Content production as a service for online retailers and manufacturers",
     "description": "PRIZMA takes over your ongoing content production: posts, reels, carousels, SEO articles and AI avatar videos from your product data, published under your approval rules. With a fixed monthly scope."

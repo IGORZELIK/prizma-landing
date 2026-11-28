@@ -1,6 +1,6 @@
 ---
-title: "PRIZMA: Content production as a service for online retailers and manufacturers"
-description: "PRIZMA takes over your ongoing content production: posts, reels, carousels, SEO articles and AI avatar videos from your product data, published under your approval rules. With a fixed monthly scope."
+title: "Company details | PRIZMA"
+description: "Who runs PRIZMA: Igor Zelikovsky, Digitalkin AI, Bielefeld, Germany. English summary of the German legal notice."
 image: "https://prizma.to/og-image.png"
 ---
 

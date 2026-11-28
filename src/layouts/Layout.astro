@@ -14,6 +14,7 @@ const description = Astro.props.description ?? t.seo.description;
 // "/" is a copy of /de (and 301s there in production), so its canonical is /de.
 const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const canonical = path === '/' ? 'https://prizma.to/de' : `https://prizma.to${path}`;
+const ogLocale = lang === 'de' ? 'de_DE' : lang === 'ru' ? 'ru_RU' : 'en_US';
 
 // hreflang follows the concrete page, not always the homepage.
 // /ru is noindex and is not part of the set. x-default is the German canonical URL.
@@ -40,6 +41,9 @@ const emitHreflang = lang !== 'ru';
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content={canonical} />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content={ogLocale} />
+  {emitHreflang && lang === 'de' && <meta property="og:locale:alternate" content="en_US" />}
+  {emitHreflang && lang === 'en' && <meta property="og:locale:alternate" content="de_DE" />}
 
   <!-- /ru stays reachable by direct link for existing clients, but is not promoted:
        out of hreflang, out of the language switcher, closed to search engines. -->
@@ -83,6 +87,9 @@ const emitHreflang = lang !== 'ru';
   <main>
     <slot />
   </main>
+
+  <!-- Cookieless lead counter: calendly, tel, mailto, form submit. No form fields. -->
+  <script is:inline src="/leads.js"></script>
 
   <!-- Vercel Analytics (GDPR-compliant, no cookies) -->
   <script>

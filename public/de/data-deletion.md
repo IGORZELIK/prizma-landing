@@ -1,6 +1,6 @@
 ---
-title: "PRIZMA: Content-Produktion als Service für Online-Händler und Hersteller"
-description: "PRIZMA übernimmt die laufende Content-Produktion: Beiträge, Reels, Karussells, SEO-Artikel und KI-Avatar-Videos aus Ihren Produktdaten, veröffentlicht nach Ihren Freigaberegeln. Mit fest vereinbartem Monatsumfang."
+title: "Datenlöschung | PRIZMA"
+description: "So verlangen Sie die Löschung von Kommentaren, Nachrichten und Tokens, die Prizma für ein verbundenes Facebook- oder Instagram-Konto gespeichert hat."
 image: "https://prizma.to/og-image.png"
 ---
 

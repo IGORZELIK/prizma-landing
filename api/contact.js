@@ -8,7 +8,21 @@
 //    name/email/message contain _ * [ no longer get rejected by Telegram and lost.
 //  - console.log on every accept/reject so submissions are visible in Vercel logs.
 
+import { recordLead } from "../lib/record-lead.js";
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+/** Page path of the form, from Referer. Query strings stay out of the lead log. */
+function pagePathFromRequest(req) {
+  const headers = req.headers || {};
+  const referer = headers.referer || headers.referrer || "";
+  if (!referer) return "";
+  try {
+    return new URL(referer).pathname;
+  } catch {
+    return "";
+  }
+}
 
 /** Escape the 5 characters that are unsafe inside Telegram HTML parse_mode. */
 function escapeHtml(value) {
@@ -93,6 +107,17 @@ export default async function handler(req, res) {
     }
 
     console.log(`[contact] sent: ${cleanEmail}`);
+    // Same cookieless lead line as /api/lead. Name and email stay out of it.
+    try {
+      await recordLead({
+        event: "form_submit",
+        path: pagePathFromRequest(req),
+        href: "",
+        userAgent: (req.headers && req.headers["user-agent"]) || "",
+      });
+    } catch (leadErr) {
+      console.error(`[contact] lead log failed: ${leadErr}`);
+    }
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error(`[contact] internal error: ${err}`);

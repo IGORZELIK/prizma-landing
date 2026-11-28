@@ -1,6 +1,6 @@
 ---
-title: "PRIZMA: Content-Produktion als Service für Online-Händler und Hersteller"
-description: "PRIZMA übernimmt die laufende Content-Produktion: Beiträge, Reels, Karussells, SEO-Artikel und KI-Avatar-Videos aus Ihren Produktdaten, veröffentlicht nach Ihren Freigaberegeln. Mit fest vereinbartem Monatsumfang."
+title: "Impressum | PRIZMA"
+description: "Anbieterkennzeichnung von PRIZMA nach § 5 DDG: Igor Zelikovsky, Digitalkin AI, Bleicherfeldstraße 31, 33689 Bielefeld."
 image: "https://prizma.to/og-image.png"
 ---
 
