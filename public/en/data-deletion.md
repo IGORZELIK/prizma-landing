@@ -1,6 +1,6 @@
 ---
-title: "PRIZMA: Content production as a service for online retailers and manufacturers"
-description: "PRIZMA takes over your ongoing content production: posts, reels, carousels, SEO articles and AI avatar videos from your product data, published under your approval rules. With a fixed monthly scope."
+title: "Delete Facebook or Instagram data held by PRIZMA"
+description: "How to ask for deletion of comments, messages and tokens stored when a business connects Facebook or Instagram to Prizma."
 image: "https://prizma.to/og-image.png"
 ---
 

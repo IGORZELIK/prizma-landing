@@ -6,12 +6,12 @@ import '../../styles/global.css';
 import t from '../../i18n/en.json';
 ---
 
-<Layout t={t}>
+<Layout t={t} title={t.seo_legal.privacy.title} description={t.seo_legal.privacy.description}>
   <Nav t={t} />
   <div class="legal-page">
     <div class="section-wrap">
       <h1>Privacy Policy</h1>
-      <p class="legal-date">Last updated: October 2026</p>
+      <p class="legal-date">Last updated: November 2026</p>
 
       <div class="legal-body">
 
@@ -30,8 +30,9 @@ import t from '../../i18n/en.json';
         <h2>3. Language Detection (Geolocation)</h2>
         <p>To select the appropriate language version, our server evaluates the country code provided by the hosting infrastructure, which is derived from your IP address. Only the country code is processed; the IP address is not stored in this context. Your language choice is stored solely in your browser (localStorage) and is not transmitted to us. The legal basis is our legitimate interest in a user-friendly presentation (Art. 6 para. 1 lit. f GDPR).</p>
 
-        <h2>4. Analytics (Vercel Analytics)</h2>
-        <p>We use Vercel Analytics for anonymous, aggregated analysis of site usage. No cookies are set and no profiles of individual visitors are created; the data collected does not allow any conclusions to be drawn about your identity. The legal basis is our legitimate interest in the statistical evaluation and improvement of our offering (Art. 6 para. 1 lit. f GDPR).</p>
+        <h2>4. Analytics (Vercel Web Analytics)</h2>
+        <p>We use Vercel Web Analytics to count page views in aggregate, without cookies and without a profile of any individual visitor.</p>
+        <p>We also run an anonymous click counter for scheduling links on calendly.com, for phone and email links, and for contact form submissions. The counter stores only the kind of event, the page path and the link, with the query string removed. It does not store a name, an email address or the contents of the form. No cookie is set. The legal basis is our legitimate interest in improving the site (Art. 6 para. 1 lit. f GDPR).</p>
 
         <h2>5. Contact Form</h2>
         <p>If you complete the contact form, we process the data you provide (name, email address, and optionally company and message) in order to handle your enquiry. For immediate notification, these details are forwarded to us via the messaging service Telegram (Telegram FZ-LLC, Dubai, United Arab Emirates). There is no EU Commission adequacy decision for the UAE; the transfer therefore takes place on the basis of your enquiry and for the performance of pre-contractual measures. The legal basis is Art. 6 para. 1 lit. b and lit. f GDPR. If you wish to avoid this transfer, please contact us directly by email.</p>

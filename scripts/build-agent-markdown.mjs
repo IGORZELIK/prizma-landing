@@ -374,10 +374,13 @@ function jsonLdBlock(t) {
   return ['```json', JSON.stringify(graph, null, 2), '```'].join('\n');
 }
 
-function renderLegal(source, file, t) {
+function renderLegal(source, file, t, urlPath) {
   const legal = extractLegal(source, file);
+  const key = urlPath.slice(urlPath.lastIndexOf('/') + 1);
+  const seo = t.seo_legal && t.seo_legal[key];
+  if (!seo) throw new Error(`Missing seo_legal.${key} for ${urlPath}`);
   const lines = [
-    frontmatter({ title: t.seo.title, description: t.seo.description }),
+    frontmatter({ title: seo.title, description: seo.description }),
     `# ${legal.h1}`,
     '',
   ];
@@ -458,6 +461,12 @@ function assertMarkdown(pages) {
   if (pages['/en'].body.includes('## Häufige Fragen') || pages['/en'].body.includes('```json')) {
     throw new Error('English page markdown includes German FAQ or JSON-LD that the English page does not render');
   }
+  if (!pages['/en'].body.startsWith('---\ntitle: "Done-for-you content from your product catalog | PRIZMA"')) {
+    throw new Error('English homepage markdown is missing its international title');
+  }
+  if (pages['/en'].body.includes('Content production as a service for online retailers')) {
+    throw new Error('English homepage markdown is still using the literal translation as its title');
+  }
   const impressum = pages['/de/impressum'].body;
   for (const phrase of ['Igor Zelikovsky', 'Bleicherfeldstraße 31', '§ 5 DDG', '33689 Bielefeld']) {
     if (!impressum.includes(phrase)) throw new Error(`German imprint markdown is missing: ${phrase}`);
@@ -486,8 +495,8 @@ export function generateAgentMarkdown() {
       roadmapSource,
     }),
     '/en': renderHome(en, 'en', {
-      title: en.seo.title,
-      description: en.seo.description,
+      title: en.seo_home.title,
+      description: en.seo_home.description,
       canonical: 'https://prizma.to/en',
       showcase,
       roadmapSource,
@@ -496,7 +505,7 @@ export function generateAgentMarkdown() {
 
   for (const [urlPath, file] of Object.entries(LEGAL_FILES)) {
     const lang = urlPath.startsWith('/de/') ? de : en;
-    bodies[urlPath] = renderLegal(read(file), file, lang);
+    bodies[urlPath] = renderLegal(read(file), file, lang, urlPath);
   }
 
   const pages = {};

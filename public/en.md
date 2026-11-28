@@ -1,6 +1,6 @@
 ---
-title: "PRIZMA: Content production as a service for online retailers and manufacturers"
-description: "PRIZMA takes over your ongoing content production: posts, reels, carousels, SEO articles and AI avatar videos from your product data, published under your approval rules. With a fixed monthly scope."
+title: "Done-for-you content from your product catalog | PRIZMA"
+description: "Set up and run for retailers, brands and agencies: a fixed monthly volume of posts, short video and articles. You decide what gets published."
 image: "https://prizma.to/og-image.png"
 ---
 

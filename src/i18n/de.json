@@ -216,6 +216,24 @@
     "title": "Social-Media-Content erstellen lassen | PRIZMA",
     "description": "PRIZMA erstellt aus Produktdaten Beiträge, Reels, Karussells, Stories, SEO-Artikel und KI-Avatare und veröffentlicht sie nach Plan. Betrieb ab 490 €/Monat."
   },
+  "seo_legal": {
+    "impressum": {
+      "title": "Impressum | PRIZMA",
+      "description": "Anbieterkennzeichnung von PRIZMA nach § 5 DDG: Igor Zelikovsky, Digitalkin AI, Bleicherfeldstraße 31, 33689 Bielefeld."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung | PRIZMA",
+      "description": "Wie prizma.to Hosting-Logs, Vercel Web Analytics ohne Cookies und einen anonymen Klickzähler behandelt. Für Unternehmer."
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen | PRIZMA",
+      "description": "Regeln für die Nutzung von PRIZMA, der Content-Plattform für Unternehmen. Vertragspartner ist Digitalkin AI in Bielefeld."
+    },
+    "data-deletion": {
+      "title": "Datenlöschung | PRIZMA",
+      "description": "So verlangen Sie die Löschung von Kommentaren, Nachrichten und Tokens, die Prizma für ein verbundenes Facebook- oder Instagram-Konto gespeichert hat."
+    }
+  },
   "seo": {
     "title": "PRIZMA: Content-Produktion als Service für Online-Händler und Hersteller",
     "description": "PRIZMA übernimmt die laufende Content-Produktion: Beiträge, Reels, Karussells, SEO-Artikel und KI-Avatar-Videos aus Ihren Produktdaten, veröffentlicht nach Ihren Freigaberegeln. Mit fest vereinbartem Monatsumfang."

@@ -1,6 +1,6 @@
 ---
-title: "PRIZMA: Content-Produktion als Service für Online-Händler und Hersteller"
-description: "PRIZMA übernimmt die laufende Content-Produktion: Beiträge, Reels, Karussells, SEO-Artikel und KI-Avatar-Videos aus Ihren Produktdaten, veröffentlicht nach Ihren Freigaberegeln. Mit fest vereinbartem Monatsumfang."
+title: "Nutzungsbedingungen | PRIZMA"
+description: "Regeln für die Nutzung von PRIZMA, der Content-Plattform für Unternehmen. Vertragspartner ist Digitalkin AI in Bielefeld."
 image: "https://prizma.to/og-image.png"
 ---
 

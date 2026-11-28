@@ -1,12 +1,12 @@
 ---
-title: "PRIZMA: Content production as a service for online retailers and manufacturers"
-description: "PRIZMA takes over your ongoing content production: posts, reels, carousels, SEO articles and AI avatar videos from your product data, published under your approval rules. With a fixed monthly scope."
+title: "How PRIZMA handles website data"
+description: "Cookieless page stats from Vercel Web Analytics, an anonymous click counter, and where contact-form messages go. Written for business customers."
 image: "https://prizma.to/og-image.png"
 ---
 
 # Privacy Policy
 
-Last updated: October 2026
+Last updated: November 2026
 
 This is an English translation for convenience. The service is directed exclusively at businesses (Unternehmer within the meaning of § 14 BGB). In case of any discrepancy, the [German version](/de/privacy) prevails.
 
@@ -26,9 +26,11 @@ This website is hosted by Vercel Inc. (340 S Lemon Ave #4133, Walnut, CA 91789, 
 
 To select the appropriate language version, our server evaluates the country code provided by the hosting infrastructure, which is derived from your IP address. Only the country code is processed; the IP address is not stored in this context. Your language choice is stored solely in your browser (localStorage) and is not transmitted to us. The legal basis is our legitimate interest in a user-friendly presentation (Art. 6 para. 1 lit. f GDPR).
 
-## 4. Analytics (Vercel Analytics)
+## 4. Analytics (Vercel Web Analytics)
 
-We use Vercel Analytics for anonymous, aggregated analysis of site usage. No cookies are set and no profiles of individual visitors are created; the data collected does not allow any conclusions to be drawn about your identity. The legal basis is our legitimate interest in the statistical evaluation and improvement of our offering (Art. 6 para. 1 lit. f GDPR).
+We use Vercel Web Analytics to count page views in aggregate, without cookies and without a profile of any individual visitor.
+
+We also run an anonymous click counter for scheduling links on calendly.com, for phone and email links, and for contact form submissions. The counter stores only the kind of event, the page path and the link, with the query string removed. It does not store a name, an email address or the contents of the form. No cookie is set. The legal basis is our legitimate interest in improving the site (Art. 6 para. 1 lit. f GDPR).
 
 ## 5. Contact Form
 
